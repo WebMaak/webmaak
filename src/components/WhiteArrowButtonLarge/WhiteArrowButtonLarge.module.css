@@ -1,0 +1,294 @@
+/* .primary-button:hover .primary-button-hover-overlay {
+  opacity: 1;
+}
+
+.primary-button-pressed-overlay {
+  z-index: 2;
+  opacity: 0;
+  background-color: transparent;
+  transition: opacity 0.2s;
+  position: absolute;
+  inset: 0%;
+}
+
+.primary-button:active .primary-button-pressed-overlay {
+  background: radial-gradient(
+      176.56% 143.54% at 100% 0%, #e0e0e010 0%, rgba(224,224,224,0) 77.6%
+    ),
+    radial-gradient(
+      36.12% 91.37% at 97.38% 0%, #e0e0e010 0%, rgba(224,224,224,0) 100%
+    ),
+    radial-gradient(
+      203.16% 254.79% at 100% -63.36%, #f0f0f020 0%, rgba(240,240,240,0) 100%
+    ),
+    linear-gradient(288deg, #e0e0e015 75.26%, rgba(224,224,224,0) 119.83%),
+    #f8f8f8;
+  opacity: 1;
+}
+
+.primary-btn-text {
+  z-index: 3;
+  color: #222;
+  text-align: center;
+  letter-spacing: -0.36px;
+  font-family: Bricolage Grotesque, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  position: relative;
+}
+
+.secondary-btn_wrap {
+  z-index: 3;
+  width: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.secondary-btn_icon {
+  color: #1a2224;
+  flex: none;
+  width: 1.25rem;
+}
+
+.secondary-btn_icon-wrap {
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  transform: translate(-100%);
+}
+
+.button-link {
+  text-decoration: none;
+}
+
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.primary-button {
+  padding: 0.75rem 2rem;
+  grid-column-gap: 0.6rem;
+  background-image: 
+      radial-gradient(circle at 50% 85.69%, #ffffff, #ffffff00 77.6%),
+      radial-gradient(circle at 50% 111.57%, #f0f0f0, #f0f0f000 56%),
+      radial-gradient(circle at 50% 132.04%, #e5e5e5, #e5e5e500 69%),
+      linear-gradient(#ffffff00 21%, #ffffff 93.49%),
+      linear-gradient(#f8f8f8, #f8f8f8);
+  border-radius: 0.375rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 2px 2px #00000040, inset 0 -2px #1e40af,
+    0 0 0 4px #0000000d, 0 20px 120px -10px #3b82f6cc;
+}
+
+.primary-button-hover-overlay {
+  z-index: 1;
+  opacity: 0;
+  background-image: 
+      radial-gradient(circle at 176% 143%, #c7c7c7, #ffffff00 77%),
+      radial-gradient(circle at 138% 79%, #ffffff20, #ffffff00),
+      radial-gradient(circle at 50% 254.79%, #ffffff10, #ffffff00),
+      linear-gradient(247deg, #ffffff 48%, #e0e0e000 92%),
+      linear-gradient(#ffffff, #bcbcbc);
+  transition: opacity 0.2s;
+  position: absolute;
+  inset: 0%;
+}
+
+.primary-button:hover .secondary-btn_icon-wrap {
+  animation: translateAnimationIn 0.3s ease;
+}
+
+.primary-button:not(:hover) .secondary-btn_icon-wrap {
+  animation: translateAnimationOut 0.3s ease;
+}
+
+@keyframes translateAnimationIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes translateAnimationOut {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+} */
+.primaryButton {
+  padding: 0.875rem 0.7rem;
+  grid-column-gap: 0.6rem;
+  background-image: 
+      radial-gradient(circle at 50% 85.69%, #ffffff, #ffffff00 77.6%),
+      radial-gradient(circle at 50% 111.57%, #f0f0f0, #f0f0f000 56%),
+      radial-gradient(circle at 50% 132.04%, #e5e5e5, #e5e5e500 69%),
+      linear-gradient(#ffffff00 21%, #ffffff 93.49%),
+      linear-gradient(#f8f8f8, #f8f8f8);
+  border-radius: 0.375rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 2px 2px #00000040, inset 0 -2px #1e40af,
+    0 0 0 4px #0000000d, 0 20px 120px -10px #3b82f6cc;
+}
+
+.primaryButtonHoverOverlay {
+  z-index: 1;
+  opacity: 0;
+  background-image: 
+      radial-gradient(circle at 176% 143%, #a9cbff, #ffffff00 77%),
+      radial-gradient(circle at 138% 79%, #ffffff20, #ffffff00),
+      radial-gradient(circle at 50% 254.79%, #ffffff10, #ffffff00),
+      linear-gradient(247deg, #ffffff 48%, #e0e0e000 92%),
+      linear-gradient(#ffffff, #a9cbff);
+  transition: opacity 0.2s;
+  position: absolute;
+  inset: 0%;
+}
+
+.primaryButtonPressedOverlay {
+  z-index: 2;
+  opacity: 0;
+  background-color: transparent;
+  transition: opacity 0.2s;
+  position: absolute;
+  inset: 0%;
+}
+
+.primaryButton:active .primaryButtonPressedOverlay {
+  background: radial-gradient(
+      176.56% 143.54% at 100% 0%, #e0e0e010 0%, rgba(224,224,224,0) 77.6%
+    ),
+    radial-gradient(
+      36.12% 91.37% at 97.38% 0%, #e0e0e010 0%, rgba(224,224,224,0) 100%
+    ),
+    radial-gradient(
+      203.16% 254.79% at 100% -63.36%, #f0f0f020 0%, rgba(240,240,240,0) 100%
+    ),
+    linear-gradient(288deg, #e0e0e015 75.26%, rgba(224,224,224,0) 119.83%),
+    #f8f8f8;
+  opacity: 1;
+}
+
+.primaryBtnText {
+  z-index: 3;
+  color: #222;
+  text-align: center;
+  letter-spacing: -0.36px;
+  font-family: Bricolage Grotesque, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  position: relative;
+}
+
+.secondaryBtnWrap {
+  z-index: 3;
+  width: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.secondaryBtnIcon {
+  color: #1a2224;
+  flex: none;
+  width: 1.25rem;
+}
+.secondaryBtnIconMeet {
+  color: #1a2224;
+  flex: none;
+  width: 1.25rem;
+}
+
+.secondaryBtnIconWrap {
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.secondaryBtnIconMeetWrap {
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.buttonLink {
+  text-decoration: none;
+}
+
+.primaryButton:hover .primaryButtonHoverOverlay {
+  opacity: 1;
+}
+
+.primaryButton:hover .secondaryBtnIconWrap {
+  transform: translateX(25%);
+}
+.primaryButton:hover .secondaryBtnIconMeetWrap {
+  transform: translateX(0%);
+}
+
+/* Remove the keyframe animations and :not(:hover) selector */
+@keyframes translateAnimationIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes translateAnimationOut {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .primaryBtnText {
+    font-size: .775rem;
+  }
+  .secondaryBtnWrap {
+    width: 1.5rem;
+  }
+  .secondaryBtnIcon {
+    width: 1rem;
+  }
+  .primaryButtonHoverOverlay {
+    opacity: 1;
+  }
+  .secondaryBtnIconWrap {
+    transform: translateX(25%);
+  }
+  .secondaryBtnIconMeetWrap {
+    transform: translateX(0%);
+  }
+  .secondaryBtnIconMeet{
+    width: 1rem;
+  }
+}

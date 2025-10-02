@@ -1,0 +1,87 @@
+.swiper-slide {
+  height: 24rem;
+  width: 18rem;
+  padding: 1.5rem 1.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+  color: #1e1e1e;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+  border: 1px solid #f0f0f0;
+}
+
+/* Rating Section */
+.rating-section {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.rating {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.star-icon {
+  color: #f5c518;
+}
+.rating-text {
+  font-size: 0.8rem;
+  color: #666;
+}
+/* Review */
+.review {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+/* Quote Symbol */
+.quote-symbol {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+  position: absolute;
+  bottom: 5rem;
+  right: 1rem;
+}
+/* User Info */
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: #272727;
+}
+.profile-image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+.user-position {
+  font-size: 0.8rem;
+  color: #666;
+}
+.user-info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper {
+  width: 240px;
+  height: 320px;
+}

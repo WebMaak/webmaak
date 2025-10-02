@@ -1,0 +1,154 @@
+        /* .preloader {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #FAFAFA;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 99999;
+          transition: opacity 0.5s ease; 
+        }
+
+        .loader {
+          max-width: fit-content;
+          color: #cce0ff;
+          font-size: 50px;
+          font-family: Mine;
+          position: relative;
+          font-style: italic;
+          font-weight: 600;
+          text-shadow: 0 0 3px #5aa0ff;
+        }
+
+        .loader span {
+          animation: cut 2s infinite;
+          transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+
+        .loader:hover {
+          color: #e0f0ff;
+          text-shadow: 0 0 5px #5aa0ff;
+        }
+
+        .loader::after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 6px;
+          border-radius: 4px;
+          background-color: #3399ffaa;
+          top: 0px;
+          filter: blur(10px);
+          animation: scan 2s infinite;
+          left: 0;
+          z-index: 0;
+          transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+
+        .loader::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 5px;
+          border-radius: 4px;
+          background-color: #3399ff;
+          top: 0px;
+          animation: scan 2s infinite;
+          left: 0;
+          z-index: 1;
+          filter: opacity(0.95);
+          box-shadow: 0 0 10px #3399ff, 0 0 20px #66ccff;
+          transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes scan {
+          0% { top: 0px; }
+          25% { top: 54px; }
+          50% { top: 0px; }
+          75% { top: 54px; }
+        }
+
+        @keyframes cut {
+          0% { clip-path: inset(0 0 0 0); }
+          25% { clip-path: inset(100% 0 0 0); }
+          54.5% { clip-path: inset(0 0 100% 0); }
+          75% { clip-path: inset(0 0 0 0); }
+        } */
+
+        .preloader {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #FAFAFA; /* or any background */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 99999;
+          transition: opacity 0.5s ease;
+        }
+
+        .loader {
+          max-width: 25%;
+          max-height: 25%;
+          object-fit: contain; /* keep video proportions */
+        }
+
+        .loader span {
+          animation: cut 2s infinite;
+          transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+
+        .loader:hover {
+          color: #e0f0ff;
+          text-shadow: 0 0 5px #5aa0ff;
+        }
+
+        .loader::after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 6px;
+          border-radius: 4px;
+          background-color: #3399ffaa;
+          top: 0px;
+          filter: blur(10px);
+          animation: scan 2s infinite;
+          left: 0;
+          z-index: 0;
+          transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+
+        .loader::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 5px;
+          border-radius: 4px;
+          background-color: #3399ff;
+          top: 0px;
+          animation: scan 2s infinite;
+          left: 0;
+          z-index: 1;
+          filter: opacity(0.95);
+          box-shadow: 0 0 10px #3399ff, 0 0 20px #66ccff;
+          transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes scan {
+          0% { top: 0px; }
+          25% { top: 54px; }
+          50% { top: 0px; }
+          75% { top: 54px; }
+        }
+
+        @keyframes cut {
+          0% { clip-path: inset(0 0 0 0); }
+          25% { clip-path: inset(100% 0 0 0); }
+          54.5% { clip-path: inset(0 0 100% 0); }
+          75% { clip-path: inset(0 0 0 0); }
+        }

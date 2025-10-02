@@ -1,0 +1,80 @@
+.primary-button-White {
+  grid-column-gap: 0.6rem;
+  background-image: radial-gradient(
+      circle at 50% 85.69%,
+      #ffffff,
+      #51ff0000 77.6%
+    ),
+    radial-gradient(circle at 50% 111.57%, #ffffff, #72e98a00 56%),
+    radial-gradient(circle at 50% 132.04%, #ffffff, #00ff9d00 69%),
+    linear-gradient(#7ef98b00 21%, #ffffff 93.49%),
+    linear-gradient(#ffffff, #ffffff);
+  border-radius: 0.375rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 -3px #0003;
+  transition: box-shadow 0.8s ease; /* Smooth shadow animation */
+}
+
+.primary-button-White:hover {
+  box-shadow: inset 0 0 0 4px #dddddd0d, 0 20px 50px -10px #0a6ccf88,
+    inset 0 -3px #0003;
+}
+
+.primary-btn-text {
+  z-index: 3;
+  color: #222;
+  text-align: center;
+  letter-spacing: -0.36px;
+  font-family: Bricolage Grotesque, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  position: relative;
+}
+
+.primary-button-White:hover .secondary-btn_icon-wrap {
+  animation: translateAnimationIn 0.3s ease forwards;
+}
+
+.primary-button-White:not(:hover) .secondary-btn_icon-wrap {
+  animation: translateAnimationOut 0.3s ease forwards;
+}
+.secondary-btn_wrap {
+  z-index: 3;
+  width: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+.secondary-btn_icon-wrap {
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  transform: translate(-100%);
+}
+/* Slide-in Animation */
+@keyframes translateAnimationIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/* Slide-out Animation */
+@keyframes translateAnimationOut {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

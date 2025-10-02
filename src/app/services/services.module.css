@@ -1,0 +1,140 @@
+
+/* Services.module.css */
+
+.services {
+  background: #0f0f1a;
+  color: #fff;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  color: #ccc;
+}
+
+.heroButtons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.chatBtn,
+.quoteBtn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.chatBtn {
+  background: #1e1e2f;
+  color: #fff;
+}
+
+.quoteBtn {
+  background: #a855f7;
+  color: #fff;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.serviceCard {
+  background: #1a1a2e;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+}
+
+.pricing {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.priceCard {
+  background: #1a1a2e;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.priceCard h3 {
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 2rem;
+  color: #a855f7;
+  margin-bottom: 1rem;
+}
+
+.priceCard ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.priceCard li {
+  margin: 0.5rem 0;
+}
+
+.highlight {
+  border: 2px solid #a855f7;
+}
+
+.features {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.featureCard {
+  background: #1a1a2e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: #ccc;
+  transition: background 0.3s;
+}
+
+.featureCard:hover {
+  background: #2a2a3d;
+  color: #fff;
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Aarav Sharma",
+    "position": "Software Engineer",
+    "company": "TechNova Solutions",
+    "profileImage": "https://example.com/images/aarav.jpg",
+    "feedback": "Great working environment, learned a lot!"
+  },
+  {
+    "id": 2,
+    "name": "Priya Verma",
+    "position": "UI/UX Designer",
+    "company": "DesignWave",
+    "profileImage": "https://example.com/images/priya.jpg",
+    "comment": "Creative freedom here is amazing."
+  },
+  {
+    "id": 3,
+    "name": "Rohan Mehta",
+    "position": "Project Manager",
+    "company": "InnoTech Labs",
+    "profileImage": "https://example.com/images/rohan.jpg",
+    "feedback": "Efficient team collaboration and smooth project execution."
+  },
+  {
+    "id": 4,
+    "name": "Sneha Kapoor",
+    "position": "Frontend Developer",
+    "company": "CodeCrafters",
+    "profileImage": "https://example.com/images/sneha.jpg",
+    "comment": "Loved working with the latest technologies."
+  },
+  {
+    "id": 5,
+    "name": "Vikram Joshi",
+    "position": "Backend Developer",
+    "company": "CloudSphere",
+    "profileImage": "https://example.com/images/vikram.jpg",
+    "feedback": "Scalable architecture and best coding practices."
+  },
+  {
+    "id": 6,
+    "name": "Meera Nair",
+    "position": "Product Manager",
+    "company": "Visionary Apps",
+    "profileImage": "https://example.com/images/meera.jpg",
+    "comment": "User-focused development is the priority here."
+  },
+  {
+    "id": 7,
+    "name": "Kunal Patel",
+    "position": "Full Stack Developer",
+    "company": "CodeNexus",
+    "profileImage": "https://example.com/images/kunal.jpg",
+    "feedback": "Challenging yet rewarding experience."
+  },
+  {
+    "id": 8,
+    "name": "Aditi Rao",
+    "position": "Marketing Specialist",
+    "company": "GrowthHub",
+    "profileImage": "https://example.com/images/aditi.jpg",
+    "comment": "Data-driven marketing strategies bring great results."
+  },
+  {
+    "id": 9,
+    "name": "Rahul Singh",
+    "position": "DevOps Engineer",
+    "company": "CloudSphere",
+    "profileImage": "https://example.com/images/rahul.jpg",
+    "feedback": "CI/CD pipelines made deployment seamless."
+  },
+  {
+    "id": 10,
+    "name": "Neha Gupta",
+    "position": "HR Manager",
+    "company": "PeopleFirst",
+    "profileImage": "https://example.com/images/neha.jpg",
+    "comment": "Employee well-being is a top priority."
+  }
+]

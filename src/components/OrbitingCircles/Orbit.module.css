@@ -1,0 +1,72 @@
+.fullvh {
+  height: 100vh;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+.orbitsWrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: clip;
+}
+
+.planet {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  outline: 1px solid #fff;
+  overflow: clip;
+}
+
+.planet img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.orbit {
+  position: absolute;
+  bottom: 60%;
+  left: 50%;
+  transform-origin: center center;
+  translate: -50% 50%;
+  width: calc(var(--size, 1) * 100px);
+  height: calc(var(--size, 1) * 100px);
+  border-radius: 50%;
+  outline: 1px dashed #fff2;
+  animation: rotation calc(var(--duration, 1000) * 1ms) linear infinite;
+}
+
+.satellite {
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1;
+  background: #fff;
+  border-radius: 50%;
+  translate: -50% calc(var(--size, 1) * (100px / 2));
+  overflow: clip;
+  animation: rotation calc(var(--duration, 1000) * 1ms) linear infinite reverse;
+}
+
+.satellite img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes rotation {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}

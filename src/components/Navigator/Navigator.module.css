@@ -1,0 +1,163 @@
+.navigator {
+  position: fixed;
+  top: 50%;
+  right: -60px; /* start hidden */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.8rem 0.4rem;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  transition: rgihtRIGHT 0.6s ease;
+  animation: slideIn 0.8s forwards;
+  z-index: 999;
+  overflow: visible; /* allow labels to overflow */
+  box-shadow: 0 0 0 0, rgba(0, 0, 0, 0.2) 0 4px 20px -1px,
+    rgba(0, 0, 0, 0.1) 0 2px 4px -1px;
+}
+
+@keyframes slideIn {
+  to {
+    right: 20px; /* visible */
+  }
+}
+
+.navItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.char {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Label positioned outside container */
+.label {
+  position: absolute;
+  right: 40px;
+  white-space: nowrap;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(66, 201, 231, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  color: #fff;
+  padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.navItem:hover .label {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.active .char {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+  .navigator {
+    display: none;
+  }
+}
+
+/* new icons */
+
+/* ICONS */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+}
+
+.active .icon {
+  opacity: 1;
+  transform: scale(1.2);
+  color: #4169e1; /* Royal Blue accent */
+}
+
+/* NAVIGATOR - Glassy Royal Blue */
+.navigator {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 16px;
+  padding: 0.8rem 0.5rem;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+/* Light mode glass */
+.navigator.light {
+  background: rgba(65, 105, 225, 0.10); /* Royal Blue tint */
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Dark mode glass */
+.navigator.dark {
+  background: rgba(65, 105, 225, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ICON THEMES */
+.navigator.light .icon {
+  color: #408ee7;
+}
+
+.navigator.dark .icon {
+  color: #f5f5f5;
+}
+
+/* LABELS - Glassy chips */
+.label {
+  position: absolute;
+  white-space: nowrap;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(65, 105, 225, 0.35); /* Royal Blue border */
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  top: 50%;
+  transform: translateY(-50%) translateX(-10px);
+  z-index: 1000;
+}
+
+.navItem:hover .label {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+  pointer-events: auto;
+}
+
+/* Label light/dark contrast with royal blue accent */
+.label.light {
+  background: rgba(65, 105, 225, 0.85); /* Royal Blue background */
+  color: #fff;
+}
+
+.label.dark {
+  background: rgba(255, 255, 255, 0.95);
+  color: #4169e1; /* Royal Blue text */
+}

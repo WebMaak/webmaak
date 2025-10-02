@@ -1,0 +1,103 @@
+/* 
+.marquee-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.ticker {
+  padding: 1vw;
+  white-space: nowrap;
+}
+
+.ticker:first-child {
+  background-color: #00ff88;
+  transform: rotateZ(-2deg);
+  scale: 1.1;
+}
+
+.ticker:last-child {
+  background-color: #1f1f1f;
+  transform: rotateZ(2deg);
+  scale: 1.1;
+}
+
+.ticker-wrap {
+  display: flex;
+  gap: 20px;
+}
+
+.ticker-text {
+  color: #000;
+  font-size: cclamp(20px, 2.5vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.ticker:last-child .ticker-text {
+  color: #fff;
+}
+
+.accent {
+  color: #0000008f;
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.ticker:last-child .accent {
+  color: #00ff88;
+} */
+
+
+.marquee {
+  position: absolute;   /* overlay like a PNG */
+  left: 0;
+  width: 100%;
+  white-space: nowrap;
+  padding: 1vw;
+  overflow: hidden;
+  z-index: 10; /* ensures it overlays */
+}
+
+.marquee.top {
+  bottom: -40px; /* overlaps previous component */
+  background-color: #6B3E3E;
+  transform: rotateZ(-2deg) scale(1.05);
+}
+
+.marquee.bottom {
+  bottom: -140px; /* overlaps next component */
+  background-color: #8B6F5A;
+  transform: rotateZ(2deg) scale(1.05);
+}
+
+.ticker-wrap {
+  display: flex;
+  gap: 20px;
+}
+
+.ticker-text {
+  font-size: clamp(10px, 2.5vw, 20px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #fdfdfd;
+}
+
+.marquee.bottom .ticker-text {
+  color: #fffbe7;
+}
+
+.accent {
+  color: #ffe3b3;
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.marquee.bottom .accent {
+  color: #ffd280;
+}
