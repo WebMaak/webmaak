@@ -69,7 +69,7 @@ export default function Home() {
     });
 
     // Animation for .fade-in class
-    gsap.utils.toArray(".fade-in").forEach((element) => {
+    gsap.utils.toArray(".fade-in1").forEach((element) => {
       gsap.set(element, { opacity: 0, visibility: "hidden" });
 
       gsap.fromTo(
@@ -91,7 +91,7 @@ export default function Home() {
     });
 
     // Animation for .fade-up class
-    gsap.utils.toArray(".fade-up").forEach((element) => {
+    gsap.utils.toArray(".fade-up1").forEach((element) => {
       gsap.set(element, { opacity: 0, visibility: "hidden" });
 
       gsap.fromTo(
@@ -113,7 +113,7 @@ export default function Home() {
     });
 
     // Animation for .scale-up class
-    gsap.utils.toArray(".scale-up").forEach((element) => {
+    gsap.utils.toArray(".scale-up1").forEach((element) => {
       gsap.set(element, { opacity: 0, scale: 0, visibility: "hidden" });
 
       gsap.fromTo(
@@ -136,7 +136,7 @@ export default function Home() {
     });
 
     // Animate .logo_title immediately on page load
-    const logoTitle = document.querySelector(".logo_title");
+    const logoTitle = document.querySelector(".logo_title1");
     if (logoTitle) {
       gsap.set(logoTitle, { opacity: 0, visibility: "hidden" });
 
