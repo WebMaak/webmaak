@@ -24,14 +24,6 @@ function Hero() {
           className="hero-bg_gradient-lines animation"
         /> */}
         <img
-          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6624ea07d7c146d72463727e_green-line-mobile.webp"
-          loading="lazy"
-          sizes="100vw"
-          srcset="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6624ea07d7c146d72463727e_green-line-mobile-p-500.png 500w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6624ea07d7c146d72463727e_green-line-mobile-p-800.png 800w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6624ea07d7c146d72463727e_green-line-mobile-p-1080.png 1080w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6624ea07d7c146d72463727e_green-line-mobile.webp 1213w"
-          alt=""
-          className="hero-bg_gradient-lines-mobile animation"
-        />
-        <img
           src="./hero-bg.JPG"
           loading="lazy"
           sizes="100vw"

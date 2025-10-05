@@ -404,9 +404,6 @@
   .hero_tool-wraper.hide-mobile-landscape {
     display: none;
   }
-  .contact_desktop-bg{
-    display: none;
-  }
   .hero-bg_gradient-lines.animation {
     height: 100%;
   }
@@ -439,8 +436,8 @@
     padding-right: 1.25rem;
   }
   .hero_tool_icon-wrap {
-    width: 20rem;
-    height: 20rem;
+    width: 16rem;
+    height: 16rem;
   }
   .hero_tool_icon {
     width: 4rem;
@@ -473,8 +470,8 @@
     padding-right: 2rem;
   }
   .hero_tool_icon {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
   }
   .hero_tool-wraper {
     margin-top: 0;
@@ -513,10 +510,6 @@
     padding-top: 7rem;
     overflow: hidden;
   }
-  .hero_tool_icon-wrap {
-    width: 20rem !important;
-    height: 20rem !important;
-  }
   .margin-bottom.margin-medium {
     margin-bottom: 0;
   }
@@ -536,15 +529,11 @@
     max-width: 100%;
   }
   .hero_tool_icon-wrap.left {
-    left: -20%;
+    left: -15%;
   }
   .hero_tool_icon-wrap {
     flex: none;
     position: absolute;
-  }
-  .hero_tool_icon {
-    width: 6rem;
-    height: 6rem;
   }
   .hero-content {
     padding-left: 1rem;
@@ -579,7 +568,7 @@
   }
   .hero_tool-wraper.mobile {
     min-height: 6rem !important;
-    margin-top: 2rem !important;
+    margin-top: 0rem !important;
     margin-bottom: -6rem !important;
   }
   .hero_tool-wraper {
@@ -589,19 +578,15 @@
     flex: none;
     position: absolute;
   }
-  .hero_tool_icon {
-    width: 6rem;
-    height: 6rem;
-  }
   .hero_tool_icon-wrap.right {
-    right: -20%;
+    right: -15%;
   }
   .hero_tool_icon-wrap {
     flex: none;
     position: absolute;
   }
   .hero_logo {
-    margin-top: 6rem;
+    margin-top: 1rem;
   }
   .logo_title {
     font-size: 0.875rem !important;
