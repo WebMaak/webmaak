@@ -32,7 +32,7 @@
   align-items: center;
 }
 .padding-section-large-second-section {
-  padding-top: 10rem;
+  padding-top: 6rem;
   padding-bottom: 0;
 }
 .max-width-case-study.center {
@@ -189,8 +189,7 @@
   font-size: 1.2rem;
   line-height: 1.6;
 }
-.home-case-studies_tab-wrapper {
-  /* margin-top: 1.5rem; */
+.tab-wrapper {
   margin-bottom: 5.625rem;
   min-width: 100%;
 }
@@ -694,9 +693,25 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .tab-wrapper {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .home-case-studies_grid_scroll.grid_scroll {
+    grid-auto-columns: minmax(300px, 1fr); 
+  }
+  .home-case-studies_tabs-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1.5rem;
+  }
   .padding-global {
     padding-left: 1.25rem !important;
     padding-right: 1.25rem !important;
+  }
+  .home-case-studies-tab{
+    height: 2rem;
   }
   .padding-section-medium {
     padding-top: 3rem;
@@ -722,7 +737,8 @@
     height: 1.5rem !important;
   }
   .home-case-studies-card-wrapper {
-    margin-top: 3rem;
+    padding-top: 0;
+    margin-top: 0;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 3rem;
@@ -736,6 +752,13 @@
   .home-case-studies_grid.grid {
     grid-row-gap: 1.5rem;
     grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  .heading-style-h2{
+    font-size: 1.5rem;
+  }
+  .project_content{
+    grid-row-gap: 0rem;
+    align-content: normal;
   }
 }
 @media screen and (max-width: 479px) {
@@ -799,11 +822,7 @@
   }
 
   .project_image-wrapper {
-    padding: 0.6rem;
-  }
-
-  .project_content {
-    grid-row-gap: 1.1rem;
+    padding: 0rem ;
   }
 
   .project_tag {
@@ -812,8 +831,6 @@
   }
 
   .heading-style-h3.project-title {
-    text-wrap: balance;
-    text-wrap: balance;
     text-wrap: balance;
     font-size: 1.8rem;
   }

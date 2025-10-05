@@ -29,7 +29,7 @@ function SecondSection() {
               <div className="section-info-wrap case-study">
                 <div className="fadeup bro">
                   <h2 className="section-info_primary-text" >
-                    Crafted Projects{" "}
+                    Crafted Projects{" "}<br className="md:hidden block" />
                     <span className="heading-text-italic">That Speak</span><br/>Louder Than Words
                   </h2>
                 </div>
