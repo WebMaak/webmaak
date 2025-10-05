@@ -48,32 +48,33 @@ function Hero() {
           className="hero-bg_lines"
         /> */}
         <div className="hero_tool-wraper hide-mobile-landscape">
-          <HeroIconCursor hoverImage="./hover-image-it.png">
-            {({ setShowImage }) => (
-          <div className="hero_tool_icon-wrap left">
-            <img
-              src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/660496dd88e87ad9be7678f9_figma-cirle.webp"
-              loading="lazy"
-              alt=""
-              className="hero_tool_circle rotate-loop"
-            />
-            <img
-              src="./codingicons.png"
-              loading="lazy"
-              alt=""
-              className="hero_tool_icon hero_tool_icon_it"
-              onClick={() => {
-                document.getElementById("media")?.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start"
-                });
-              }}
-              onMouseEnter={() => setShowImage(true)}
-              onMouseLeave={() => setShowImage(false)}
-            />
-          </div>
+          <HeroIconCursor hoverText="MOBILE APPS • AUTOMATIONS • AI • WEB APPS •"  >
+          {({ setShowImage }) => (
+            <div className="hero_tool_icon-wrap left">
+              <img
+                src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/660496dd88e87ad9be7678f9_figma-cirle.webp"
+                loading="lazy"
+                alt=""
+                className="hero_tool_circle rotate-loop"
+              />
+              <img
+                src="./codingicons.png"
+                loading="lazy"
+                alt=""
+                className="hero_tool_icon hero_tool_icon_it"
+                onClick={() =>
+                  document.getElementById("media")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  })
+                }
+                onMouseEnter={() => setShowImage(true)}
+                onMouseLeave={() => setShowImage(false)}
+              />
+            </div>
           )}
-          </HeroIconCursor>
+        </HeroIconCursor>
+
            
           {/* <div className="hero_tool_icon-wrap right">
             <img
@@ -121,8 +122,8 @@ function Hero() {
               </div>
             )}
           </HeroIconCursor> */}
-          <HeroIconCursor hoverImage="./hover-image-media.png">
             {/* ({ setHoverText }) => ( */}
+          <HeroIconCursor hoverText="3D ANIMATION • MGFX • SFX • VIDEO EDITING •" radius={8}>
             {({ setShowImage }) => (
               <div className="hero_tool_icon-wrap right">
                 <img
@@ -142,14 +143,10 @@ function Hero() {
                   }}
                   onMouseEnter={() => setShowImage(true)}
                   onMouseLeave={() => setShowImage(false)}
-                  // onMouseEnter={() => setHoverText('View Our Media Work')} // show text
-                  // onMouseLeave={() => setHoverText('')} // hide text
                 />
               </div>
             )}
           </HeroIconCursor>
-
-
         </div>
       </div>
       <div className="hero-content">
@@ -175,6 +172,8 @@ function Hero() {
         </div>
       </div>
       <div className="hero_tool-wraper mobile">
+        <HeroIconCursor hoverText="3D ANIMATION • MGFX • SFX • VIDEO EDITING •" radius={8}>
+            {({ setShowImage }) => (
         <div className="hero_tool_icon-wrap left mobile">
           <img
             src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/660496dd88e87ad9be7678f9_figma-cirle.webp"
@@ -195,6 +194,8 @@ function Hero() {
             className="hero_tool_icon"
           />
         </div>
+        )}
+          </HeroIconCursor>
         <div className="hero_tool_icon-wrap right mobile">
           <img
             src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/660496d3ccf8e10df385076e_webflow-circle.webp"

@@ -257,44 +257,128 @@
 // }
 
 
-import { useState, useEffect } from "react";
 
-export default function HeroIconCursor({ children, hoverImage }) {
-  const [showImage, setShowImage] = useState(false);
+// Previous animation of apinning circle image
+
+// import { useState, useEffect } from "react";
+
+// export default function HeroIconCursor({ children, hoverImage }) {
+//   const [showImage, setShowImage] = useState(false);
+//   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
+//   const targetPos = useState({ x: 0, y: 0 })[0];
+
+//   useEffect(() => {
+//     const handleMouseMove = (e) => {
+//       targetPos.x = e.clientX;
+//       targetPos.y = e.clientY;
+//     };
+//     document.addEventListener("mousemove", handleMouseMove);
+
+//     const animate = () => {
+//       setTooltipPos((prev) => ({
+//         x: prev.x + (targetPos.x - prev.x) * 0.2,
+//         y: prev.y + (targetPos.y - prev.y) * 0.2,
+//       }));
+//       requestAnimationFrame(animate);
+//     };
+//     animate();
+
+//     return () => document.removeEventListener("mousemove", handleMouseMove);
+//   }, [targetPos]);
+
+//   return (
+//     <>
+//       {children({ setShowImage })}
+
+//       {showImage && hoverImage && (
+//         <div
+//           className="fixed z-[9999] pointer-events-none -translate-x-1/2 -translate-y-1/2"
+//           style={{
+//             left: tooltipPos.x,
+//             top: tooltipPos.y,
+//           }}
+//         >
+//           <style jsx>{`
+//             @keyframes slow-spin {
+//               from { transform: rotate(0deg); }
+//               to { transform: rotate(360deg); }
+//             }
+//             .slow-spin {
+//               animation: slow-spin 10s linear infinite;
+//             }
+//           `}</style>
+
+//           <img
+//             src={hoverImage}
+//             alt="cursor hover"
+//             className="object-contain w-[150px] h-[150px] slow-spin hover-image opacity-0"
+//             style={{ opacity: showImage === true ? 1 : 0 , transition: 'opacity 1s ease-in-out', filter: 'drop-shadow(0 4px 10px rgba(65, 121, 225, 0.77))' }}
+//           />
+//         </div>
+//       )}
+//     </>
+//   );
+// }
+
+
+// Spinning text
+import { useState, useEffect, useRef } from "react";
+import { SpinningText } from "./SpinningText";
+
+export default function HeroIconCursor({ children, hoverText = "Hover Me", radius = 8, fontSize = 16, className }) {
+  const [showText, setShowText] = useState(false);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
-  const targetPos = useState({ x: 0, y: 0 })[0];
+  const targetPos = useRef({ x: 0, y: 0 });
+  const [isTouch, setIsTouch] = useState(false);
 
+  // Detect if it’s a touch device
   useEffect(() => {
+    setIsTouch('ontouchstart' in window || navigator.maxTouchPoints > 0);
+    if (isTouch) {
+      setShowText(true); // Always show text on mobile
+    }
+  }, [isTouch]);
+
+  // Track cursor position for desktop
+  useEffect(() => {
+    if (isTouch) return; // No cursor tracking on mobile
+
     const handleMouseMove = (e) => {
-      targetPos.x = e.clientX;
-      targetPos.y = e.clientY;
+      targetPos.current.x = e.clientX;
+      targetPos.current.y = e.clientY;
     };
     document.addEventListener("mousemove", handleMouseMove);
 
     const animate = () => {
       setTooltipPos((prev) => ({
-        x: prev.x + (targetPos.x - prev.x) * 0.2,
-        y: prev.y + (targetPos.y - prev.y) * 0.2,
+        x: prev.x + (targetPos.current.x - prev.x) * 0.2,
+        y: prev.y + (targetPos.current.y - prev.y) * 0.2,
       }));
       requestAnimationFrame(animate);
     };
     animate();
 
     return () => document.removeEventListener("mousemove", handleMouseMove);
-  }, [targetPos]);
+  }, [isTouch]);
 
   return (
     <>
-      {children({ setShowImage })}
+      {children({ setShowImage: !isTouch ? setShowText : () => {} })}
 
-      {showImage && hoverImage && (
+      {showText && (
         <div
-          className="fixed z-[9999] pointer-events-none -translate-x-1/2 -translate-y-1/2"
+          className={`fixed z-[9999] pointer-events-none -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out ${className || ""}`}
           style={{
-            left: tooltipPos.x,
-            top: tooltipPos.y,
+            left: isTouch ? '50%' : tooltipPos.x, // center on mobile
+            top: isTouch ? '50%' : tooltipPos.y, // center on mobile
           }}
         >
+          <div className="slow-spin">
+            <SpinningText radius={radius} fontSize={fontSize}>
+              {hoverText}
+            </SpinningText>
+          </div>
+
           <style jsx>{`
             @keyframes slow-spin {
               from { transform: rotate(0deg); }
@@ -304,13 +388,6 @@ export default function HeroIconCursor({ children, hoverImage }) {
               animation: slow-spin 10s linear infinite;
             }
           `}</style>
-
-          <img
-            src={hoverImage}
-            alt="cursor hover"
-            className="object-contain w-[150px] h-[150px] slow-spin hover-image opacity-0"
-            style={{ opacity: showImage === true ? 1 : 0 , transition: 'opacity 1s ease-in-out', filter: 'drop-shadow(0 4px 10px rgba(65, 121, 225, 0.77))' }}
-          />
         </div>
       )}
     </>
