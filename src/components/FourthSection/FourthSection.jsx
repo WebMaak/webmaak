@@ -13,11 +13,12 @@ export default function FourthSection() {
 
   return (
     <section id="section5" data-theme="dark" className="section_solutions">
-      {/* <div className="container"> */}
-        {/* <div className="stars"></div> */}
-        {/* <div className="stars2"></div> */}
-        {/* <div className="stars3"></div> */}
-      {/* </div> */}
+        <div className="bg-animation">
+          <div id="stars"></div>
+          {/* <div id="stars2"></div> */}
+          {/* <div id="stars3"></div> */}
+          <div id="stars4"></div>
+        </div>  
       <div className="solution_bg hidden">
         <img
           src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66016f983e1756246a489a82_green-solution.webp"
