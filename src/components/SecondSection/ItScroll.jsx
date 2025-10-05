@@ -82,9 +82,9 @@ function HorizontalScrollCarousel() {
   
   // const x = useTransform(scrollYProgress, [0, 1], ["46%", "-46%"]);
   
-  let outputRange = ["46%", "-46%"]; 
-  if (isTablet) outputRange = ["38%", "-38%"];
-  if (isDesktop) outputRange = ["10vw", "-130vw"];
+  let outputRange = ["5%", "-730%"]; 
+  if (isTablet) outputRange = ["5%", "-460%"];
+  if (isDesktop) outputRange = ["5%", "-130%"];
 
   const x = useTransform(scrollYProgress, [0, 1], outputRange);
   const projectData = [
@@ -176,12 +176,12 @@ function HorizontalScrollCarousel() {
   return (
     <>
     <section ref={targetRef} id="it-section" className="relative h-[300vh] mb-[-6rem]">
-      <div className="sticky top-0 flex flex-col h-screen items-center w-[98.9vw] overflow-hidden">
+      <div className="sticky top-0 md:top-32 lg:top-10 flex flex-col md:h-[80vh] lg:h-screen items-center w-[98.9vw] overflow-hidden">
         <div className="max-width-case-study center mt-24">
           <div className="section-info-wrap case-study">
             <div className="fadeup bro">
               <h2 className="section-info_primary-text">
-                Building{" "}
+                Building{" "}<br className="md:hidden block" />
                 <span className="heading-text-italic">Websites & Web Apps</span> <br/>
                 That Scales Business
               </h2>
