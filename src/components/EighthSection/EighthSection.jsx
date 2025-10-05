@@ -4,6 +4,7 @@ import React from "react";
 import "./EighthSection.css";
 import BlueArrowButton from "../BlueArrowButton/BlueArrowButton";
 import { useIntersection } from "@/hooks/useIntersection";
+import WhiteArrowButtonLarge from "../WhiteArrowButtonLarge/WhiteArrowButtonLarge";
 
 function EighthSection() {
   useIntersection();
@@ -14,42 +15,26 @@ function EighthSection() {
       className="section_footer-cta"
     >
       <div className="footer-cta_bg-wrap">
-        <img
-          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/65febc8962c55d2ae0322b95_footer-cta_curve-line.webp"
-          loading="lazy"
-          sizes="100vw"
-          srcset="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/65febc8962c55d2ae0322b95_footer-cta_curve-line-p-500.png 500w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/65febc8962c55d2ae0322b95_footer-cta_curve-line.webp 654w"
-          alt=""
-          className="section-curve-line"
-        />
-        <img
-          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/65febee4bf27147c206bb8f8_green-effect-line.webp"
-          loading="lazy"
-          sizes="100vw"
-          srcset="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/65febee4bf27147c206bb8f8_green-effect-line-p-500.webp 500w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/65febee4bf27147c206bb8f8_green-effect-line-p-800.png 800w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/65febee4bf27147c206bb8f8_green-effect-line-p-1080.webp 1080w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/65febee4bf27147c206bb8f8_green-effect-line.webp 1331w"
-          alt=""
-          className="footer-cta_green-line animation"
-        />
       </div>
-      <div className="padding-global relative">
+      <div className="padding-global-footer relative">
         <div className="container-large">
           <div className="padding-section-large padding-bottom-0 footer">
             <div className="footer-cta_heading-content">
               <div className="fadeup">
                 <div split-text="true" className="section-info-wrap">
                   <h2 className="section-info_primary-text-light">
-                    Don’t settle for{" "}
+                    Not just good.{" "}
                     <span className="heading-text-italic">
-                      basic.
+                      Exceptional.
                       <br />‍
                     </span>
                     Your <span className="heading-text-italic">brand</span>{" "}
-                    deserves more
+                    deserves the best.
                   </h2>
                 </div>
               </div>
               <div className="fadeup">
-                <BlueArrowButton txt="Book a call" />
+                <WhiteArrowButtonLarge txt="Book a call" />
               </div>
             </div>
             <div className="spacer-medium"></div>
