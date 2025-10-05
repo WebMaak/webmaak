@@ -82,8 +82,8 @@ function HorizontalScrollCarousel() {
   
   // const x = useTransform(scrollYProgress, [0, 1], ["46%", "-46%"]);
   
-  let outputRange = ["46%", "-46%"]; 
-  if (isTablet) outputRange = ["38%", "-38%"];
+  let outputRange = ["5%", "-730%"]; 
+  if (isTablet) outputRange = ["5%", "-460%"];
   if (isDesktop) outputRange = ["10vw", "-130vw"];
 
   const x = useTransform(scrollYProgress, [0, 1], outputRange);
@@ -183,12 +183,12 @@ function HorizontalScrollCarousel() {
   return (
     <>
     <section ref={targetRef} data-theme="light" className="relative h-[300vh] ">
-      <div className="sticky top-0 flex flex-col h-screen items-center w-[98.9vw] overflow-hidden">
+      <div className="sticky top-10 md:top-32 lg:top-10 flex flex-col h-[85vh] lg:h-screen items-center w-[98.9vw] overflow-hidden">
         <div className="max-width-case-study center mt-24">
           <div className="section-info-wrap case-study">
             <div className="fadeup bro">
               <h2 className="section-info_primary-text">
-                Driving{" "}
+                Driving{" "}<br className="md:hidden block" />
                 <span className="heading-text-italic">Digital Marketing</span><br/>
                 that fuels growth
               </h2>
@@ -201,8 +201,8 @@ function HorizontalScrollCarousel() {
             </div>
           </div>
         </div>
-        <div className="relative mb-12 w-full flex-1">
-          <motion.div style={{ x }} className="flex h-full items-center">
+        <div className="relative mb-12 w-full flex-1 h-full">
+          <motion.div style={{ x }} className="flex items-center">
             <ProjectCards data={projectData} />
           </motion.div>
         </div>
