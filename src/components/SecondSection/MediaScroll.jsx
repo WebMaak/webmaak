@@ -83,9 +83,9 @@ function HorizontalScrollCarousel() {
   
   // const x = useTransform(scrollYProgress, [0, 1], ["46%", "-46%"]);
   
-  let outputRange = ["-46%", "46%"]; 
-  if (isTablet) outputRange = ["-38%", "38%"];
-  if (isDesktop) outputRange = ["-25vw", "10vw"];
+  let outputRange = ["-320%", "0%"]; 
+  if (isTablet) outputRange = ["-190%", "5%"];
+  if (isDesktop) outputRange = ["-20%", "5%"];
   
   const x = useTransform(scrollYProgress, [0, 1], outputRange);
   const projectData = [
@@ -134,15 +134,15 @@ function HorizontalScrollCarousel() {
 
   return (
     <>
-    <section ref={targetRef} id="media-section" data-theme="light" className="relative h-[300vh] ">
-      <div className="sticky top-0 flex flex-col h-screen items-center w-[98.9vw] overflow-hidden">
+    <section ref={targetRef} id="media-section" data-theme="light" className="relative h-[200vh] lg:h-[180vh]">
+      <div className="sticky top-5 lg:top-10 flex flex-col md:h-[85vh] lg:h-screen items-center w-[98.9vw] overflow-hidden">
         <div className="max-width-case-study center mt-24">
           <div className="section-info-wrap case-study">
             <div className="fadeup bro">
               <h2 className="section-info_primary-text">
                 From{" "}
                 <span className="heading-text-italic">Trimming Clips</span> <br/>
-                To Building <span className="heading-text-italic">3D Experiences</span> 
+                To Building<br className="md:hidden block" /> <span className="heading-text-italic">3D Experiences</span> 
               </h2>
             </div>
             <div className="fadeup">
