@@ -242,58 +242,20 @@ body {
   color: #ffffff; /* Gold text */
 }
 
-/* Scaleup Animation */
-@keyframes scaleUp {
-  from {
-    transform: scale(0);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
+/* Scaleup/Fadeup animations removed per request - make elements visible by default.
+   Keeping classes so existing markup still works but without animations. */
 
-/* 🔹 Prevents elements from showing up briefly before animation */
-.scaleup {
-  opacity: 0;
-  transform: scale(0);
-  transition: transform 0.7s ease-in, opacity 1s ease-out;
-  will-change: transform, opacity;
-  visibility: hidden; /* Hides element until animation starts */
-}
-
-/* 🔹 Animation starts when element enters viewport */
-.scaleup.visible {
-  visibility: visible; /* Makes element appear smoothly */
-  animation: scaleUp 0.7s ease-out forwards;
-}
-
-/* Fade up Animation */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 🔹 Prevents elements from showing up briefly before animation */
-.fadeup {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: transform 0.7s ease-in, opacity 1s ease-out;
-  will-change: transform, opacity;
-  visibility: hidden; /* Hides element until animation starts */
-}
-
-/* 🔹 Animation starts when element enters viewport */
-.fadeup.visible {
-  visibility: visible; /* Makes element appear smoothly */
-  animation: fadeUp 0.7s ease-out forwards;
+.scaleup,
+.fadeup,
+.fade-in1,
+.fade-up1,
+.scale-up1,
+.scale {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+  transition: none !important;
+  animation: none !important;
 }
 
 /* Common Container Styles */
@@ -587,4 +549,16 @@ body {
 
 .animate-pulse-scale {
   animation: pulse-scale 2.5s ease-in-out infinite;
+}
+
+
+/* Fadeup/scaleup styles removed here to disable animations. Classes left to preserve markup. */
+.fadeup,
+.scale,
+.fadeup.scale {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+  animation: none !important;
+  transition: none !important;
 }

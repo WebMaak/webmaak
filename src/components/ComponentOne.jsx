@@ -1,32 +1,12 @@
 "use client";
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
 
 export default function ProjectSection() {
   const marqueeRef = useRef(null);
 
   useEffect(() => {
-    // Floating card animation
-    gsap.to(".float-card", {
-      y: 15,
-      repeat: -1,
-      yoyo: true,
-      ease: "power1.inOut",
-      duration: 2,
-      stagger: 0.3,
-    });
-
-    // Marquee animation
-    let ctx = gsap.context(() => {
-      gsap.to(".marquee-track", {
-        xPercent: -50,
-        repeat: -1,
-        duration: 20,
-        ease: "linear",
-      });
-    }, marqueeRef);
-
-    return () => ctx.revert();
+    // GSAP animations removed - keep static marquee and floating cards without animation.
+    // If desired later, we can re-introduce simple CSS animations here.
   }, []);
 
   return (

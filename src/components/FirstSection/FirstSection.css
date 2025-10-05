@@ -624,6 +624,9 @@
   .section_steps {
     overflow: visible;
   }
+  .steps_card {
+    box-shadow: 0 20px 35px #00000008;
+  }
   .steps-bottom-shadow {
     display: none;
   }
@@ -829,7 +832,7 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     position: sticky;
-    top: 6rem;
+    top: 10rem;
   }
 }
 @media screen and (max-width: 479px) {
@@ -838,8 +841,6 @@
     width: 100% !important;
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
-    position: sticky !important;
-    top: 6rem;
   }
   .section-info_primary-text {
     font-size: 2rem;
