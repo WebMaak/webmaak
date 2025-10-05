@@ -199,7 +199,7 @@ const CaseStudiesIt = () => {
 
 
   return (
-    <div ref={sectionRef} className="home-case-studies_tab-wrapper">
+    <div ref={sectionRef} className="tab-wrapper">
       <div className="home-case-studies_tabs">
         <div className="home-case-studies_tabs-content">
           {tabsData.map((tab) => (

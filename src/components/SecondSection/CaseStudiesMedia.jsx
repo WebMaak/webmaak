@@ -11,8 +11,8 @@ const YouTube = dynamic(() => import("react-youtube"), { ssr: false });
 const tabsData = [
   {
     id: 0,
-    name: "Porsche",
-    logo: "./case-studies/porsche.png",
+    name: "Dtalks",
+    logo: "./case-studies/dtalks.png",
     videoId: "5LS7dZQ1pEM",
     title: "Porsche Landing Page",
     tags: ["Figma Design", "SEO Optimized", "Wordpress Development"],
@@ -21,8 +21,8 @@ const tabsData = [
   },
   {
     id: 1,
-    name: "Porsche",
-    logo: "./case-studies/porsche.png",
+    name: "Neowiz",
+    logo: "./case-studies/neowiz.png",
     videoId: "5LS7dZQ1pEM",
     title: "Porsche Landing Page",
     tags: ["Figma Design", "SEO Optimized", "Wordpress Development"],
@@ -31,8 +31,8 @@ const tabsData = [
   },
   {
     id: 2,
-    name: "Porsche",
-    logo: "./case-studies/porsche.png",
+    name: "VFS",
+    logo: "./case-studies/vfs-global.png",
     videoId: "5LS7dZQ1pEM",
     title: "Porsche Landing Page",
     tags: ["Figma Design", "SEO Optimized", "Wordpress Development"],
@@ -41,8 +41,8 @@ const tabsData = [
   },
   {
     id: 3,
-    name: "Porsche",
-    logo: "./case-studies/porsche.png",
+    name: "J&J",
+    logo: "./case-studies/j&j.png",
     videoId: "5LS7dZQ1pEM",
     title: "Porsche Landing Page",
     tags: ["Figma Design", "SEO Optimized", "Wordpress Development"],
@@ -51,8 +51,18 @@ const tabsData = [
   },
   {
     id: 4,
-    name: "Porsche",
-    logo: "./case-studies/porsche.png",
+    name: "Digitalks",
+    logo: "./case-studies/digitalks.png",
+    videoId: "5LS7dZQ1pEM",
+    title: "Porsche Landing Page",
+    tags: ["Figma Design", "SEO Optimized", "Wordpress Development"],
+    buttonText: "More on Youtube",
+    buttonLink: "https://www.youtube.com/@web-xx6hs",
+  },
+  {
+    id: 5,
+    name: "YODA",
+    logo: "./case-studies/yoda.png",
     videoId: "5LS7dZQ1pEM",
     title: "Porsche Landing Page",
     tags: ["Figma Design", "SEO Optimized", "Wordpress Development"],
@@ -199,7 +209,7 @@ const CaseStudiesIt = () => {
 
 
   return (
-    <div ref={sectionRef} className="home-case-studies_tab-wrapper">
+    <div ref={sectionRef} className="tab-wrapper">
       <div className="home-case-studies_tabs">
         <div className="home-case-studies_tabs-content">
           {tabsData.map((tab) => (

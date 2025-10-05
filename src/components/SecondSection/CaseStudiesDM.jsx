@@ -151,7 +151,7 @@ const CaseStudiesDM = () => {
   }, []);
 
   return (
-    <div className="home-case-studies_tab-wrapper">
+    <div className="tab-wrapper">
       <div className="home-case-studies_tabs">
         <div className="home-case-studies_tabs-content">
           {tabsData.map((tab) => (
