@@ -158,7 +158,7 @@ const ProjectCards = ({ data }) => {
           {data.map((project) => (
             <div
               key={project.id}
-              className="home-case-studies_item fadeup w-dyn-item md:max-w-[400px] md:max-h-[500px]"
+              className="home-case-studies_item fadeup w-dyn-item md:max-w-[400px] max-h-[500px] md:max-h-[500px]"
             >
               <a
                 href={project.link}
@@ -184,7 +184,7 @@ const ProjectCards = ({ data }) => {
                         {project.tags.map((tag, idx) => (
                           <div key={idx} role="listitem" className="collection-item w-dyn-item">
                             <div className="project_tag">
-                              <div>{tag}</div>
+                              {tag}
                             </div>
                           </div>
                         ))}
@@ -192,7 +192,7 @@ const ProjectCards = ({ data }) => {
                     </div>
 
                     <div className="project_bottom-wrap">
-                      <h3 className="heading-style-h2 project-title text-[1.9rem]">{project.title}</h3>
+                      <h3 className="heading-style-h2 project-title">{project.title}</h3>
                       <div className="wrap-content">
                         <p className="text-size-small problem_grid-content-pr w-[90%]">{project.description}</p>
                         <div className="project_round-icon">
