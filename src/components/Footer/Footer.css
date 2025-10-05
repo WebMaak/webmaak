@@ -1,5 +1,5 @@
 .section_footer {
-  background-color: #161d1f;
+  background: radial-gradient(ellipse at bottom, #090a0f 0%, #1b2735 100%);
 }
 .padding-global {
   padding-left: 2.5rem;
