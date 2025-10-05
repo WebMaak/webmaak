@@ -43,8 +43,11 @@
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
+  .marquee-content {
+    gap: 2.5rem;
+  }
   .marquee {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
   }
 }
 
