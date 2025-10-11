@@ -852,7 +852,7 @@
     padding-right: 1.5rem !important;
   }
   .section-info_primary-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 991px) {
@@ -861,6 +861,9 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .section-info_primary-text {
+    font-size: 1.5rem !important;
+  }
   .steps_card-wrapper._4 {
     z-index: 4;
     margin-top: 15rem;
