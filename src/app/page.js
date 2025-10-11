@@ -116,10 +116,10 @@ export default function Home() {
               {/* <img src="/orbiting-circle-icons/icon-5.png" alt="icon 5" /> */}
             </OrbitingCirclesPulse>
             <OrbitingCirclesPulse radius={370} duration={20} iconSize={80}>
-              <img src="/orbiting-circle-icons/2.png" alt="icon 2" />
-              <img src="/orbiting-circle-icons/3.png" alt="icon 3" />
-              <img src="/orbiting-circle-icons/2.png" alt="icon 4" />
-              <img src="/orbiting-circle-icons/3.png" alt="icon 5" />
+              <img src="/orbiting-circle-icons/4.png" alt="icon 2" />
+              <img src="/orbiting-circle-icons/5.png" alt="icon 3" />
+              <img src="/orbiting-circle-icons/6.png" alt="icon 4" />
+              <img src="/orbiting-circle-icons/7.png" alt="icon 5" />
               {/* <img src="/orbiting-circle-icons/icon-6.png" alt="icon 6" /> */}
             </OrbitingCirclesPulse>
             <OrbitingCirclesPulse
@@ -128,8 +128,8 @@ export default function Home() {
               duration={17}
               iconSize={80}
             >
-              <img src="/orbiting-circle-icons/2.png" alt="icon 2" />
-              <img src="/orbiting-circle-icons/3.png" alt="icon 3" />
+              <img src="/orbiting-circle-icons/8.png" alt="icon 2" />
+              <img src="/orbiting-circle-icons/9.png" alt="icon 3" />
               <img src="/orbiting-circle-icons/2.png" alt="icon 4" />
               <img src="/orbiting-circle-icons/3.png" alt="icon 5" />
               {/* <img src="/orbiting-circle-icons/icon-6.png" alt="icon 6" /> */}

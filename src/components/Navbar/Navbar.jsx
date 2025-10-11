@@ -6,6 +6,7 @@ import "./Navbar.css";
 import WhiteArrowButton from "../WhiteArrowButton/WhiteArrowButton";
 import ToggleMenu from "../MorphingMenu/MorphingMenu";
 import styles from "../WhiteArrowButtonLarge/WhiteArrowButtonLarge.module.css";
+import Menu from "../Menu/Menu";
 
 export default function Navbar() {
   const pathname = usePathname(); // current route
@@ -62,67 +63,13 @@ export default function Navbar() {
           <nav role="navigation" className="navbar_menu w-nav-menu">
             <div className="navbar_menu-wrap">
               <div className="navbar_menu-top">
-                <a
-                  href="/case-studies"
-                  className={`navbar_menu-item w-inline-block ${
-                    scrolled ? "scrolled" : ""
-                  }`}
-                >
-                  <div className="navbar_link" style={{ display: "none" }}>
-                    Our Work
-                  </div>
-                  <div
-                    className="mobile-menu_icon-circle"
-                    style={{ display: "none" }}
-                  >
-                    <div className="mobile-menu_icon-wrap">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="100%"
-                        viewBox="0 0 23 23"
-                        fill="none"
-                        className="mobile-menu_arrow-icon"
-                      >
-                        <path
-                          d="M8.38626 14.6143L14.9859 8.01462M14.9859 8.01462H8.38626M14.9859 8.01462V14.6143"
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="/#services"
-                  className={`navbar_menu-item w-inline-block ${
-                    scrolled ? "scrolled" : ""
-                  }`}
-                >
-                  <div className="navbar_link">Services</div>
-                  <div className="mobile-menu_icon-circle">
-                    <div className="mobile-menu_icon-wrap">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="100%"
-                        viewBox="0 0 23 23"
-                        fill="none"
-                        className="mobile-menu_arrow-icon"
-                      >
-                        <path
-                          d="M8.38626 14.6143L14.9859 8.01462M14.9859 8.01462H8.38626M14.9859 8.01462V14.6143"
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-                <a
+                {/* <a
                   href="/#reviews"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const section = document.querySelector("#reviews");
+                    section?.scrollIntoView({ behavior: "smooth" });
+                  }}
                   className={`navbar_menu-item w-inline-block ${
                     scrolled ? "scrolled" : ""
                   }`}
@@ -147,7 +94,7 @@ export default function Navbar() {
                       </svg>
                     </div>
                   </div>
-                </a>
+                </a> */}
               </div>
               <div className="mobile-menu_bottom-v2">
                 {/* <a href="/contact" className="button-link w-inline-block">
@@ -186,6 +133,7 @@ export default function Navbar() {
                     </div>
                   </button>
                 </a> */}
+
                 <WhiteArrowButton txt="Schedule a call" />
                 <WhiteArrowButton
                   txt="Chat Now"
@@ -198,6 +146,7 @@ export default function Navbar() {
             id="w-node-d5229618-d2f9-dcdf-f238-806b9aeacf98-9aeacf7f"
             className="navbar_button-wrapper"
           >
+            <Menu scrolled={scrolled} />
             <a href="/contact" className="navbar-button w-inline-block">
               <div className="navbar-btn-content">
                 <div className="button-bg-1"></div>
