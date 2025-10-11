@@ -325,7 +325,13 @@
 import { useState, useEffect, useRef } from "react";
 import { SpinningText } from "./SpinningText";
 
-export default function HeroIconCursor({ children, hoverText = "Hover Me", radius = 8, fontSize = 16, className }) {
+export default function HeroIconCursor({
+  children,
+  hoverText = "Hover Me",
+  radius = 8,
+  fontSize = 16,
+  className,
+}) {
   const [showText, setShowText] = useState(false);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
   const targetPos = useRef({ x: 0, y: 0 });
@@ -333,15 +339,12 @@ export default function HeroIconCursor({ children, hoverText = "Hover Me", radiu
 
   // Detect if it’s a touch device
   useEffect(() => {
-    setIsTouch('ontouchstart' in window || navigator.maxTouchPoints > 0);
-    if (isTouch) {
-      setShowText(true); // Always show text on mobile
-    }
-  }, [isTouch]);
+    setIsTouch("ontouchstart" in window || navigator.maxTouchPoints > 0);
+  }, []);
 
   // Track cursor position for desktop
   useEffect(() => {
-    if (isTouch) return; // No cursor tracking on mobile
+    if (isTouch) return; // Skip mouse tracking for touch devices
 
     const handleMouseMove = (e) => {
       targetPos.current.x = e.clientX;
@@ -363,14 +366,21 @@ export default function HeroIconCursor({ children, hoverText = "Hover Me", radiu
 
   return (
     <>
-      {children({ setShowImage: !isTouch ? setShowText : () => {} })}
+      {/* Pass hover controls to children */}
+      {children({
+        setShowImage: (val) => {
+          if (!isTouch) setShowText(val);
+        },
+      })}
 
       {showText && (
         <div
-          className={`fixed z-[9999] pointer-events-none -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out ${className || ""}`}
+          className={`fixed z-[9999] pointer-events-none -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out ${
+            className || ""
+          }`}
           style={{
-            left: isTouch ? '50%' : tooltipPos.x, // center on mobile
-            top: isTouch ? '50%' : tooltipPos.y, // center on mobile
+            left: tooltipPos.x,
+            top: tooltipPos.y,
           }}
         >
           <div className="slow-spin">
@@ -381,8 +391,12 @@ export default function HeroIconCursor({ children, hoverText = "Hover Me", radiu
 
           <style jsx>{`
             @keyframes slow-spin {
-              from { transform: rotate(0deg); }
-              to { transform: rotate(360deg); }
+              from {
+                transform: rotate(0deg);
+              }
+              to {
+                transform: rotate(360deg);
+              }
             }
             .slow-spin {
               animation: slow-spin 10s linear infinite;
