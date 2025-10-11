@@ -81,7 +81,7 @@ export default function Home() {
           <FifthSection />
           <div className="relative overflow-hidden h-[900px] w-full mb-20 z-10" data-theme="light">
             <OrbitingCirclesPulse radius={0} duration={0} iconSize={250}>
-              <img src="/orbiting-circle-icons/center-icon.png" alt="icon 2" className="mr-[-72px] mb-[-72px]" />
+              <img src="/orbiting-circle-icons/center-icon.png" alt="icon 2" className="mr-[-72px] mb-[-72px] animate-pulse-scale" />
             </OrbitingCirclesPulse>
             <OrbitingCirclesPulse radius={220} reverse duration={25} iconSize={80} > 
               <img src="/orbiting-circle-icons/icon-2.png" alt="icon 2" />

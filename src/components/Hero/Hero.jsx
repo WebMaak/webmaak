@@ -55,7 +55,7 @@ function Hero() {
                 alt=""
                 className="hero_tool_icon hero_tool_icon_it"
                 onClick={() =>
-                  document.getElementById("media")?.scrollIntoView({
+                  document.getElementById("it")?.scrollIntoView({
                     behavior: "smooth",
                     block: "start",
                   })
@@ -128,7 +128,7 @@ function Hero() {
                   alt=""
                   className="hero_tool_icon hero_tool_icon_media"
                   onClick={() => {
-                    document.getElementById("it")?.scrollIntoView({
+                    document.getElementById("media")?.scrollIntoView({
                       behavior: "smooth",
                       block: "start",
                     });

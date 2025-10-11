@@ -49,8 +49,14 @@ export default function Navbar() {
            <img
              src="/main-logo/site-logo.png"
               alt="Site Logo"
-              className="navbar_logo"
-              style={{ width: 'auto', height: '25px' }} 
+              className={`navbar_logo ${scrolled ? "hidden" : ""}`}
+              style={{ width: 'auto', height: '25px' }}
+            />
+           <img
+             src="/main-logo/favicon.png"
+              alt="Site Logo"
+              className={`navbar_logo ${scrolled ? "" : "hidden"}`}
+              style={{ width: 'auto', height: '30px' }}
             />
           </a>
 
@@ -113,50 +119,6 @@ export default function Navbar() {
                 <a href="/#reviews" className={`navbar_menu-item w-inline-block ${scrolled ? "scrolled" : ""}`}>
                   <div className="navbar_link">Reviews</div>
                   <div className="mobile-menu_icon-circle">
-                    <div className="mobile-menu_icon-wrap">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="100%"
-                        viewBox="0 0 23 23"
-                        fill="none"
-                        className="mobile-menu_arrow-icon"
-                      >
-                        <path
-                          d="M8.38626 14.6143L14.9859 8.01462M14.9859 8.01462H8.38626M14.9859 8.01462V14.6143"
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-                <a href="/blog" className={`navbar_menu-item w-inline-block ${scrolled ? "scrolled" : ""}`}>
-                  <div className="navbar_link" style={{ display: 'none' }} >Blogs</div>
-                  <div className="mobile-menu_icon-circle" style={{ display: 'none' }}>
-                    <div className="mobile-menu_icon-wrap">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="100%"
-                        viewBox="0 0 23 23"
-                        fill="none"
-                        className="mobile-menu_arrow-icon"
-                      >
-                        <path
-                          d="M8.38626 14.6143L14.9859 8.01462M14.9859 8.01462H8.38626M14.9859 8.01462V14.6143"
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-                <a href="/schema" className={`navbar_menu-item w-inline-block ${scrolled ? "scrolled" : ""}`}>
-                  <div className="navbar_link" style={{ display: 'none' }}>Schema App</div>
-                  <div className="mobile-menu_icon-circle" style={{ display: 'none' }}>
                     <div className="mobile-menu_icon-wrap">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

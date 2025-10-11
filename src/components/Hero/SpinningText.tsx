@@ -92,12 +92,14 @@ export function SpinningText({
           aria-hidden="true"
           key={`${index}-${letter}`}
           variants={itemVariants}
-          className="absolute left-1/2 top-1/2 inline-block text-white font-semibold uppercase"
+          className="absolute hidden lg:block left-1/2 top-1/2 text-white font-semibold uppercase"
             style={{
               "--index": index,
               "--total": letters.length,
               "--radius": radius,
-              fontSize: '1.5rem', 
+              fontSize: '1rem',
+              letterSpacing: '2px',
+              fontWeight: 400,
               textShadow: '0 4px 10px rgba(65, 121, 225, 0.77)', 
               transform: `
                 translate(-50%, -50%)
