@@ -262,24 +262,24 @@
   transition: all 0.7s ease-in-out;
 }
 .steps-card_lottie_1 img {
-  width: 250px;   
+  width: 250px;
   bottom: -20px;
   right: -20px;
 }
 .steps-card_lottie_2 img {
-  width: 100px;  
+  width: 100px;
   top: -60px;
-  right: 30px; 
+  right: 30px;
 }
 .steps-card_lottie_3 img {
   width: 100px;
   top: 0px;
-  right: 40px;  
+  right: 40px;
 }
 .steps-card_lottie_4 img {
   width: 30px;
   top: 0px;
-  left: 40px;    
+  left: 40px;
 }
 .steps_card-wrapper:hover .steps-card_lottie_1 img {
   width: 280px;
@@ -287,19 +287,19 @@
   right: -17px;
 }
 .steps_card-wrapper:hover .steps-card_lottie_2 img {
-  width: 250px;  
+  width: 250px;
   top: -110px;
-  right: -25px; 
+  right: -25px;
 }
 .steps_card-wrapper:hover .steps-card_lottie_3 img {
   width: 50px;
   top: -40px;
-  right: 40px;    
+  right: 40px;
 }
 .steps_card-wrapper:hover .steps-card_lottie_4 img {
   width: 8px;
   top: 10px;
-  left: 40px;     
+  left: 40px;
 }
 
 /* Card 2 image animation */
@@ -320,22 +320,22 @@
 .steps-card_2_2 img {
   width: 200px;
   bottom: -100px;
-  right: 100px;  
+  right: 100px;
 }
 .steps-card_2_3 img {
   width: 300px;
-  top: 20px; 
-  right: -180px;  
+  top: 20px;
+  right: -180px;
 }
 .steps-card_2_4 img {
   width: 200px;
-  top: -50px; 
-  right: 100px; 
+  top: -50px;
+  right: 100px;
 }
 .steps-card_2_5 img {
   width: 20px;
-  top: 65px; 
-  right: 210px; 
+  top: 65px;
+  right: 210px;
 }
 .steps_card-wrapper:hover .steps-card_2_1 img {
   width: 300px;
@@ -345,22 +345,22 @@
 .steps_card-wrapper:hover .steps-card_2_2 img {
   width: 200px;
   bottom: -100px;
-  right: 80px;  
+  right: 80px;
 }
 .steps_card-wrapper:hover .steps-card_2_3 img {
- width: 300px;
-  top: 30px; 
-  right: -180px;  
+  width: 300px;
+  top: 30px;
+  right: -180px;
 }
 .steps_card-wrapper:hover .steps-card_2_4 img {
   width: 200px;
-  top: -50px; 
-  right: 80px; 
+  top: -50px;
+  right: 80px;
 }
 .steps_card-wrapper:hover .steps-card_2_5 img {
   width: 20px;
-  top: 50px; 
-  right: 215px; 
+  top: 50px;
+  right: 215px;
 }
 
 /* Card 3 image animation */
@@ -382,12 +382,12 @@
 }
 .steps-card_3_2 img {
   width: 50px;
-  top: 10px; 
+  top: 10px;
   left: 120px;
 }
 .steps-card_3_3 img {
   width: 150px;
-  top: 100px; 
+  top: 100px;
   right: 40px;
 }
 .steps-card_3_4 img {
@@ -397,17 +397,17 @@
 }
 .steps-card_3_5 img {
   width: 70px;
-  bottom: 30px; 
+  bottom: 30px;
   left: 50px;
 }
 .steps-card_3_6 img {
   width: 100px;
-  top: 30px; 
+  top: 30px;
   left: 20px;
 }
 .steps-card_3_7 img {
   width: 70px;
-  top: 30px; 
+  top: 30px;
   right: 30px;
 }
 .steps_card-wrapper:hover .steps-card_3_1 img {
@@ -415,26 +415,26 @@
   right: 10px;
 }
 .steps_card-wrapper:hover .steps-card_3_2 img {
-  top: 0px; 
-  right: 50px; 
+  top: 0px;
+  right: 50px;
 }
 .steps_card-wrapper:hover .steps-card_3_3 img {
-  top: 120px; 
+  top: 120px;
   right: 40px;
 }
 .steps_card-wrapper:hover .steps-card_3_4 img {
   left: 10px;
 }
 .steps_card-wrapper:hover .steps-card_3_5 img {
-  bottom: 30px; 
+  bottom: 30px;
   left: 30px;
 }
 .steps_card-wrapper:hover .steps-card_3_6 img {
   top: 20px;
-  left: 10px; 
+  left: 10px;
 }
 .steps_card-wrapper:hover .steps-card_3_7 img {
-  top: -40px; 
+  top: -40px;
 }
 
 /* Card 4 images animation */
@@ -458,12 +458,12 @@
 }
 .steps-card_4_3 img {
   width: 240px;
-  bottom: -70px; 
+  bottom: -70px;
   right: 10px;
 }
 .steps-card_4_4 img {
   width: 30px;
-  top: 0px; 
+  top: 0px;
   left: 40px;
 }
 .steps_card-wrapper:hover .steps-card_4_1 img {
@@ -474,21 +474,20 @@
 .steps_card-wrapper:hover .steps-card_4_2 img {
   width: 232px;
   bottom: -10px;
-  left: -25px; 
+  left: -25px;
 }
 .steps_card-wrapper:hover .steps-card_4_3 img {
   width: 234px;
-  bottom: -64px; 
-  right: 8px; 
+  bottom: -64px;
+  right: 8px;
 }
 .steps_card-wrapper:hover .steps-card_4_4 img {
   width: 30px;
-  top: 0px; 
-  left: 25px;  
+  top: 0px;
+  left: 25px;
 }
 
 /* Card Image animation end */
-
 
 .steps_card_image_line {
   z-index: -1;
@@ -502,10 +501,10 @@
   bottom: -60px;
 }
 .steps_card-wrapper:nth-child(3) .steps_card_image_line {
-  bottom: 55px; 
+  bottom: 55px;
 }
 .steps_card-wrapper:nth-child(4) .steps_card_image_line {
-  bottom: -70px; 
+  bottom: -70px;
 }
 .steps_card-lines-holder {
   z-index: 0;
@@ -618,6 +617,16 @@
   transform: translateY(6px); /* Move text down slightly */
 }
 
+@media screen and (max-width: 1024px) {
+  .section-info_primary-text {
+    font-size: 2rem !important;
+  }
+  .sub-title-border {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
 
 /* Media queries */
 @media screen and (max-width: 767px) {
