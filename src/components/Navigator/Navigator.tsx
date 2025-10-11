@@ -5,18 +5,31 @@ import {
   Home,
   Lightbulb,
   PlayCircle,
-  Layers,
+  Clapperboard,
+  Code2,
   Grid,
   Cpu,
+  Presentation,
+  ChartNoAxesCombined,
   Link as LinkIcon,
 } from "lucide-react";
 
 const sections = [
   { id: "section1", icon: <Home size={20} />, label: "Home" },
   { id: "section2", icon: <Lightbulb size={24} />, label: "Ideas" },
-  { id: "section3", icon: <PlayCircle size={20} />, label: "Ads / Videos" },
-  { id: "section4", icon: <Layers size={20} />, label: "Services" },
-  { id: "section5", icon: <Grid size={20} />, label: "Projects" },
+  {
+    id: "section3",
+    icon: <Presentation size={20} />,
+    label: "Crafted Projects",
+  },
+  { id: "section4", icon: <Code2 size={20} />, label: "IT / Web Apps" },
+  { id: "section8", icon: <Clapperboard size={20} />, label: "Media / Edits" },
+  {
+    id: "section9",
+    icon: <ChartNoAxesCombined size={20} />,
+    label: "Marketing / Ads",
+  },
+  { id: "section5", icon: <Grid size={20} />, label: "Solutions" },
   { id: "section6", icon: <Cpu size={20} />, label: "Tech Stack" },
   { id: "section7", icon: <LinkIcon size={20} />, label: "Footer" },
 ];
@@ -35,9 +48,8 @@ export default function Navigator() {
           let theme: "light" | "dark" = "light";
 
           // Select all sections with id or data-theme
-          const allSections = document.querySelectorAll<HTMLElement>(
-            "[id], [data-theme]"
-          );
+          const allSections =
+            document.querySelectorAll<HTMLElement>("[id], [data-theme]");
 
           allSections.forEach((el) => {
             const rect = el.getBoundingClientRect();
@@ -78,8 +90,7 @@ export default function Navigator() {
     const el = document.getElementById(id);
     if (id === "section1") {
       window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-    else if (el) {
+    } else if (el) {
       el.scrollIntoView({ behavior: "smooth" });
     }
     setActiveSection(id);
@@ -98,9 +109,9 @@ export default function Navigator() {
           >
             <div className={styles.icon}>{sec.icon}</div>
             <span
-              className={`${styles.label} ${
-                isActive ? styles.showLabel : ""
-              } ${styles[activeTheme]}`}
+              className={`${styles.label} ${isActive ? styles.showLabel : ""} ${
+                styles[activeTheme]
+              }`}
             >
               {sec.label}
             </span>

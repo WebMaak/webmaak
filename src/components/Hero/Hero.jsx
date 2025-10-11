@@ -55,7 +55,7 @@ function Hero() {
                 alt=""
                 className="hero_tool_icon hero_tool_icon_it"
                 onClick={() =>
-                  document.getElementById("it")?.scrollIntoView({
+                  document.getElementById("it-section")?.scrollIntoView({
                     behavior: "smooth",
                     block: "start",
                   })
@@ -128,7 +128,7 @@ function Hero() {
                   alt=""
                   className="hero_tool_icon hero_tool_icon_media"
                   onClick={() => {
-                    document.getElementById("media")?.scrollIntoView({
+                    document.getElementById("media-section")?.scrollIntoView({
                       behavior: "smooth",
                       block: "start",
                     });
@@ -174,11 +174,11 @@ function Hero() {
             className="hero_tool_circle rotate-loop"
           />
           <img
-            src="./keyframeicons.png"
+            src="./codingicons.png"
             loading="lazy"
             alt=""
             onClick={() => {
-                document.getElementById("it-section")?.scrollIntoView({
+                document.getElementById("media-section")?.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
               });
@@ -198,11 +198,11 @@ function Hero() {
             className="hero_tool_circle rotate-loop"
           />
           <img
-            src="./codingicons.png"
+            src="./keyframeicons.png"
             loading="lazy"
             alt=""
             onClick={() => {
-              document.getElementById("media-section")?.scrollIntoView({
+              document.getElementById("it-section")?.scrollIntoView({
                 behavior: "smooth",
                 block: "start"
               });

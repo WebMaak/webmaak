@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import "./Navbar.css";
 import WhiteArrowButton from "../WhiteArrowButton/WhiteArrowButton";
-import ToggleMenu from '../MorphingMenu/MorphingMenu';
+import ToggleMenu from "../MorphingMenu/MorphingMenu";
 import styles from "../WhiteArrowButtonLarge/WhiteArrowButtonLarge.module.css";
 
 export default function Navbar() {
@@ -30,7 +30,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
 
-
   return (
     <header className={`section_navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-embed w-embed"></div>
@@ -41,37 +40,41 @@ export default function Navbar() {
       >
         <div className="navbar_container">
           <a
-           href="/"
-           aria-current="page"
-           className="navbar_logo-link w-nav-brand w--current"
-           aria-label="home"
+            href="/"
+            aria-current="page"
+            className="navbar_logo-link w-nav-brand w--current"
+            aria-label="home"
           >
-           <img
-             src="/main-logo/site-logo.png"
+            <img
+              src="/main-logo/site-logo.png"
               alt="Site Logo"
               className={`navbar_logo ${scrolled ? "hidden" : ""}`}
-              style={{ width: 'auto', height: '25px' }}
+              style={{ width: "auto", height: "25px" }}
             />
-           <img
-             src="/main-logo/favicon.png"
+            <img
+              src="/main-logo/favicon.png"
               alt="Site Logo"
               className={`navbar_logo ${scrolled ? "" : "hidden"}`}
-              style={{ width: 'auto', height: '30px' }}
+              style={{ width: "auto", height: "30px" }}
             />
           </a>
 
-          <nav
-            role="navigation"
-            className="navbar_menu w-nav-menu"
-          >
+          <nav role="navigation" className="navbar_menu w-nav-menu">
             <div className="navbar_menu-wrap">
               <div className="navbar_menu-top">
                 <a
                   href="/case-studies"
-                  className={`navbar_menu-item w-inline-block ${scrolled ? "scrolled" : ""}`}
+                  className={`navbar_menu-item w-inline-block ${
+                    scrolled ? "scrolled" : ""
+                  }`}
                 >
-                  <div className="navbar_link" style={{ display: 'none' }} >Our Work</div>
-                  <div className="mobile-menu_icon-circle" style={{ display: 'none' }}>
+                  <div className="navbar_link" style={{ display: "none" }}>
+                    Our Work
+                  </div>
+                  <div
+                    className="mobile-menu_icon-circle"
+                    style={{ display: "none" }}
+                  >
                     <div className="mobile-menu_icon-wrap">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +96,9 @@ export default function Navbar() {
                 </a>
                 <a
                   href="/#services"
-                  className={`navbar_menu-item w-inline-block ${scrolled ? "scrolled" : ""}`}
+                  className={`navbar_menu-item w-inline-block ${
+                    scrolled ? "scrolled" : ""
+                  }`}
                 >
                   <div className="navbar_link">Services</div>
                   <div className="mobile-menu_icon-circle">
@@ -116,7 +121,12 @@ export default function Navbar() {
                     </div>
                   </div>
                 </a>
-                <a href="/#reviews" className={`navbar_menu-item w-inline-block ${scrolled ? "scrolled" : ""}`}>
+                <a
+                  href="/#reviews"
+                  className={`navbar_menu-item w-inline-block ${
+                    scrolled ? "scrolled" : ""
+                  }`}
+                >
                   <div className="navbar_link">Reviews</div>
                   <div className="mobile-menu_icon-circle">
                     <div className="mobile-menu_icon-wrap">
@@ -177,7 +187,10 @@ export default function Navbar() {
                   </button>
                 </a> */}
                 <WhiteArrowButton txt="Schedule a call" />
-                <WhiteArrowButton txt="Chat Now" href="https://api.whatsapp.com/send?phone=916289972924&text=Hi%2C%20Webmaak%20team%2C%20Let%27s%20discuss%20about%20project" />
+                <WhiteArrowButton
+                  txt="Chat Now"
+                  href="https://api.whatsapp.com/send?phone=916289972924&text=Hi%2C%20Webmaak%20team%2C%20Let%27s%20discuss%20about%20project"
+                />
               </div>
             </div>
           </nav>
@@ -185,10 +198,7 @@ export default function Navbar() {
             id="w-node-d5229618-d2f9-dcdf-f238-806b9aeacf98-9aeacf7f"
             className="navbar_button-wrapper"
           >
-            <a
-              href="/contact"
-              className="navbar-button w-inline-block"
-            >
+            <a href="/contact" className="navbar-button w-inline-block">
               <div className="navbar-btn-content">
                 <div className="button-bg-1"></div>
                 <div className="button-bg-2"></div>
@@ -208,7 +218,8 @@ export default function Navbar() {
                       preserveAspectRatio="xMidYMid meet"
                     />
                   </svg>
-                  Schedule a call</div>
+                  Schedule a call
+                </div>
               </div>
               <div className="navbar-light-wrap">
                 <div className="navbar-light"></div>
@@ -219,8 +230,14 @@ export default function Navbar() {
               target="_blank"
               className="navbar-button w-inline-block chat-now"
             >
-              <div className={`navbar-btn-content-white ${ scrolled ?"scrolled":''}`}>
-                <div className={`button-bg-1-white ${scrolled?'scrolled': ''}`}></div>
+              <div
+                className={`navbar-btn-content-white ${
+                  scrolled ? "scrolled" : ""
+                }`}
+              >
+                <div
+                  className={`button-bg-1-white ${scrolled ? "scrolled" : ""}`}
+                ></div>
                 <div className="button-bg-2"></div>
                 <div className="navbar_text_white flex items-center gap-3">
                   <svg
@@ -238,35 +255,38 @@ export default function Navbar() {
                       preserveAspectRatio="xMidYMid meet"
                     />
                   </svg>
-
-                  Chat Now</div>
+                  Chat Now
+                </div>
               </div>
-              <div className={`navbar-light-wrap-white ${scrolled?"scrolled":''}`}>
+              <div
+                className={`navbar-light-wrap-white ${
+                  scrolled ? "scrolled" : ""
+                }`}
+              >
                 <div className="navbar-light"></div>
               </div>
             </a>
-            <ToggleMenu 
-                  className="hidden"
-                  menuItems={[
-                    { label: 'Home', href: '/' },
-                    { label: 'About', href: '/about' },
-                    { label: 'Services', href: '/services' },
-                    { label: 'Contact', href: '/contact' }
-                  ]}
-                  onMenuItemClick={(item) => {
-                    // Your navigation logic here
-                    console.log('Navigate to:', item.href);
-                    // router.push(item.href) for Next.js
-                  }}
-                  onButtonClick={() => {
-                    // Your button action
-                    console.log('Get Started clicked');
-                  }}
-                  buttonText="Get Started"
-                  menuTitle="Menu"
-                />
-            
-            
+            <ToggleMenu
+              className="hidden"
+              menuItems={[
+                { label: "Home", href: "/" },
+                { label: "About", href: "/about" },
+                { label: "Services", href: "/services" },
+                { label: "Contact", href: "/contact" },
+              ]}
+              onMenuItemClick={(item) => {
+                // Your navigation logic here
+                console.log("Navigate to:", item.href);
+                // router.push(item.href) for Next.js
+              }}
+              onButtonClick={() => {
+                // Your button action
+                console.log("Get Started clicked");
+              }}
+              buttonText="Get Started"
+              menuTitle="Menu"
+            />
+
             <div className="navbar_light-bgtn-wrap">
               <a
                 href="/contact"
@@ -412,10 +432,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        <div
-          className="w-nav-overlay"
-          id="w-nav-overlay-0"
-        ></div>
+        <div className="w-nav-overlay" id="w-nav-overlay-0"></div>
       </div>
     </header>
   );

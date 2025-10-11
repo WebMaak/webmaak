@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import "./FirstSection.css";
@@ -30,15 +30,15 @@ function FirstSection() {
                 <div className="section-info-wrap">
                   <div className="fadeup">
                     <h2 className="section-info_primary-text">
-                      How We Bring Your <br/> Ideas{" "}
-                      <span className="heading-text-italic">
-                       to Life
-                      </span>
+                      How We Bring Your <br /> Ideas{" "}
+                      <span className="heading-text-italic">to Life</span>
                     </h2>
                   </div>
                   <div className="fadeup">
                     <p className="sub-title-border background-color-white">
-                      At WebMaak Creative, we believe great work starts with a great partnership. Here’s how we roll—from your first  "What if..." to your final "Wow!".
+                      At WebMaak Creative, we believe great work starts with a
+                      great partnership. Here’s how we roll—from your first
+                      "What if..." to your final "Wow!".
                     </p>
                   </div>
                 </div>
@@ -48,51 +48,62 @@ function FirstSection() {
               <div className="steps_wrapper">
                 <div className="steps_card-wrapper _1">
                   <div className="fade-up-desktop fadeup">
-                    <div
-                      className="steps_card"
-                    >
+                    <div className="steps_card">
                       <p className="steps_card_step-number">01</p>
                       <div className="steps_card_content">
-                        <svg 
-                          xmlns="http://www.w3.org/2000/svg" 
-                          viewBox="0 0 24 25" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          strokeWidth="2" 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round" 
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 25"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           className="steps_card_icon "
                         >
-                          <path d="M10.1 2.182a10 10 0 0 1 3.8 0"/>
-                          <path d="M13.9 21.818a10 10 0 0 1-3.8 0"/>
-                          <path d="M17.609 3.72a10 10 0 0 1 2.69 2.7"/>
-                          <path d="M2.182 13.9a10 10 0 0 1 0-3.8"/>
-                          <path d="M20.28 17.61a10 10 0 0 1-2.7 2.69"/>
-                          <path d="M21.818 10.1a10 10 0 0 1 0 3.8"/>
-                          <path d="M3.721 6.391a10 10 0 0 1 2.7-2.69"/>
-                          <path d="m6.163 21.117-2.906.85a1 1 0 0 1-1.236-1.169l.965-2.98"/>
+                          <path d="M10.1 2.182a10 10 0 0 1 3.8 0" />
+                          <path d="M13.9 21.818a10 10 0 0 1-3.8 0" />
+                          <path d="M17.609 3.72a10 10 0 0 1 2.69 2.7" />
+                          <path d="M2.182 13.9a10 10 0 0 1 0-3.8" />
+                          <path d="M20.28 17.61a10 10 0 0 1-2.7 2.69" />
+                          <path d="M21.818 10.1a10 10 0 0 1 0 3.8" />
+                          <path d="M3.721 6.391a10 10 0 0 1 2.7-2.69" />
+                          <path d="m6.163 21.117-2.906.85a1 1 0 0 1-1.236-1.169l.965-2.98" />
                         </svg>
 
                         <div className="steps_card_title">
                           Let’s Chat & Dream
                           <br />
                           <span className="text-style-secondary steps">
-                            Your ideas guide us. We listen first, then craft with purpose.
+                            Your ideas guide us. We listen first, then craft
+                            with purpose.
                           </span>
                         </div>
                       </div>
                       <div className="steps_card_image-wrap">
                         <div class="steps-card_lottie_1 figma">
-                          <img src="/card-images/g-meet-1.png" alt="Google Meet" />
+                          <img
+                            src="/card-images/g-meet-1.png"
+                            alt="Google Meet"
+                          />
                         </div>
                         <div class="steps-card_lottie_2 figma">
-                          <img src="/card-images/g-meet-2.png" alt="Google Meet" />
+                          <img
+                            src="/card-images/g-meet-2.png"
+                            alt="Google Meet"
+                          />
                         </div>
                         <div class="steps-card_lottie_3 figma">
-                          <img src="/card-images/g-meet-3.png" alt="Google Meet" />
+                          <img
+                            src="/card-images/g-meet-3.png"
+                            alt="Google Meet"
+                          />
                         </div>
                         <div class="steps-card_lottie_4 figma">
-                          <img src="https://www.gstatic.com/marketing-cms/assets/images/25/5f/c96350b5427fbfdbdef268515872/google-chat.webp" alt="Google Meet" />
+                          <img
+                            src="https://www.gstatic.com/marketing-cms/assets/images/25/5f/c96350b5427fbfdbdef268515872/google-chat.webp"
+                            alt="Google Meet"
+                          />
                         </div>
 
                         <svg
@@ -108,8 +119,6 @@ function FirstSection() {
                             stroke-dasharray="4 6"
                           ></path>
                         </svg>
-                        
-                        
                       </div>
                       <div className="steps_card-lines-holder">
                         <div className="steps_card-green-line _1 card_1_color"></div>
@@ -134,7 +143,7 @@ function FirstSection() {
                           viewBox="0 0 24 25"
                           fill="none"
                           stroke="currentColor"
-                          strokeWidth='2'
+                          strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           className="steps_card_icon"
@@ -149,7 +158,8 @@ function FirstSection() {
                           Create & Collaborate
                           <br />
                           <span className="text-style-secondary steps">
-                            Ideas come alive here. We design, develop, and edit while keeping you involved at every stage.
+                            Ideas come alive here. We design, develop, and edit
+                            while keeping you involved at every stage.
                           </span>
                         </div>
                       </div>
@@ -161,19 +171,34 @@ function FirstSection() {
                       </div>
                       <div className="steps_card_image-wrap">
                         <div class="steps-card_2_1 figma">
-                          <img src="/card-images/figma-1.png" alt="figma logo" />
+                          <img
+                            src="/card-images/figma-1.png"
+                            alt="figma logo"
+                          />
                         </div>
                         <div class="steps-card_2_2 figma">
-                          <img src="/card-images/figma-2.png" alt="figma logo" />
+                          <img
+                            src="/card-images/figma-2.png"
+                            alt="figma logo"
+                          />
                         </div>
                         <div class="steps-card_2_3 figma">
-                          <img src="/card-images/figma-3.png" alt="figma logo" />
+                          <img
+                            src="/card-images/figma-3.png"
+                            alt="figma logo"
+                          />
                         </div>
                         <div class="steps-card_2_4 figma">
-                          <img src="/card-images/figma-4.png" alt="figma logo" />
+                          <img
+                            src="/card-images/figma-4.png"
+                            alt="figma logo"
+                          />
                         </div>
                         <div class="steps-card_2_5 figma">
-                          <img src="/card-images/figma-logo.png" alt="figma logo" />
+                          <img
+                            src="/card-images/figma-logo.png"
+                            alt="figma logo"
+                          />
                         </div>
                         <div
                           data-is-ix2-target="1"
@@ -187,8 +212,7 @@ function FirstSection() {
                           data-renderer="svg"
                           data-duration="0"
                           data-ix2-initial-state="0"
-                        >
-                        </div>
+                        ></div>
                         <img
                           src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6602aac33505d7363704674c_webfllow-line.svg"
                           loading="lazy"
@@ -231,36 +255,57 @@ function FirstSection() {
                           <path d="M12.2 6.2 11 5" />
                         </svg>
 
-                        
                         <div className="steps_card_title">
                           Refine & Shine
                           <br />
                           <span className="text-style-secondary steps">
-                            From good to great, we fine-tune until it feels just right.
+                            From good to great, we fine-tune until it feels just
+                            right.
                           </span>
                         </div>
                       </div>
                       <div className="steps_card_image-wrap lottie-wrap">
                         <div class="steps-card_3_1 figma">
-                          <img src="/card-images/card-35.png" alt="Google Meet" />
+                          <img
+                            src="/card-images/card-35.png"
+                            alt="Google Meet"
+                          />
                         </div>
                         <div class="steps-card_3_2 figma">
-                          <img src="/card-images/card-36.png" alt="Google Meet" />
+                          <img
+                            src="/card-images/card-36.png"
+                            alt="Google Meet"
+                          />
                         </div>
                         <div class="steps-card_3_3 figma">
-                          <img src="/card-images/card-37.png" alt="Google Meet" />
+                          <img
+                            src="/card-images/card-37.png"
+                            alt="Google Meet"
+                          />
                         </div>
                         <div class="steps-card_3_4 figma">
-                          <img src="/card-images/card-39.png" alt="Google Meet" />
+                          <img
+                            src="/card-images/card-39.png"
+                            alt="Google Meet"
+                          />
                         </div>
                         <div class="steps-card_3_5 figma">
-                          <img src="/card-images/card-38.png" alt="Google Meet" />
+                          <img
+                            src="/card-images/card-38.png"
+                            alt="Google Meet"
+                          />
                         </div>
                         <div class="steps-card_3_6 figma">
-                          <img src="/card-images/card-34.png" alt="Google Meet" />
+                          <img
+                            src="/card-images/card-34.png"
+                            alt="Google Meet"
+                          />
                         </div>
                         <div class="steps-card_3_7 figma">
-                          <img src="/card-images/card-32.png" alt="Google Meet" />
+                          <img
+                            src="/card-images/card-32.png"
+                            alt="Google Meet"
+                          />
                         </div>
                         <div
                           data-is-ix2-target="1"
@@ -268,8 +313,7 @@ function FirstSection() {
                           data-w-id="5e2c88b6-1b3c-54ae-83c4-259ade95117a"
                           data-animation-type="lottie"
                           data-src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/661506759b4e4e53e9e2732a_speed.lottie"
-                        >
-                        </div>
+                        ></div>
                         <img
                           src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6602ab114b5e6ae4a3622a0f_seo-line.svg"
                           loading="lazy"
@@ -321,31 +365,40 @@ function FirstSection() {
                           <path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z" />
                         </svg>
 
-
                         <div className="steps_card_title">
                           Launch & Celebrate
                           <br />‍
                           <span className="text-style-secondary steps">
-                            Launch day made simple — we manage the details so you can focus on celebrating and scaling.
+                            Launch day made simple — we manage the details so
+                            you can focus on celebrating and scaling.
                           </span>
                         </div>
                       </div>
                       <div className="steps_card_image-wrap lottie-wrap">
                         <div class="steps-card_4_1 figma">
-                          <img src="/card-images/vs-code-1.png" alt="Google Meet" />
+                          <img
+                            src="/card-images/vs-code-1.png"
+                            alt="Google Meet"
+                          />
                         </div>
                         <div class="steps-card_4_2 figma">
-                          <img src="/card-images/vs-code-2.png" alt="Google Meet" />
+                          <img
+                            src="/card-images/vs-code-2.png"
+                            alt="Google Meet"
+                          />
                         </div>
                         <div class="steps-card_4_3 figma">
-                          <img src="/card-images/vs-code-3.png" alt="Google Meet" />
+                          <img
+                            src="/card-images/vs-code-3.png"
+                            alt="Google Meet"
+                          />
                         </div>
                         <div class="steps-card_4_4 vscode">
-                        <img 
-                          src="/card-images/vs-code-logo.png" 
-                          alt="VS Code" 
-                        />
-                      </div>
+                          <img
+                            src="/card-images/vs-code-logo.png"
+                            alt="VS Code"
+                          />
+                        </div>
 
                         <div
                           data-is-ix2-target="1"
@@ -360,8 +413,7 @@ function FirstSection() {
                           data-default-duration="6.016666666666667"
                           data-duration="0"
                           data-ix2-initial-state="99"
-                        >
-                        </div>
+                        ></div>
                         <img
                           src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6602ab4e6da9e63e10db2cc9_publish-line.svg"
                           loading="lazy"

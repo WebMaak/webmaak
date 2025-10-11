@@ -16,20 +16,75 @@ import { useState } from "react";
 
 function SeventhSection() {
   const swiperRef = useRef(null);
-
+  const testimonials = [
+    {
+      name: "Emma Watson",
+      role: "Marketing Director",
+      company: "Logoipsum",
+      image: "/loader.gif",
+      companyLogo: "/marquee-logo/21.png",
+      quote:
+        "Since Noda.ai, our team meetings are 90% more productive. It's like having a genius scribe who never misses a thing.",
+    },
+    {
+      name: "John Doe",
+      role: "Product Manager",
+      company: "TechCorp",
+      image: "/loader.gif",
+      companyLogo: "/marquee-logo/21.png",
+      quote:
+        "Noda.ai has completely changed the way we organize our projects. It's incredibly efficient.",
+    },
+    {
+      name: "Alice Smith",
+      role: "CEO",
+      company: "InnovateX",
+      image: "/loader.gif",
+      companyLogo: "/marquee-logo/21.png",
+      quote:
+        "Our productivity skyrocketed after using Noda.ai. It's like having an extra team member.",
+    },
+    {
+      name: "Michael Brown",
+      role: "Designer",
+      company: "CreativesHub",
+      image: "/loader.gif",
+      companyLogo: "/marquee-logo/21.png",
+      quote:
+        "I can't imagine going back to our old workflow. Noda.ai makes collaboration effortless.",
+    },
+    {
+      name: "Sophia Lee",
+      role: "Engineer",
+      company: "DevWorks",
+      image: "/loader.gif",
+      companyLogo: "/marquee-logo/21.png",
+      quote:
+        "The clarity and organization Noda.ai provides is unmatched. It's a game changer.",
+    },
+  ];
   const [cards, setCards] = useState(cardData);
   return (
-    <section id="reviews" className="section_testimonial">
+    <section id="reviews" className="section_testimonial relative">
+      <div class="absolute bottom-[0%] left-[15%] w-[30rem] h-[30rem] bg-pink-300 rounded-full filter blur-[7.5rem] opacity-40 "></div>
+      <div class="absolute top-[15%] right-[12%] w-[40rem] h-[40rem] bg-purple-300 rounded-full filter blur-[10rem] opacity-50 "></div>
       <div className="padding-global">
-        <div className="container-large">
+        <div className="container-large" style={{ maxWidth: "100%" }}>
           <div className="padding-section-large padding-bottom-testimonial">
             <div className="testimonail_heading">
-              <div className="fadeup">
+              <div className="fadeup text-center">
                 <h2 className="section-info_primary-text">
                   What our clients think
                   <span className="heading-text-italic"> about</span>
                   our work
                 </h2>
+              </div>
+              <div className="fadeup">
+                <p className="sub-title-border mx-auto background-color-white mt-2 w-[55%] text-center">
+                  At WebMaak Creative, we believe great work starts with a great
+                  partnership. Here’s how we roll—from your first "What if..."
+                  to your final "Wow!".
+                </p>
               </div>
             </div>
             <div className="fadeup">
@@ -61,11 +116,57 @@ function SeventhSection() {
                 modules={[EffectCoverflow, Navigation]} // Add Navigation module
                 className="swiper-container "
               >
-                <SwiperSlide className="slide-content red">1</SwiperSlide>
-                <SwiperSlide className="slide-content blue">2</SwiperSlide>
-                <SwiperSlide className="slide-content green">3</SwiperSlide>
-                <SwiperSlide className="slide-content yellow">4</SwiperSlide>
-                <SwiperSlide className="slide-content purple">5</SwiperSlide>
+                {testimonials.map((t, index) => (
+                  <SwiperSlide key={index} className="slide-content my-auto">
+                    <div className="testimonail_card flex flex-col lg:flex-row bg-white border border-gray-200 rounded-2xl shadow-[0_26px_46.5px_-22px_rgba(0,0,0,0.3)] overflow-hidden w-full h-full relative">
+                      {/* Testimonial Content */}
+                      <div className="testimonail_content flex flex-col justify-between items-start w-full  p-12">
+                        <div className="testimonial_text text-black text-2xl font-normal leading-snug mb-6">
+                          "{t.quote}"
+                        </div>
+
+                        <div className="testimonial-details flex flex-col justify-center items-start ">
+                          <p className="testimonial_client-name mb-0 text-black text-md font-semibold">
+                            {t.name}
+                          </p>
+                          <p className="testimonial_designation text-gray-900 text-xl font-normal">
+                            {t.role}, {t.company}
+                          </p>
+                          {t.companyLogo && (
+                            <img
+                              src={t.companyLogo}
+                              alt={`${t.company} Logo`}
+                              className="testimonial_company-logo h-10 mt-2"
+                            />
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Testimonial Image */}
+                      <div className="testimonail_image relative w-full lg:w-2/5 flex justify-end items-end">
+                        <img
+                          src={t.image}
+                          alt={t.name}
+                          className="testimonial_person-image rounded-full object-cover w-40 h-40 shadow-xl ring-4 ring-white"
+                        />
+                        {t.bgIcon && (
+                          <img
+                            src={t.bgIcon}
+                            alt=""
+                            className="testimonial-image-back-icon absolute top-0 left-0"
+                          />
+                        )}
+                        {t.bgMobile && (
+                          <img
+                            src={t.bgMobile}
+                            alt=""
+                            className="testimonial-image-back-mobile absolute bottom-0 right-0"
+                          />
+                        )}
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
           </div>
@@ -78,8 +179,11 @@ function SeventhSection() {
 export default SeventhSection;
 
 // Bottom little card carousel
-{/* comment goes above section */}
-{/* <div className="fadeup">
+{
+  /* comment goes above section */
+}
+{
+  /* <div className="fadeup">
         <div className="result-wraperr">
           <div className="result-wrapper_list w-dyn-list">
             <div
@@ -374,4 +478,5 @@ export default SeventhSection;
           </div>
           <div className="loop-move-left"></div>
         </div>
-      </div> */}
+      </div> */
+}

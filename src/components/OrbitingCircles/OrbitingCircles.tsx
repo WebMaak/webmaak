@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { cn } from "../../app/lib/utils";
 import React from "react";
 import Image from "next/image";
@@ -62,9 +62,9 @@ export function OrbitingCircles({
               } as React.CSSProperties
             }
             className={cn(
-              `absolute flex size-[var(--icon-size)] transform-gpu animate-orbit items-center justify-center rounded-full`,
+              `absolute flex size-[var(--icon-size)]  transform-gpu animate-orbit items-center justify-center rounded-full`,
               { "[animation-direction:reverse]": reverse },
-              className,
+              className
             )}
             {...props}
           >

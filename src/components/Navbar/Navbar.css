@@ -6,22 +6,24 @@
   right: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0);
-  transition: 
-    background-color 0.5s ease-in-out, 
-    width 0.5s ease-in-out, 
-    box-shadow 0.5s ease-in-out,
-    border-bottom-left-radius 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out, width 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out, border-bottom-left-radius 0.5s ease-in-out;
   box-shadow: none;
   border-bottom-left-radius: 60px;
 }
 
 .section_navbar.scrolled {
   background-color: rgb(255, 255, 255);
-  box-shadow: -2px 5px 37px 9px rgba(0,0,0,0.12);
+  box-shadow: -2px 5px 37px 9px rgba(0, 0, 0, 0.12);
   width: 54%;
-  border-bottom-left-radius: 60px; 
+  border-bottom-left-radius: 60px;
 }
 
+@media (max-width: 1024px) {
+  .section_navbar.scrolled {
+    border-bottom-left-radius: 40px;
+  }
+}
 
 .navbar_component {
   background-color: #0000;
@@ -6615,7 +6617,7 @@ a {
 
   .mobile-menu_bottom-v2 {
     display: flex;
-  gap: 1rem;
+    gap: 1rem;
   }
 
   .footer-heading {
@@ -7662,32 +7664,35 @@ a {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: conic-gradient(from var(--angle), transparent 80%, rgb(255, 255, 255));
+  background: conic-gradient(
+    from var(--angle),
+    transparent 80%,
+    rgb(255, 255, 255)
+  );
   animation: 3s spin linear infinite;
   transition: background 0.3s ease-in-out;
 }
-.navbar-btn-content-white.scrolled {  
+.navbar-btn-content-white.scrolled {
   background-color: rgba(242, 237, 227, 0.949);
 }
 .navbar-light-wrap-white.scrolled::after,
 .navbar-light-wrap-white.scrolled::before {
-background: conic-gradient(from var(--angle), transparent 80%, hsl(40, 100%, 71%));
+  background: conic-gradient(
+    from var(--angle),
+    transparent 80%,
+    hsl(40, 100%, 71%)
+  );
 }
 .button-bg-1-white.scrolled {
   z-index: 0;
   border-radius: 0.375rem;
   position: absolute;
   inset: 0;
-  background: 
-    radial-gradient(
+  background: radial-gradient(
       100% 200% at 50% 100%,
       rgba(255, 255, 255, 0.2),
       transparent
     ),
-    radial-gradient(
-      50% 100% at 50% 100%,
-      rgba(255, 255, 255, 0.1),
-      transparent
-    ),
+    radial-gradient(50% 100% at 50% 100%, rgba(255, 255, 255, 0.1), transparent),
     rgba(242, 237, 227, 0.95); /* Base color matches your page bg */
 }

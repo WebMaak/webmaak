@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./orbiting.module.css"
+import styles from "./orbiting.module.css";
 
 export interface OrbitingCirclesPulseProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -58,47 +58,53 @@ export function OrbitingCirclesPulse({
 
         return (
           <>
-          <div
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "80px",
-              zIndex: 20,
-              background: "linear-gradient(to bottom, rgba(255,255,255,0.2), transparent)",
-            }}
-          ></div>
-          <div
-            style={{
-              position: "absolute",
-              bottom: 0,
-              left: 0,
-              width: "100%",
-              height: "80px",
-              zIndex: 20,
-              background: "linear-gradient(to top, rgba(255,255,255,0.2), transparent)",
-            }}
-          ></div>
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "80px",
+                zIndex: 20,
+                background:
+                  "linear-gradient(to bottom, rgba(255,255,255,0.2), transparent)",
+              }}
+            ></div>
+            <div
+              style={{
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+                width: "100%",
+                height: "80px",
+                zIndex: 20,
+                background:
+                  "linear-gradient(to top, rgba(255,255,255,0.2), transparent)",
+              }}
+            ></div>
 
-          <div
-            style={{
-              width: `${iconSize}px`,
-              height: `${iconSize}px`,
-              "--duration": `${calculatedDuration}s`,
-              "--radius": `${radius}px`,
-              "--angle": `${angle}deg`,
-              animationDirection: reverse ? "reverse" : "normal",
-              position: "absolute",
-              top: "47.5%",
-              left: "49%",
-              transform: "translate(-50%, -50%)", // centers the orbit origin
-            } as React.CSSProperties}
-            className={`flex items-center justify-center rounded-full animate-orbit  ${className || ""}`}
-            {...props}
-          >
-            {child}
-          </div>
+            <div
+              style={
+                {
+                  width: `${iconSize}px`,
+                  height: `${iconSize}px`,
+                  "--duration": `${calculatedDuration}s`,
+                  "--radius": `${radius}px`,
+                  "--angle": `${angle}deg`,
+                  animationDirection: reverse ? "reverse" : "normal",
+                  position: "absolute",
+                  top: "47.5%",
+                  left: "49%",
+                  transform: "translate(-50%, -50%)", // centers the orbit origin
+                } as React.CSSProperties
+              }
+              className={`flex items-center justify-center rounded-full animate-orbit  ${
+                className || ""
+              }`}
+              {...props}
+            >
+              {child}
+            </div>
           </>
         );
       })}
