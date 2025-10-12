@@ -34,6 +34,21 @@ body.menu-toggled > #menu {
   pointer-events: all;
 }
 
+/* Allow scrolling on mobile devices when menu is open */
+@media (max-width: 768px) {
+  body.menu-toggled > #menu {
+    pointer-events: none;
+  }
+  
+  body.menu-toggled > #menu > #menu-links {
+    pointer-events: all;
+  }
+  
+  body.menu-toggled > #menu > #menu-toggle {
+    pointer-events: all;
+  }
+}
+
 body.menu-toggled > #menu > #menu-toggle > span:first-of-type {
   transform: translate3d(0px, 8px, 0px) rotate(45deg);
 }

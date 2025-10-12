@@ -32,8 +32,8 @@ export default function Menu({ scrolled }: MenuProps) {
     if (mounted && portalRoot) {
       portalRoot.classList.toggle("menu-toggled", menuOpen);
       
-      // Pause or resume Lenis smooth scrolling
-      if (window.lenis) {
+      // Pause or resume Lenis smooth scrolling (only on desktop)
+      if (window.lenis && window.innerWidth > 768) {
         if (menuOpen) {
           window.lenis.stop();
         } else {
