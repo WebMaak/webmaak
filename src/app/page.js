@@ -145,7 +145,7 @@ export default function Home() {
             </OrbitingCirclesPulse>
           </div>
           <div id="section7" data-theme="dark">
-            <SeventhSection />
+            {/* <SeventhSection /> */}
             <EighthSection />
             <Footer />
           </div>
