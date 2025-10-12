@@ -1394,7 +1394,7 @@ a {
     background-color: #0000;
     border-radius: 3.75rem;
     padding: 0;
-    display: block;
+    /* display: block; */
   }
 
   .mobile-menu-btn.w--open {

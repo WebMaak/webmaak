@@ -279,8 +279,9 @@ export default function Navbar() {
                 </button>
               </a>
             </div>
+            {/* Toggle mobile Menu */}
             <div
-              className="mobile-menu-btn w-nav-button w--open"
+              className="mobile-menu-btn w-nav-button w--open hidden"
               aria-label="menu"
               role="button"
               tabindex="0"

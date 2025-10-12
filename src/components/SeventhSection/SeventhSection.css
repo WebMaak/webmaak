@@ -82,7 +82,6 @@ h2 {
   justify-content: space-between;
   align-self: stretch;
   align-items: stretch;
-  min-width: 14.5rem;
   margin-right: 2rem;
   display: flex;
 }
@@ -195,4 +194,24 @@ h2 {
   ) {
   opacity: 0;
   pointer-events: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .slide-content {
+    width: 500px !important;
+    height: 600px !important;
+  }
+  .swiper-container {
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    width: 275px !important;
+    height: 500px !important;
+  }
+  .swiper-container {
+    height: 100vh;
+  }
 }

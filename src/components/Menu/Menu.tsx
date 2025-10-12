@@ -5,6 +5,13 @@ import { createPortal } from "react-dom";
 import "./Menu.css";
 import { MenuIcon } from "lucide-react";
 
+// Extend Window interface to include Lenis
+declare global {
+  interface Window {
+    lenis?: any;
+  }
+}
+
 interface MenuProps {
   scrolled: boolean; // parent passes true/false
 }
@@ -20,10 +27,19 @@ export default function Menu({ scrolled }: MenuProps) {
     setPortalRoot(document.body);
   }, []);
 
-  // Toggle body class when menu opens
+  // Toggle body class when menu opens and pause/resume smooth scrolling
   useEffect(() => {
     if (mounted && portalRoot) {
       portalRoot.classList.toggle("menu-toggled", menuOpen);
+      
+      // Pause or resume Lenis smooth scrolling
+      if (window.lenis) {
+        if (menuOpen) {
+          window.lenis.stop();
+        } else {
+          window.lenis.start();
+        }
+      }
     }
   }, [menuOpen, mounted, portalRoot]);
 
@@ -57,7 +73,16 @@ export default function Menu({ scrolled }: MenuProps) {
           onClick={() => {
             const section = document.querySelector("#section4");
             if (section) {
-              section.scrollIntoView({ behavior: "smooth" });
+              // Resume Lenis, scroll to section, then close menu
+              if (window.lenis) {
+                window.lenis.start();
+                window.lenis.scrollTo(section, { 
+                  duration: 1.5,
+                  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                });
+              } else {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
             }
             setMenuOpen(!menuOpen);
           }}
@@ -72,7 +97,16 @@ export default function Menu({ scrolled }: MenuProps) {
           onClick={() => {
             const section = document.querySelector("#reviews");
             if (section) {
-              section.scrollIntoView({ behavior: "smooth" });
+              // Resume Lenis, scroll to section, then close menu
+              if (window.lenis) {
+                window.lenis.start();
+                window.lenis.scrollTo(section, { 
+                  duration: 1.5,
+                  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                });
+              } else {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
             }
             setMenuOpen(!menuOpen);
           }}

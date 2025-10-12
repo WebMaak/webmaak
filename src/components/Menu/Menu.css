@@ -104,12 +104,11 @@ body.menu-toggled > #menu > #menu-links > .link:nth-of-type(4) {
 #menu {
   height: 100vh;
   left: 0px;
-  overflow: hidden;
   pointer-events: none;
   position: fixed;
   top: 0px;
   width: 100vw;
-  z-index: 100;
+  z-index: 9998;
 }
 
 #menu > #menu-toggle {
@@ -485,3 +484,4 @@ body.menu-toggled > .meta-link > span {
     z-index: 100;
   }
 } */
+
