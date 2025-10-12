@@ -16,21 +16,22 @@ import { useState } from "react";
 
 function SeventhSection() {
   const swiperRef = useRef(null);
+  const [showFull, setShowFull] = useState(false);
   const testimonials = [
     {
       name: "Emma Watson",
       role: "Marketing Director",
       company: "Logoipsum",
-      image: "/loader.gif",
+      image: "/clients/client1.png",
       companyLogo: "/marquee-logo/21.png",
       quote:
-        "Since Noda.ai, our team meetings are 90% more productive. It's like having a genius scribe who never misses a thing.",
+        "Working with Aman and his team has been one of the smoothest professional experiences I’ve had. He is incredibly polite and respectful in all interactions, which makes collaboration effortless. He understands the brief quickly and with great clarity, and what really stands out is his cooperative nature, there’s never any ego, only a willingness to make the work better. No matter how many changes or modifications are needed, he handles them with patience and positivity. Beyond his attitude, his editing skills are exceptional, he has an eye for detail and creativity that consistently elevates the final output. I’ve never once been disappointed, and I can confidently say he’s someone you can trust to deliver not just quality work, but also a pleasant working relationship. I’d wholeheartedly recommend him to anyone looking for a skilled and dependable editor.",
     },
     {
       name: "John Doe",
       role: "Product Manager",
       company: "TechCorp",
-      image: "/loader.gif",
+      image: "/clients/client5.png",
       companyLogo: "/marquee-logo/21.png",
       quote:
         "Noda.ai has completely changed the way we organize our projects. It's incredibly efficient.",
@@ -56,16 +57,19 @@ function SeventhSection() {
     {
       name: "Sophia Lee",
       role: "Engineer",
-      company: "DevWorks",
+      company: "D-Talks",
       image: "/loader.gif",
       companyLogo: "/marquee-logo/21.png",
       quote:
-        "The clarity and organization Noda.ai provides is unmatched. It's a game changer.",
+        "We have been working with the team for over a year and the team has been nothing short of supportive. It is not only the most quality output, but it is at a very optimum price. Working with them in the long run has been very convenient, not just for me. It has given me an understanding of what the brand is about as well. And create content eventually which is very strong and with very minimal edits. It is truly a partnership more than working with a vendor..",
     },
   ];
   const [cards, setCards] = useState(cardData);
   return (
-    <section id="reviews" className="section_testimonial relative max-w-[100vw] overflow-hidden ">
+    <section
+      id="reviews"
+      className="section_testimonial relative max-w-[100vw] overflow-hidden "
+    >
       <div class="absolute bottom-[0%] left-[15%] w-[30rem] h-[30rem] bg-pink-300 rounded-full filter blur-[7.5rem] opacity-40 "></div>
       <div class="absolute top-[15%] right-[12%] w-[40rem] h-[40rem] bg-purple-300 rounded-full filter blur-[10rem] opacity-50 "></div>
       <div className="padding-global">
@@ -80,7 +84,7 @@ function SeventhSection() {
                 </h2>
               </div>
               <div className="fadeup">
-                <p className="sub-title-border mx-auto background-color-white mt-2 w-[55%] text-center">
+                <p className="sub-title-border mx-auto background-color-white mt-2 w-[90%] lg:w-[55%] text-center">
                   At WebMaak Creative, we believe great work starts with a great
                   partnership. Here’s how we roll—from your first "What if..."
                   to your final "Wow!".
@@ -118,53 +122,7 @@ function SeventhSection() {
               >
                 {testimonials.map((t, index) => (
                   <SwiperSlide key={index} className="slide-content my-auto">
-                    <div className="testimonail_card flex flex-col lg:flex-row bg-white border border-gray-200 rounded-2xl shadow-[0_26px_46.5px_-22px_rgba(0,0,0,0.3)] overflow-hidden w-full h-full relative">
-                      {/* Testimonial Content */}
-                      <div className="testimonail_content flex flex-col justify-between items-start w-full  p-12">
-                        <div className="testimonial_text text-black text-2xl font-normal leading-snug mb-6">
-                          "{t.quote}"
-                        </div>
-
-                        <div className="testimonial-details flex flex-col justify-center items-start ">
-                          <p className="testimonial_client-name mb-0 text-black text-md font-semibold">
-                            {t.name}
-                          </p>
-                          <p className="testimonial_designation text-gray-900 text-xl font-normal">
-                            {t.role}, {t.company}
-                          </p>
-                          {t.companyLogo && (
-                            <img
-                              src={t.companyLogo}
-                              alt={`${t.company} Logo`}
-                              className="testimonial_company-logo h-10 mt-2"
-                            />
-                          )}
-                        </div>
-                      </div>
-
-                      {/* Testimonial Image */}
-                      <div className="testimonail_image relative w-full lg:w-2/5 flex justify-end items-end">
-                        <img
-                          src={t.image}
-                          alt={t.name}
-                          className="testimonial_person-image rounded-full object-cover w-40 h-40 shadow-xl ring-4 ring-white"
-                        />
-                        {t.bgIcon && (
-                          <img
-                            src={t.bgIcon}
-                            alt=""
-                            className="testimonial-image-back-icon absolute top-0 left-0"
-                          />
-                        )}
-                        {t.bgMobile && (
-                          <img
-                            src={t.bgMobile}
-                            alt=""
-                            className="testimonial-image-back-mobile absolute bottom-0 right-0"
-                          />
-                        )}
-                      </div>
-                    </div>
+                    <TestimonialText testimonial={t} />
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -177,306 +135,71 @@ function SeventhSection() {
 }
 
 export default SeventhSection;
+function TestimonialText({ testimonial }) {
+  const [showFull, setShowFull] = useState(false);
 
-// Bottom little card carousel
-{
-  /* comment goes above section */
-}
-{
-  /* <div className="fadeup">
-        <div className="result-wraperr">
-          <div className="result-wrapper_list w-dyn-list">
-            <div
-              role="list"
-              className="marquee-pane loop-move-left w-dyn-items"
-            >
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">25%</div>
-                    <p className="result_card-info_description">
-                      Growth in enterprise leads
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/66547b7d336c6f9e33398c4a_Hyper.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">42%</div>
-                    <p className="result_card-info_description">
-                      Increase in Signup requests
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/65feb1f495074243de013633_SuperrpEts.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">41%</div>
-                    <p className="result_card-info_description">
-                      Increase in monthly leads
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/65feb1b352ec61fb427b6aad_Saral.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">45%</div>
-                    <p className="result_card-info_description">
-                      Increase in website conversions
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/65feb1182989eb1e11c4c0bb_Skuad.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">34%</div>
-                    <p className="result_card-info_description">
-                      Increase in conversion rate
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/65feb0ad1f430c2501fb6aa1_Richpanel.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
+  return (
+    <div className="w-full">
+      {!showFull ? (
+        // Full card view
+        <div className="testimonail_card flex flex-col lg:flex-row bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden w-full lg:h-[400px] md:h-[650px] relative">
+          {/* Testimonial Content */}
+          <div className="testimonail_content flex flex-col justify-between items-start w-full p-12">
+            <p className="testimonial_text text-black text-[0.1rem] md:text-[1.3rem] font-normal leading-snug md:mb-6 mb-0">
+              "
+              {testimonial.quote.length > 170
+                ? testimonial.quote.slice(0, 170) + "..."
+                : testimonial.quote}
+              "
+              <br />
+              <span
+                className="cursor-pointer leading-normal font-normal text-[0.775rem] md:text-lg bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 bg-clip-text text-transparent hover:underline"
+                onClick={() => setShowFull(true)}
+              >
+                Read More
+              </span>
+            </p>
+
+            <div className="testimonial-details flex flex-col justify-center items-start">
+              <p className="testimonial_client-name mb-0 text-black text-md font-semibold">
+                {testimonial.name}
+              </p>
+              <p className="testimonial_designation mb-0 text-gray-900 text-xl font-normal">
+                {testimonial.role}, {testimonial.company}
+              </p>
+              {testimonial.companyLogo && (
+                <img
+                  src={testimonial.companyLogo}
+                  alt={`${testimonial.company} Logo`}
+                  className="testimonial_company-logo h-10 mt-0 md:mt-2"
+                />
+              )}
             </div>
           </div>
-          <div className="result-wrapper_list w-dyn-list">
-            <div
-              role="list"
-              className="marquee-pane loop-move-left w-dyn-items"
-            >
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">25%</div>
-                    <p className="result_card-info_description">
-                      Growth in enterprise leads
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/66547b7d336c6f9e33398c4a_Hyper.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">42%</div>
-                    <p className="result_card-info_description">
-                      Increase in Signup requests
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/65feb1f495074243de013633_SuperrpEts.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">41%</div>
-                    <p className="result_card-info_description">
-                      Increase in monthly leads
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/65feb1b352ec61fb427b6aad_Saral.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">45%</div>
-                    <p className="result_card-info_description">
-                      Increase in website conversions
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/65feb1182989eb1e11c4c0bb_Skuad.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">34%</div>
-                    <p className="result_card-info_description">
-                      Increase in conversion rate
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/65feb0ad1f430c2501fb6aa1_Richpanel.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+
+          {/* Testimonial Image */}
+          <div className="testimonail_image relative w-[60%] flex justify-end items-end">
+            <img
+              src={testimonial.image}
+              alt={testimonial.name}
+              className="testimonial_person-image object-cover w-full shadow-xl ring-4 ring-white"
+            />
           </div>
-          <div className="result-wrapper_list w-dyn-list">
-            <div
-              role="list"
-              className="marquee-pane loop-move-left w-dyn-items"
-            >
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">25%</div>
-                    <p className="result_card-info_description">
-                      Growth in enterprise leads
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/66547b7d336c6f9e33398c4a_Hyper.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">42%</div>
-                    <p className="result_card-info_description">
-                      Increase in Signup requests
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/65feb1f495074243de013633_SuperrpEts.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">41%</div>
-                    <p className="result_card-info_description">
-                      Increase in monthly leads
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/65feb1b352ec61fb427b6aad_Saral.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">45%</div>
-                    <p className="result_card-info_description">
-                      Increase in website conversions
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/65feb1182989eb1e11c4c0bb_Skuad.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div role="listitem" className="result-card_item w-dyn-item">
-                <div className="result_card">
-                  <div className="result_card-info">
-                    <div className="result_card-info_number">34%</div>
-                    <p className="result_card-info_description">
-                      Increase in conversion rate
-                    </p>
-                  </div>
-                  <div className="result_card-logo">
-                    <img
-                      src="https://cdn.prod.website-files.com/65fcbd0ae4a1ef93ccf63114/65feb0ad1f430c2501fb6aa1_Richpanel.svg"
-                      loading="eager"
-                      alt="client logo"
-                      className="result_card-info_logo"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="loop-move-left"></div>
         </div>
-      </div> */
+      ) : (
+        // Quote-only view
+        <div className="bg-white border border-gray-200 rounded-2xl shadow-lg p-4 md:p-12 w-full lg:h-[400px] md:h-[650px] flex flex-col items-start justify-center">
+          <p className="text-black md:text-[1.1rem] text-[0.775rem] font-normal leading-tight text-center">
+            "{testimonial.quote}"
+          </p>
+          <span
+            className="cursor-pointer leading-normal font-normal text-[0.775rem] md:text-lg bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 bg-clip-text text-transparent hover:underline mx-auto"
+            onClick={() => setShowFull(false)}
+          >
+            Read less
+          </span>
+        </div>
+      )}
+    </div>
+  );
 }
