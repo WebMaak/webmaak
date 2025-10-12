@@ -460,7 +460,7 @@ body.menu-toggled > .meta-link > span {
   transition: color 600ms;
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   #menu {
     height: 100vh;
     left: 0px;
@@ -484,4 +484,4 @@ body.menu-toggled > .meta-link > span {
     width: 100vw;
     z-index: 100;
   }
-}
+} */
