@@ -32,16 +32,28 @@ export default function Menu({ scrolled }: MenuProps) {
     if (mounted && portalRoot) {
       portalRoot.classList.toggle("menu-toggled", menuOpen);
       
-      // Pause or resume Lenis smooth scrolling (only on desktop)
-      if (window.lenis && window.innerWidth > 768) {
+      // Pause or resume Lenis smooth scrolling
+      if (window.lenis) {
         if (menuOpen) {
           window.lenis.stop();
         } else {
+          // Ensure Lenis is started when menu closes
           window.lenis.start();
         }
       }
     }
   }, [menuOpen, mounted, portalRoot]);
+
+  // Ensure Lenis is properly initialized on mobile
+  useEffect(() => {
+    if (mounted && window.lenis) {
+      // Force start Lenis on mobile to ensure scrolling works
+      const isMobile = window.innerWidth <= 768;
+      if (isMobile && !menuOpen) {
+        window.lenis.start();
+      }
+    }
+  }, [mounted, menuOpen]);
 
   const menuContent = (
     <div id="menu">

@@ -21,9 +21,9 @@
 body {
   background-color: var(--background-light);
   margin: 0px;
-  overflow: hidden;
   padding: 0px;
   transition: background-color 600ms;
+  touch-action: pan-y;
 }
 
 body.menu-toggled {
@@ -32,21 +32,6 @@ body.menu-toggled {
 
 body.menu-toggled > #menu {
   pointer-events: all;
-}
-
-/* Allow scrolling on mobile devices when menu is open */
-@media (max-width: 768px) {
-  body.menu-toggled > #menu {
-    pointer-events: none;
-  }
-  
-  body.menu-toggled > #menu > #menu-links {
-    pointer-events: all;
-  }
-  
-  body.menu-toggled > #menu > #menu-toggle {
-    pointer-events: all;
-  }
 }
 
 body.menu-toggled > #menu > #menu-toggle > span:first-of-type {
