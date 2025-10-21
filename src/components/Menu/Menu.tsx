@@ -58,7 +58,9 @@ export default function Menu({ scrolled }: MenuProps) {
   const menuContent = (
     <div id="menu">
       <div id="menu-gradient"></div>
-      <div id="menu-gradient-blur"></div>
+      <div id="menu-gradient-blur">
+        <div id="stars-bg"></div>
+      </div>
 
       <div id="menu-arcs-wrapper">
         <svg id="menu-arcs">
