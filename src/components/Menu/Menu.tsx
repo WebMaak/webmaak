@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import "./Menu.css";
-import { MenuIcon, X } from "lucide-react";
+import { ChartNoAxesGantt, X } from "lucide-react";
 
 // Extend Window interface to include Lenis
 declare global {
@@ -144,7 +144,7 @@ export default function Menu({ scrolled }: MenuProps) {
         }`}
       >
         {/* Menu Icon */}
-        <MenuIcon
+        <ChartNoAxesGantt
           className={`absolute w-6 h-6 transition-opacity duration-300 ${
             menuOpen ? "opacity-0" : "opacity-100"
           }`}

@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import ProjectCards from "./ProjectCard";
 import "./SecondSection.css";
 
-export default function ItScroll() {
+export default function DigitalMarketingTouch() {
   return (
     <div>
       <HorizontalDragCarousel />
@@ -49,116 +49,103 @@ function HorizontalDragCarousel() {
   const projectData = [
     {
       id: 1,
-      title: "UI/UX Design",
-      image: "it-scroll/card1.png",
-      tags: ["Figma", "Design", "UI/UX"],
-      link: "/contact@webapps",
-      description:
-        "Modern and intuitive UI/UX designs built to improve usability and engagement.",
+      title: "Coming Soon",
+      link: "/contact@marketing",
+      image: "/comming-soon.png",
+      tags: ["WebMaak", "Innovation", "Future"],
+      description: "Exciting project launching soon...",
     },
     {
       id: 2,
-      title: "CMS Development",
-      image: "/it-scroll/card2.png",
-      link: "/contact@webapps",
-      tags: ["WordPress", "Webflow", "Shopify"],
-      description:
-        "Easy content management solutions designed for efficiency, control, growth.",
-    },
-    {
-      id: 4,
-      title: "E-Commerce Solutions",
-      image: "/it-scroll/card4.png",
-      link: "/contact@webapps",
-      tags: ["Shopify", "WooCommerce", "Custom Stores"],
-      description:
-        "Secure, fast, and sales-driven platforms designed to boost growth and trust.",
-    },
-    {
-      id: 5,
-      title: "Web Applications",
-      image: "/it-scroll/card5.png",
-      link: "/contact@webapps",
-      tags: ["Next.js", "React.js", "Node.js"],
-      description:
-        "Custom apps that scale businesses. Powerful, seamless, user-focused apps.",
+      title: "Coming Soon",
+      link: "/contact@marketing",
+      image: "/comming-soon.png",
+      tags: ["WebMaak", "Creative", "Tech"],
+      description: "Stay tuned for our next big launch!",
     },
     {
       id: 3,
-      title: "Website Development",
+      title: "Coming Soon",
+      link: "/contact@marketing",
       image: "/comming-soon.png",
-      link: "/contact@webapps",
-      tags: ["React.js", "Next.js", "Node.js", "Express.js"],
-      description:
-        "Responsive, scalable websites built for performance and strong SEO results.",
+      tags: ["WebMaak", "Design", "Growth"],
+      description: "Innovative solutions on the horizon.",
+    },
+    {
+      id: 4,
+      title: "Coming Soon",
+      link: "/contact@marketing",
+      image: "/comming-soon.png",
+      tags: ["WebMaak", "Digital", "Branding"],
+      description: "Crafting the future of digital presence.",
+    },
+    {
+      id: 5,
+      title: "Coming Soon",
+      link: "/contact@marketing",
+      image: "/comming-soon.png",
+      tags: ["WebMaak", "Strategy", "NextGen"],
+      description: "Big ideas are on their way.",
     },
     {
       id: 6,
-      title: "App Development",
+      title: "Coming Soon",
+      link: "/contact@marketing",
       image: "/comming-soon.png",
-      link: "/contact@webapps",
-      tags: ["React Native", "Mobile", "iOS/Android"],
-      description:
-        "iOS & Android, native & hybrid. Engaging apps with intuitive UX.",
+      tags: ["WebMaak", "Solutions", "Impact"],
+      description: "Building smarter digital experiences.",
     },
     {
       id: 7,
-      title: "Custom Integrations",
+      title: "Coming Soon",
+      link: "/contact@marketing",
       image: "/comming-soon.png",
-      link: "/contact@webapps",
-      tags: ["WhatsApp", "AI Chatbot", "API"],
-      description:
-        "API & third-party tool setups. Smooth workflows, connected systems.",
+      tags: ["WebMaak", "Tech", "Future-Ready"],
+      description: "Where creativity meets technology.",
     },
     {
       id: 8,
-      title: "AI Consulting",
+      title: "Coming Soon",
+      link: "/contact@marketing",
       image: "/comming-soon.png",
-      link: "/contact@webapps",
-      tags: ["AI Strategy", "Implementation", "Consulting"],
-      description:
-        "Strategy, setup & implementation. Guiding your AI transformation.",
+      tags: ["WebMaak", "Vision", "Digital"],
+      description: "Pioneering the next wave of innovation.",
     },
     {
       id: 9,
-      title: "IT Consulting",
+      title: "Coming Soon",
+      link: "/contact@marketing",
       image: "/comming-soon.png",
-      link: "/contact@webapps",
-      tags: ["Technology Strategy", "Digital Growth", "Consulting"],
-      description:
-        "Technology strategy & digital growth. Guidance to scale your business.",
+      tags: ["WebMaak", "Ideas", "Growth"],
+      description: "Transforming concepts into reality.",
     },
     {
       id: 10,
-      title: "Tech Support & Maint.",
+      title: "Coming Soon",
+      link: "/contact@marketing",
       image: "/comming-soon.png",
-      link: "/contact@webapps",
-      tags: ["Support", "Maintenance", "IT Services"],
-      description:
-        "Ongoing updates, fixes & security. Always-on reliable IT support.",
+      tags: ["WebMaak", "Innovation", "Launch"],
+      description: "Something new around the corner.",
     },
   ];
 
   return (
     <>
       <section className="relative w-full bg-white">
-        <div className="max-width-case-study center mt-24">
+        <div className="max-width-case-study center mt-10 md:mt-24">
           <div className="section-info-wrap case-study">
             <div className="fadeup bro">
               <h2 className="section-info_primary-text">
-                Building <br className="md:hidden block" />
-                <span className="heading-text-italic">
-                  Websites & Web Apps
-                </span>{" "}
+                Driving <br className="md:hidden block" />
+                <span className="heading-text-italic">Digital Marketing</span>
                 <br />
-                That Scales Business
+                that fuels growth
               </h2>
             </div>
             <div className="fadeup">
               <p split-text="true" className="sub-title">
-                &nbsp;From responsive websites to robust web applications, we
-                craft digital solutions that deliver performance, scalability,
-                and seamless user experiences.
+                &nbsp;Boosting brand visibility with SEO, targeted ads, and
+                performance-driven campaigns designed to maximize ROI.
               </p>
             </div>
           </div>

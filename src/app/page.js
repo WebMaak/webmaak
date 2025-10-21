@@ -10,9 +10,12 @@ import EighthSection from "../components/EighthSection/EighthSection";
 import SeventhSection from "../components/SeventhSection/SeventhSection";
 import SixthSection from "../components/SixthSection/SixthSection";
 import Footer from "../components/Footer/Footer";
-import DigitalMarketing from "../components/SecondSection/DigitalMarketing";
 import ItScroll from "../components/SecondSection/ItScroll";
 import MediaScroll from "../components/SecondSection/MediaScroll";
+import DigitalMarketing from "../components/SecondSection/DigitalMarketing";
+import ItScrollTouch from "../components/SecondSection/ItScrollTouch";
+import MediaScrollTouch from "../components/SecondSection/MediaScrollTouch";
+import DigitalMarketingTouch from "../components/SecondSection/DigitalMarketingTouch";
 import Navigator from "../components/Navigator/Navigator";
 import { React, useState, useEffect } from "react";
 import { OrbitingCirclesPulse } from "../components/orbiting-circles-pulse";
@@ -69,6 +72,23 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
+  const [isTouch, setIsTouch] = useState(false);
+
+  useEffect(() => {
+    const checkWidth = () => {
+      setIsTouch(window.innerWidth < 1024);
+    };
+
+    // Initial check
+    checkWidth();
+
+    // Update on window resize
+    window.addEventListener("resize", checkWidth);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkWidth);
+  }, []);
+
   return (
     <>
       <Loader />
@@ -97,14 +117,15 @@ export default function Home() {
           <FirstSection />
           <SecondSection />
           <div id="section4" data-theme="light">
-            <ItScroll />
+            {isTouch ? <ItScrollTouch /> : <ItScroll />}
           </div>
           <div id="section8" data-theme="light">
-            <MediaScroll />
+            {isTouch ? <MediaScrollTouch /> : <MediaScroll />}
           </div>
           <div id="section9" data-theme="light">
-            <DigitalMarketing />
+            {isTouch ? <DigitalMarketingTouch /> : <DigitalMarketing />}
           </div>
+
           <FourthSection />
           <FifthSection />
 
@@ -132,8 +153,8 @@ export default function Home() {
               duration={24}
               iconSize={orbitConfig.iconSize[1]}
             >
-              <img src="/orbiting-circle-icons/2.png" alt="icon 2" />
-              <img src="/orbiting-circle-icons/3.png" alt="icon 3" />
+              <img src="/orbiting-circle-icons/12.png" alt="icon 2" />
+              <img src="/orbiting-circle-icons/13.png" alt="icon 3" />
             </OrbitingCirclesPulse>
 
             <OrbitingCirclesPulse
@@ -157,8 +178,8 @@ export default function Home() {
               <img src="/orbiting-circle-icons/9.png" alt="icon 9" />
               <img src="/orbiting-circle-icons/10.png" alt="icon 10" />
               <img src="/orbiting-circle-icons/11.png" alt="icon 11" />
-              <img src="/orbiting-circle-icons/12.png" alt="icon 12" />
-              <img src="/orbiting-circle-icons/13.png" alt="icon 13" />
+              <img src="/orbiting-circle-icons/2.png" alt="icon 12" />
+              <img src="/orbiting-circle-icons/3.png" alt="icon 13" />
             </OrbitingCirclesPulse>
 
             <OrbitingCirclesPulse
