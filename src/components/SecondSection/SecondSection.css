@@ -715,7 +715,7 @@
 }
 @media screen and (max-width: 767px) {
   .tab-wrapper {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
   }
   .home-case-studies_grid_scroll.grid_scroll {

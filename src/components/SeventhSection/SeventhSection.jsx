@@ -20,7 +20,7 @@ function SeventhSection() {
   const testimonials = [
     {
       name: "Dhiraj Tejwani",
-      role: "Podcast Host",
+      role: "Podcast Host,",
       company: "DTalks",
       image: "/clients/client1.png",
       // companyLogo: "/marquee-logo/21.png",
@@ -37,29 +37,10 @@ function SeventhSection() {
         "The e-card which you provided to me was amazingly great work..Great work guyz and the best part was wedding website which was absolutely cherry on the cake.. Commendable work..keep up the Good work.",
     },
     {
-      name: "Alice Smith",
-      role: "CEO",
-      company: "InnovateX",
-      image: "/loader.gif",
-      companyLogo: "/marquee-logo/21.png",
-      quote:
-        "Our productivity skyrocketed after using Noda.ai. It's like having an extra team member.",
-    },
-    {
-      name: "Michael Brown",
-      role: "Designer",
-      company: "CreativesHub",
-      image: "/loader.gif",
-      companyLogo: "/marquee-logo/21.png",
-      quote:
-        "I can't imagine going back to our old workflow. Noda.ai makes collaboration effortless.",
-    },
-    {
       name: "DigiTalks",
       role: "Agency",
       company: "",
-      image: "/loader.gif",
-      companyLogo: "/testimonial/digitalks.png",
+      image: "/testimonial/digitalks.png",
       quote:
         "We have been working with the team for over a year and the team has been nothing short of supportive. It is not only the most quality output, but it is at a very optimum price. Working with them in the long run has been very convenient, not just for me. It has given me an understanding of what the brand is about as well. And create content eventually which is very strong and with very minimal edits. It is truly a partnership more than working with a vendor..",
     },
@@ -72,7 +53,7 @@ function SeventhSection() {
     >
       <div class="absolute bottom-[0%] left-[15%] w-[30rem] h-[30rem] bg-pink-300 rounded-full filter blur-[7.5rem] opacity-40 "></div>
       <div class="absolute top-[15%] right-[12%] w-[40rem] h-[40rem] bg-purple-300 rounded-full filter blur-[10rem] opacity-50 "></div>
-      <div className="padding-global">
+      <div>
         <div className="container-large" style={{ maxWidth: "100%" }}>
           <div className="padding-section-large padding-bottom-testimonial">
             <div className="testimonail_heading">
@@ -165,7 +146,8 @@ function TestimonialText({ testimonial }) {
                 {testimonial.name}
               </p>
               <p className="testimonial_designation mb-0 text-gray-900 text-xl font-normal">
-                {testimonial.role}, {testimonial.company}
+                <span className="client-role">{testimonial.role}</span>{" "}
+                <span className="client-company">{testimonial.company}</span>
               </p>
               {testimonial.companyLogo && (
                 <img
@@ -178,11 +160,11 @@ function TestimonialText({ testimonial }) {
           </div>
 
           {/* Testimonial Image */}
-          <div className="testimonail_image relative w-[60%] flex justify-end items-end">
+          <div className="testimonail_image relative w-[60%] md:mb-0 mb-4 flex justify-end items-end">
             <img
               src={testimonial.image}
               alt={testimonial.name}
-              className="testimonial_person-image object-cover w-full  ring-4 ring-white"
+              className="testimonial_person-image object-cover w-full lg:rounded-none rounded-full ring-4 ring-white"
             />
           </div>
         </div>

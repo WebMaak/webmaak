@@ -35,12 +35,12 @@ export default function Home() {
       if (window.innerWidth < 640) {
         setOrbitConfig({
           radius: [0, 80, 135, 200, 270],
-          iconSize: [100, 40, 40, 40, 40],
+          iconSize: [60, 40, 40, 40, 40],
         });
       } else if (window.innerWidth < 1024) {
         setOrbitConfig({
           radius: [0, 120, 210, 290, 370],
-          iconSize: [160, 50, 50, 50, 50],
+          iconSize: [70, 50, 50, 50, 50],
         });
       } else {
         setOrbitConfig({
@@ -143,7 +143,7 @@ export default function Home() {
               <img
                 src="/orbiting-circle-icons/center.png"
                 alt="icon 2"
-                className="lg:mr-[-72px] lg:mb-[-72px] md:mr-[-56px] md:mb-[-56px] mr-[-38px] mb-[-38px] animate-pulse-scale"
+                className=" lg:mr-[-72px] lg:mb-[-72px] md:mr-[-56px] md:mb-[-56px] mr-[-38px] mb-[-38px] animate-pulse-scale"
               />
             </OrbitingCirclesPulse>
 

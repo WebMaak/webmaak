@@ -72,10 +72,18 @@
   transform: scale(1.1);
 }
 
-
 @media (max-width: 768px) {
+  .icon {
+    width: 14px;
+    height: auto;
+  }
   .navigator {
-    display: none;
+    gap: 0.4rem;
+  }
+  @keyframes slideIn {
+    to {
+      right: 10px; /* visible */
+    }
   }
 }
 
@@ -87,7 +95,8 @@
   align-items: center;
   justify-content: center;
   opacity: 0.8;
-  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease,
+    color 0.3s ease;
 }
 
 .active .icon {
@@ -107,7 +116,7 @@
 
 /* Light mode glass */
 .navigator.light {
-  background: rgba(65, 105, 225, 0.10); /* Royal Blue tint */
+  background: rgba(65, 105, 225, 0.1); /* Royal Blue tint */
   border: 1px solid rgba(255, 255, 255, 0.35);
 }
 

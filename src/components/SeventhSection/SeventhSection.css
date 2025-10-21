@@ -8,6 +8,13 @@
   margin-right: auto !important;
   margin-left: auto !important;
 }
+.testimonials-details {
+  letter-spacing: -0.64px !important;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Bricolage Grotesque, sans-serif;
+  line-height: 1.2 !important;
+}
 .container-large {
   width: 100%;
   margin-left: auto;
@@ -119,7 +126,26 @@ h2 {
   padding: 0.75rem 2rem;
 }
 
+.client-role {
+  letter-spacing: -0.38px;
+  padding-right: 6px;
+  font-family: Libre Baskerville, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  display: inline;
+}
+
+@media screen and (max-width: 1024px) {
+  .testimonail_card {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
 @media screen and (max-width: 769px) {
+  .testimonail_card {
+    justify-content: space-around;
+    gap: 0;
+  }
   .result_card {
     margin-right: 1.5rem;
   }
