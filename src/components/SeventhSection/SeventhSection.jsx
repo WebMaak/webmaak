@@ -182,13 +182,13 @@ function TestimonialText({ testimonial }) {
             <img
               src={testimonial.image}
               alt={testimonial.name}
-              className="testimonial_person-image object-cover w-full shadow-xl ring-4 ring-white"
+              className="testimonial_person-image object-cover w-full  ring-4 ring-white"
             />
           </div>
         </div>
       ) : (
         // Quote-only view
-        <div className="bg-white border border-gray-200 rounded-2xl shadow-lg p-4 md:p-12 w-full lg:h-[400px] md:h-[650px] flex flex-col items-start justify-center">
+        <div className="bg-white border border-gray-200 rounded-2xl  p-4 md:p-12 w-full lg:h-[400px] md:h-[650px] flex flex-col items-start justify-center">
           <p className="text-black md:text-[1.1rem] text-[0.775rem] font-normal leading-tight text-center">
             "{testimonial.quote}"
           </p>

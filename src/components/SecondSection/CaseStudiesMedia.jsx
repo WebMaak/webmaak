@@ -197,9 +197,9 @@ const CaseStudiesIt = () => {
     const interval = setInterval(() => {
       if (
         playerRef.current &&
-        playerRef.current.getPlaybackQuality() !== "highres"
+        playerRef.current.getPlaybackQuality() !== "hd1080"
       ) {
-        playerRef.current.setPlaybackQuality("highres");
+        playerRef.current.setPlaybackQuality("hd1080");
       }
     }, 2000);
 
