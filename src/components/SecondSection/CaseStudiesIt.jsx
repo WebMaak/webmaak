@@ -114,7 +114,7 @@ const CaseStudiesIt = () => {
     playerRef.current = event.target;
 
     // Force highest quality
-    playerRef.current.setPlaybackQuality("highres");
+    playerRef.current.setPlaybackQuality("hd1080");
 
     // Start muted for autoplay
     playerRef.current.mute();
