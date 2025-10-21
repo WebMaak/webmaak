@@ -555,6 +555,8 @@ body {
 }
 
 .animate-pulse-scale {
+  filter: drop-shadow(0 0 10px rgb(65, 172, 225))
+    drop-shadow(0 0 30px rgb(65, 132, 225));
   animation: pulse-scale 2.5s ease-in-out infinite;
 }
 

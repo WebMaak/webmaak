@@ -42,7 +42,7 @@ export default function Home() {
       } else {
         setOrbitConfig({
           radius: [0, 220, 370, 530, 700],
-          iconSize: [250, 80, 80, 80, 80],
+          iconSize: [100, 80, 80, 80, 80],
         });
       }
     };
@@ -120,7 +120,7 @@ export default function Home() {
               iconSize={orbitConfig.iconSize[0]}
             >
               <img
-                src="/orbiting-circle-icons/center-icon.png"
+                src="/orbiting-circle-icons/center.png"
                 alt="icon 2"
                 className="lg:mr-[-72px] lg:mb-[-72px] md:mr-[-56px] md:mb-[-56px] mr-[-38px] mb-[-38px] animate-pulse-scale"
               />
