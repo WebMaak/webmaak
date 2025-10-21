@@ -22,8 +22,8 @@ export default function Home() {
   const [bgHeight, setBgHeight] = useState("100vh");
   const [hideHero, setHideHero] = useState(false);
   const [orbitConfig, setOrbitConfig] = useState({
-    radius: [0, 220, 370, 530],
-    iconSize: [250, 80, 80, 80],
+    radius: [0, 220, 370, 530, 700],
+    iconSize: [250, 80, 80, 80, 80],
   });
 
   // ✅ Responsive orbit config
@@ -31,18 +31,18 @@ export default function Home() {
     const handleResize = () => {
       if (window.innerWidth < 640) {
         setOrbitConfig({
-          radius: [0, 80, 135, 200],
-          iconSize: [100, 40, 40, 40],
+          radius: [0, 80, 135, 200, 270],
+          iconSize: [100, 40, 40, 40, 40],
         });
       } else if (window.innerWidth < 1024) {
         setOrbitConfig({
-          radius: [0, 140, 250, 370],
-          iconSize: [180, 60, 60, 60],
+          radius: [0, 120, 210, 290, 370],
+          iconSize: [160, 50, 50, 50, 50],
         });
       } else {
         setOrbitConfig({
-          radius: [0, 220, 370, 530],
-          iconSize: [250, 80, 80, 80],
+          radius: [0, 220, 370, 530, 700],
+          iconSize: [250, 80, 80, 80, 80],
         });
       }
     };
@@ -110,8 +110,9 @@ export default function Home() {
 
           {/* ✅ Responsive Orbit Section */}
           <div
-            className="relative overflow-hidden w-full mb-20 z-10 min-h-[600px]"
+            className="relative overflow-hidden w-full mb-20 z-10 min-h-[700px]"
             data-theme="light"
+            id="section6"
           >
             <OrbitingCirclesPulse
               radius={orbitConfig.radius[0]}
@@ -121,14 +122,14 @@ export default function Home() {
               <img
                 src="/orbiting-circle-icons/center-icon.png"
                 alt="icon 2"
-                className="lg:mr-[-72px] lg:mb-[-72px] md:mr-[-62px] md:mb-[-62px] mr-[-38px] mb-[-38px] animate-pulse-scale"
+                className="lg:mr-[-72px] lg:mb-[-72px] md:mr-[-56px] md:mb-[-56px] mr-[-38px] mb-[-38px] animate-pulse-scale"
               />
             </OrbitingCirclesPulse>
 
             <OrbitingCirclesPulse
               radius={orbitConfig.radius[1]}
               reverse
-              duration={25}
+              duration={24}
               iconSize={orbitConfig.iconSize[1]}
             >
               <img src="/orbiting-circle-icons/2.png" alt="icon 2" />
@@ -137,7 +138,7 @@ export default function Home() {
 
             <OrbitingCirclesPulse
               radius={orbitConfig.radius[2]}
-              duration={14}
+              duration={20}
               iconSize={orbitConfig.iconSize[2]}
             >
               <img src="/orbiting-circle-icons/4.png" alt="icon 4" />
@@ -149,18 +150,36 @@ export default function Home() {
             <OrbitingCirclesPulse
               radius={orbitConfig.radius[3]}
               reverse
-              duration={10}
+              duration={16}
               iconSize={orbitConfig.iconSize[3]}
             >
               <img src="/orbiting-circle-icons/8.png" alt="icon 8" />
-              <img src="/orbiting-circle-icons/8.png" alt="icon 8" />
               <img src="/orbiting-circle-icons/9.png" alt="icon 9" />
-              <img src="/orbiting-circle-icons/9.png" alt="icon 9" />
+              <img src="/orbiting-circle-icons/10.png" alt="icon 10" />
+              <img src="/orbiting-circle-icons/11.png" alt="icon 11" />
+              <img src="/orbiting-circle-icons/12.png" alt="icon 12" />
+              <img src="/orbiting-circle-icons/13.png" alt="icon 13" />
+            </OrbitingCirclesPulse>
+
+            <OrbitingCirclesPulse
+              radius={orbitConfig.radius[4]}
+              reverse
+              duration={12}
+              iconSize={orbitConfig.iconSize[4]}
+            >
+              <img src="/orbiting-circle-icons/14.png" alt="icon 14" />
+              <img src="/orbiting-circle-icons/15.png" alt="icon 15" />
+              <img src="/orbiting-circle-icons/16.png" alt="icon 16" />
+              <img src="/orbiting-circle-icons/17.png" alt="icon 17" />
+              <img src="/orbiting-circle-icons/18.png" alt="icon 18" />
+              <img src="/orbiting-circle-icons/19.png" alt="icon 19" />
             </OrbitingCirclesPulse>
           </div>
 
-          <div id="section7" data-theme="dark">
+          <div id="section10" data-theme="light">
             <SeventhSection />
+          </div>
+          <div id="section7" data-theme="dark">
             <EighthSection />
             <Footer />
           </div>

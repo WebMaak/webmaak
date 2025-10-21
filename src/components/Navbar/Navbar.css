@@ -2863,6 +2863,9 @@ a {
     opacity: 1 !important;
     visibility: visible !important;
   } */
+  .navbar_component {
+    padding-top: 0.1rem;
+  }
   .w-nav-brand {
     padding-left: 10px;
   }
@@ -3536,9 +3539,17 @@ a {
   .steps_card-wrapper._1 {
     z-index: 1;
   }
-
   .navbar_component {
-    min-height: 4rem;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navbar_component.scrolled {
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    min-height: 3rem;
+  }
+  .section_navbar.scrolled {
+    border-bottom-left-radius: 30px;
   }
 
   .steps_border-box._1,
@@ -6182,11 +6193,6 @@ a {
 
   .navbar_logo-link.is-small {
     width: 5.5rem;
-  }
-
-  .navbar_component {
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
   }
 
   .navbar_container {

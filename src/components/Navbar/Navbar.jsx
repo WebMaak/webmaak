@@ -35,7 +35,7 @@ export default function Navbar() {
     <header className={`section_navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-embed w-embed"></div>
       <div
-        className="navbar_component w-nav"
+        className={`navbar_component ${scrolled ? "scrolled" : ""} w-nav`}
         fs-scrolldisable-element="smart-nav"
         role="banner"
       >

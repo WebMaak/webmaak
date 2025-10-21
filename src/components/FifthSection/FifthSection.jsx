@@ -11,7 +11,6 @@ function FifthSection() {
     <>
       <section
         className="section_integration pt-20 pb-12 flex gap-4 justify-center items-center flex-col"
-        id="section6"
         data-theme="light"
       >
         <div className="fadeup">

@@ -53,6 +53,30 @@ export function OrbitingCirclesPulse({
 
   return (
     <>
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100px",
+          zIndex: 20,
+          background:
+            "linear-gradient(to bottom, rgba(255,255,255,1), transparent)",
+        }}
+      ></div>
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          width: "100%",
+          height: "100px",
+          zIndex: 20,
+          background:
+            "linear-gradient(to top, rgba(255,255,255,1), transparent)",
+        }}
+      ></div>
       {/* Orbit Path Circle */}
       {path && (
         <svg
@@ -83,31 +107,6 @@ export function OrbitingCirclesPulse({
 
         return (
           <>
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "80px",
-                zIndex: 20,
-                background:
-                  "linear-gradient(to bottom, rgba(255,255,255,0.2), transparent)",
-              }}
-            ></div>
-            <div
-              style={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                width: "100%",
-                height: "80px",
-                zIndex: 20,
-                background:
-                  "linear-gradient(to top, rgba(255,255,255,0.2), transparent)",
-              }}
-            ></div>
-
             <div
               style={
                 {

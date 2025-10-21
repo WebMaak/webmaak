@@ -4,13 +4,13 @@ import styles from "./Navigator.module.css";
 import {
   Home,
   Lightbulb,
-  PlayCircle,
   Clapperboard,
   Code2,
-  Grid,
-  Cpu,
+  SquareChartGantt,
   Presentation,
   ChartNoAxesCombined,
+  Quote,
+  BringToFront,
   Link as LinkIcon,
 } from "lucide-react";
 
@@ -29,8 +29,9 @@ const sections = [
     icon: <ChartNoAxesCombined size={20} />,
     label: "Marketing / Ads",
   },
-  { id: "section5", icon: <Grid size={20} />, label: "Solutions" },
-  { id: "section6", icon: <Cpu size={20} />, label: "Tech Stack" },
+  { id: "section5", icon: <SquareChartGantt size={20} />, label: "Solutions" },
+  { id: "section6", icon: <BringToFront size={20} />, label: "Tech Stack" },
+  { id: "section10", icon: <Quote size={20} />, label: "Testimonial" },
   { id: "section7", icon: <LinkIcon size={20} />, label: "Footer" },
 ];
 
