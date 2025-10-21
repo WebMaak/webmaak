@@ -206,7 +206,9 @@ h2 {
     height: 700px !important;
   }
   .swiper-container {
-    height: 70vh;
+    height: fit-content;
+    padding-top: 8vh;
+    padding-bottom: 4vh;
   }
 }
 
@@ -216,6 +218,8 @@ h2 {
     height: 500px !important;
   }
   .swiper-container {
-    height: 100vh;
+    height: fit-content;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
   }
 }

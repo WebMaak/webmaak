@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./orbiting.module.css";
 
 export interface OrbitingCirclesPulseProps
@@ -25,6 +25,31 @@ export function OrbitingCirclesPulse({
   ...props
 }: OrbitingCirclesPulseProps) {
   const calculatedDuration = duration / speed;
+
+  // ✅ Responsive top/left offsets
+  const [positionOffsets, setPositionOffsets] = useState({
+    top: "47.5%",
+    left: "49%",
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        // mobile
+        setPositionOffsets({ top: "46%", left: "48%" });
+      } else if (window.innerWidth < 1024) {
+        // tablet
+        setPositionOffsets({ top: "46.5%", left: "48.5%" });
+      } else {
+        // desktop (original)
+        setPositionOffsets({ top: "47.5%", left: "49%" });
+      }
+    };
+
+    handleResize(); // initial call
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
@@ -93,12 +118,12 @@ export function OrbitingCirclesPulse({
                   "--angle": `${angle}deg`,
                   animationDirection: reverse ? "reverse" : "normal",
                   position: "absolute",
-                  top: "47.5%",
-                  left: "49%",
+                  top: positionOffsets.top,
+                  left: positionOffsets.left,
                   transform: "translate(-50%, -50%)", // centers the orbit origin
                 } as React.CSSProperties
               }
-              className={`flex items-center justify-center rounded-full animate-orbit  ${
+              className={`flex items-center justify-center rounded-full animate-orbit ${
                 className || ""
               }`}
               {...props}

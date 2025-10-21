@@ -21,28 +21,50 @@ import Loader from "../components/Loader/Loader";
 export default function Home() {
   const [bgHeight, setBgHeight] = useState("100vh");
   const [hideHero, setHideHero] = useState(false);
+  const [orbitConfig, setOrbitConfig] = useState({
+    radius: [0, 220, 370, 530],
+    iconSize: [250, 80, 80, 80],
+  });
+
+  // ✅ Responsive orbit config
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setOrbitConfig({
+          radius: [0, 80, 135, 200],
+          iconSize: [100, 40, 40, 40],
+        });
+      } else if (window.innerWidth < 1024) {
+        setOrbitConfig({
+          radius: [0, 140, 250, 370],
+          iconSize: [180, 60, 60, 60],
+        });
+      } else {
+        setOrbitConfig({
+          radius: [0, 220, 370, 530],
+          iconSize: [250, 80, 80, 80],
+        });
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const img = new Image();
     img.src = "/background-design.png";
-    img.onload = () => {
-      setBgHeight(`${img.naturalHeight}px`);
-    };
+    img.onload = () => setBgHeight(`${img.naturalHeight}px`);
 
-    // GSAP-driven animations removed per request.
-    // Keep image preload, visibility logic and the IntersectionObserver that hides the hero.
-    const spacer = document.getElementById("spacer"); // target by ID
+    const spacer = document.getElementById("spacer");
     if (!spacer) return;
+
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Hide hero when spacer is NOT in view
-        setHideHero(!entry.isIntersecting); // changes value of setHideHero to opposite
-      },
-      {
-        root: null, // viewport
-        threshold: 0, // trigger as soon as any part enters/leaves
-      }
+      ([entry]) => setHideHero(!entry.isIntersecting),
+      { root: null, threshold: 0 }
     );
+
     observer.observe(spacer);
     return () => observer.disconnect();
   }, []);
@@ -85,65 +107,58 @@ export default function Home() {
           </div>
           <FourthSection />
           <FifthSection />
+
+          {/* ✅ Responsive Orbit Section */}
           <div
-            className="relative overflow-hidden h-[900px] w-full mb-20 z-10"
+            className="relative overflow-hidden w-full mb-20 z-10 min-h-[600px]"
             data-theme="light"
           >
-            <OrbitingCirclesPulse radius={0} duration={0} iconSize={250}>
+            <OrbitingCirclesPulse
+              radius={orbitConfig.radius[0]}
+              duration={0}
+              iconSize={orbitConfig.iconSize[0]}
+            >
               <img
                 src="/orbiting-circle-icons/center-icon.png"
                 alt="icon 2"
-                className="mr-[-72px] mb-[-72px] animate-pulse-scale"
+                className="lg:mr-[-72px] lg:mb-[-72px] md:mr-[-62px] md:mb-[-62px] mr-[-38px] mb-[-38px] animate-pulse-scale"
               />
-              {/* <div class="orbit-background">
-                <div class="blur-circle"></div>
-                <img
-                  src="/orbiting-circle-icons/center-icon.png"
-                  alt="Project"
-                  class="orbit-image"
-                />
-              </div> */}
             </OrbitingCirclesPulse>
+
             <OrbitingCirclesPulse
-              radius={220}
+              radius={orbitConfig.radius[1]}
               reverse
               duration={25}
-              iconSize={80}
+              iconSize={orbitConfig.iconSize[1]}
             >
               <img src="/orbiting-circle-icons/2.png" alt="icon 2" />
               <img src="/orbiting-circle-icons/3.png" alt="icon 3" />
-              {/* <img src="/orbiting-circle-icons/icon-4.png" alt="icon 4" /> */}
-              {/* <img src="/orbiting-circle-icons/icon-5.png" alt="icon 5" /> */}
             </OrbitingCirclesPulse>
-            <OrbitingCirclesPulse radius={370} duration={20} iconSize={80}>
-              <img src="/orbiting-circle-icons/4.png" alt="icon 2" />
-              <img src="/orbiting-circle-icons/5.png" alt="icon 3" />
-              <img src="/orbiting-circle-icons/6.png" alt="icon 4" />
-              <img src="/orbiting-circle-icons/7.png" alt="icon 5" />
-              {/* <img src="/orbiting-circle-icons/icon-6.png" alt="icon 6" /> */}
-            </OrbitingCirclesPulse>
+
             <OrbitingCirclesPulse
-              radius={530}
-              reverse
-              duration={17}
-              iconSize={80}
+              radius={orbitConfig.radius[2]}
+              duration={14}
+              iconSize={orbitConfig.iconSize[2]}
             >
-              <img src="/orbiting-circle-icons/8.png" alt="icon 2" />
-              <img src="/orbiting-circle-icons/9.png" alt="icon 3" />
-              <img src="/orbiting-circle-icons/2.png" alt="icon 4" />
-              <img src="/orbiting-circle-icons/3.png" alt="icon 5" />
-              {/* <img src="/orbiting-circle-icons/icon-6.png" alt="icon 6" /> */}
+              <img src="/orbiting-circle-icons/4.png" alt="icon 4" />
+              <img src="/orbiting-circle-icons/5.png" alt="icon 5" />
+              <img src="/orbiting-circle-icons/6.png" alt="icon 6" />
+              <img src="/orbiting-circle-icons/7.png" alt="icon 7" />
             </OrbitingCirclesPulse>
-            <OrbitingCirclesPulse radius={700} duration={15} iconSize={80}>
-              <img src="/orbiting-circle-icons/2.png" alt="icon 2" />
-              <img src="/orbiting-circle-icons/3.png" alt="icon 3" />
-              <img src="/orbiting-circle-icons/2.png" alt="icon 4" />
-              <img src="/orbiting-circle-icons/3.png" alt="icon 5" />
-              <img src="/orbiting-circle-icons/2.png" alt="icon 6" />
-              <img src="/orbiting-circle-icons/3.png" alt="icon 7" />
-              {/* <img src="/orbiting-circle-icons/icon-8.png" alt="icon 8" /> */}
+
+            <OrbitingCirclesPulse
+              radius={orbitConfig.radius[3]}
+              reverse
+              duration={10}
+              iconSize={orbitConfig.iconSize[3]}
+            >
+              <img src="/orbiting-circle-icons/8.png" alt="icon 8" />
+              <img src="/orbiting-circle-icons/8.png" alt="icon 8" />
+              <img src="/orbiting-circle-icons/9.png" alt="icon 9" />
+              <img src="/orbiting-circle-icons/9.png" alt="icon 9" />
             </OrbitingCirclesPulse>
           </div>
+
           <div id="section7" data-theme="dark">
             <SeventhSection />
             <EighthSection />

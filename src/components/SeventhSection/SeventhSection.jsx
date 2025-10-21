@@ -19,22 +19,22 @@ function SeventhSection() {
   const [showFull, setShowFull] = useState(false);
   const testimonials = [
     {
-      name: "Emma Watson",
-      role: "Marketing Director",
-      company: "Logoipsum",
+      name: "Dhiraj Tejwani",
+      role: "Podcast Host",
+      company: "DTalks",
       image: "/clients/client1.png",
-      companyLogo: "/marquee-logo/21.png",
+      // companyLogo: "/marquee-logo/21.png",
       quote:
         "Working with Aman and his team has been one of the smoothest professional experiences I’ve had. He is incredibly polite and respectful in all interactions, which makes collaboration effortless. He understands the brief quickly and with great clarity, and what really stands out is his cooperative nature, there’s never any ego, only a willingness to make the work better. No matter how many changes or modifications are needed, he handles them with patience and positivity. Beyond his attitude, his editing skills are exceptional, he has an eye for detail and creativity that consistently elevates the final output. I’ve never once been disappointed, and I can confidently say he’s someone you can trust to deliver not just quality work, but also a pleasant working relationship. I’d wholeheartedly recommend him to anyone looking for a skilled and dependable editor.",
     },
     {
-      name: "John Doe",
-      role: "Product Manager",
-      company: "TechCorp",
+      name: "Hamna Kouser",
+      role: "Client",
+      company: "",
       image: "/clients/client5.png",
-      companyLogo: "/marquee-logo/21.png",
+      // companyLogo: "/marquee-logo/21.png",
       quote:
-        "Noda.ai has completely changed the way we organize our projects. It's incredibly efficient.",
+        "The e-card which you provided to me was amazingly great work..Great work guyz and the best part was wedding website which was absolutely cherry on the cake.. Commendable work..keep up the Good work.",
     },
     {
       name: "Alice Smith",
@@ -55,11 +55,11 @@ function SeventhSection() {
         "I can't imagine going back to our old workflow. Noda.ai makes collaboration effortless.",
     },
     {
-      name: "Sophia Lee",
-      role: "Engineer",
-      company: "D-Talks",
+      name: "DigiTalks",
+      role: "Agency",
+      company: "",
       image: "/loader.gif",
-      companyLogo: "/marquee-logo/21.png",
+      companyLogo: "/testimonial/digitalks.png",
       quote:
         "We have been working with the team for over a year and the team has been nothing short of supportive. It is not only the most quality output, but it is at a very optimum price. Working with them in the long run has been very convenient, not just for me. It has given me an understanding of what the brand is about as well. And create content eventually which is very strong and with very minimal edits. It is truly a partnership more than working with a vendor..",
     },
@@ -78,7 +78,7 @@ function SeventhSection() {
             <div className="testimonail_heading">
               <div className="fadeup text-center">
                 <h2 className="section-info_primary-text">
-                  What our clients think
+                  What our clients think{" "}
                   <span className="heading-text-italic"> about</span>
                   our work
                 </h2>

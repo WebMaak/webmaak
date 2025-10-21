@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import "./Menu.css";
-import { MenuIcon } from "lucide-react";
+import { MenuIcon, X } from "lucide-react";
 
 // Extend Window interface to include Lenis
 declare global {
@@ -31,7 +31,7 @@ export default function Menu({ scrolled }: MenuProps) {
   useEffect(() => {
     if (mounted && portalRoot) {
       portalRoot.classList.toggle("menu-toggled", menuOpen);
-      
+
       // Pause or resume Lenis smooth scrolling
       if (window.lenis) {
         if (menuOpen) {
@@ -88,9 +88,9 @@ export default function Menu({ scrolled }: MenuProps) {
               // Resume Lenis, scroll to section, then close menu
               if (window.lenis) {
                 window.lenis.start();
-                window.lenis.scrollTo(section, { 
+                window.lenis.scrollTo(section, {
                   duration: 1.5,
-                  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
                 });
               } else {
                 section.scrollIntoView({ behavior: "smooth" });
@@ -112,9 +112,9 @@ export default function Menu({ scrolled }: MenuProps) {
               // Resume Lenis, scroll to section, then close menu
               if (window.lenis) {
                 window.lenis.start();
-                window.lenis.scrollTo(section, { 
+                window.lenis.scrollTo(section, {
                   duration: 1.5,
-                  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
                 });
               } else {
                 section.scrollIntoView({ behavior: "smooth" });
@@ -139,11 +139,22 @@ export default function Menu({ scrolled }: MenuProps) {
         id="menu-toggle"
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle Menu"
-        className={`relative w-10 h-10 flex flex-col items-center justify-center gap-[6px] transition-colors duration-300 ${
+        className={`relative w-10 h-10 flex items-center justify-center transition-colors duration-300 ${
           scrolled ? "text-black" : "text-white"
         }`}
       >
-        <MenuIcon />
+        {/* Menu Icon */}
+        <MenuIcon
+          className={`absolute w-6 h-6 transition-opacity duration-300 ${
+            menuOpen ? "opacity-0" : "opacity-100"
+          }`}
+        />
+        {/* Close Icon */}
+        <X
+          className={`absolute w-6 h-6 transition-opacity duration-300 ${
+            menuOpen ? "opacity-100" : "opacity-0"
+          }`}
+        />
       </button>
 
       {/* Render menu overlay via portal */}

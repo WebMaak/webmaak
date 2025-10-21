@@ -3,16 +3,20 @@
 import React, { useEffect, useState } from "react";
 import "../contact/page.css";
 import Navbar from "@/components/Navbar/Navbar";
-import AmanScheduler from "@/components/Iframes/AmanScheduler"
+import AmanScheduler from "@/components/Iframes/AmanScheduler";
 import Footer from "@/components/Footer/Footer";
 import EighthSection from "@/components/EighthSection/EighthSection";
-import {CircleArrowLeft} from "lucide-react"
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter, FaEnvelope } from 'react-icons/fa6';
+import { CircleArrowLeft } from "lucide-react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+  FaEnvelope,
+} from "react-icons/fa6";
 
 function Contact() {
-
   const [activeTab, setactiveTab] = useState(true);
-
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -82,37 +86,38 @@ function Contact() {
 
   return (
     <>
-    <Navbar />
-    <div className="section_contact min-h-[150vh]">
-      <div className="casestudy_wrapper">
-        <div className="container-large">
-          <div className="hero-bg">
-            <img
-              src="/hero-bg.JPG"
-              loading="lazy"
-              sizes="100vw"
-              srcset="hero-bg.JPG 500w, hero-bg.JPG 1440w"
-              alt=""
-              className="contact_desktop-bg max-h-[100%] min-w-[max-content]" 
-            />
-          </div>
-          <h2 className="heading-style-h2 is-contact-page-hero-heading">
-            Bring Your Stories to Life  <br />
-            with Creative Media
-            <br />
-          </h2>
-          <div className="contact_sub-title-wrapper flex flex-col justify-center items-center">
-            <div split-text="" className="contact_sub-title-one w-3/4">
-             WebMaak Media crafts visuals and videos that engage your audience.
+      <Navbar />
+      <div className="section_contact min-h-[150vh]">
+        <div className="casestudy_wrapper">
+          <div className="container-large">
+            <div className="hero-bg">
+              <img
+                src="/hero-bg.JPG"
+                loading="lazy"
+                sizes="100vw"
+                srcset="hero-bg.JPG 500w, hero-bg.JPG 1440w"
+                alt=""
+                className="contact_desktop-bg max-h-[100%] min-w-[max-content]"
+              />
             </div>
-            <div className="contact_sub-title-two-wrapper mt-2">
-              <div className="contact_sub-title-two is-green">
-                50+ Media Projects Completed
+            <h2 className="heading-style-h2 is-contact-page-hero-heading">
+              Bring Your Stories to Life <br />
+              with Creative Media
+              <br />
+            </h2>
+            <div className="contact_sub-title-wrapper flex flex-col justify-center items-center">
+              <div split-text="" className="contact_sub-title-one w-3/4">
+                WebMaak Media crafts visuals and videos that engage your
+                audience.
               </div>
-              <div className="contact_sub-title-two">and Counting!</div>
+              <div className="contact_sub-title-two-wrapper mt-2">
+                <div className="contact_sub-title-two is-green">
+                  50+ Media Projects Completed
+                </div>
+                <div className="contact_sub-title-two">and Counting!</div>
+              </div>
             </div>
-          </div>
-          {/* <div className="contact_brands-wrapper">
+            {/* <div className="contact_brands-wrapper">
             <div className="contact_brand-wrap"></div>
             <div className="contact_brand-wrap">
               <img
@@ -157,9 +162,9 @@ function Contact() {
             </div>
             <div className="contact_brand-wrap"></div>
           </div> */}
+          </div>
         </div>
-      </div>
-      {/* <div className=" works-brands_wrapper contact">
+        {/* <div className=" works-brands_wrapper contact">
         <div className="works-brands_inner-wrapper">
           <div className="works-brand_item-outer-wrapper">
             <div className="works-brand_item-wrapper">
@@ -379,104 +384,102 @@ function Contact() {
           </div>
         </div>
       </div> */}
-      <section className="section_layout508">
-        <div className="padding-global">
-          <div className="container-large">
-            <div
-              className="layout508_tabs w-tabs"
-            >
-               <div className="layout508_tabs-menu w-tab-menu">
-                <a
-                href="/contact"
-                  className="layout508_tab-link w-inline-block w-tab-link"
-                  style={{paddingLeft: "1rem", paddingRight: "1rem"}}
-                >
-                  <CircleArrowLeft />
-                </a>
-                <a
-                  href="https://webmaak.workway.pro/lead-form/cab7978cc6df39803c26bc4186b8d6a6?styled=1&with_logo=1"
-                  onClick={() => setactiveTab(true)}
-                  target="_blank"
-                  className={`layout508_tab-link w-inline-block w-tab-link ${
-                    activeTab ? "w--current" : ""
-                  }`}
-                >
-                  Request Quote
-                </a>
-              </div>
+        <section className="section_layout508">
+          <div className="padding-global">
+            <div className="container-large">
+              <div className="layout508_tabs w-tabs">
+                <div className="layout508_tabs-menu w-tab-menu">
+                  <a
+                    href="/contact"
+                    className="layout508_tab-link w-inline-block w-tab-link"
+                    style={{ paddingLeft: "1rem", paddingRight: "1rem" }}
+                  >
+                    <CircleArrowLeft />
+                  </a>
+                  <a
+                    href="https://webmaak.workway.pro/lead-form/cab7978cc6df39803c26bc4186b8d6a6?styled=1&with_logo=1"
+                    onClick={() => setactiveTab(true)}
+                    target="_blank"
+                    className={`layout508_tab-link w-inline-block w-tab-link ${
+                      activeTab ? "w--current" : ""
+                    }`}
+                  >
+                    Request Quote
+                  </a>
+                </div>
 
-              <div className="layout508_tabs-content w-tab-content">
-                {/* Tab 1 */}
-                {/* <div className={`pt-16 relative ${activeTab ? "" : "hidden"}`}>
+                <div className="layout508_tabs-content w-tab-content">
+                  {/* Tab 1 */}
+                  {/* <div className={`pt-16 relative ${activeTab ? "" : "hidden"}`}>
                 </div> */}
 
-                {/* Tab 2 */}
-                <div className={`pt-16 relative`}>
-                  <AmanScheduler/>
-                  <div className="p-4 w-full bg-[#0b224d] absolute bottom-0">&nbsp;</div>
+                  {/* Tab 2 */}
+                  <div className={`pt-16 relative`}>
+                    <AmanScheduler />
+                    <div className="p-4 w-full bg-[#0b224d] absolute bottom-0">
+                      &nbsp;
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="contact_endorsement-wrapper">
+                <div className="contact_endorsement-top-wrapper">
+                  <div className="contact_endorsement-top-text">
+                    Your Gateway to WebMaak Updates & Insights
+                  </div>
+                </div>
+                <div className="contact_endorsement-partners-wrapper">
+                  <a
+                    href="https://www.linkedin.com/company/webmaak-creative"
+                    target="_blank"
+                    className="contact_endorsement-partner webflow"
+                  >
+                    <FaLinkedinIn /> LinkedIn
+                  </a>
+
+                  <a
+                    href="https://x.com/yourprofile"
+                    target="_blank"
+                    className="contact_endorsement-partner webflow"
+                  >
+                    <FaXTwitter /> x.com
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/webmaak/"
+                    target="_blank"
+                    className="contact_endorsement-partner webflow"
+                  >
+                    <FaInstagram /> Instagram
+                  </a>
+
+                  <a
+                    href="https://www.facebook.com/webmaak"
+                    target="_blank"
+                    className="contact_endorsement-partner webflow"
+                  >
+                    <FaFacebookF /> Facebook
+                  </a>
+                </div>
+                <div className="contact_email-wrapper">
+                  <a
+                    href="mailto:hello@webmaak.com"
+                    className="flex text-white flex-row align-middle items-center justify-center gap-1 pr-2"
+                  >
+                    Share your querry at our email
+                    <FaEnvelope className="ml-2 text-white" />
+                    hello@webmaak.com
+                  </a>
                 </div>
               </div>
             </div>
-            <div className="contact_endorsement-wrapper">
-                          <div className="contact_endorsement-top-wrapper">
-                            <div className="contact_endorsement-top-text">
-                              Your Gateway to WebMaak Updates & Insights
-                            </div>
-                          </div>
-                          <div className="contact_endorsement-partners-wrapper">
-                            <a
-                              href="https://www.linkedin.com/company/webmaak-creative"
-                              target="_blank"
-                              className="contact_endorsement-partner webflow"
-                            >
-                              <FaLinkedinIn /> LinkedIn
-                            </a>
-            
-                            <a
-                              href="https://x.com/yourprofile"
-                              target="_blank"
-                              className="contact_endorsement-partner webflow"
-                            >
-                              <FaXTwitter /> x.com
-                            </a>
-            
-                            <a
-                              href="https://www.instagram.com/webmaak/"
-                              target="_blank"
-                              className="contact_endorsement-partner webflow"
-                            >
-                              <FaInstagram /> Instagram
-                            </a>
-            
-                            <a
-                              href="https://www.facebook.com/webmaak"
-                              target="_blank"
-                              className="contact_endorsement-partner webflow"
-                            >
-                              <FaFacebookF /> Facebook
-                            </a>
-                          </div>
-                          <div className="contact_email-wrapper">
-                            <a
-                              href="mailto:hello@webmaak.com"
-                              className="flex text-white flex-row align-middle items-center justify-center gap-1 pr-2"
-                              >
-                              Share your querry at our email
-                              <FaEnvelope className="ml-2 text-white" />
-                                hello@webmaak.com
-                            </a>
-                          </div>
-                        </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Bottom Section */}
-      <section className="section_trust hidden">
-      </section>
-    </div>
-    <EighthSection/>
-    <Footer/>
+        {/* Bottom Section */}
+        <section className="section_trust hidden"></section>
+      </div>
+      <Footer />
     </>
   );
 }
