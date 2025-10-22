@@ -30,19 +30,31 @@ export function OrbitingCirclesPulse({
   const [positionOffsets, setPositionOffsets] = useState({
     top: "47.5%",
     left: "49%",
+    cx: "50%",
+    cy: "50%",
   });
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
         // mobile
-        setPositionOffsets({ top: "46%", left: "48%" });
+        setPositionOffsets({
+          top: "46%",
+          left: "48%",
+          cx: "52%",
+          cy: "48.5%",
+        });
       } else if (window.innerWidth < 1024) {
         // tablet
-        setPositionOffsets({ top: "46.5%", left: "48.5%" });
+        setPositionOffsets({
+          top: "46.5%",
+          left: "48.5%",
+          cx: "51.5%",
+          cy: "50%",
+        });
       } else {
         // desktop (original)
-        setPositionOffsets({ top: "47.5%", left: "49%" });
+        setPositionOffsets({ top: "47.5%", left: "49%", cx: "50%", cy: "50%" });
       }
     };
 
@@ -53,7 +65,7 @@ export function OrbitingCirclesPulse({
 
   return (
     <>
-      <div
+      {/* <div
         style={{
           position: "absolute",
           top: 0,
@@ -76,7 +88,7 @@ export function OrbitingCirclesPulse({
           background:
             "linear-gradient(to top, rgba(255,255,255,1), transparent)",
         }}
-      ></div>
+      ></div> */}
       {/* Orbit Path Circle */}
       {path && (
         <svg
@@ -91,11 +103,11 @@ export function OrbitingCirclesPulse({
           }}
         >
           <circle
-            cx="50.7%"
-            cy="52%"
+            cx={positionOffsets.cx}
+            cy={positionOffsets.cy}
             r={radius}
             fill="none"
-            stroke="rgba(0,0,0,0.1)"
+            stroke="#fff"
             strokeWidth="1"
           />
         </svg>

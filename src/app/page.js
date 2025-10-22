@@ -131,10 +131,34 @@ export default function Home() {
 
           {/* ✅ Responsive Orbit Section */}
           <div
-            className="relative overflow-hidden w-full mb-20 z-10 min-h-[700px]"
+            className="relative overflow-hidden w-full mb-20 z-10 min-h-[775px]"
             data-theme="light"
             id="section6"
           >
+            <div
+              style={{
+                position: "absolute",
+                top: "-6px",
+                left: 0,
+                width: "100%",
+                height: "100px",
+                zIndex: 20,
+                background:
+                  "linear-gradient(to bottom, rgba(255,255,255,1), transparent)",
+              }}
+            ></div>
+            <div
+              style={{
+                position: "absolute",
+                bottom: "-2px",
+                left: 0,
+                width: "100%",
+                height: "100px",
+                zIndex: 20,
+                background:
+                  "linear-gradient(to top, rgba(255,255,255,1), transparent)",
+              }}
+            ></div>
             <OrbitingCirclesPulse
               radius={orbitConfig.radius[0]}
               duration={0}
