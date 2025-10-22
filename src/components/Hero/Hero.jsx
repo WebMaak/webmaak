@@ -1,19 +1,15 @@
-'use client'
+"use client";
 
 import React from "react";
 import "./Hero.css";
-import LogoMarquee from "../LogoMarquee/LogoMarquee"
+import LogoMarquee from "../LogoMarquee/LogoMarquee";
 import WhiteArrowButtonLarge from "../WhiteArrowButtonLarge/WhiteArrowButtonLarge";
 import HeroIconCursor from "./HeroIconCursor";
-import Cards from './Cards'
+import Cards from "./Cards";
 
 function Hero() {
-
   return (
-    <section
-      className="section_hero"
-      id="section1" data-theme="dark"
-    >
+    <section className="section_hero" id="section1" data-theme="dark">
       <div className="hero-bg">
         {/* <img
           src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/65fc1ba1ea85400f35700aa6_bg-green-light.webp"
@@ -40,34 +36,33 @@ function Hero() {
           className="hero-bg_lines"
         /> */}
         <div className="hero_tool-wraper hide-mobile-landscape">
-          <HeroIconCursor hoverText="MOBILE APPS • AUTOMATIONS • AI • WEB APPS •"  >
-          {({ setShowImage }) => (
-            <div className="hero_tool_icon-wrap left">
-              <img
-                src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/660496dd88e87ad9be7678f9_figma-cirle.webp"
-                loading="lazy"
-                alt=""
-                className="hero_tool_circle rotate-loop"
-              />
-              <img
-                src="./codingicons.png"
-                loading="lazy"
-                alt=""
-                className="hero_tool_icon hero_tool_icon_it"
-                onClick={() =>
-                  document.getElementById("it-section")?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  })
-                }
-                onMouseEnter={() => setShowImage(true)}
-                onMouseLeave={() => setShowImage(false)}
-              />
-            </div>
-          )}
-        </HeroIconCursor>
+          <HeroIconCursor hoverText="MOBILE APPS • AUTOMATIONS • AI • WEB APPS •">
+            {({ setShowImage }) => (
+              <div className="hero_tool_icon-wrap left">
+                <img
+                  src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/660496dd88e87ad9be7678f9_figma-cirle.webp"
+                  loading="lazy"
+                  alt=""
+                  className="hero_tool_circle rotate-loop"
+                />
+                <img
+                  src="./codingicons.png"
+                  loading="lazy"
+                  alt=""
+                  className="hero_tool_icon hero_tool_icon_it"
+                  onClick={() =>
+                    document.getElementById("it-section")?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    })
+                  }
+                  onMouseEnter={() => setShowImage(true)}
+                  onMouseLeave={() => setShowImage(false)}
+                />
+              </div>
+            )}
+          </HeroIconCursor>
 
-           
           {/* <div className="hero_tool_icon-wrap right">
             <img
               src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/660496d3ccf8e10df385076e_webflow-circle.webp"
@@ -114,8 +109,11 @@ function Hero() {
               </div>
             )}
           </HeroIconCursor> */}
-            {/* ({ setHoverText }) => ( */}
-          <HeroIconCursor hoverText="3D ANIMATION • MGFX • SFX • VIDEO EDITING •" radius={8}>
+          {/* ({ setHoverText }) => ( */}
+          <HeroIconCursor
+            hoverText="3D ANIMATION • MGFX • SFX • VIDEO EDITING •"
+            radius={8}
+          >
             {({ setShowImage }) => (
               <div className="hero_tool_icon-wrap right">
                 <img
@@ -142,20 +140,19 @@ function Hero() {
         </div>
       </div>
       <div className="hero-content">
-        <h1 split-text="true" className="hero-content-title">
+        <h1 split-text="true" className="hero-content-title ">
           {/* <span className="hero-content-white-text">
             Designing &amp; developing
           </span>{" "} */}
-          <span className="hero-green-text">
-            Crafting
-          </span>{" "}
+          <span className="hero-green-text">Crafting</span>{" "}
           <span className="hero-content-white-text italic-text-hero">
             Digital Masterpieces
           </span>
         </h1>
         <div className="max-width-medium">
           <p split-text="true" className="hero-content-subtitle">
-            Crafting digital experiences that don’t just look good, but also bring measurable growth.
+            Crafting digital experiences that don’t just look good, but also
+            bring measurable growth.
           </p>
         </div>
         <div className="hero-content_btn-wrapper fadeup">
@@ -164,30 +161,33 @@ function Hero() {
         </div>
       </div>
       <div className="hero_tool-wraper mobile">
-        <HeroIconCursor hoverText="3D ANIMATION • MGFX • SFX • VIDEO EDITING •" radius={8}>
-            {({ setShowImage }) => (
-        <div className="hero_tool_icon-wrap left mobile">
-          <img
-            src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/660496dd88e87ad9be7678f9_figma-cirle.webp"
-            loading="lazy"
-            alt=""
-            className="hero_tool_circle rotate-loop"
-          />
-          <img
-            src="./codingicons.png"
-            loading="lazy"
-            alt=""
-            onClick={() => {
-                document.getElementById("media-section")?.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-              });
-            }}
-            className="hero_tool_icon"
-          />
-        </div>
-        )}
-          </HeroIconCursor>
+        <HeroIconCursor
+          hoverText="3D ANIMATION • MGFX • SFX • VIDEO EDITING •"
+          radius={8}
+        >
+          {({ setShowImage }) => (
+            <div className="hero_tool_icon-wrap left mobile">
+              <img
+                src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/660496dd88e87ad9be7678f9_figma-cirle.webp"
+                loading="lazy"
+                alt=""
+                className="hero_tool_circle rotate-loop"
+              />
+              <img
+                src="./codingicons.png"
+                loading="lazy"
+                alt=""
+                onClick={() => {
+                  document.getElementById("media-section")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }}
+                className="hero_tool_icon"
+              />
+            </div>
+          )}
+        </HeroIconCursor>
         <div className="hero_tool_icon-wrap right mobile">
           <img
             src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/660496d3ccf8e10df385076e_webflow-circle.webp"
@@ -204,7 +204,7 @@ function Hero() {
             onClick={() => {
               document.getElementById("it-section")?.scrollIntoView({
                 behavior: "smooth",
-                block: "start"
+                block: "start",
               });
             }}
             className="hero_tool_icon"
@@ -212,20 +212,26 @@ function Hero() {
         </div>
       </div>
       <div className="hero_logo">
-            <div className="padding-section-medium " style={{paddingTop: "3rem", paddingBottom: "0rem"}}>
-              <div className="margin-bottom margin-medium">
-                <div className="text-align-center">
-                  <div className="max-width-large align-center">
-                    <h2 split-text="true" className="logo_title">
-                      Trusted by businesses that shape the future
-                    </h2>
-                  </div>
-                </div>
-              </div>
-              <div className="max-width-large align-center" style={{maxWidth: '70rem'}} >
-              <LogoMarquee/>
+        <div
+          className="padding-section-medium "
+          style={{ paddingTop: "3rem", paddingBottom: "0rem" }}
+        >
+          <div className="margin-bottom margin-medium">
+            <div className="text-align-center">
+              <div className="max-width-large align-center">
+                <h2 split-text="true" className="logo_title">
+                  Trusted by businesses that shape the future
+                </h2>
               </div>
             </div>
+          </div>
+          <div
+            className="max-width-large align-center"
+            style={{ maxWidth: "70rem" }}
+          >
+            <LogoMarquee />
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -97,7 +97,7 @@ function Contact() {
                 sizes="100vw"
                 srcset="hero-bg.JPG 500w, hero-bg.JPG 1440w"
                 alt=""
-                className="contact_desktop-bg max-h-[100%] min-w-[max-content]"
+                className="contact_desktop-bg max-h-[100%] min-h-[100%] min-w-[max-content]"
               />
             </div>
             <h2 className="heading-style-h2 is-contact-page-hero-heading">
@@ -416,7 +416,9 @@ function Contact() {
                 </div> */}
 
                   {/* Tab 2 */}
-                  <div className={`pt-16 relative`}>
+                  <div
+                    className={`lg:pt-16 md:pt-10 pt-6 lg:pb-0 md:pb-10 pb-4 lg:px-0 md:px-8 px-4 relative`}
+                  >
                     <TalibScheduler />
                     <div className="p-4 w-full bg-[#0b224d] absolute bottom-0">
                       &nbsp;
@@ -466,11 +468,13 @@ function Contact() {
                 <div className="contact_email-wrapper">
                   <a
                     href="mailto:hello@webmaak.com"
-                    className="flex text-white flex-row align-middle items-center justify-center gap-1 pr-2"
+                    className="flex text-white flex-col md:flex-row items-center justify-center gap-1 pr-2 md:pl-0 pl-4 md:pb-0 pb-4"
                   >
                     Share your querry at our email
-                    <FaEnvelope className="ml-2 text-white" />
-                    hello@webmaak.com
+                    <div className="flex gap-1 items-center">
+                      <FaEnvelope className="ml-2 text-white" />
+                      hello@webmaak.com
+                    </div>
                   </a>
                 </div>
               </div>

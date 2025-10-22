@@ -97,7 +97,7 @@ function Contact() {
                 sizes="100vw"
                 srcset="hero-bg.JPG 500w, hero-bg.JPG 1440w"
                 alt=""
-                className="contact_desktop-bg max-h-[100%] min-w-[max-content]"
+                className="contact_desktop-bg max-h-[100%] min-h-[100%] min-w-[max-content]"
               />
             </div>
             <h2 className="heading-style-h2 is-contact-page-hero-heading">
@@ -154,7 +154,7 @@ function Contact() {
                   <h3 className="pt-6 heading-style-h3 is-contact-page-hero-heading">
                     Select your Service
                   </h3>
-                  <div className="pb-16 pt-6 relative flex justify-center gap-6">
+                  <div className="pb-16 pt-6 relative flex md:flex-row flex-col items-center justify-center gap-6">
                     <Button
                       name={
                         <span className="flex items-center gap-2">
@@ -227,11 +227,13 @@ function Contact() {
                 <div className="contact_email-wrapper">
                   <a
                     href="mailto:hello@webmaak.com"
-                    className="flex text-white flex-row align-middle items-center justify-center gap-1 pr-2"
+                    className="flex text-white flex-col md:flex-row items-center justify-center gap-1 pr-2 md:pl-0 pl-4 md:pb-0 pb-4"
                   >
                     Share your querry at our email
-                    <FaEnvelope className="ml-2 text-white" />
-                    hello@webmaak.com
+                    <div className="flex gap-1 items-center">
+                      <FaEnvelope className="ml-2 text-white" />
+                      hello@webmaak.com
+                    </div>
                   </a>
                 </div>
               </div>

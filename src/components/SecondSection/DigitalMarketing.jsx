@@ -87,7 +87,7 @@ function HorizontalScrollCarousel() {
   if (isScaledDesktop) outputRange = ["5%", "-235%"];
   if (isDesktop) outputRange = ["5%", "-130%"];
 
-  const topMount = isScaledDesktop ? "lg:top-[-220px]" : "lg:top-10";
+  const topMount = isScaledDesktop ? "lg:top-[-170px]" : "lg:top-10";
   const lgHeight = isScaledDesktop ? "lg:h-fit" : "lg:h-screen";
 
   const x = useTransform(

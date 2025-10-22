@@ -48,7 +48,7 @@
   inset: 0%;
   overflow: hidden;
 }
-.contact_desktop-bg{
+.contact_desktop-bg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -60,7 +60,7 @@
     hue-rotate(180deg)    
     saturate(350%)
     blur(3px); */
-  opacity: 100%;   
+  opacity: 100%;
 }
 .hero-bg_gradient-lines {
   position: absolute;
@@ -231,8 +231,8 @@
 .container-medium,
 .container-small,
 .container-large {
-  margin-right: 0 ;
-  margin-left: 0 ;
+  margin-right: 0;
+  margin-left: 0;
 }
 .container-medium {
   width: 100%;
@@ -329,9 +329,35 @@
     transform: rotate(70deg);
   }
 }
-
-
-
+@media screen and (max-width: 1537px) {
+  .hero-green-text {
+    font-size: 4.5rem;
+  }
+  .italic-text-hero {
+    font-size: 4rem;
+  }
+  .hero-content-subtitle {
+    font-size: 0.9rem;
+  }
+  .hero-content-title {
+    line-height: 1 !important;
+  }
+  .hero-content {
+    max-width: 40rem;
+  }
+  .hero_tool-wraper {
+    max-width: 64rem;
+    margin-top: -8rem;
+  }
+  .hero_tool_icon-wrap {
+    width: 20rem;
+    height: 20rem;
+  }
+  .hero_tool_icon {
+    width: 6rem;
+    height: 6rem;
+  }
+}
 @media screen and (max-width: 1024px) {
   .section_hero {
     min-height: 70vh;
@@ -339,7 +365,7 @@
   .hero_tool-wraper {
     margin-top: 5.5rem;
   }
-  .contact_desktop-bg{
+  .contact_desktop-bg {
     bottom: 0;
   }
   .logo_component {
@@ -373,7 +399,7 @@
     font-size: 3rem;
   }
   .hero-content-subtitle {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
   .hide,
   .hide-tablet {
@@ -382,7 +408,7 @@
   .hero-content-title {
     font-size: 3.5rem;
   }
-  .hero-green-text{
+  .hero-green-text {
     font-size: 3.5rem;
   }
   .hero_tool_icon {
@@ -393,7 +419,7 @@
     max-width: 25rem;
   }
   .logo_title {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -644,7 +670,6 @@
 
 /* Hover Text Circle Animation */
 
-
 .cursorText {
   background: rgba(65, 105, 225, 0.9); /* royal blue tooltip */
   color: white;
@@ -654,4 +679,3 @@
   font-size: 14px;
   pointer-events: none;
 }
-
