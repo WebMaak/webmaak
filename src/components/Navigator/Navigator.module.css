@@ -186,4 +186,14 @@
     width: 18px;
     height: 18px;
   }
+
+  .navigator.light .icon {
+    color: #0077ff;
+  }
+
+  /* Light mode glass */
+  .navigator.light {
+    background: rgb(193, 210, 255);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
 }
