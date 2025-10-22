@@ -42,6 +42,11 @@ export default function Home() {
           radius: [0, 120, 210, 290, 370],
           iconSize: [70, 50, 50, 50, 50],
         });
+      } else if (window.innerWidth < 1537) {
+        setOrbitConfig({
+          radius: [0, 170, 300, 450, 600],
+          iconSize: [100, 80, 80, 80, 80],
+        });
       } else {
         setOrbitConfig({
           radius: [0, 220, 370, 530, 700],
@@ -131,7 +136,7 @@ export default function Home() {
 
           {/* ✅ Responsive Orbit Section */}
           <div
-            className="relative overflow-hidden w-full mb-20 z-10 min-h-[775px]"
+            className="relative bg-black overflow-hidden w-full mb-20 z-10 min-h-[775px]"
             data-theme="light"
             id="section6"
           >

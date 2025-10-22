@@ -52,6 +52,14 @@ export function OrbitingCirclesPulse({
           cx: "51.5%",
           cy: "50%",
         });
+      } else if (window.innerWidth < 1537) {
+        // tablet
+        setPositionOffsets({
+          top: "46.5%",
+          left: "48.5%",
+          cx: "51.5%",
+          cy: "51%",
+        });
       } else {
         // desktop (original)
         setPositionOffsets({ top: "47.5%", left: "49%", cx: "50%", cy: "50%" });
