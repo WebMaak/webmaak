@@ -44,6 +44,14 @@ export function OrbitingCirclesPulse({
           cx: "52%",
           cy: "48.5%",
         });
+      } else if (window.innerWidth < 1537) {
+        // tablet
+        setPositionOffsets({
+          top: "46.5%",
+          left: "48.5%",
+          cx: "51.5%",
+          cy: "52%",
+        });
       } else if (window.innerWidth < 1024) {
         // tablet
         setPositionOffsets({
@@ -52,17 +60,14 @@ export function OrbitingCirclesPulse({
           cx: "51.5%",
           cy: "50%",
         });
-      } else if (window.innerWidth < 1537) {
-        // tablet
-        setPositionOffsets({
-          top: "46.5%",
-          left: "48.5%",
-          cx: "51.5%",
-          cy: "51%",
-        });
       } else {
         // desktop (original)
-        setPositionOffsets({ top: "47.5%", left: "49%", cx: "50%", cy: "50%" });
+        setPositionOffsets({
+          top: "47.5%",
+          left: "49%",
+          cx: "51%",
+          cy: "52%",
+        });
       }
     };
 
@@ -115,7 +120,8 @@ export function OrbitingCirclesPulse({
             cy={positionOffsets.cy}
             r={radius}
             fill="none"
-            stroke="#fff"
+            stroke="rgb(0,0,0, 0.1)"
+            // stroke="#fff"
             strokeWidth="1"
           />
         </svg>
