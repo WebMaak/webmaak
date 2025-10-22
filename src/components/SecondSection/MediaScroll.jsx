@@ -42,7 +42,6 @@
 //   );
 // }
 
-
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import ProjectCards from "./ProjectCard";
@@ -50,7 +49,7 @@ import "./SecondSection.css";
 
 export default function MediaScroll() {
   return (
-    <div >
+    <div>
       <HorizontalScrollCarousel />
     </div>
   );
@@ -62,117 +61,139 @@ function HorizontalScrollCarousel() {
     target: targetRef,
   });
 
-  
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
+  const [isScaledDesktop, setIsScaledDesktop] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
-  
+
   useEffect(() => {
     const updateDevice = () => {
-      
       const width = window.innerWidth;
       setIsMobile(width < 640);
       setIsTablet(width >= 640 && width < 1024);
-      setIsDesktop(width >= 1024);
+      setIsScaledDesktop(width >= 1024 && width <= 1536);
+      setIsDesktop(width > 1536);
     };
-    
+
     updateDevice();
     window.addEventListener("resize", updateDevice);
     return () => window.removeEventListener("resize", updateDevice);
   }, []);
-  
-  // const x = useTransform(scrollYProgress, [0, 1], ["46%", "-46%"]);
-  
-  let outputRange = ["-320%", "0%"]; 
-  if (isTablet) outputRange = ["-190%", "5%"];
-  if (isDesktop) outputRange = ["-20%", "5%"];
-  
-  const x = useTransform(scrollYProgress, [0, 1], outputRange);
-  const projectData = [
-  {
-    id: 1,
-    title: "Video Editing",
-    link: '/contact@media',
-    image: "/comming-soon.png",
-    tags: ["Premiere Pro", "DaVinci", "After Effects"],
-    description: "Crafting stories by shaping raw footage into engaging content.",
-  },
-  {
-    id: 2,
-    title: "Motion Graphics",
-    link: '/contact@media',
-    image: "/comming-soon.png",
-    tags: ["DaVinci", "After Effects"],
-    description: "Bringing visuals to life with animated design and dynamic effects.",
-  },
-  {
-    id: 3,
-    title: "3D Modelling",
-    link: '/contact@media',
-    image: "/comming-soon.png",
-    tags: ["Blender", "Unreal Engine"],
-    description: "Creating realistic objects and environments in 3D space.",
-  },
-  {
-    id: 4,
-    title: "3D Animation",
-    link: '/contact@media',
-    image: "/comming-soon.png",
-    tags: ["Blender", "Unreal Engine"],
-    description: "Precise, detailed, and dynamic 3D animation.",
-  },
-  {
-    id: 5,
-    title: "Architectural Visualisation",
-    link: '/contact@media',
-    image: "/comming-soon.png",
-    tags: ["Unreal Engine"],
-    description: "Turning 2D architectural plans into realistic 3D visuals and walkthroughs.",
-  },
-];
 
+  // const x = useTransform(scrollYProgress, [0, 1], ["46%", "-46%"]);
+
+  let outputRange = ["-320%", "0%"];
+  if (isTablet) outputRange = ["-190%", "5%"];
+  if (isScaledDesktop) outputRange = ["-80%", "5%"];
+  if (isDesktop) outputRange = ["-20%", "5%"];
+
+  const topMount = isScaledDesktop ? "lg:top-[-220px]" : "lg:top-10";
+  const lgHeight = isScaledDesktop ? "lg:h-fit" : "lg:h-screen";
+
+  const x = useTransform(
+    scrollYProgress,
+    [isScaledDesktop ? 0.3 : 0, 1],
+    outputRange
+  );
+
+  const projectData = [
+    {
+      id: 1,
+      title: "Video Editing",
+      link: "/contact@media",
+      image: "/comming-soon.png",
+      tags: ["Premiere Pro", "DaVinci", "After Effects"],
+      description:
+        "Crafting stories by shaping raw footage into engaging content.",
+    },
+    {
+      id: 2,
+      title: "Motion Graphics",
+      link: "/contact@media",
+      image: "/comming-soon.png",
+      tags: ["DaVinci", "After Effects"],
+      description:
+        "Bringing visuals to life with animated design and dynamic effects.",
+    },
+    {
+      id: 3,
+      title: "3D Modelling",
+      link: "/contact@media",
+      image: "/comming-soon.png",
+      tags: ["Blender", "Unreal Engine"],
+      description: "Creating realistic objects and environments in 3D space.",
+    },
+    {
+      id: 4,
+      title: "3D Animation",
+      link: "/contact@media",
+      image: "/comming-soon.png",
+      tags: ["Blender", "Unreal Engine"],
+      description: "Precise, detailed, and dynamic 3D animation.",
+    },
+    {
+      id: 5,
+      title: "Architectural Visualisation",
+      link: "/contact@media",
+      image: "/comming-soon.png",
+      tags: ["Unreal Engine"],
+      description:
+        "Turning 2D architectural plans into realistic 3D visuals and walkthroughs.",
+    },
+  ];
 
   return (
     <>
-    <section ref={targetRef} id="media-section" data-theme="light" className="relative h-[200vh] lg:h-[180vh]">
-      <div className="sticky top-5 lg:top-10 flex flex-col md:h-[85vh] lg:h-screen items-center w-[98.9vw] overflow-hidden">
-        <div className="max-width-case-study center mt-24">
-          <div className="section-info-wrap case-study">
-            <div className="fadeup bro">
-              <h2 className="section-info_primary-text">
-                From{" "}
-                <span className="heading-text-italic">Trimming Clips</span> <br/>
-                To Building<br className="md:hidden block" /> <span className="heading-text-italic">3D Experiences</span> 
-              </h2>
-            </div>
-            <div className="fadeup">
-              <p split-text="true" className="sub-title">
-                &nbsp;We bring stories to life with high-quality video production, 3D animations, 
-                and post-production that captivate audiences and drive engagement.
-              </p>
+      <section
+        ref={targetRef}
+        id="media-section"
+        data-theme="light"
+        className="relative h-[200vh] lg:h-[180vh]"
+      >
+        <div
+          className={`sticky top-5 ${topMount} flex flex-col md:h-[85vh] ${lgHeight} items-center w-[98.9vw] overflow-hidden`}
+        >
+          <div className="max-width-case-study center mt-24">
+            <div className="section-info-wrap case-study">
+              <div className="fadeup bro">
+                <h2 className="section-info_primary-text">
+                  From{" "}
+                  <span className="heading-text-italic">Trimming Clips</span>{" "}
+                  <br />
+                  To Building
+                  <br className="md:hidden block" />{" "}
+                  <span className="heading-text-italic">3D Experiences</span>
+                </h2>
+              </div>
+              <div className="fadeup">
+                <p split-text="true" className="sub-title">
+                  &nbsp;We bring stories to life with high-quality video
+                  production, 3D animations, and post-production that captivate
+                  audiences and drive engagement.
+                </p>
+              </div>
             </div>
           </div>
+          <div className="relative w-full flex-1">
+            <motion.div style={{ x }} className="flex h-full items-center">
+              <ProjectCards data={projectData} />
+            </motion.div>
+          </div>
         </div>
-        <div className="relative mb-12 w-full flex-1">
-          <motion.div style={{ x }} className="flex h-full items-center">
-            <ProjectCards data={projectData} />
-          </motion.div>
-        </div>
-      </div>
-    </section>
-    <style jsx>{`
-      .scroll-text {
-      font-size: 6.2rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      background: -webkit-linear-gradient(-90deg, #262626, #ffffff 80%);
-      -webkit-background-clip: text;
-      -webkit-text-stroke: 4px transparent;
-      overflow: visible;
-      padding: 1.4rem 0rem;
-      padding-right: 3rem;
-    }
-    `}</style>
+      </section>
+      <style jsx>{`
+        .scroll-text {
+          font-size: 6.2rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          background: -webkit-linear-gradient(-90deg, #262626, #ffffff 80%);
+          -webkit-background-clip: text;
+          -webkit-text-stroke: 4px transparent;
+          overflow: visible;
+          padding: 1.4rem 0rem;
+          padding-right: 3rem;
+        }
+      `}</style>
     </>
   );
 }

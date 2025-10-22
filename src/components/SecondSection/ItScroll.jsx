@@ -48,21 +48,16 @@ import ProjectCards from "./ProjectCard";
 import "./SecondSection.css";
 
 export default function ItScroll() {
-  return (
-    <div>
-      <HorizontalScrollCarousel />
-    </div>
-  );
+  return <HorizontalScrollCarousel />;
 }
 
 function HorizontalScrollCarousel() {
   const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
+  const { scrollYProgress } = useScroll({ target: targetRef });
 
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
+  const [isScaledDesktop, setIsScaledDesktop] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
@@ -70,7 +65,8 @@ function HorizontalScrollCarousel() {
       const width = window.innerWidth;
       setIsMobile(width < 640);
       setIsTablet(width >= 640 && width < 1024);
-      setIsDesktop(width >= 1024);
+      setIsScaledDesktop(width >= 1024 && width <= 1536);
+      setIsDesktop(width > 1536);
     };
 
     updateDevice();
@@ -78,13 +74,20 @@ function HorizontalScrollCarousel() {
     return () => window.removeEventListener("resize", updateDevice);
   }, []);
 
-  // const x = useTransform(scrollYProgress, [0, 1], ["46%", "-46%"]);
-
   let outputRange = ["5%", "-730%"];
   if (isTablet) outputRange = ["5%", "-460%"];
+  if (isScaledDesktop) outputRange = ["5%", "-235%"];
   if (isDesktop) outputRange = ["5%", "-130%"];
 
-  const x = useTransform(scrollYProgress, [0, 1], outputRange);
+  const topMount = isScaledDesktop ? "lg:top-[-220px]" : "lg:top-10";
+  const lgHeight = isScaledDesktop ? "lg:h-fit" : "lg:h-screen";
+
+  const x = useTransform(
+    scrollYProgress,
+    [isScaledDesktop ? 0.15 : 0, 1],
+    outputRange
+  );
+
   const projectData = [
     {
       id: 1,
@@ -185,7 +188,9 @@ function HorizontalScrollCarousel() {
         id="it-section"
         className="relative h-[300vh] mb-[-6rem]"
       >
-        <div className="sticky top-0 md:top-32 lg:top-10 flex flex-col md:h-[80vh] lg:h-screen items-center w-[98.9vw] overflow-hidden">
+        <div
+          className={`sticky top-0 ${topMount} md:top-32 flex flex-col md:h-[80vh] ${lgHeight} items-center w-[98.9vw] overflow-hidden`}
+        >
           <div className="max-width-case-study center mt-24">
             <div className="section-info-wrap case-study">
               <div className="fadeup bro">
