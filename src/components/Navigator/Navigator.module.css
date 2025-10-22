@@ -71,20 +71,8 @@
   color: #fff;
   transform: scale(1.1);
 }
-
-@media (max-width: 768px) {
-  .icon {
-    width: 14px;
-    height: auto;
-  }
-  .navigator {
-    gap: 0.4rem;
-  }
-  @keyframes slideIn {
-    to {
-      right: 10px; /* visible */
-    }
-  }
+.navigatorMobile {
+  display: none;
 }
 
 /* new icons */
@@ -169,4 +157,33 @@
 .label.dark {
   background: rgba(255, 255, 255, 0.95);
   color: #4169e1; /* Royal Blue text */
+}
+
+@media (max-width: 1024px) {
+  .label {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .navigator {
+    top: auto;
+    right: auto;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    width: fit-content;
+  }
+
+  .navigator .navItem {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
 }

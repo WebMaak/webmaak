@@ -98,27 +98,51 @@ export default function Navigator() {
   };
 
   return (
-    <div className={`${styles.navigator} ${styles[activeTheme]}`}>
-      {sections.map((sec) => {
-        const isActive = activeSection === sec.id;
+    <>
+      <div className={`${styles.navigator} ${styles[activeTheme]}`}>
+        {sections.map((sec) => {
+          const isActive = activeSection === sec.id;
 
-        return (
-          <div
-            key={sec.id}
-            className={`${styles.navItem} ${isActive ? styles.active : ""}`}
-            onClick={() => handleClick(sec.id)}
-          >
-            <div className={styles.icon}>{sec.icon}</div>
-            <span
-              className={`${styles.label} ${isActive ? styles.showLabel : ""} ${
-                styles[activeTheme]
-              }`}
+          return (
+            <div
+              key={sec.id}
+              className={`${styles.navItem} ${isActive ? styles.active : ""}`}
+              onClick={() => handleClick(sec.id)}
             >
-              {sec.label}
-            </span>
-          </div>
-        );
-      })}
-    </div>
+              <div className={styles.icon}>{sec.icon}</div>
+              <span
+                className={`${styles.label} ${
+                  isActive ? styles.showLabel : ""
+                } ${styles[activeTheme]}`}
+              >
+                {sec.label}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+      <div className={`${styles.navigator} ${styles[activeTheme]}`}>
+        {sections.map((sec) => {
+          const isActive = activeSection === sec.id;
+
+          return (
+            <div
+              key={sec.id}
+              className={`${styles.navItem} ${isActive ? styles.active : ""}`}
+              onClick={() => handleClick(sec.id)}
+            >
+              <div className={styles.icon}>{sec.icon}</div>
+              <span
+                className={`${styles.label} ${
+                  isActive ? styles.showLabel : ""
+                } ${styles[activeTheme]}`}
+              >
+                {sec.label}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 }
