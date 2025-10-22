@@ -632,6 +632,9 @@ body {
     padding-top: 0.7rem !important;
     padding-bottom: 0.7rem !important;
   }
+  .marquee-top-text {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -645,5 +648,9 @@ body {
     grid-template-columns: 2fr 2fr !important;
     max-width: 80%;
     margin: 0 auto;
+  }
+  .marquee-top-text {
+    display: block;
+    margin-bottom: 3rem !important;
   }
 }

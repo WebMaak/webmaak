@@ -216,7 +216,7 @@ function Hero() {
           className="padding-section-medium "
           style={{ paddingTop: "3rem", paddingBottom: "0rem" }}
         >
-          <div className="margin-bottom margin-medium">
+          <div className="margin-bottom margin-medium marquee-top-text">
             <div className="text-align-center">
               <div className="max-width-large align-center">
                 <h2 split-text="true" className="logo_title">

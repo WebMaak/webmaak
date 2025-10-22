@@ -63,6 +63,11 @@ const StyledWrapper = styled.div`
     transition: opacity 300ms ease-in-out 150ms;
     padding: var(--_label-padding);
   }
+  @media (max-width: 768px) {
+    .switch > span {
+      padding: 0.8rem 1.5rem;
+    }
+  }
   .switch::before,
   .switch::after {
     content: "";
