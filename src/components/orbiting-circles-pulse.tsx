@@ -36,21 +36,13 @@ export function OrbitingCirclesPulse({
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) {
+      if (window.innerWidth < 768) {
         // mobile
         setPositionOffsets({
           top: "46%",
           left: "48%",
           cx: "52%",
           cy: "48.5%",
-        });
-      } else if (window.innerWidth < 1537) {
-        // tablet
-        setPositionOffsets({
-          top: "46.5%",
-          left: "48.5%",
-          cx: "51.5%",
-          cy: "52%",
         });
       } else if (window.innerWidth < 1024) {
         // tablet
@@ -59,6 +51,14 @@ export function OrbitingCirclesPulse({
           left: "48.5%",
           cx: "51.5%",
           cy: "50%",
+        });
+      } else if (window.innerWidth < 1537) {
+        // Scaled Desktop
+        setPositionOffsets({
+          top: "46.5%",
+          left: "48.5%",
+          cx: "51.5%",
+          cy: "52%",
         });
       } else {
         // desktop (original)
@@ -120,8 +120,7 @@ export function OrbitingCirclesPulse({
             cy={positionOffsets.cy}
             r={radius}
             fill="none"
-            stroke="rgb(0,0,0, 0.1)"
-            // stroke="#fff"
+            stroke="rgb(0,0,0, 0.07)"
             strokeWidth="1"
           />
         </svg>

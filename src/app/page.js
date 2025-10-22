@@ -32,10 +32,10 @@ export default function Home() {
   // ✅ Responsive orbit config
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) {
+      if (window.innerWidth < 768) {
         setOrbitConfig({
-          radius: [0, 80, 135, 200, 270],
-          iconSize: [60, 40, 40, 40, 40],
+          radius: [0, 60, 100, 140, 180],
+          iconSize: [40, 30, 30, 30, 30],
         });
       } else if (window.innerWidth < 1024) {
         setOrbitConfig({
@@ -136,7 +136,7 @@ export default function Home() {
 
           {/* ✅ Responsive Orbit Section */}
           <div
-            className="relative overflow-hidden w-full mb-20 z-10 min-h-[775px]"
+            className="relative overflow-hidden w-full mb-20 z-10 min-h-[450px] md:min-h-[775px]"
             data-theme="light"
             id="section6"
           >
@@ -172,7 +172,7 @@ export default function Home() {
               <img
                 src="/orbiting-circle-icons/center.png"
                 alt="icon 2"
-                className=" lg:mr-[-72px] lg:mb-[-72px] md:mr-[-56px] md:mb-[-56px] mr-[-38px] mb-[-38px] animate-pulse-scale"
+                className=" lg:mr-[-72px] lg:mb-[-72px] md:mr-[-54px] md:mb-[-54px] mr-[-32px] mb-[-24px] animate-pulse-scale"
               />
             </OrbitingCirclesPulse>
 
