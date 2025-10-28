@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
 import React from "react";
 import "./FourthSection.css";
 import WhiteArrowButton from "@/components/WhiteArrowButton/WhiteArrowButton";
 import { useIntersection } from "@/hooks/useIntersection";
 import { Repeat2 } from "lucide-react";
-import Image from "next/image"
+import Image from "next/image";
 
 export default function FourthSection() {
   useIntersection();
@@ -13,12 +13,12 @@ export default function FourthSection() {
 
   return (
     <section id="section5" data-theme="dark" className="section_solutions">
-        <div className="bg-animation">
-          <div id="stars"></div>
-          {/* <div id="stars2"></div> */}
-          {/* <div id="stars3"></div> */}
-          <div id="stars4"></div>
-        </div>  
+      <div className="bg-animation">
+        <div id="stars"></div>
+        {/* <div id="stars2"></div> */}
+        {/* <div id="stars3"></div> */}
+        <div id="stars4"></div>
+      </div>
       <div className="solution_bg hidden">
         <img
           src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66016f983e1756246a489a82_green-solution.webp"
@@ -43,14 +43,19 @@ export default function FourthSection() {
             <div className="solutions_wrap min-w-full">
               <div split-text="true" className="section-info-wrap">
                 <div className="fadeup">
-                  <h2  className={`section-info_primary-text-light`}>
-                    Crating <span className="heading-text-italic">Digital Experiences</span><br/>
+                  <h2 className={`section-info_primary-text-light`}>
+                    Crating{" "}
+                    <span className="heading-text-italic">
+                      Digital Experiences
+                    </span>
+                    <br />
                     That Fuel Success
                   </h2>
                 </div>
                 <div className="fadeup">
                   <p className="sub-title-fourth-sec">
-                    From sleek landing pages to powerful enterprise web apps, we bring ideas to life with precision and creativity.
+                    From sleek landing pages to powerful enterprise web apps, we
+                    bring ideas to life with precision and creativity.
                   </p>
                 </div>
               </div>
@@ -67,17 +72,24 @@ export default function FourthSection() {
                       <div className="solutions_card-content">
                         <div className="solutions_card_top-content">
                           <h4 className="solutions_card_title">
-                            Creative Web Development <br/>
+                            Creative Web Development <br />
                           </h4>
                           <div className="text-color-grey w-3/4">
                             <p className="solutions_card_description">
-                              High-performing websites that reflect your brand identity and deliver measurable results. From corporate sites to eCommerce, we craft digital experiences that convert.
+                              High-performing websites that reflect your brand
+                              identity and deliver measurable results. From
+                              corporate sites to eCommerce, we craft digital
+                              experiences that convert.
                             </p>
                           </div>
                           <div className="icon-text-wrapper">
                             <div className="icon-text-wrap">
                               <div className="flex justify-center">
-                                <Image src="/main-logo/favicon.png" width={27} height={27} />
+                                <Image
+                                  src="/main-logo/favicon.png"
+                                  width={27}
+                                  height={27}
+                                />
                               </div>
                               <div className="icon-text_text pt-[3px]">
                                 Growth-Focused Strategies
@@ -85,7 +97,11 @@ export default function FourthSection() {
                             </div>
                             <div className="icon-text-wrap">
                               <div className="flex justify-center">
-                                <Image src="/main-logo/favicon.png" width={27} height={27} />
+                                <Image
+                                  src="/main-logo/favicon.png"
+                                  width={27}
+                                  height={27}
+                                />
                               </div>
                               <div className="icon-text_text pt-[3px]">
                                 CMS & custom integrations
@@ -93,7 +109,11 @@ export default function FourthSection() {
                             </div>
                             <div className="icon-text-wrap">
                               <div className="flex justify-center">
-                                <Image src="/main-logo/favicon.png" width={27} height={27} />
+                                <Image
+                                  src="/main-logo/favicon.png"
+                                  width={27}
+                                  height={27}
+                                />
                               </div>
                               <div className="icon-text_text pt-[3px]">
                                 Optimized for speed & SEO
@@ -101,7 +121,11 @@ export default function FourthSection() {
                             </div>
                             <div className="icon-text-wrap">
                               <div className="flex justify-center">
-                                <Image src="/main-logo/favicon.png" width={27} height={27} />
+                                <Image
+                                  src="/main-logo/favicon.png"
+                                  width={27}
+                                  height={27}
+                                />
                               </div>
                               <div className="icon-text_text pt-[3px]">
                                 Scalable, future-ready builds
@@ -113,14 +137,13 @@ export default function FourthSection() {
                       </div>
                       <div className="solutions_card-content-image-wrap">
                         <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66000f0f58f2d3804787464a_navigator.webp"
+                          src="/web-dev-image.png"
                           loading="lazy"
                           sizes="(max-width: 479px) 40vw, (max-width: 767px) 38vw, (max-width: 991px) 21vw, 19vw"
-                          srcset="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66000f0f58f2d3804787464a_navigator-p-500.webp 500w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66000f0f58f2d3804787464a_navigator.webp 502w"
-                          alt=""
+                          alt="web development"
                           className="webflow-navigator"
                         />
-                        <img
+                        {/* <img
                           src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66012032daeca4ae7591f4bb_dashboar-webflow-min.png"
                           loading="lazy"
                           sizes="(max-width: 479px) 91vw, (max-width: 767px) 90vw, (max-width: 991px) 46vw, 31vw"
@@ -160,11 +183,9 @@ export default function FourthSection() {
                             fill="currentColor"
                             className="webflow-tag-text"
                           ></path>
-                        </svg>
+                        </svg> */}
                       </div>
                     </div>
-
-                    
                   </div>
                 </div>
               </div>
@@ -180,7 +201,9 @@ export default function FourthSection() {
                           </h4>
                           <div className="text-color-grey">
                             <p className="solutions_card_description">
-                             We design experiences, not just screens. Every interaction is built to keep users engaged and connected with your brand.
+                              We design experiences, not just screens. Every
+                              interaction is built to keep users engaged and
+                              connected with your brand.
                             </p>
                           </div>
                         </div>
@@ -458,7 +481,6 @@ export default function FourthSection() {
                         </svg>
                       </div>
                     </div>
-                    
                   </div>
                 </div>
               </div>
@@ -474,14 +496,20 @@ export default function FourthSection() {
                           </h4>
                           <div className="text-color-grey">
                             <p className="solutions_card_description">
-                              We design experiences, not just screens. Every interaction is built to keep users engaged and connected with your brand.
+                              We design experiences, not just screens. Every
+                              interaction is built to keep users engaged and
+                              connected with your brand.
                             </p>
                           </div>
                         </div>
                         <div class="icon-text-wrapper">
                           <div className="icon-text-wrap">
                             <div className="flex justify-center">
-                              <Image src="/main-logo/favicon.png" width={27} height={27} />
+                              <Image
+                                src="/main-logo/favicon.png"
+                                width={27}
+                                height={27}
+                              />
                             </div>
                             <div className="icon-text_text pt-[3px]">
                               High-Impact Product Visuals
@@ -489,7 +517,11 @@ export default function FourthSection() {
                           </div>
                           <div className="icon-text-wrap">
                             <div className="flex justify-center">
-                              <Image src="/main-logo/favicon.png" width={27} height={27} />
+                              <Image
+                                src="/main-logo/favicon.png"
+                                width={27}
+                                height={27}
+                              />
                             </div>
                             <div className="icon-text_text pt-[3px]">
                               Seamless Shopping Experience
@@ -497,7 +529,11 @@ export default function FourthSection() {
                           </div>
                           <div className="icon-text-wrap">
                             <div className="flex justify-center">
-                              <Image src="/main-logo/favicon.png" width={27} height={27} />
+                              <Image
+                                src="/main-logo/favicon.png"
+                                width={27}
+                                height={27}
+                              />
                             </div>
                             <div className="icon-text_text pt-[3px]">
                               Mobile-Optimized & Fast
@@ -505,7 +541,11 @@ export default function FourthSection() {
                           </div>
                           <div className="icon-text-wrap">
                             <div className="flex justify-center">
-                              <Image src="/main-logo/favicon.png" width={27} height={27} />
+                              <Image
+                                src="/main-logo/favicon.png"
+                                width={27}
+                                height={27}
+                              />
                             </div>
                             <div className="icon-text_text pt-[3px]">
                               Sales-Driven Layouts & CTAs
@@ -562,7 +602,6 @@ export default function FourthSection() {
                         />
                       </div>
                     </div>
-                    
                   </div>
                 </div>
               </div>
@@ -588,7 +627,9 @@ export default function FourthSection() {
                           </h4>
                           <div className="text-color-grey">
                             <p className="solutions_card_description">
-                              Beyond design and development, we help you grow your online presence with tailored marketing strategies.
+                              Beyond design and development, we help you grow
+                              your online presence with tailored marketing
+                              strategies.
                             </p>
                           </div>
                         </div>
@@ -718,7 +759,10 @@ export default function FourthSection() {
                           fill="none"
                           className="revamp-webflow-svg"
                         >
-                          <g filter="url(#filter0_di_2338_7847)" className="g-3">
+                          <g
+                            filter="url(#filter0_di_2338_7847)"
+                            className="g-3"
+                          >
                             <rect
                               x="17.0693"
                               y="4.86719"
@@ -806,7 +850,6 @@ export default function FourthSection() {
                         </svg>
                       </div>
                     </div>
-                    
                   </div>
                 </div>
               </div>
@@ -816,19 +859,34 @@ export default function FourthSection() {
                   <div className="solutions_card-holder">
                     <div className="solutions_card verticle">
                       <div className="solutions_card-content padding-bottom-0">
-                        <div className="solutions_card_top-content wized" style={{maxWidth: "100%"}}>
+                        <div
+                          className="solutions_card_top-content wized"
+                          style={{ maxWidth: "100%" }}
+                        >
                           <h4 className="solutions_card_title">
                             3D & Creative Graphics
                           </h4>
                           <div className="text-color-grey">
                             <p className="solutions_card_description">
-                              From 3D animations to striking graphic design, we help brands stand out with visually stunning content.
+                              From 3D animations to striking graphic design, we
+                              help brands stand out with visually stunning
+                              content.
                             </p>
                           </div>
-                          <div className="icon-text-wrapper" style={{display: "grid", gridTemplateColumns: "repeat(2, 1fr)",}}>
+                          <div
+                            className="icon-text-wrapper"
+                            style={{
+                              display: "grid",
+                              gridTemplateColumns: "repeat(2, 1fr)",
+                            }}
+                          >
                             <div className="icon-text-wrap">
                               <div className="flex justify-center">
-                                <Image src="/main-logo/favicon.png" width={27} height={27} />
+                                <Image
+                                  src="/main-logo/favicon.png"
+                                  width={27}
+                                  height={27}
+                                />
                               </div>
                               <div className="icon-text_text pt-[3px]">
                                 Growth-Focused Strategies
@@ -836,7 +894,11 @@ export default function FourthSection() {
                             </div>
                             <div className="icon-text-wrap">
                               <div className="flex justify-center">
-                                <Image src="/main-logo/favicon.png" width={27} height={27} />
+                                <Image
+                                  src="/main-logo/favicon.png"
+                                  width={27}
+                                  height={27}
+                                />
                               </div>
                               <div className="icon-text_text pt-[3px]">
                                 CMS & custom integrations
@@ -844,7 +906,11 @@ export default function FourthSection() {
                             </div>
                             <div className="icon-text-wrap">
                               <div className="flex justify-center">
-                                <Image src="/main-logo/favicon.png" width={27} height={27} />
+                                <Image
+                                  src="/main-logo/favicon.png"
+                                  width={27}
+                                  height={27}
+                                />
                               </div>
                               <div className="icon-text_text pt-[3px]">
                                 Optimized for speed & SEO
@@ -852,7 +918,11 @@ export default function FourthSection() {
                             </div>
                             <div className="icon-text-wrap">
                               <div className="flex justify-center">
-                                <Image src="/main-logo/favicon.png" width={27} height={27} />
+                                <Image
+                                  src="/main-logo/favicon.png"
+                                  width={27}
+                                  height={27}
+                                />
                               </div>
                               <div className="icon-text_text pt-[3px]">
                                 Scalable, future-ready builds
@@ -899,7 +969,6 @@ export default function FourthSection() {
                         />
                       </div>
                     </div>
-                    
                   </div>
                 </div>
               </div>
@@ -915,45 +984,63 @@ export default function FourthSection() {
                           </h4>
                           <div className="text-color-grey">
                             <p className="solutions_card_description">
-                              Bring your brand stories to life with professional video editing and dynamic motion graphics. Perfect for ads, presentations, and social media.
+                              Bring your brand stories to life with professional
+                              video editing and dynamic motion graphics. Perfect
+                              for ads, presentations, and social media.
                             </p>
                           </div>
                         </div>
                         <div class="icon-text-wrapper">
                           <div className="icon-text-wrap">
                             <div className="flex justify-center">
-                                <Image src="/main-logo/favicon.png" width={27} height={27} />
-                              </div>
+                              <Image
+                                src="/main-logo/favicon.png"
+                                width={27}
+                                height={27}
+                              />
+                            </div>
                             <div className="icon-text_text pt-[3px]">
                               Video Editing & Post-Production
                             </div>
                           </div>
                           <div className="icon-text-wrap">
                             <div className="flex justify-center">
-                                <Image src="/main-logo/favicon.png" width={27} height={27} />
-                              </div>
+                              <Image
+                                src="/main-logo/favicon.png"
+                                width={27}
+                                height={27}
+                              />
+                            </div>
                             <div className="icon-text_text pt-[3px]">
                               Motion Graphics & Animation
                             </div>
                           </div>
                           <div className="icon-text-wrap">
                             <div className="flex justify-center">
-                                <Image src="/main-logo/favicon.png" width={27} height={27} />
-                              </div>
+                              <Image
+                                src="/main-logo/favicon.png"
+                                width={27}
+                                height={27}
+                              />
+                            </div>
                             <div className="icon-text_text pt-[3px]">
                               Social Media Video Content
                             </div>
                           </div>
                           <div className="icon-text-wrap">
                             <div className="flex justify-center">
-                                <Image src="/main-logo/favicon.png" width={27} height={27} />
-                              </div>
+                              <Image
+                                src="/main-logo/favicon.png"
+                                width={27}
+                                height={27}
+                              />
+                            </div>
                             <div className="icon-text_text pt-[3px]">
                               Video Strategy & Analytics
                             </div>
                           </div>
                         </div>
-                      <WhiteArrowButton txt="Book a call" />
+                        <WhiteArrowButton txt="Book a call" />
                       </div>
                       <div className="solutions_card-content-user-centric tab-relative">
                         <img
@@ -1005,7 +1092,6 @@ export default function FourthSection() {
                       </div>
                     </div>
                     <div className="h-10"></div>
-                    
                   </div>
                 </div>
               </div>

@@ -220,11 +220,11 @@
 }
 .webflow-navigator {
   z-index: 2;
-  width: 19vw;
-  max-width: 15.5rem;
+  width: 100vw;
+  max-width: 34rem;
   position: absolute;
-  bottom: 0;
-  left: -4%;
+  bottom: -50px;
+  left: -35%;
 }
 .webflow-dashboard {
   z-index: 1;
