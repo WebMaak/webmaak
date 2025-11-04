@@ -102,43 +102,19 @@ const ProjectCards = ({ data }) => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
 
-  const onMouseDown = (e) => {
+  const startDrag = (pageX) => {
     setIsDragging(true);
-    setStartX(e.pageX - sliderRef.current.offsetLeft);
+    setStartX(pageX - sliderRef.current.offsetLeft);
     setScrollLeft(sliderRef.current.scrollLeft);
   };
 
-  const onMouseLeave = () => {
-    setIsDragging(false);
-  };
+  const stopDrag = () => setIsDragging(false);
 
-  const onMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const onMouseMove = (e) => {
+  const handleDrag = (pageX) => {
     if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - sliderRef.current.offsetLeft;
+    const x = pageX - sliderRef.current.offsetLeft;
     const walk = (x - startX) * 1; // scroll speed factor
     sliderRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const onTouchStart = (e) => {
-    setIsDragging(true);
-    setStartX(e.touches[0].pageX - sliderRef.current.offsetLeft);
-    setScrollLeft(sliderRef.current.scrollLeft);
-  };
-
-  const onTouchMove = (e) => {
-    if (!isDragging) return;
-    const x = e.touches[0].pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX) * 1; // scroll speed factor
-    sliderRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const onTouchEnd = () => {
-    setIsDragging(false);
   };
 
   return (
@@ -146,77 +122,106 @@ const ProjectCards = ({ data }) => {
       <div className="home-case-studies_collection-wrap w-dyn-list">
         <div
           ref={sliderRef}
-          className={`home-case-studies_grid_scroll grid_scroll w-dyn-items gap-10 ${isDragging ? "dragging" : ""}`}
-          onMouseDown={onMouseDown}
-          onMouseLeave={onMouseLeave}
-          onMouseUp={onMouseUp}
-          onMouseMove={onMouseMove}
-          onTouchStart={onTouchStart}
-          onTouchMove={onTouchMove}
-          onTouchEnd={onTouchEnd}
+          className={`home-case-studies_grid_scroll grid_scroll w-dyn-items gap-10 ${
+            isDragging ? "dragging" : ""
+          }`}
+          onMouseDown={(e) => startDrag(e.pageX)}
+          onMouseLeave={stopDrag}
+          onMouseUp={stopDrag}
+          onMouseMove={(e) => handleDrag(e.pageX)}
+          onTouchStart={(e) => startDrag(e.touches[0].pageX)}
+          onTouchMove={(e) => handleDrag(e.touches[0].pageX)}
+          onTouchEnd={stopDrag}
         >
           {data.map((project) => (
             <div
               key={project.id}
               className="home-case-studies_item fadeup w-dyn-item md:max-w-[400px] max-h-[500px] md:max-h-[500px]"
             >
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noreferrer"
-                className="home-case-studies_link"
-              >
-                <div className="project_card">
-                  <div className="project_image-wrapper">
-                    <div className="project_inner-image-wrap">
-                      <img
-                        loading="lazy"
-                        src={project.image}
-                        alt={project.title}
-                        className="project_image"
-                      />
+              <div className="project_card">
+                {/* IMAGE */}
+                <div
+                  className="project_image-wrapper"
+                  style={{ pointerEvents: "none" }}
+                >
+                  <div className="project_inner-image-wrap">
+                    <img
+                      loading="lazy"
+                      src={project.image}
+                      alt={project.title}
+                      className="project_image"
+                      draggable={false}
+                    />
+                  </div>
+                </div>
+
+                {/* CONTENT */}
+                <div
+                  className="project_content"
+                  style={{ pointerEvents: "none" }}
+                >
+                  {/* TAGS */}
+                  <div className="w-dyn-list">
+                    <div role="list" className="project_tags w-dyn-items">
+                      {project.tags.map((tag, idx) => (
+                        <div
+                          key={idx}
+                          role="listitem"
+                          className="collection-item w-dyn-item"
+                        >
+                          <div className="project_tag">{tag}</div>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
-                  <div className="project_content">
-                    <div className="w-dyn-list">
-                      <div role="list" className="project_tags w-dyn-items">
-                        {project.tags.map((tag, idx) => (
-                          <div key={idx} role="listitem" className="collection-item w-dyn-item">
-                            <div className="project_tag">
-                              {tag}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                  {/* TITLE + DESCRIPTION + ICON */}
+                  <div className="project_bottom-wrap">
+                    {/* Title is clickable */}
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{ pointerEvents: "auto" }}
+                    >
+                      <h3 className="heading-style-h2 project-title">
+                        {project.title}
+                      </h3>
+                    </a>
 
-                    <div className="project_bottom-wrap">
-                      <h3 className="heading-style-h2 project-title">{project.title}</h3>
-                      <div className="wrap-content">
-                        <p className="text-size-small problem_grid-content-pr w-[90%]">{project.description}</p>
-                        <div className="project_round-icon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="100%"
-                            viewBox="0 0 46 46"
-                            fill="none"
-                            className="project_icon"
-                          >
-                            <path
-                              d="M16.7725 29.5059L29.9718 16.3066M29.9718 16.3066H16.7725M29.9718 16.3066V29.5059"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            ></path>
-                          </svg>
-                        </div>
-                      </div>
+                    <div className="wrap-content">
+                      <p className="text-size-small problem_grid-content-pr w-[90%]">
+                        {project.description}
+                      </p>
+
+                      {/* Arrow icon clickable */}
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="project_round-icon"
+                        style={{ pointerEvents: "auto" }}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="100%"
+                          viewBox="0 0 46 46"
+                          fill="none"
+                          className="project_icon"
+                        >
+                          <path
+                            d="M16.7725 29.5059L29.9718 16.3066M29.9718 16.3066H16.7725M29.9718 16.3066V29.5059"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>
+                        </svg>
+                      </a>
                     </div>
                   </div>
                 </div>
-              </a>
+              </div>
             </div>
           ))}
         </div>

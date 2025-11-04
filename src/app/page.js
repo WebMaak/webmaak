@@ -8,14 +8,9 @@ import FourthSection from "../components/FourthSection/FourthSection";
 import FifthSection from "../components/FifthSection/FifthSection";
 import EighthSection from "../components/EighthSection/EighthSection";
 import SeventhSection from "../components/SeventhSection/SeventhSection";
-import SixthSection from "../components/SixthSection/SixthSection";
 import Footer from "../components/Footer/Footer";
-import ItScroll from "../components/SecondSection/ItScroll";
-import MediaScroll from "../components/SecondSection/MediaScroll";
-import DigitalMarketing from "../components/SecondSection/DigitalMarketing";
 import ItScrollTouch from "../components/SecondSection/ItScrollTouch";
 import MediaScrollTouch from "../components/SecondSection/MediaScrollTouch";
-import DigitalMarketingTouch from "../components/SecondSection/DigitalMarketingTouch";
 import Navigator from "../components/Navigator/Navigator";
 import { React, useState, useEffect } from "react";
 import { OrbitingCirclesPulse } from "../components/orbiting-circles-pulse";
@@ -122,14 +117,14 @@ export default function Home() {
           <FirstSection />
           <SecondSection />
           <div id="section4" data-theme="light">
-            {isTouch ? <ItScrollTouch /> : <ItScroll />}
+            <ItScrollTouch />
           </div>
           <div id="section8" data-theme="light">
-            {isTouch ? <MediaScrollTouch /> : <MediaScroll />}
+            <MediaScrollTouch />
           </div>
-          <div id="section9" data-theme="light">
-            {isTouch ? <DigitalMarketingTouch /> : <DigitalMarketing />}
-          </div>
+          {/* <div id="section9" data-theme="light">
+            <DigitalMarketingTouch />
+          </div> */}
 
           <FourthSection />
           <FifthSection />
