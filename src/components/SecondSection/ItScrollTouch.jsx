@@ -50,7 +50,7 @@ function HorizontalDragCarousel() {
     {
       id: 1,
       title: "UI/UX Design",
-      image: "it-scroll/card1.png",
+      image: "it-scroll/ui-ux.png",
       tags: ["Figma", "Design", "UI/UX"],
       link: "/contact@webapps",
       description:
@@ -59,7 +59,7 @@ function HorizontalDragCarousel() {
     {
       id: 2,
       title: "CMS Development",
-      image: "/it-scroll/card2.png",
+      image: "/it-scroll/cms-development.png",
       link: "/contact@webapps",
       tags: ["WordPress", "Webflow", "Shopify"],
       description:
@@ -68,7 +68,7 @@ function HorizontalDragCarousel() {
     {
       id: 4,
       title: "E-Commerce Solutions",
-      image: "/it-scroll/card4.png",
+      image: "/it-scroll/ecommerce-solution.png",
       link: "/contact@webapps",
       tags: ["Shopify", "WooCommerce", "Custom Stores"],
       description:
@@ -77,7 +77,7 @@ function HorizontalDragCarousel() {
     {
       id: 5,
       title: "Web Applications",
-      image: "/it-scroll/card5.png",
+      image: "/it-scroll/webapps.png",
       link: "/contact@webapps",
       tags: ["Next.js", "React.js", "Node.js"],
       description:
@@ -86,7 +86,7 @@ function HorizontalDragCarousel() {
     {
       id: 3,
       title: "Website Development",
-      image: "/comming-soon.png",
+      image: "/it-scroll/website-development.png",
       link: "/contact@webapps",
       tags: ["React.js", "Next.js", "Node.js", "Express.js"],
       description:
@@ -95,48 +95,48 @@ function HorizontalDragCarousel() {
     {
       id: 6,
       title: "App Development",
-      image: "/comming-soon.png",
+      image: "/it-scroll/app-development.png",
       link: "/contact@webapps",
       tags: ["React Native", "Mobile", "iOS/Android"],
       description:
         "iOS & Android, native & hybrid. Engaging apps with intuitive UX.",
     },
-    {
-      id: 7,
-      title: "Custom Integrations",
-      image: "/comming-soon.png",
-      link: "/contact@webapps",
-      tags: ["WhatsApp", "AI Chatbot", "API"],
-      description:
-        "API & third-party tool setups. Smooth workflows, connected systems.",
-    },
-    {
-      id: 8,
-      title: "AI Consulting",
-      image: "/comming-soon.png",
-      link: "/contact@webapps",
-      tags: ["AI Strategy", "Implementation", "Consulting"],
-      description:
-        "Strategy, setup & implementation. Guiding your AI transformation.",
-    },
-    {
-      id: 9,
-      title: "IT Consulting",
-      image: "/comming-soon.png",
-      link: "/contact@webapps",
-      tags: ["Technology Strategy", "Digital Growth", "Consulting"],
-      description:
-        "Technology strategy & digital growth. Guidance to scale your business.",
-    },
-    {
-      id: 10,
-      title: "Tech Support & Maint.",
-      image: "/comming-soon.png",
-      link: "/contact@webapps",
-      tags: ["Support", "Maintenance", "IT Services"],
-      description:
-        "Ongoing updates, fixes & security. Always-on reliable IT support.",
-    },
+    // {
+    //   id: 7,
+    //   title: "Custom Integrations",
+    //   image: "/comming-soon.png",
+    //   link: "/contact@webapps",
+    //   tags: ["WhatsApp", "AI Chatbot", "API"],
+    //   description:
+    //     "API & third-party tool setups. Smooth workflows, connected systems.",
+    // },
+    // {
+    //   id: 8,
+    //   title: "AI Consulting",
+    //   image: "/comming-soon.png",
+    //   link: "/contact@webapps",
+    //   tags: ["AI Strategy", "Implementation", "Consulting"],
+    //   description:
+    //     "Strategy, setup & implementation. Guiding your AI transformation.",
+    // },
+    // {
+    //   id: 9,
+    //   title: "IT Consulting",
+    //   image: "/comming-soon.png",
+    //   link: "/contact@webapps",
+    //   tags: ["Technology Strategy", "Digital Growth", "Consulting"],
+    //   description:
+    //     "Technology strategy & digital growth. Guidance to scale your business.",
+    // },
+    // {
+    //   id: 10,
+    //   title: "Tech Support & Maint.",
+    //   image: "/comming-soon.png",
+    //   link: "/contact@webapps",
+    //   tags: ["Support", "Maintenance", "IT Services"],
+    //   description:
+    //     "Ongoing updates, fixes & security. Always-on reliable IT support.",
+    // },
   ];
 
   return (

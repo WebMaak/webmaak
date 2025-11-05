@@ -791,6 +791,16 @@
     grid-row-gap: 0rem;
     align-content: normal;
   }
+  .hover-visibility-content {
+    flex-direction: row;
+  }
+  .home-case-studies_title {
+    font-size: 0.875rem;
+  }
+  .home-case-studies_detail-tag {
+    font-size: 0.3rem;
+    padding: 7px;
+  }
 }
 @media screen and (max-width: 479px) {
   .cta-bg-image {

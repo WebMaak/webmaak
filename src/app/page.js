@@ -9,6 +9,7 @@ import FifthSection from "../components/FifthSection/FifthSection";
 import EighthSection from "../components/EighthSection/EighthSection";
 import SeventhSection from "../components/SeventhSection/SeventhSection";
 import Footer from "../components/Footer/Footer";
+import ModernFooter from "../components/Footer/ModernFooter";
 import ItScrollTouch from "../components/SecondSection/ItScrollTouch";
 import MediaScrollTouch from "../components/SecondSection/MediaScrollTouch";
 import Navigator from "../components/Navigator/Navigator";
@@ -44,8 +45,8 @@ export default function Home() {
         });
       } else {
         setOrbitConfig({
-          radius: [0, 220, 370, 530, 700],
-          iconSize: [100, 80, 80, 80, 80],
+          radius: [0, 220, 360, 520, 690],
+          iconSize: [100, 70, 70, 70, 70],
         });
       }
     };
@@ -225,8 +226,9 @@ export default function Home() {
             <SeventhSection />
           </div>
           <div id="section7" data-theme="dark">
-            <EighthSection />
-            <Footer />
+            {/* <EighthSection />
+            <Footer /> */}
+            <ModernFooter />
           </div>
         </div>
       </div>

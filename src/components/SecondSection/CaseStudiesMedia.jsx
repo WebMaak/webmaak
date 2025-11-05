@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { FiVolume2, FiVolumeX } from "react-icons/fi";
 import dynamic from "next/dynamic";
 import "./SecondSection.css";
-
+import { Maximize } from "lucide-react";
 // Dynamically import react-youtube to avoid SSR issues
 const YouTube = dynamic(() => import("react-youtube"), { ssr: false });
 
@@ -13,7 +13,7 @@ const tabsData = [
     id: 0,
     name: "Dtalks",
     logo: "./case-studies/dtalks.png",
-    videoId: "5LS7dZQ1pEM",
+    videoId: "clrJeh_Zubk",
     title: "Porsche Landing Page",
     tags: ["Figma Design", "SEO Optimized", "Wordpress Development"],
     buttonText: "More on Youtube",
@@ -23,7 +23,7 @@ const tabsData = [
     id: 1,
     name: "Neowiz",
     logo: "./case-studies/neowiz.png",
-    videoId: "5LS7dZQ1pEM",
+    videoId: "clrJeh_Zubk",
     title: "Porsche Landing Page",
     tags: ["Figma Design", "SEO Optimized", "Wordpress Development"],
     buttonText: "More on Youtube",
@@ -33,7 +33,7 @@ const tabsData = [
     id: 2,
     name: "VFS",
     logo: "./case-studies/vfs-global.png",
-    videoId: "5LS7dZQ1pEM",
+    videoId: "clrJeh_Zubk",
     title: "Porsche Landing Page",
     tags: ["Figma Design", "SEO Optimized", "Wordpress Development"],
     buttonText: "More on Youtube",
@@ -43,7 +43,7 @@ const tabsData = [
     id: 3,
     name: "J&J",
     logo: "./case-studies/j&j.png",
-    videoId: "5LS7dZQ1pEM",
+    videoId: "clrJeh_Zubk",
     title: "Porsche Landing Page",
     tags: ["Figma Design", "SEO Optimized", "Wordpress Development"],
     buttonText: "More on Youtube",
@@ -53,7 +53,7 @@ const tabsData = [
     id: 4,
     name: "Digitalks",
     logo: "./case-studies/digitalks.png",
-    videoId: "5LS7dZQ1pEM",
+    videoId: "clrJeh_Zubk",
     title: "Porsche Landing Page",
     tags: ["Figma Design", "SEO Optimized", "Wordpress Development"],
     buttonText: "More on Youtube",
@@ -63,7 +63,7 @@ const tabsData = [
     id: 5,
     name: "YODA",
     logo: "./case-studies/yoda.png",
-    videoId: "5LS7dZQ1pEM",
+    videoId: "clrJeh_Zubk",
     title: "Porsche Landing Page",
     tags: ["Figma Design", "SEO Optimized", "Wordpress Development"],
     buttonText: "More on Youtube",
@@ -279,16 +279,33 @@ const CaseStudiesIt = () => {
                   </div>
 
                   <div className="home-case-studies_button hover-visibility-content">
-                    <button className="mute-toggle-btn" onClick={toggleMute}>
-                      {isMuted ? (
-                        <FiVolumeX size={24} color="black" />
-                      ) : (
-                        <FiVolume2 size={24} color="black" />
-                      )}
-                    </button>
+                    <div className="hidden md:block">
+                      <button className="mute-toggle-btn " onClick={toggleMute}>
+                        {isMuted ? (
+                          <FiVolumeX size={24} color="black" />
+                        ) : (
+                          <FiVolume2 size={24} color="black" />
+                        )}
+                      </button>
+                    </div>
+                    <div className="block md:hidden">
+                      <button
+                        className="secondary-button"
+                        onClick={toggleMute}
+                        style={{
+                          padding: "0.3rem 0.3rem",
+                        }}
+                      >
+                        {isMuted ? (
+                          <FiVolumeX size={10} color="black" />
+                        ) : (
+                          <FiVolume2 size={10} color="black" />
+                        )}
+                      </button>
+                    </div>
                     <a
                       onClick={togglePlay}
-                      className="button-link w-inline-block"
+                      className="button-link  hidden md:block"
                     >
                       <button
                         className="secondary-button"
@@ -335,21 +352,71 @@ const CaseStudiesIt = () => {
                         </div>
                       </button>
                     </a>
-                    {/* <a
+                    <a
+                      onClick={togglePlay}
+                      className="button-link  block md:hidden"
+                    >
+                      <button
+                        className="secondary-button"
+                        style={{
+                          padding: "0.3rem",
+                        }}
+                      >
+                        <div
+                          className="secondary-btn-text flex align-center gap-2 justify-center"
+                          style={{ fontsize: "0.75rem" }}
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="8"
+                            height="8"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="lucide"
+                          >
+                            {playing ? (
+                              // Pause icon
+                              <>
+                                <rect
+                                  x="14"
+                                  y="3"
+                                  width="5"
+                                  height="18"
+                                  rx="1"
+                                />
+                                <rect
+                                  x="5"
+                                  y="3"
+                                  width="5"
+                                  height="18"
+                                  rx="1"
+                                />
+                              </>
+                            ) : (
+                              // Play icon
+                              <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" />
+                            )}
+                          </svg>
+                        </div>
+                      </button>
+                    </a>
+                    <a
                       href={tab.buttonLink}
-                      className="button-link w-inline-block"
+                      className="button-link block md:hidden"
                       target="_blank"
                       rel="noreferrer"
                     >
                       <button
-                        className="secondary-button"
-                        style={{ padding: "0.75rem 1.5rem" }}
+                        className="secondary-button flex items-center justify-center"
+                        style={{ padding: "0.3rem" }}
                       >
-                        <div className="secondary-btn-text">
-                          {tab.buttonText}
-                        </div>
+                        <Maximize className="w-2 h-2" />
                       </button>
-                    </a> */}
+                    </a>
                   </div>
                 </div>
               </div>

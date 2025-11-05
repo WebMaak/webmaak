@@ -84,49 +84,21 @@ export default function FourthSection() {
                           </div>
                           <div className="icon-text-wrapper">
                             <div className="icon-text-wrap">
-                              <div className="flex justify-center">
-                                <Image
-                                  src="/main-logo/favicon.png"
-                                  width={27}
-                                  height={27}
-                                />
-                              </div>
                               <div className="icon-text_text pt-[3px]">
                                 Growth-Focused Strategies
                               </div>
                             </div>
                             <div className="icon-text-wrap">
-                              <div className="flex justify-center">
-                                <Image
-                                  src="/main-logo/favicon.png"
-                                  width={27}
-                                  height={27}
-                                />
-                              </div>
                               <div className="icon-text_text pt-[3px]">
                                 CMS & custom integrations
                               </div>
                             </div>
                             <div className="icon-text-wrap">
-                              <div className="flex justify-center">
-                                <Image
-                                  src="/main-logo/favicon.png"
-                                  width={27}
-                                  height={27}
-                                />
-                              </div>
                               <div className="icon-text_text pt-[3px]">
                                 Optimized for speed & SEO
                               </div>
                             </div>
                             <div className="icon-text-wrap">
-                              <div className="flex justify-center">
-                                <Image
-                                  src="/main-logo/favicon.png"
-                                  width={27}
-                                  height={27}
-                                />
-                              </div>
                               <div className="icon-text_text pt-[3px]">
                                 Scalable, future-ready builds
                               </div>
@@ -504,49 +476,21 @@ export default function FourthSection() {
                         </div>
                         <div class="icon-text-wrapper">
                           <div className="icon-text-wrap">
-                            <div className="flex justify-center">
-                              <Image
-                                src="/main-logo/favicon.png"
-                                width={27}
-                                height={27}
-                              />
-                            </div>
                             <div className="icon-text_text pt-[3px]">
                               High-Impact Product Visuals
                             </div>
                           </div>
                           <div className="icon-text-wrap">
-                            <div className="flex justify-center">
-                              <Image
-                                src="/main-logo/favicon.png"
-                                width={27}
-                                height={27}
-                              />
-                            </div>
                             <div className="icon-text_text pt-[3px]">
                               Seamless Shopping Experience
                             </div>
                           </div>
                           <div className="icon-text-wrap">
-                            <div className="flex justify-center">
-                              <Image
-                                src="/main-logo/favicon.png"
-                                width={27}
-                                height={27}
-                              />
-                            </div>
                             <div className="icon-text_text pt-[3px]">
                               Mobile-Optimized & Fast
                             </div>
                           </div>
                           <div className="icon-text-wrap">
-                            <div className="flex justify-center">
-                              <Image
-                                src="/main-logo/favicon.png"
-                                width={27}
-                                height={27}
-                              />
-                            </div>
                             <div className="icon-text_text pt-[3px]">
                               Sales-Driven Layouts & CTAs
                             </div>
@@ -881,49 +825,21 @@ export default function FourthSection() {
                             }}
                           >
                             <div className="icon-text-wrap">
-                              <div className="flex justify-center">
-                                <Image
-                                  src="/main-logo/favicon.png"
-                                  width={27}
-                                  height={27}
-                                />
-                              </div>
                               <div className="icon-text_text pt-[3px]">
                                 Growth-Focused Strategies
                               </div>
                             </div>
                             <div className="icon-text-wrap">
-                              <div className="flex justify-center">
-                                <Image
-                                  src="/main-logo/favicon.png"
-                                  width={27}
-                                  height={27}
-                                />
-                              </div>
                               <div className="icon-text_text pt-[3px]">
                                 CMS & custom integrations
                               </div>
                             </div>
                             <div className="icon-text-wrap">
-                              <div className="flex justify-center">
-                                <Image
-                                  src="/main-logo/favicon.png"
-                                  width={27}
-                                  height={27}
-                                />
-                              </div>
                               <div className="icon-text_text pt-[3px]">
                                 Optimized for speed & SEO
                               </div>
                             </div>
                             <div className="icon-text-wrap">
-                              <div className="flex justify-center">
-                                <Image
-                                  src="/main-logo/favicon.png"
-                                  width={27}
-                                  height={27}
-                                />
-                              </div>
                               <div className="icon-text_text pt-[3px]">
                                 Scalable, future-ready builds
                               </div>
@@ -992,49 +908,21 @@ export default function FourthSection() {
                         </div>
                         <div class="icon-text-wrapper">
                           <div className="icon-text-wrap">
-                            <div className="flex justify-center">
-                              <Image
-                                src="/main-logo/favicon.png"
-                                width={27}
-                                height={27}
-                              />
-                            </div>
                             <div className="icon-text_text pt-[3px]">
                               Video Editing & Post-Production
                             </div>
                           </div>
                           <div className="icon-text-wrap">
-                            <div className="flex justify-center">
-                              <Image
-                                src="/main-logo/favicon.png"
-                                width={27}
-                                height={27}
-                              />
-                            </div>
                             <div className="icon-text_text pt-[3px]">
                               Motion Graphics & Animation
                             </div>
                           </div>
                           <div className="icon-text-wrap">
-                            <div className="flex justify-center">
-                              <Image
-                                src="/main-logo/favicon.png"
-                                width={27}
-                                height={27}
-                              />
-                            </div>
                             <div className="icon-text_text pt-[3px]">
                               Social Media Video Content
                             </div>
                           </div>
                           <div className="icon-text-wrap">
-                            <div className="flex justify-center">
-                              <Image
-                                src="/main-logo/favicon.png"
-                                width={27}
-                                height={27}
-                              />
-                            </div>
                             <div className="icon-text_text pt-[3px]">
                               Video Strategy & Analytics
                             </div>
