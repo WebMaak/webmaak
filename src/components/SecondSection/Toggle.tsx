@@ -253,12 +253,17 @@ const StyledWrapper = styled.div<StyledWrapperProps>`
   }
   /* checked - move slider to right */
   .switch::before {
-    background-color: ${(props) =>
-      props.checked ? "var(--_slider-bg-clr-on)" : "var(--_slider-bg-clr)"};
-    inset: ${(props) =>
-      props.checked
-        ? "var(--_switch-padding) var(--_switch-padding) var(--_switch-padding) 50%"
-        : "var(--_switch-padding) 50% var(--_switch-padding) var(--_switch-padding)"};
+    background-color: var(--_slider-bg-clr);
+    inset: var(--_switch-padding) 50% var(--_switch-padding)
+      var(--_switch-padding);
+    transition: inset 500ms var(--_switch-easing),
+      background-color 500ms ease-in-out;
+  }
+
+  .switch input[type="checkbox"]:checked ~ &::before {
+    background-color: var(--_slider-bg-clr-on);
+    inset: var(--_switch-padding) var(--_switch-padding) var(--_switch-padding)
+      50%;
   }
 
   /* checked - set opacity */

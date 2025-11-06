@@ -13,7 +13,7 @@ const CaseStudiesIt = dynamic(() => import("./CaseStudiesIt"), { ssr: false });
 
 function SecondSection() {
   const [active, setActive] = useState("table");
-  const [activeTable, setActiveTable] = useState(true);
+  const [activeTable, setActiveTable] = useState(false);
   useIntersection();
   useIntersection("fadeup");
   return (
