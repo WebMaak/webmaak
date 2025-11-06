@@ -19,13 +19,13 @@ function SeventhSection() {
   const [showFull, setShowFull] = useState(false);
   const testimonials = [
     {
-      name: "Dhiraj Tejwani",
-      role: "Podcast Host,",
-      company: "DTalks",
-      image: "/clients/client1.png",
+      name: "Sonam Singh",
+      role: "Director,",
+      company: "Delfyle Solutions Pvt. Ltd.",
+      image: "/testimonial/delfyle.png",
       // companyLogo: "/marquee-logo/21.png",
       quote:
-        "Working with Aman and his team has been one of the smoothest professional experiences I’ve had. He is incredibly polite and respectful in all interactions, which makes collaboration effortless. He understands the brief quickly and with great clarity, and what really stands out is his cooperative nature, there’s never any ego, only a willingness to make the work better. No matter how many changes or modifications are needed, he handles them with patience and positivity. Beyond his attitude, his editing skills are exceptional, he has an eye for detail and creativity that consistently elevates the final output. I’ve never once been disappointed, and I can confidently say he’s someone you can trust to deliver not just quality work, but also a pleasant working relationship. I’d wholeheartedly recommend him to anyone looking for a skilled and dependable editor.",
+        "Working with Webmaak has been an absolute delight! From concept to execution, their team handled our website design with remarkable creativity, precision, and professionalism. They understood exactly what we envisioned for Delfyle, a clean, impactful, and user-friendly website that truly represents who we are as a brand. The entire process was smooth, transparent, and efficient, with the Webmaak team ensuring every detail aligned perfectly with our expectations. What impressed me most was their proactive approach, timely delivery, and commitment to quality. They didn’t just design a website; they built a digital identity that reflects Delfyle’s vision and values. A huge thank you to the entire Webmaak team for your dedication and brilliant execution, you’ve made our online presence stronger and more inspiring than ever!",
     },
     {
       name: "Hamna Kouser",
@@ -43,6 +43,15 @@ function SeventhSection() {
       image: "/testimonial/digitalks.png",
       quote:
         "We have been working with the team for over a year and the team has been nothing short of supportive. It is not only the most quality output, but it is at a very optimum price. Working with them in the long run has been very convenient, not just for me. It has given me an understanding of what the brand is about as well. And create content eventually which is very strong and with very minimal edits. It is truly a partnership more than working with a vendor..",
+    },
+    {
+      name: "Dhiraj Tejwani",
+      role: "Podcast Host,",
+      company: "DTalks",
+      image: "/clients/client1.png",
+      // companyLogo: "/marquee-logo/21.png",
+      quote:
+        "Working with Aman and his team has been one of the smoothest professional experiences I’ve had. He is incredibly polite and respectful in all interactions, which makes collaboration effortless. He understands the brief quickly and with great clarity, and what really stands out is his cooperative nature, there’s never any ego, only a willingness to make the work better. No matter how many changes or modifications are needed, he handles them with patience and positivity. Beyond his attitude, his editing skills are exceptional, he has an eye for detail and creativity that consistently elevates the final output. I’ve never once been disappointed, and I can confidently say he’s someone you can trust to deliver not just quality work, but also a pleasant working relationship. I’d wholeheartedly recommend him to anyone looking for a skilled and dependable editor.",
     },
   ];
   const [cards, setCards] = useState(cardData);

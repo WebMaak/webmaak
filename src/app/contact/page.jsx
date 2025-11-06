@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import "./page.css";
 import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
+import ModernFooter from "@/components/Footer/ModernFooter";
 import EighthSection from "@/components/EighthSection/EighthSection";
 import Button from "@/components/ui/Button";
 import {
@@ -244,7 +244,7 @@ function Contact() {
         {/* Bottom Section */}
         <section className="section_trust hidden"></section>
       </div>
-      <Footer />
+      <ModernFooter />
     </>
   );
 }

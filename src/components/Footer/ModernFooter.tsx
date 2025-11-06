@@ -3,8 +3,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import WhiteArrowButton from "@/components/WhiteArrowButton/WhiteArrowButton";
-import { Twitter, Instagram, Linkedin, Github } from "lucide-react";
-
+import { SiLinkedin, SiFacebook, SiInstagram } from "react-icons/si";
+import Image from "next/image";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "./Footer.css";
 export default function ModernFooter() {
   const [zoomFont, setZoomFont] = useState("20rem");
 
@@ -42,7 +44,7 @@ export default function ModernFooter() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex flex-col items-center justify-center p-4 md:p-4 lg:p-8">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex flex-col items-center justify-center p-4  md:p-4 lg:p-8 pt-0 md:pt-0 lg:pt-0">
       {/* Hero Section */}
       <div className="w-full mb-16 text-center">
         <div className="bg-gradient-to-b from-gray-900 to-black rounded-3xl py-16 md:py-32 shadow-2xl flex flex-col gap-6">
@@ -68,42 +70,65 @@ export default function ModernFooter() {
 
       {/* Footer */}
       <footer className="w-full border border-[rgba(0,0,0,0.04)] bg-[#FAFAFA] rounded-3xl lg:p-12 md:p-6 p-5">
-        <div className="max-w-[98%] lg:p-20 md:p-6 p-5 mx-auto rounded-3xl shadow-lg">
+        <div className="max-w-[98%] lg:p-20 md:p-6 p-5 mx-auto rounded-3xl shadow-lg ">
           <div className="flex flex-col md:flex-row justify-between gap-12 mb-12">
             {/* Logo and Description */}
-            <div className="max-w-xs text-center md:text-left">
-              <div className="flex items-center md:justify-start justify-center gap-2 mb-4">
-                <img src="/main-logo/site-logo.png" className="w-[100px]"></img>
+            <div className="max-w-xl text-center md:text-left">
+              <div className="hidden md:flex items-center justify-start gap-2 mb-4">
+                <img
+                  src="/main-logo/colored-logo.png"
+                  className="w-[150px]"
+                ></img>
               </div>
-              <p className="text-gray-600 text-sm mb-6">
+              <div className="flex md:hidden justify-start  items-center  gap-2 mb-4">
+                <img
+                  src="/main-logo/colored-logo.png"
+                  className="w-[100px]"
+                ></img>
+              </div>
+              <p className="text-gray-600 sub-title-footer-sec mb-6">
                 WebMaak empowers brands to turn ideas into powerful digital
-                experiences — making design, performance, and storytelling come
+                experiences, making design, performance, and storytelling come
                 together seamlessly.
               </p>
-              <div className="flex gap-3 justify-center md:justify-start">
+              <div className="gap-2 flex md:hidden justify-center">
                 <a
                   href="#"
-                  className="text-gray-600 hover:text-black transition-colors"
+                  className="text-black/60 hover:text-blacktransition-colors"
                 >
-                  <Twitter size={20} />
+                  <i className="fa-brands fa-linkedin-in"></i>
                 </a>
                 <a
                   href="#"
-                  className="text-gray-600 hover:text-black transition-colors"
+                  className="text-black/60 hover:text-black mt-[1px] text-[0.9rem] transition-colors"
                 >
-                  <Instagram size={20} />
+                  <i className="fa-brands fa-facebook-f"></i>
                 </a>
                 <a
                   href="#"
-                  className="text-gray-600 hover:text-black transition-colors"
+                  className="text-black/60 hover:text-black  transition-colors"
                 >
-                  <Linkedin size={20} />
+                  <i className="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+              <div className="gap-3 text-[1.2rem] hidden md:flex justify-start ">
+                <a
+                  href="#"
+                  className="text-black/60 hover:text-black transition-colors"
+                >
+                  <i className="fa-brands fa-linkedin-in"></i>
                 </a>
                 <a
                   href="#"
-                  className="text-gray-600 hover:text-black transition-colors"
+                  className="text-black/60 hover:text-black transition-colors"
                 >
-                  <Github size={20} />
+                  <i className="fa-brands fa-instagram"></i>
+                </a>
+                <a
+                  href="#"
+                  className="text-black/60 hover:text-black  transition-colors"
+                >
+                  <i className="fa-brands fa-facebook-f"></i>
                 </a>
               </div>
             </div>
@@ -236,7 +261,7 @@ export default function ModernFooter() {
 
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4 text-sm text-gray-500">
-            <p className="order-last md:order-first">
+            <p className="order-last md:order-first text-center md:text-left">
               © 2025 WebMaak. All rights reserved.
             </p>
             <div className="flex gap-6 md:order-last order-first">
@@ -250,9 +275,12 @@ export default function ModernFooter() {
           </div>
         </div>
         <h1
-          className="font-bold text-center uppercase bg-gradient-to-b from-black/10 to-transparent bg-clip-text text-transparent drop-shadow-[0_1px_3px_rgba(0,0,0,0.05)] mix-blend-multiply [mask-image:linear-gradient(to_bottom,black_30%,transparent)]"
+          className="hidden md:block font-bold text-center uppercase bg-gradient-to-b from-black/10 to-transparent bg-clip-text text-transparent drop-shadow-[0_1px_3px_rgba(0,0,0,0.05)] mix-blend-multiply [mask-image:linear-gradient(to_bottom,black_30%,transparent)]"
           style={{ fontSize: zoomFont }}
         >
+          WEBMAAK
+        </h1>
+        <h1 className="text-[3rem] block md:hidden font-bold text-center uppercase bg-gradient-to-b from-black/10 to-transparent bg-clip-text text-transparent drop-shadow-[0_1px_3px_rgba(0,0,0,0.05)] mix-blend-multiply [mask-image:linear-gradient(to_bottom,black_30%,transparent)]">
           WEBMAAK
         </h1>
       </footer>

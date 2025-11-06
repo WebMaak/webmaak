@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import "../contact/page.css";
 import Navbar from "@/components/Navbar/Navbar";
 import TalibScheduler from "@/components/Iframes/TalibScheduler";
-import Footer from "@/components/Footer/Footer";
+import ModernFooter from "@/components/Footer/ModernFooter";
 import EighthSection from "@/components/EighthSection/EighthSection";
 import { CircleArrowLeft } from "lucide-react";
 import {
@@ -485,7 +485,7 @@ function Contact() {
         {/* Bottom Section */}
         <section className="section_trust hidden"></section>
       </div>
-      <Footer />
+      <ModernFooter />
     </>
   );
 }

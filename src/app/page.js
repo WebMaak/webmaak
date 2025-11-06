@@ -228,7 +228,7 @@ export default function Home() {
           <div id="section7" data-theme="dark">
             {/* <EighthSection />
             <Footer /> */}
-            {/* <ModernFooter /> */}
+            <ModernFooter />
           </div>
         </div>
       </div>

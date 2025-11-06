@@ -76,10 +76,8 @@ export default function FourthSection() {
                           </h4>
                           <div className="text-color-grey w-3/4">
                             <p className="solutions_card_description">
-                              High-performing websites that reflect your brand
-                              identity and deliver measurable results. From
-                              corporate sites to eCommerce, we craft digital
-                              experiences that convert.
+                              We build websites that engage customers and drive
+                              results.
                             </p>
                           </div>
                           <div className="icon-text-wrapper">
@@ -164,8 +162,11 @@ export default function FourthSection() {
               {/* Card 2 */}
               <div className="solutions_card-wrap column span-1">
                 <div className="solutions_card-holder-wrap scaleup">
-                  <div className="solutions_card-holder">
-                    <div className="solutions_card verticle">
+                  <div className="solutions_card-holder ">
+                    <div
+                      className="solutions_card verticle"
+                      style={{ backgroundColor: "#131822" }}
+                    >
                       <div className="solutions_card-content webflow-shopify">
                         <div className="solutions_card_top-content">
                           <h4 className="solutions_card_title">
@@ -182,275 +183,13 @@ export default function FourthSection() {
                       </div>
                       <div className="webflow-shopify_imp-wrap">
                         <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6600395bd493d5a53ce5407e_webflow-shopify.webp"
+                          src="/ui-ux.png"
                           loading="lazy"
                           sizes="(max-width: 479px) 90vw, (max-width: 767px) 94vw, (max-width: 991px) 91vw, 29vw"
-                          srcset="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6600395bd493d5a53ce5407e_webflow-shopify-p-500.png 500w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6600395bd493d5a53ce5407e_webflow-shopify.webp 820w"
+                          srcset="/ui-ux.png 500w, /ui-ux.png 820w"
                           alt=""
-                          className="solutions_card_shopify-img"
+                          className=""
                         />
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="100%"
-                          viewBox="0 0 94 95"
-                          fill="none"
-                          className="shopify-svg"
-                        >
-                          <g
-                            filter="url(#filter0_di_2264_7537)"
-                            className="webflow-shopify_circle"
-                          >
-                            <rect
-                              x="14.7832"
-                              y="3.32422"
-                              width="64"
-                              height="64"
-                              rx="32"
-                              fill="currentColor"
-                              shape-rendering="crispEdges"
-                              className="rect"
-                            ></rect>
-                            <rect
-                              x="14.7832"
-                              y="3.32422"
-                              width="64"
-                              height="64"
-                              rx="32"
-                              stroke="url(#paint0_linear_2264_7537)"
-                              stroke-width="1.4"
-                              shape-rendering="crispEdges"
-                              className="rect-2"
-                            ></rect>
-                            <path
-                              d="M58.0592 24.787C58.0356 24.6135 57.8854 24.5175 57.7613 24.5069C57.6373 24.4964 55.015 24.2998 55.015 24.2998C55.015 24.2998 53.1937 22.4706 52.9939 22.2681C52.7939 22.0657 52.4032 22.1273 52.2516 22.1725C52.2293 22.1791 51.8537 22.2964 51.2324 22.4909C50.624 20.7198 49.5503 19.0922 47.6614 19.0922C47.6093 19.0922 47.5556 19.0943 47.502 19.0974C46.9648 18.3787 46.2993 18.0664 45.7245 18.0664C41.3244 18.0664 39.2222 23.6313 38.5631 26.4592C36.8533 26.9952 35.6387 27.3763 35.4835 27.4256C34.5292 27.7285 34.499 27.7589 34.3737 28.6687C34.2794 29.3574 31.7822 48.8948 31.7822 48.8948L51.2405 52.5833L61.7836 50.2758C61.7836 50.2758 58.0825 24.9604 58.0592 24.787ZM50.157 22.8274L48.5104 23.343C48.5111 23.2256 48.5116 23.11 48.5116 22.9838C48.5116 21.883 48.3606 20.9968 48.1183 20.2941C49.0916 20.4177 49.7398 21.5381 50.157 22.8274ZM46.9109 20.5124C47.1816 21.1984 47.3575 22.1828 47.3575 23.5112C47.3575 23.5792 47.3569 23.6413 47.3563 23.7041C46.2856 24.0397 45.122 24.404 43.9559 24.7695C44.6107 22.213 45.838 20.9782 46.9109 20.5124ZM45.6037 19.2604C45.7936 19.2604 45.9849 19.3256 46.168 19.4532C44.7578 20.1245 43.2463 21.8153 42.608 25.1918L39.9201 26.0339C40.6677 23.4585 42.4432 19.2604 45.6037 19.2604Z"
-                              fill="currentColor"
-                              className="path-2"
-                            ></path>
-                            <path
-                              d="M57.761 24.5061C57.6371 24.4957 55.0148 24.299 55.0148 24.299C55.0148 24.299 53.1935 22.4698 52.9937 22.2673C52.9188 22.192 52.8179 22.1534 52.7125 22.1367L51.2412 52.5822L61.7834 50.275C61.7834 50.275 58.0822 24.9597 58.059 24.7862C58.0354 24.6127 57.8851 24.5167 57.761 24.5061Z"
-                              fill="currentColor"
-                              className="path-3"
-                            ></path>
-                            <path
-                              d="M47.6611 30.4002L46.3611 34.3124C46.3611 34.3124 45.2221 33.6974 43.8259 33.6974C41.779 33.6974 41.676 34.997 41.676 35.3244C41.676 37.1113 46.28 37.7959 46.28 41.9812C46.28 45.274 44.2156 47.3944 41.4321 47.3944C38.0919 47.3944 36.3838 45.2913 36.3838 45.2913L37.2781 42.3018C37.2781 42.3018 39.034 43.8268 40.5156 43.8268C41.4837 43.8268 41.8774 43.0556 41.8774 42.4922C41.8774 40.1615 38.1004 40.0575 38.1004 36.2276C38.1004 33.0041 40.3873 29.8848 45.0036 29.8848C46.7824 29.8848 47.6611 30.4002 47.6611 30.4002Z"
-                              fill="currentColor"
-                              className="path-4"
-                            ></path>
-                          </g>
-                          <defs>
-                            <filter
-                              id="filter0_di_2264_7537"
-                              x="0.0830078"
-                              y="0.625"
-                              width="93.4004"
-                              height="93.3984"
-                              filterUnits="userSpaceOnUse"
-                              color-interpolation-filters="sRGB"
-                            >
-                              <feFlood
-                                flood-opacity="0"
-                                result="BackgroundImageFix"
-                              ></feFlood>
-                              <feColorMatrix
-                                in="SourceAlpha"
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                result="hardAlpha"
-                              ></feColorMatrix>
-                              <feOffset dy="12"></feOffset>
-                              <feGaussianBlur stdDeviation="7"></feGaussianBlur>
-                              <feComposite
-                                in2="hardAlpha"
-                                operator="out"
-                              ></feComposite>
-                              <feColorMatrix
-                                type="matrix"
-                                values="0 0 0 0 0.0583333 0 0 0 0 0.0578472 0 0 0 0 0.0578472 0 0 0 0.2 0"
-                              ></feColorMatrix>
-                              <feBlend
-                                mode="normal"
-                                in2="BackgroundImageFix"
-                                result="effect1_dropShadow_2264_7537"
-                              ></feBlend>
-                              <feBlend
-                                mode="normal"
-                                in="SourceGraphic"
-                                in2="effect1_dropShadow_2264_7537"
-                                result="shape"
-                              ></feBlend>
-                              <feColorMatrix
-                                in="SourceAlpha"
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                result="hardAlpha"
-                              ></feColorMatrix>
-                              <feOffset dy="11"></feOffset>
-                              <feGaussianBlur stdDeviation="20"></feGaussianBlur>
-                              <feComposite
-                                in2="hardAlpha"
-                                operator="arithmetic"
-                                k2="-1"
-                                k3="1"
-                              ></feComposite>
-                              <feColorMatrix
-                                type="matrix"
-                                values="0 0 0 0 0.883333 0 0 0 0 0.883333 0 0 0 0 0.883333 0 0 0 0.08 0"
-                              ></feColorMatrix>
-                              <feBlend
-                                mode="normal"
-                                in2="shape"
-                                result="effect2_innerShadow_2264_7537"
-                              ></feBlend>
-                            </filter>
-                            <linearGradient
-                              id="paint0_linear_2264_7537"
-                              x1="46.7832"
-                              y1="14.7143"
-                              x2="46.7832"
-                              y2="119.204"
-                              gradientUnits="userSpaceOnUse"
-                            >
-                              <stop stop-color="#1A2224"></stop>
-                              <stop
-                                offset="1"
-                                stop-color="#1A2224"
-                                stop-opacity="0"
-                              ></stop>
-                            </linearGradient>
-                          </defs>
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="100%"
-                          viewBox="0 0 93 93"
-                          fill="none"
-                          className="webflow-svg"
-                        >
-                          <g filter="url(#filter0_di_2264_7533)">
-                            <rect
-                              x="14.5"
-                              y="2.22656"
-                              width="64"
-                              height="64"
-                              rx="32"
-                              fill="currentColor"
-                              shape-rendering="crispEdges"
-                              className="rect-3"
-                            ></rect>
-                            <rect
-                              x="15.2"
-                              y="2.92656"
-                              width="62.6"
-                              height="62.6"
-                              rx="31.3"
-                              stroke="url(#paint0_linear_2264_7533)"
-                              stroke-width="1.4"
-                              shape-rendering="crispEdges"
-                            ></rect>
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M62.7501 24.2266L52.3795 44.2266H42.6391L46.9789 35.9377H46.7842C43.2038 40.523 37.8619 43.5416 30.25 44.2266V36.0524C30.25 36.0524 35.1192 35.7687 37.9817 32.7996H30.25V24.2267H38.94V31.2778L39.1346 31.277L42.686 24.2267H49.2581V31.2331L49.4527 31.2328L53.1369 24.2266H62.7501Z"
-                              fill="url(#paint1_linear_2264_7533)"
-                            ></path>
-                          </g>
-                          <defs>
-                            <filter
-                              id="filter0_di_2264_7533"
-                              x="0.5"
-                              y="0.226562"
-                              width="92"
-                              height="92"
-                              filterUnits="userSpaceOnUse"
-                              color-interpolation-filters="sRGB"
-                            >
-                              <feFlood
-                                flood-opacity="0"
-                                result="BackgroundImageFix"
-                              ></feFlood>
-                              <feColorMatrix
-                                in="SourceAlpha"
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                result="hardAlpha"
-                              ></feColorMatrix>
-                              <feOffset dy="12"></feOffset>
-                              <feGaussianBlur stdDeviation="7"></feGaussianBlur>
-                              <feComposite
-                                in2="hardAlpha"
-                                operator="out"
-                              ></feComposite>
-                              <feColorMatrix
-                                type="matrix"
-                                values="0 0 0 0 0.0583333 0 0 0 0 0.0578472 0 0 0 0 0.0578472 0 0 0 0.2 0"
-                              ></feColorMatrix>
-                              <feBlend
-                                mode="normal"
-                                in2="BackgroundImageFix"
-                                result="effect1_dropShadow_2264_7533"
-                              ></feBlend>
-                              <feBlend
-                                mode="normal"
-                                in="SourceGraphic"
-                                in2="effect1_dropShadow_2264_7533"
-                                result="shape"
-                              ></feBlend>
-                              <feColorMatrix
-                                in="SourceAlpha"
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                result="hardAlpha"
-                              ></feColorMatrix>
-                              <feOffset dy="11"></feOffset>
-                              <feGaussianBlur stdDeviation="20"></feGaussianBlur>
-                              <feComposite
-                                in2="hardAlpha"
-                                operator="arithmetic"
-                                k2="-1"
-                                k3="1"
-                              ></feComposite>
-                              <feColorMatrix
-                                type="matrix"
-                                values="0 0 0 0 0.883333 0 0 0 0 0.883333 0 0 0 0 0.883333 0 0 0 0.12 0"
-                              ></feColorMatrix>
-                              <feBlend
-                                mode="normal"
-                                in2="shape"
-                                result="effect2_innerShadow_2264_7533"
-                              ></feBlend>
-                            </filter>
-                            <linearGradient
-                              id="paint0_linear_2264_7533"
-                              x1="46.5"
-                              y1="13.6166"
-                              x2="46.5"
-                              y2="118.107"
-                              gradientUnits="userSpaceOnUse"
-                            >
-                              <stop stop-color="#1A2224"></stop>
-                              <stop
-                                offset="1"
-                                stop-color="#1A2224"
-                                stop-opacity="0"
-                              ></stop>
-                            </linearGradient>
-                            <linearGradient
-                              id="paint1_linear_2264_7533"
-                              x1="18.5772"
-                              y1="46.5251"
-                              x2="93.2907"
-                              y2="17.3471"
-                              gradientUnits="userSpaceOnUse"
-                            >
-                              <stop stop-color="#EEFFF8"></stop>
-                              <stop
-                                offset="1"
-                                stop-color="#F2FFFA"
-                                stop-opacity="0.62"
-                              ></stop>
-                            </linearGradient>
-                          </defs>
-                        </svg>
                       </div>
                     </div>
                   </div>
@@ -499,50 +238,12 @@ export default function FourthSection() {
                       </div>
                       <div className="solutions_card-content-user-centric tab-relative">
                         <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008ac8c553278771b4aa7f_color-panel.webp"
-                          loading="lazy"
-                          alt=""
-                          className="solutions_user-center_img color-panel"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008be9179511a669f7f60c_dashboard-panel.webp"
+                          src="/ecommerce.png"
                           loading="lazy"
                           sizes="(max-width: 479px) 88vw, (max-width: 991px) 640px, 512px"
-                          srcset="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008be9179511a669f7f60c_dashboard-panel-p-500.webp 500w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008be9179511a669f7f60c_dashboard-panel-p-800.webp 800w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008be9179511a669f7f60c_dashboard-panel-p-1080.webp 1080w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008be9179511a669f7f60c_dashboard-panel.webp 1184w"
+                          srcset="/ecommerce.png 500w, /ecommerce.png 800w, /ecommerce.png 1080w, /ecommerce.png 1184w"
                           alt=""
                           class="solutions_user-center_img main-dashbaord"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008d5ba7370d500b6f38f7_panel-icons.webp"
-                          loading="lazy"
-                          alt=""
-                          className="solutions_user-center_img icon-panel"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008d9bcabf8b360ca6f182_lottie-icon.webp"
-                          loading="lazy"
-                          alt=""
-                          className="solutions_user-center_img lottie-icons"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008e651d8abdeff9002741_animate.webp"
-                          loading="lazy"
-                          alt=""
-                          className="solutions_user-center_img animate-img"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008e27bfd894b77d2321ef_controls.webp"
-                          loading="lazy"
-                          sizes="(max-width: 479px) 73vw, 208px"
-                          srcset="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008e27bfd894b77d2321ef_controls-p-500.png 500w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008e27bfd894b77d2321ef_controls.webp 665w"
-                          alt=""
-                          class="solutions_user-center_img controller-panel"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6601121afa335fc226cda859_Large.webp"
-                          loading="lazy"
-                          alt="figma icon"
-                          className="solutions_user-center_img figma"
                         />
                       </div>
                     </div>

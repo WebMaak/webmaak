@@ -793,6 +793,7 @@
   }
   .hover-visibility-content {
     flex-direction: row;
+    align-items: end !important;
   }
   .home-case-studies_title {
     font-size: 0.875rem;
