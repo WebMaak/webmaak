@@ -57,7 +57,11 @@ export default function ModernFooter() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex flex-col items-center justify-center p-4  md:p-4 lg:p-8 pt-0 md:pt-0 lg:pt-0">
       {/* Hero Section */}
       {!shouldHide && (
-        <div className="w-full mb-16 text-center">
+        <div
+          className="w-full mb-16 text-center"
+          id="section11"
+          data-theme="dark"
+        >
           <div className="bg-gradient-to-b from-gray-900 to-black rounded-3xl py-16 md:py-32 shadow-2xl flex flex-col gap-6">
             <div className="fadeup flex flex-col items-center justify-center ">
               <h2 className={`section-info_primary-text-light text-center`}>
@@ -81,7 +85,11 @@ export default function ModernFooter() {
       )}
 
       {/* Footer */}
-      <footer className="w-full border border-[rgba(0,0,0,0.04)] bg-[#FAFAFA] rounded-3xl lg:p-12 md:p-6 p-5">
+      <footer
+        className="w-full border border-[rgba(0,0,0,0.04)] bg-[#FAFAFA] rounded-3xl lg:p-12 md:p-6 p-5"
+        id="section7"
+        data-theme="light"
+      >
         <div className="max-w-[98%] lg:p-20 md:p-6 p-5 mx-auto rounded-3xl shadow-lg ">
           <div className="flex flex-col md:flex-row justify-between gap-12 mb-12">
             {/* Logo and Description */}

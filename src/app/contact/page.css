@@ -1480,6 +1480,12 @@ select {
   display: flex;
 }
 
+@media (max-width: 767px) {
+  .mobile-padding-none {
+    padding: 0 !important;
+  }
+}
+
 /* Animations */
 @keyframes translateAnimationIn {
   from {

@@ -3,8 +3,10 @@
 import React from "react";
 import "./FirstSection.css";
 import { useIntersection } from "@/hooks/useIntersection";
+import { useState } from "react";
 
 function FirstSection() {
+  const [isTouched, setIsTouched] = useState(false);
   useIntersection();
   useIntersection("fadeup");
   return (
@@ -46,7 +48,13 @@ function FirstSection() {
             </div>
             <div className="container-large">
               <div className="steps_wrapper">
-                <div className="steps_card-wrapper _1">
+                <div
+                  className={`steps_card-wrapper ${
+                    isTouched ? "touched" : ""
+                  } _1`}
+                  onTouchStart={() => setIsTouched(true)}
+                  onTouchEnd={() => setIsTouched(false)}
+                >
                   <div className="fade-up-desktop fadeup">
                     <div className="steps_card">
                       <p className="steps_card_step-number">01</p>
@@ -130,7 +138,13 @@ function FirstSection() {
                   </div>
                   <div className="steps_border-box _1"></div>
                 </div>
-                <div className="steps_card-wrapper _2">
+                <div
+                  className={`steps_card-wrapper ${
+                    isTouched ? "touched" : ""
+                  } _2`}
+                  onTouchStart={() => setIsTouched(true)}
+                  onTouchEnd={() => setIsTouched(false)}
+                >
                   <div className="fade-up-desktop fadeup">
                     <div
                       data-w-id="64205669-bc89-99ef-b9eb-e5b51f1839f3"
@@ -224,7 +238,13 @@ function FirstSection() {
                   </div>
                   <div className="steps_border-box _2"></div>
                 </div>
-                <div className="steps_card-wrapper _3">
+                <div
+                  className={`steps_card-wrapper ${
+                    isTouched ? "touched" : ""
+                  } _3`}
+                  onTouchStart={() => setIsTouched(true)}
+                  onTouchEnd={() => setIsTouched(false)}
+                >
                   <div className="fade-up-desktop fadeup">
                     <div
                       data-w-id="64205669-bc89-99ef-b9eb-e5b51f183a0a"
@@ -331,7 +351,13 @@ function FirstSection() {
                   </div>
                   <div className="steps_border-box _3"></div>
                 </div>
-                <div className="steps_card-wrapper _4">
+                <div
+                  className={`steps_card-wrapper ${
+                    isTouched ? "touched" : ""
+                  } _4`}
+                  onTouchStart={() => setIsTouched(true)}
+                  onTouchEnd={() => setIsTouched(false)}
+                >
                   <div
                     data-w-id="1c6ea753-1b90-de87-d736-b6b6224c0167"
                     className="fade-up-desktop fadeup"

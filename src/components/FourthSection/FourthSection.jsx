@@ -551,38 +551,12 @@ export default function FourthSection() {
                       </div>
                       <div className="solutions_card-content-image-wrap _w-100">
                         <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6600aa28e9c8c82134ccb928_wized-images.webp"
+                          src="/3d-video.png"
                           loading="lazy"
                           sizes="(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 91vw, 61vw"
-                          srcset="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6600aa28e9c8c82134ccb928_wized-images-p-500.webp 500w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6600aa28e9c8c82134ccb928_wized-images-p-800.png 800w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6600aa28e9c8c82134ccb928_wized-images-p-1080.png 1080w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6600aa28e9c8c82134ccb928_wized-images-p-1600.png 1600w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6600aa28e9c8c82134ccb928_wized-images.webp 1921w"
+                          srcset="/3d-video.png 500w, /3d-video.png 800w, /3d-video.png 1080w, /3d-video.png 1600w, /3d-video.png 1921w"
                           alt=""
                           className="solutions_wized-img"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6626c96fe07962dd61ebfe89_Graphics.webp"
-                          loading="lazy"
-                          sizes="(max-width: 479px) 90vw, 100vw"
-                          srcset="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6626c96fe07962dd61ebfe89_Graphics-p-500.png 500w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6626c96fe07962dd61ebfe89_Graphics.webp 659w"
-                          alt=""
-                          className="solutions_wized-img-mobile"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6626ceb6c5321e543cd40558_xano.webp"
-                          loading="lazy"
-                          alt=""
-                          className="solutions_wized-image-icons xano"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6626cf06c1e7f32a6aa75b1b_wized.webp"
-                          loading="lazy"
-                          alt=""
-                          className="solutions_wized-image-icons wized"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6626cf47a2a709eb72810302_webflow.webp"
-                          loading="lazy"
-                          alt=""
-                          className="solutions_wized-image-icons webflow"
                         />
                       </div>
                     </div>
@@ -633,50 +607,12 @@ export default function FourthSection() {
                       </div>
                       <div className="solutions_card-content-user-centric tab-relative">
                         <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008ac8c553278771b4aa7f_color-panel.webp"
-                          loading="lazy"
-                          alt=""
-                          className="solutions_user-center_img color-panel"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008be9179511a669f7f60c_dashboard-panel.webp"
+                          src="/editing.png"
                           loading="lazy"
                           sizes="(max-width: 479px) 88vw, (max-width: 991px) 640px, 512px"
-                          srcset="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008be9179511a669f7f60c_dashboard-panel-p-500.webp 500w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008be9179511a669f7f60c_dashboard-panel-p-800.webp 800w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008be9179511a669f7f60c_dashboard-panel-p-1080.webp 1080w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008be9179511a669f7f60c_dashboard-panel.webp 1184w"
+                          srcset="/editing.png 500w, /editing.png 800w, /editing.png 1080w, /editing.png 1184w"
                           alt=""
-                          class="solutions_user-center_img main-dashbaord"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008d5ba7370d500b6f38f7_panel-icons.webp"
-                          loading="lazy"
-                          alt=""
-                          className="solutions_user-center_img icon-panel"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008d9bcabf8b360ca6f182_lottie-icon.webp"
-                          loading="lazy"
-                          alt=""
-                          className="solutions_user-center_img lottie-icons"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008e651d8abdeff9002741_animate.webp"
-                          loading="lazy"
-                          alt=""
-                          className="solutions_user-center_img animate-img"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008e27bfd894b77d2321ef_controls.webp"
-                          loading="lazy"
-                          sizes="(max-width: 479px) 73vw, 208px"
-                          srcset="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008e27bfd894b77d2321ef_controls-p-500.png 500w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66008e27bfd894b77d2321ef_controls.webp 665w"
-                          alt=""
-                          class="solutions_user-center_img controller-panel"
-                        />
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6601121afa335fc226cda859_Large.webp"
-                          loading="lazy"
-                          alt="figma icon"
-                          className="solutions_user-center_img figma"
+                          class="solutions_user-center_img main-dashbaord "
                         />
                       </div>
                     </div>

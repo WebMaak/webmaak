@@ -5,12 +5,6 @@ import "./SecondSection.css";
 import { useIntersection } from "@/hooks/useIntersection";
 import dynamic from "next/dynamic";
 import Toggle from "./Toggle";
-import ProjectCards from "./ProjectCard";
-import TeamCarousel from "./TeamCarousel";
-import ItScroll from "./ItScroll";
-import MediaScroll from "./MediaScroll";
-import DigitalMarketing from "./DigitalMarketing";
-import { ImageCursorTrail } from "@/components/ImageCursorTrail";
 
 const CaseStudiesMedia = dynamic(() => import("./CaseStudiesMedia"), {
   ssr: false,

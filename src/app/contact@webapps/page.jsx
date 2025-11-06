@@ -377,7 +377,7 @@ function Contact() {
         </div>
       </div> */}
         <section className="section_layout508">
-          <div className="padding-globa">
+          <div className="padding-global mobile-padding-none">
             <div className="container-large">
               <div className="layout508_tabs w-tabs">
                 <div className="layout508_tabs-menu w-tab-menu">
@@ -407,7 +407,7 @@ function Contact() {
 
                   {/* Tab 2 */}
                   <div
-                    className={`lg:pt-16 md:pt-10 pt-6 lg:pb-0 md:pb-10 pb-4 lg:px-0 md:px-8 px-4 relative`}
+                    className={`lg:pt-16 md:pt-10 pt-6 lg:pb-0 md:pb-10 pb-4 lg:px-0 md:px-8 px-2 relative`}
                   >
                     <TalibScheduler />
                     <div className="p-4 w-full bg-[#16062d] absolute bottom-0">
