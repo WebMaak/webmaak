@@ -92,18 +92,16 @@ function Contact() {
           <div className="container-large">
             <div className="hero-bg">
               <img
-                src="/hero-bg.JPG"
+                src="/black-hole-bg.jpg"
                 loading="lazy"
                 sizes="100vw"
-                srcset="hero-bg.JPG 500w, hero-bg.JPG 1440w"
+                srcset="black-hole-bg.jpg 500w, black-hole-bg.jpg 1440w"
                 alt=""
-                className="contact_desktop-bg max-h-[100%] min-h-[100%] min-w-[max-content]"
+                className="blur-[10px] contact_desktop-bg max-h-[100%] min-h-[100%] min-w-[max-content]"
               />
             </div>
             <h2 className="heading-style-h2 is-contact-page-hero-heading">
-              Let’s Bring Your Creative
-              <br />
-              Vision to Life
+              Schedule a call
               <br />
             </h2>
             <div className="contact_sub-title-wrapper flex flex-col justify-center items-center">

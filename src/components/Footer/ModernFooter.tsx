@@ -6,9 +6,19 @@ import WhiteArrowButton from "@/components/WhiteArrowButton/WhiteArrowButton";
 import { SiLinkedin, SiFacebook, SiInstagram } from "react-icons/si";
 import Image from "next/image";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { usePathname } from "next/navigation";
 import "./Footer.css";
 export default function ModernFooter() {
+  const pathname = usePathname();
   const [zoomFont, setZoomFont] = useState("20rem");
+
+  const hideOnRoutes = [
+    "/contact",
+    "/contact@marketing",
+    "contact@media",
+    "contact@webapps",
+  ];
+  const shouldHide = hideOnRoutes.includes(pathname);
 
   useEffect(() => {
     const handleResize = () => {
@@ -46,27 +56,29 @@ export default function ModernFooter() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex flex-col items-center justify-center p-4  md:p-4 lg:p-8 pt-0 md:pt-0 lg:pt-0">
       {/* Hero Section */}
-      <div className="w-full mb-16 text-center">
-        <div className="bg-gradient-to-b from-gray-900 to-black rounded-3xl py-16 md:py-32 shadow-2xl flex flex-col gap-6">
-          <div className="fadeup flex flex-col items-center justify-center ">
-            <h2 className={`section-info_primary-text-light text-center`}>
-              Crafting{" "}
-              <span className="heading-text-italic">digital stories</span>
-              <br />
-              that inspire and engage.{" "}
-            </h2>{" "}
-          </div>{" "}
-          <div className="fadeup max-w-[90%] md:max-w-[50%] mx-auto mb-6 ">
-            {" "}
-            <p className="sub-title-fourth-sec text-center">
-              Every great brand deserves an exceptional online presence. We’re
-              here to bring your vision to life with design, strategy, and
-              technology that work in harmony.{" "}
-            </p>{" "}
+      {!shouldHide && (
+        <div className="w-full mb-16 text-center">
+          <div className="bg-gradient-to-b from-gray-900 to-black rounded-3xl py-16 md:py-32 shadow-2xl flex flex-col gap-6">
+            <div className="fadeup flex flex-col items-center justify-center ">
+              <h2 className={`section-info_primary-text-light text-center`}>
+                Crafting{" "}
+                <span className="heading-text-italic">digital stories</span>
+                <br />
+                that inspire and engage.{" "}
+              </h2>{" "}
+            </div>{" "}
+            <div className="fadeup max-w-[90%] md:max-w-[50%] mx-auto mb-6 ">
+              {" "}
+              <p className="sub-title-cta-sec text-center">
+                Every great brand deserves an exceptional online presence. We’re
+                here to bring your vision to life with design, strategy, and
+                technology that work in harmony.{" "}
+              </p>{" "}
+            </div>
+            <WhiteArrowButton txt="Book a call" />
           </div>
-          <WhiteArrowButton txt="Book a call" />
         </div>
-      </div>
+      )}
 
       {/* Footer */}
       <footer className="w-full border border-[rgba(0,0,0,0.04)] bg-[#FAFAFA] rounded-3xl lg:p-12 md:p-6 p-5">
@@ -74,16 +86,10 @@ export default function ModernFooter() {
           <div className="flex flex-col md:flex-row justify-between gap-12 mb-12">
             {/* Logo and Description */}
             <div className="max-w-xl text-center md:text-left">
-              <div className="hidden md:flex items-center justify-start gap-2 mb-4">
+              <div className="footer-logo mb-4">
                 <img
                   src="/main-logo/colored-logo.png"
                   className="w-[150px]"
-                ></img>
-              </div>
-              <div className="flex md:hidden justify-start  items-center  gap-2 mb-4">
-                <img
-                  src="/main-logo/colored-logo.png"
-                  className="w-[100px]"
                 ></img>
               </div>
               <p className="text-gray-600 sub-title-footer-sec mb-6">
@@ -91,27 +97,7 @@ export default function ModernFooter() {
                 experiences, making design, performance, and storytelling come
                 together seamlessly.
               </p>
-              <div className="gap-2 flex md:hidden justify-center">
-                <a
-                  href="#"
-                  className="text-black/60 hover:text-blacktransition-colors"
-                >
-                  <i className="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a
-                  href="#"
-                  className="text-black/60 hover:text-black mt-[1px] text-[0.9rem] transition-colors"
-                >
-                  <i className="fa-brands fa-facebook-f"></i>
-                </a>
-                <a
-                  href="#"
-                  className="text-black/60 hover:text-black  transition-colors"
-                >
-                  <i className="fa-brands fa-instagram"></i>
-                </a>
-              </div>
-              <div className="gap-3 text-[1.2rem] hidden md:flex justify-start ">
+              <div className="gap-3 text-[1.2rem] footer-socials flex justify-start ">
                 <a
                   href="#"
                   className="text-black/60 hover:text-black transition-colors"
@@ -134,47 +120,6 @@ export default function ModernFooter() {
             </div>
 
             <div className="flex md:flex-row flex-col text-center md:text-left lg:gap-16 md:gap-6">
-              {/* Product */}
-              <div>
-                <h3 className="font-semibold text-lg md:text-lg lg:text-2xl text-black md:mb-4 mb-0">
-                  Product
-                </h3>
-                <ul className="lg:space-y-3 space-y-1">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
-                    >
-                      Features
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
-                    >
-                      Pricing
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
-                    >
-                      Integrations
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
-                    >
-                      Changelog
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
               {/* Resources */}
               <div>
                 <h3 className="font-semibold text-lg md:text-lg lg:text-2xl text-black md:mb-4 mb-0">
@@ -186,7 +131,7 @@ export default function ModernFooter() {
                       href="#"
                       className="text-gray-600 hover:text-black transition-colors text-sm"
                     >
-                      Documentation
+                      Signin
                     </a>
                   </li>
                   <li>
@@ -194,7 +139,7 @@ export default function ModernFooter() {
                       href="#"
                       className="text-gray-600 hover:text-black transition-colors text-sm"
                     >
-                      Tutorials
+                      Get a Quote
                     </a>
                   </li>
                   <li>
@@ -202,7 +147,7 @@ export default function ModernFooter() {
                       href="#"
                       className="text-gray-600 hover:text-black transition-colors text-sm"
                     >
-                      Blog
+                      Privacy Policy
                     </a>
                   </li>
                   <li>
@@ -210,7 +155,72 @@ export default function ModernFooter() {
                       href="#"
                       className="text-gray-600 hover:text-black transition-colors text-sm"
                     >
-                      Support
+                      Terms of Services
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                    >
+                      Project Onboarding Guide
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                    >
+                      Project Delivery & Refund Policy
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Services */}
+              <div>
+                <h3 className="font-semibold text-lg md:text-lg lg:text-2xl text-black md:mb-4 mb-0">
+                  Services
+                </h3>
+                <ul className="lg:space-y-3 space-y-1">
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                    >
+                      UI/UX Design
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                    >
+                      App Development
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                    >
+                      Video Editing & MGFx
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                    >
+                      3D Modelling & Animation
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                    >
+                      Web Design & Development
                     </a>
                   </li>
                 </ul>
@@ -227,7 +237,15 @@ export default function ModernFooter() {
                       href="#"
                       className="text-gray-600 hover:text-black transition-colors text-sm"
                     >
-                      About
+                      About us
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                    >
+                      Our Work
                     </a>
                   </li>
                   <li>
@@ -243,15 +261,7 @@ export default function ModernFooter() {
                       href="#"
                       className="text-gray-600 hover:text-black transition-colors text-sm"
                     >
-                      Contact
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
-                    >
-                      Partners
+                      Contact us
                     </a>
                   </li>
                 </ul>
@@ -265,22 +275,29 @@ export default function ModernFooter() {
               © 2025 WebMaak. All rights reserved.
             </p>
             <div className="flex gap-6 md:order-last order-first">
-              <a href="#" className="hover:text-black transition-colors">
-                Privacy Policy
+              <a
+                href="mailto:hello@webmaak.com"
+                className="text-[#0175e4] hover:text-[#013ca4] transition-colors"
+              >
+                hello@webmaak.com
               </a>
-              <a href="#" className="hover:text-black transition-colors">
-                Terms of Service
+              <a
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=916289972924&text=Hi%2C%20Webmaak%20team%2C%20Let%27s%20discuss%20about%20project"
+                className="text-[#0175e4] hover:text-[#013ca4] transition-colors"
+              >
+                +91 62899 72924
               </a>
             </div>
           </div>
         </div>
         <h1
-          className="hidden md:block font-bold text-center uppercase bg-gradient-to-b from-black/10 to-transparent bg-clip-text text-transparent drop-shadow-[0_1px_3px_rgba(0,0,0,0.05)] mix-blend-multiply [mask-image:linear-gradient(to_bottom,black_30%,transparent)]"
+          className="footer-webmaak font-bold text-center uppercase bg-gradient-to-b from-black/10 to-transparent bg-clip-text text-transparent drop-shadow-[0_1px_3px_rgba(0,0,0,0.05)] mix-blend-multiply [mask-image:linear-gradient(to_bottom,black_30%,transparent)]"
           style={{ fontSize: zoomFont }}
         >
           WEBMAAK
         </h1>
-        <h1 className="text-[3rem] block md:hidden font-bold text-center uppercase bg-gradient-to-b from-black/10 to-transparent bg-clip-text text-transparent drop-shadow-[0_1px_3px_rgba(0,0,0,0.05)] mix-blend-multiply [mask-image:linear-gradient(to_bottom,black_30%,transparent)]">
+        <h1 className="footer-webmaak-mobile text-[3rem] font-bold text-center uppercase bg-gradient-to-b from-black/10 to-transparent bg-clip-text text-transparent drop-shadow-[0_1px_3px_rgba(0,0,0,0.05)] mix-blend-multiply [mask-image:linear-gradient(to_bottom,black_30%,transparent)]">
           WEBMAAK
         </h1>
       </footer>

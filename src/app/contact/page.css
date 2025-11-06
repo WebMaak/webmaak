@@ -658,7 +658,7 @@ select {
 .layout508_tabs-menu {
   grid-column-gap: 0.25rem;
   grid-row-gap: 0.25rem;
-  background-color: #0b224d;
+  background-color: #16062d;
   border: 1px solid #96b6bf33;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
@@ -705,9 +705,63 @@ select {
   min-height: 1.5rem;
 }
 .layout508_tabs-content {
-  background-color: #0b224d;
+  background-color: #16062d;
   border: 1px solid #96b6bf33;
   width: 100%;
+}
+/* .layout508_tabs-content {
+  background: rgba(20, 10, 35, 0.35);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(150, 182, 191, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.02);
+  position: relative;
+  overflow: hidden;
+} */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.19);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 8px 4px rgba(255, 255, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+.glass-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+.glass-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
 }
 .w-tab-content {
   display: block;
