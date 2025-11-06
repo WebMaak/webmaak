@@ -145,6 +145,12 @@ h2 {
     justify-content: center;
     gap: 1rem;
   }
+  .swiper-wrapper {
+    padding-top: 18%;
+  }
+  .padding-bottom-testimonial {
+    padding-bottom: 2rem !important;
+  }
 }
 @media screen and (max-width: 769px) {
   .testimonail_card {

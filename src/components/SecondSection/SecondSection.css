@@ -620,6 +620,11 @@
 .button-link.w-inline-block {
   text-decoration: none !important;
 }
+@media (max-width: 1536px) {
+  .case-study-section {
+    margin-top: 3rem;
+  }
+}
 @media screen and (max-width: 1024px) {
   .home-case-studies_title {
     font-size: 1.5rem;

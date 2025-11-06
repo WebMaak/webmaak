@@ -62,7 +62,7 @@ export default function ModernFooter() {
           id="section11"
           data-theme="dark"
         >
-          <div className="bg-gradient-to-b from-gray-900 to-black rounded-3xl py-16 md:py-32 shadow-2xl flex flex-col gap-6">
+          <div className="bg-gradient-to-b from-gray-900 to-black rounded-3xl py-16 md:py-28 shadow-2xl flex flex-col gap-6">
             <div className="fadeup flex flex-col items-center justify-center ">
               <h2 className={`section-info_primary-text-light text-center`}>
                 Crafting{" "}
@@ -71,7 +71,7 @@ export default function ModernFooter() {
                 that inspire and engage.{" "}
               </h2>{" "}
             </div>{" "}
-            <div className="fadeup max-w-[90%] md:max-w-[50%] mx-auto mb-6 ">
+            <div className="fadeup max-w-[90%] md:max-w-[70%] mx-auto mb-6 ">
               {" "}
               <p className="sub-title-cta-sec text-center">
                 Every great brand deserves an exceptional online presence. We’re
@@ -86,14 +86,14 @@ export default function ModernFooter() {
 
       {/* Footer */}
       <footer
-        className="w-full border border-[rgba(0,0,0,0.04)] bg-[#FAFAFA] rounded-3xl lg:p-12 md:p-6 p-5"
+        className="footer-outer w-full border border-[rgba(0,0,0,0.04)] bg-[#FAFAFA] rounded-3xl lg:p-12 md:p-6 p-5"
         id="section7"
         data-theme="light"
       >
-        <div className="max-w-[98%] lg:p-20 md:p-6 p-5 mx-auto rounded-3xl shadow-lg ">
-          <div className="flex flex-col md:flex-row justify-between gap-12 mb-12">
+        <div className="footer-inner max-w-[98%] lg:p-20 md:p-6 p-5 mx-auto rounded-3xl shadow-lg ">
+          <div className="flex flex-col md:flex-col justify-between gap-12 mb-12">
             {/* Logo and Description */}
-            <div className="max-w-xl text-center md:text-left">
+            <div className="max-w-[30%] md:max-w-full footer-left text-center md:text-left">
               <div className="footer-logo mb-4">
                 <img
                   src="/main-logo/colored-logo.png"
@@ -127,17 +127,17 @@ export default function ModernFooter() {
               </div>
             </div>
 
-            <div className="flex md:flex-row flex-col text-center md:text-left lg:gap-16 md:gap-6">
+            <div className="footer-cols flex md:flex-row flex-col text-center md:text-left lg:gap-16 md:justify-between">
               {/* Resources */}
               <div>
-                <h3 className="font-semibold text-lg md:text-lg lg:text-2xl text-black md:mb-4 mb-0">
+                <h3 className="footer-menu-heading font-semibold text-lg md:text-lg lg:text-2xl text-black md:mb-4 mb-0">
                   Resources
                 </h3>
-                <ul className="lg:space-y-3 space-y-1">
+                <ul className="lg:space-y-3 space-y-1 footer-menu-list ">
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Signin
                     </a>
@@ -145,7 +145,7 @@ export default function ModernFooter() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Get a Quote
                     </a>
@@ -153,7 +153,7 @@ export default function ModernFooter() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Privacy Policy
                     </a>
@@ -161,7 +161,7 @@ export default function ModernFooter() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Terms of Services
                     </a>
@@ -169,7 +169,7 @@ export default function ModernFooter() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Project Onboarding Guide
                     </a>
@@ -177,7 +177,7 @@ export default function ModernFooter() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Project Delivery & Refund Policy
                     </a>
@@ -187,14 +187,14 @@ export default function ModernFooter() {
 
               {/* Services */}
               <div>
-                <h3 className="font-semibold text-lg md:text-lg lg:text-2xl text-black md:mb-4 mb-0">
+                <h3 className="footer-menu-heading font-semibold text-lg md:text-lg lg:text-2xl text-black md:mb-4 mb-0">
                   Services
                 </h3>
-                <ul className="lg:space-y-3 space-y-1">
+                <ul className="lg:space-y-3 space-y-1 footer-menu-list">
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       UI/UX Design
                     </a>
@@ -202,7 +202,7 @@ export default function ModernFooter() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       App Development
                     </a>
@@ -210,7 +210,7 @@ export default function ModernFooter() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Video Editing & MGFx
                     </a>
@@ -218,7 +218,7 @@ export default function ModernFooter() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       3D Modelling & Animation
                     </a>
@@ -226,7 +226,7 @@ export default function ModernFooter() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Web Design & Development
                     </a>
@@ -236,14 +236,14 @@ export default function ModernFooter() {
 
               {/* Company */}
               <div>
-                <h3 className="font-semibold text-lg md:text-lg lg:text-2xl text-black md:mb-4 mb-0">
+                <h3 className=" footer-menu-heading font-semibold text-lg md:text-lg lg:text-2xl text-black md:mb-4 mb-0">
                   Company
                 </h3>
-                <ul className="lg:space-y-3 space-y-1">
+                <ul className="lg:space-y-3 space-y-1 footer-menu-list">
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       About us
                     </a>
@@ -251,7 +251,7 @@ export default function ModernFooter() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Our Work
                     </a>
@@ -259,7 +259,7 @@ export default function ModernFooter() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Careers
                     </a>
@@ -267,7 +267,7 @@ export default function ModernFooter() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Contact us
                     </a>
@@ -282,7 +282,7 @@ export default function ModernFooter() {
             <p className="order-last md:order-first text-center md:text-left">
               © 2025 WebMaak. All rights reserved.
             </p>
-            <div className="flex gap-6 md:order-last order-first">
+            <div className="flex flex-col gap-1 md:gap-6 md:flex-row md:order-last order-first">
               <a
                 href="mailto:hello@webmaak.com"
                 className="text-[#0175e4] hover:text-[#013ca4] transition-colors"

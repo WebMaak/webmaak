@@ -204,6 +204,28 @@ svg:not(:root) {
   display: none;
 }
 
+@media (max-width: 1536px) {
+  .sub-title-cta-sec,
+  .sub-title-footer-sec {
+    font-size: 1rem !important;
+  }
+  .footer-inner {
+    padding: 2rem;
+  }
+  .footer-outer {
+    padding: 2rem;
+  }
+  .footer-cols {
+    gap: 2rem;
+  }
+  .footer-menu-heading {
+    font-size: 1.2rem;
+  }
+  .footer-menu-links {
+    font-size: 0.9rem;
+  }
+}
+
 @media (min-width: 992px) {
   .footer-content_cta_nav-item {
     display: inline-block;

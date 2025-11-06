@@ -132,7 +132,7 @@ export default function Home() {
 
           {/* ✅ Responsive Orbit Section */}
           <div
-            className="relative overflow-hidden w-full mb-20 z-10 min-h-[450px] md:min-h-[775px]"
+            className="relative overflow-hidden w-full mb-20 md:mb-2 z-10 min-h-[450px] md:min-h-[775px]"
             data-theme="light"
             id="section6"
           >

@@ -74,7 +74,7 @@ export default function FourthSection() {
                           <h4 className="solutions_card_title">
                             Creative Web Development <br />
                           </h4>
-                          <div className="text-color-grey w-3/4">
+                          <div className="text-color-grey w-full lg:3/4">
                             <p className="solutions_card_description">
                               We build websites that engage customers and drive
                               results.
@@ -111,7 +111,7 @@ export default function FourthSection() {
                           loading="lazy"
                           sizes="(max-width: 479px) 40vw, (max-width: 767px) 38vw, (max-width: 991px) 21vw, 19vw"
                           alt="web development"
-                          className="webflow-navigator"
+                          class="solutions_user-center_img main-dashbaord "
                         />
                         {/* <img
                           src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66012032daeca4ae7591f4bb_dashboar-webflow-min.png"
@@ -188,7 +188,7 @@ export default function FourthSection() {
                           sizes="(max-width: 479px) 90vw, (max-width: 767px) 94vw, (max-width: 991px) 91vw, 29vw"
                           srcset="/ui-ux.png 500w, /ui-ux.png 820w"
                           alt=""
-                          className=""
+                          className="card-2-image"
                         />
                       </div>
                     </div>
@@ -240,8 +240,6 @@ export default function FourthSection() {
                         <img
                           src="/ecommerce.png"
                           loading="lazy"
-                          sizes="(max-width: 479px) 88vw, (max-width: 991px) 640px, 512px"
-                          srcset="/ecommerce.png 500w, /ecommerce.png 800w, /ecommerce.png 1080w, /ecommerce.png 1184w"
                           alt=""
                           class="solutions_user-center_img main-dashbaord"
                         />
@@ -547,16 +545,13 @@ export default function FourthSection() {
                             </div>
                           </div>
                         </div>
-                        <WhiteArrowButton txt="Book a call" />
                       </div>
                       <div className="solutions_card-content-image-wrap _w-100">
                         <img
                           src="/3d-video.png"
                           loading="lazy"
-                          sizes="(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 91vw, 61vw"
-                          srcset="/3d-video.png 500w, /3d-video.png 800w, /3d-video.png 1080w, /3d-video.png 1600w, /3d-video.png 1921w"
                           alt=""
-                          className="solutions_wized-img"
+                          class="solutions_user-center_img main-dashbaord py-6 md:py-0"
                         />
                       </div>
                     </div>
@@ -567,8 +562,8 @@ export default function FourthSection() {
               <div className="solutions_card-wrap column span-3">
                 <div className="solutions_card-holder-wrap scaleup">
                   <div className="solutions_card-holder">
-                    <div className="solutions_card mobile-verticle">
-                      <div className="solutions_card-content user-centric">
+                    <div className="solutions_card mobile-verticle video-editing-card">
+                      <div className="solutions_card-content user-centric ">
                         <div className="solutions_card_top-content">
                           <h4 className="solutions_card_title">
                             Video Editing & Motion Graphics
@@ -612,7 +607,7 @@ export default function FourthSection() {
                           sizes="(max-width: 479px) 88vw, (max-width: 991px) 640px, 512px"
                           srcset="/editing.png 500w, /editing.png 800w, /editing.png 1080w, /editing.png 1184w"
                           alt=""
-                          class="solutions_user-center_img main-dashbaord "
+                          class="solutions_user-center_img main-dashbaord lg:max-w-3xl"
                         />
                       </div>
                     </div>

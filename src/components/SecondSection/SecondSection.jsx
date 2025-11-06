@@ -45,12 +45,12 @@ function SecondSection() {
                 </div>
               </div>
               <div className="fadeup case-study-section">
-                <Toggle
+                {/* <Toggle
                   checked={activeTable}
                   onChange={() => setActiveTable((prev) => !prev)}
-                />
+                /> */}
                 <div className="mt-1"></div>
-                {/* <div className="relative inline-flex bg-royalblue-light rounded-full p-2 shadow-inner">
+                <div className="relative inline-flex bg-royalblue-light rounded-full p-2 shadow-inner">
                   <div
                     className={`absolute top-2 left-2 h-[50px] w-[155px] bg-royalblue rounded-full transition-all duration-300 ${
                       active === "map" ? "w-[198px]" : "w-[155px]"
@@ -79,8 +79,8 @@ function SecondSection() {
                   >
                     Media Projects&nbsp;
                   </button>
-                </div> */}
-                {/* <div
+                </div>
+                <div
                   className={`${active === "table" ? "hidden" : "visible"}`}
                   style={{
                     transition: "visibility 0.3s ease-in-out",
@@ -97,8 +97,8 @@ function SecondSection() {
                   }}
                 >
                   <CaseStudiesIt />
-                </div> */}
-                {activeTable ? <CaseStudiesMedia /> : <CaseStudiesIt />}
+                </div>
+                {/* {activeTable ? <CaseStudiesMedia /> : <CaseStudiesIt />} */}
               </div>
             </div>
           </div>
