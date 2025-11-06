@@ -95,7 +95,7 @@ function Contact() {
                 src="/black-hole-bg.jpg"
                 loading="lazy"
                 sizes="100vw"
-                srcset="black-hole-bg.jpg 500w, black-hole-bg.jpg 1440w"
+                srcset="/black-hole-bg.jpg 500w, /black-hole-bg.jpg 1440w"
                 alt=""
                 className="blur-[10px] contact_desktop-bg max-h-[100%] min-h-[100%] min-w-[max-content]"
               />
@@ -106,14 +106,8 @@ function Contact() {
             </h2>
             <div className="contact_sub-title-wrapper flex flex-col justify-center items-center">
               <div split-text="" className="contact_sub-title-one w-3/4">
-                At WebMaak, we make your vision a reality—creative media, apps,
-                and digital marketing.
-              </div>
-              <div className="contact_sub-title-two-wrapper mt-2">
-                <div className="contact_sub-title-two is-green">
-                  100+ Successful Projects Delivered
-                </div>
-                <div className="contact_sub-title-two">and Counting!</div>
+                At WebMaak, we make your vision a reality. Creative Media, Apps,
+                and Digital Marketing.
               </div>
             </div>
           </div>

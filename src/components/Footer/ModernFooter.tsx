@@ -15,8 +15,8 @@ export default function ModernFooter() {
   const hideOnRoutes = [
     "/contact",
     "/contact@marketing",
-    "contact@media",
-    "contact@webapps",
+    "/contact@media",
+    "/contact@webapps",
   ];
   const shouldHide = hideOnRoutes.includes(pathname);
 

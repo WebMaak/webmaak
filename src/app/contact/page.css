@@ -1325,9 +1325,8 @@ select {
   display: grid;
 }
 .contact_endorsement-partner.webflow {
-  font-weight: 500;
-  color: #222;
-  background-color: #ffffff;
+  font-weight: 300;
+  color: #ffffff;
 }
 
 .contact_endorsement-partner {

@@ -92,31 +92,21 @@ function Contact() {
           <div className="container-large">
             <div className="hero-bg">
               <img
-                src="/hero-bg.JPG"
+                src="/black-hole-bg.jpg"
                 loading="lazy"
                 sizes="100vw"
-                srcset="hero-bg.JPG 500w, hero-bg.JPG 1440w"
+                srcset="/black-hole-bg.jpg 500w, black-hole-bg.jpg 1440w"
                 alt=""
-                className="contact_desktop-bg max-h-[100%] min-h-[100%] min-w-[max-content]"
+                className="blur-3xl contact_desktop-bg max-h-[100%] min-h-[100%] min-w-[max-content]"
               />
             </div>
             <h2 className="heading-style-h2 is-contact-page-hero-heading">
-              Build Smart, Build Powerful
-              <br />
-              Digital Solutions
+              Smart, Powerful Digital Solutions
               <br />
             </h2>
             <div className="contact_sub-title-wrapper flex flex-col justify-center items-center">
               <div split-text="" className="contact_sub-title-one w-3/4">
                 We create high-performing websites and apps that drive results.
-              </div>
-              <div className="contact_sub-title-two-wrapper mt-2">
-                <div className="contact_sub-title-two is-green">
-                  200+ Digital Solutions
-                </div>
-                <div className="contact_sub-title-two">
-                  Delivered Successfully!
-                </div>
               </div>
             </div>
             {/* <div className="contact_brands-wrapper">
@@ -387,7 +377,7 @@ function Contact() {
         </div>
       </div> */}
         <section className="section_layout508">
-          <div className="padding-global">
+          <div className="padding-globa">
             <div className="container-large">
               <div className="layout508_tabs w-tabs">
                 <div className="layout508_tabs-menu w-tab-menu">
@@ -420,7 +410,7 @@ function Contact() {
                     className={`lg:pt-16 md:pt-10 pt-6 lg:pb-0 md:pb-10 pb-4 lg:px-0 md:px-8 px-4 relative`}
                   >
                     <TalibScheduler />
-                    <div className="p-4 w-full bg-[#0b224d] absolute bottom-0">
+                    <div className="p-4 w-full bg-[#16062d] absolute bottom-0">
                       &nbsp;
                     </div>
                   </div>
