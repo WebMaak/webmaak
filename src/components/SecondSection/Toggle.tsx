@@ -134,7 +134,7 @@ import styled from "styled-components";
 
 const Switch = ({ checked, onChange }) => {
   return (
-    <StyledWrapper checked={checked}>
+    <StyledWrapper checked={checked} data-checked={checked}>
       <label htmlFor="filter" className="switch" aria-label="Toggle Filter">
         <input
           type="checkbox"
@@ -256,11 +256,9 @@ const StyledWrapper = styled.div<StyledWrapperProps>`
     background-color: var(--_slider-bg-clr);
     inset: var(--_switch-padding) 50% var(--_switch-padding)
       var(--_switch-padding);
-    transition: inset 500ms var(--_switch-easing),
-      background-color 500ms ease-in-out;
   }
 
-  .switch input[type="checkbox"]:checked ~ &::before {
+  [data-checked="true"] .switch::before {
     background-color: var(--_slider-bg-clr-on);
     inset: var(--_switch-padding) var(--_switch-padding) var(--_switch-padding)
       50%;
