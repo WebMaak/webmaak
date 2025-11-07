@@ -115,7 +115,7 @@ function HorizontalDragCarousel() {
               </h2>
             </div>
             <div className="fadeup">
-              <p split-text="true" className="sub-title">
+              <p split-text="true" className="sub-title px-4">
                 &nbsp;We bring stories to life with high-quality video
                 production, 3D animations, and post-production that captivate
                 audiences and drive engagement.

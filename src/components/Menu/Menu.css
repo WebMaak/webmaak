@@ -12,7 +12,6 @@
   from {
     transform: translate3d(-50%, -50%, 0px) rotate(0deg);
   }
-
   to {
     transform: translate3d(-50%, -50%, 0px) rotate(360deg);
   }

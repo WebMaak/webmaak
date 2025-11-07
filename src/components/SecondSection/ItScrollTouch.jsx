@@ -155,7 +155,7 @@ function HorizontalDragCarousel() {
               </h2>
             </div>
             <div className="fadeup">
-              <p split-text="true" className="sub-title">
+              <p split-text="true" className="sub-title px-4">
                 &nbsp;From responsive websites to robust web applications, we
                 craft digital solutions that deliver performance, scalability,
                 and seamless user experiences.

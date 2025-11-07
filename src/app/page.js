@@ -16,6 +16,7 @@ import Navigator from "../components/Navigator/Navigator";
 import { React, useState, useEffect } from "react";
 import { OrbitingCirclesPulse } from "../components/orbiting-circles-pulse";
 import Loader from "../components/Loader/Loader";
+import Client from "@/components/client";
 
 export default function Home() {
   const [bgHeight, setBgHeight] = useState("100vh");
@@ -221,7 +222,7 @@ export default function Home() {
               <img src="/orbiting-circle-icons/19.png" alt="icon 19" />
             </OrbitingCirclesPulse>
           </div>
-
+          <Client />
           <div id="section10" data-theme="light">
             <SeventhSection />
           </div>

@@ -630,8 +630,8 @@
     font-size: 1.5rem;
   }
   .home-case-studies_detail-row {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
   .secondary-button {
     padding-left: 1rem;
@@ -730,15 +730,20 @@
     border-radius: 0.75rem;
   }
   .home-case-studies_tab-image-media {
+    width: 2rem;
+  }
+  .home-case-studies_tab-image {
     width: 3rem;
+    height: auto;
   }
   .case-study-section {
     margin-top: 4rem;
   }
   .home-case-studies_tabs-menu {
-    display: grid;
-    grid-auto-flow: column;
+    justify-content: space-between;
     grid-auto-columns: auto;
+    grid-auto-flow: column;
+    display: grid;
     gap: 0.5rem;
     padding: 0.5rem;
   }
@@ -805,7 +810,25 @@
   }
   .home-case-studies_detail-tag {
     font-size: 0.3rem;
-    padding: 7px;
+    padding: 5px;
+  }
+  .home-case-studies_detail-tag-wrapper {
+    grid-column-gap: 4px;
+  }
+  .home-case-studies_detail-row {
+    padding-bottom: 0.75rem;
+  }
+  .home-case-studies_detail-tag-wrapper {
+    margin-top: 7px;
+  }
+  .project_tag {
+    font-size: 0.5rem;
+  }
+  .home-case-study_progress-bar-wrap {
+    padding-top: 0;
+  }
+  .mobile-px {
+    padding-left: 1rem !important;
   }
 }
 @media screen and (max-width: 479px) {
@@ -874,7 +897,6 @@
 
   .project_tag {
     padding: 0.3rem 0.5rem;
-    font-size: 0.7rem;
   }
 
   .heading-style-h3.project-title {

@@ -213,7 +213,7 @@ svg:not(:root) {
     padding: 2rem;
   }
   .footer-outer {
-    padding: 2rem;
+    padding: 1rem;
   }
   .footer-cols {
     gap: 2rem;
@@ -351,7 +351,7 @@ svg:not(:root) {
   }
   .footer-webmaak-mobile {
     display: block;
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 @media screen and (max-width: 479px) {

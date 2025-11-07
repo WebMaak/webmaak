@@ -26,9 +26,9 @@ function SecondSection() {
         <div className="padding-global relative">
           <div className="container-large">
             <div className="padding-section-large-second-section">
-              <div className="max-width-case-study center">
-                <div className="section-info-wrap case-study">
-                  <div className="fadeup bro">
+              <div className="max-width-case-study  center">
+                <div className="section-info-wrap  case-study">
+                  <div className="fadeup bro ">
                     <h2 className="section-info_primary-text">
                       Crafted Projects <br className="md:hidden block" />
                       <span className="heading-text-italic">That Speak</span>
@@ -36,8 +36,8 @@ function SecondSection() {
                       Louder Than Words
                     </h2>
                   </div>
-                  <div className="fadeup">
-                    <p split-text="true" className="sub-title">
+                  <div className="fadeup ">
+                    <p split-text="true" className="sub-title ">
                       Explore how we’ve turned ideas into digital experiences
                       that elevate brands and drive growth
                     </p>
@@ -50,7 +50,37 @@ function SecondSection() {
                   onChange={() => setActiveTable((prev) => !prev)}
                 /> */}
                 <div className="mt-1"></div>
-                <div className="relative inline-flex bg-royalblue-light rounded-full p-2 shadow-inner">
+                <div className="relative inline-flex md:hidden bg-royalblue-light rounded-full p-2 shadow-inner">
+                  <div
+                    className={`absolute top-2 left-2 h-[34px] max-w-[155px] bg-royalblue rounded-full transition-all duration-300 ${
+                      active === "map" ? "w-[118px]" : "w-[90px]"
+                    } `}
+                    style={{
+                      transform:
+                        active === "map"
+                          ? "translateX(90px)"
+                          : "translateX(0px)",
+                    }}
+                  ></div>
+
+                  <button
+                    onClick={() => setActive("table")}
+                    className={`relative z-10 px-4 py-2 rounded-full text-[0.7rem] md:text-base font-semibold transition-colors duration-300 ${
+                      active === "table" ? "text-white" : "text-royalblue-dark"
+                    }`}
+                  >
+                    IT Projects
+                  </button>
+                  <button
+                    onClick={() => setActive("map")}
+                    className={`relative z-10 px-4 py-2 rounded-full text-[0.7rem] md:text-base font-semibold transition-colors duration-300 ${
+                      active === "map" ? "text-white" : "text-royalblue-dark"
+                    }`}
+                  >
+                    Media Projects&nbsp;
+                  </button>
+                </div>
+                <div className="hidden md:inline-flex relative  bg-royalblue-light rounded-full p-2 shadow-inner">
                   <div
                     className={`absolute top-2 left-2 h-[50px] w-[155px] bg-royalblue rounded-full transition-all duration-300 ${
                       active === "map" ? "w-[198px]" : "w-[155px]"
@@ -65,7 +95,7 @@ function SecondSection() {
 
                   <button
                     onClick={() => setActive("table")}
-                    className={`relative z-10 px-9 py-3 rounded-full text-[0.875rem] md:text-base font-semibold transition-colors duration-300 ${
+                    className={`relative z-10 px-9 py-3 rounded-full text-[0.7rem] md:text-base font-semibold transition-colors duration-300 ${
                       active === "table" ? "text-white" : "text-royalblue-dark"
                     }`}
                   >
@@ -73,7 +103,7 @@ function SecondSection() {
                   </button>
                   <button
                     onClick={() => setActive("map")}
-                    className={`relative z-10 px-9 py-3 rounded-full text-[0.875rem] md:text-base font-semibold transition-colors duration-300 ${
+                    className={`relative z-10 px-9 py-3 rounded-full text-[0.7rem] md:text-base font-semibold transition-colors duration-300 ${
                       active === "map" ? "text-white" : "text-royalblue-dark"
                     }`}
                   >

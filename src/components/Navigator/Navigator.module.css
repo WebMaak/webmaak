@@ -173,7 +173,7 @@
     transform: translateX(-50%);
     flex-direction: row;
     padding: 0.5rem 1rem;
-    gap: 1rem;
+    gap: 0.775rem;
     width: fit-content;
   }
 
@@ -183,8 +183,8 @@
   }
 
   .icon {
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
   }
 
   .navigator.light .icon {

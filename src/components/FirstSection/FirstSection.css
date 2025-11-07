@@ -282,47 +282,25 @@
   left: 40px;
 }
 
-.steps_card-wrapper.touched .steps-card_lottie_1 img {
+.steps_card-wrapper:hover .steps-card_lottie_1 img {
   width: 280px;
   bottom: -15px;
   right: -17px;
 }
-.steps_card-wrapper.touched .steps-card_lottie_2 img {
+.steps_card-wrapper:hover .steps-card_lottie_2 img {
   width: 250px;
   top: -110px;
   right: -25px;
 }
-.steps_card-wrapper.touched .steps-card_lottie_3 img {
+.steps_card-wrapper:hover .steps-card_lottie_3 img {
   width: 50px;
   top: -40px;
   right: 40px;
 }
-.steps_card-wrapper.touched .steps-card_lottie_4 img {
+.steps_card-wrapper:hover .steps-card_lottie_4 img {
   width: 8px;
   top: 10px;
   left: 40px;
-}
-@media (hover: hover) and (pointer: fine) {
-  .steps_card-wrapper:hover .steps-card_lottie_1 img {
-    width: 280px;
-    bottom: -15px;
-    right: -17px;
-  }
-  .steps_card-wrapper:hover .steps-card_lottie_2 img {
-    width: 250px;
-    top: -110px;
-    right: -25px;
-  }
-  .steps_card-wrapper:hover .steps-card_lottie_3 img {
-    width: 50px;
-    top: -40px;
-    right: 40px;
-  }
-  .steps_card-wrapper:hover .steps-card_lottie_4 img {
-    width: 8px;
-    top: 10px;
-    left: 40px;
-  }
 }
 
 /* Card 2 image animation */
@@ -360,57 +338,31 @@
   top: 65px;
   right: 210px;
 }
-.steps_card-wrapper.touched .steps-card_2_1 img {
+
+.steps_card-wrapper:hover .steps-card_2_1 img {
   width: 300px;
   bottom: -15px;
   right: -30px;
 }
-.steps_card-wrapper.touched .steps-card_2_2 img {
+.steps_card-wrapper:hover .steps-card_2_2 img {
   width: 200px;
   bottom: -100px;
   right: 80px;
 }
-.steps_card-wrapper.touched .steps-card_2_3 img {
+.steps_card-wrapper:hover .steps-card_2_3 img {
   width: 300px;
   top: 30px;
   right: -180px;
 }
-.steps_card-wrapper.touched .steps-card_2_4 img {
+.steps_card-wrapper:hover .steps-card_2_4 img {
   width: 200px;
   top: -50px;
   right: 80px;
 }
-.steps_card-wrapper.touched .steps-card_2_5 img {
+.steps_card-wrapper:hover .steps-card_2_5 img {
   width: 20px;
   top: 50px;
   right: 215px;
-}
-@media (hover: hover) and (pointer: fine) {
-  .steps_card-wrapper:hover .steps-card_2_1 img {
-    width: 300px;
-    bottom: -15px;
-    right: -30px;
-  }
-  .steps_card-wrapper:hover .steps-card_2_2 img {
-    width: 200px;
-    bottom: -100px;
-    right: 80px;
-  }
-  .steps_card-wrapper:hover .steps-card_2_3 img {
-    width: 300px;
-    top: 30px;
-    right: -180px;
-  }
-  .steps_card-wrapper:hover .steps-card_2_4 img {
-    width: 200px;
-    top: -50px;
-    right: 80px;
-  }
-  .steps_card-wrapper:hover .steps-card_2_5 img {
-    width: 20px;
-    top: 50px;
-    right: 215px;
-  }
 }
 
 /* Card 3 image animation */
@@ -461,59 +413,31 @@
   right: 30px;
 }
 
-.steps_card-wrapper.touched .steps-card_3_1 img {
+.steps_card-wrapper:hover .steps-card_3_1 img {
   bottom: 100px;
   right: 10px;
 }
-.steps_card-wrapper.touched .steps-card_3_2 img {
+.steps_card-wrapper:hover .steps-card_3_2 img {
   top: 0px;
   right: 50px;
 }
-.steps_card-wrapper.touched .steps-card_3_3 img {
+.steps_card-wrapper:hover .steps-card_3_3 img {
   top: 120px;
   right: 40px;
 }
-.steps_card-wrapper.touched .steps-card_3_4 img {
+.steps_card-wrapper:hover .steps-card_3_4 img {
   left: 10px;
 }
-.steps_card-wrapper.touched .steps-card_3_5 img {
+.steps_card-wrapper:hover .steps-card_3_5 img {
   bottom: 30px;
   left: 30px;
 }
-.steps_card-wrapper.touched .steps-card_3_6 img {
+.steps_card-wrapper:hover .steps-card_3_6 img {
   top: 20px;
   left: 10px;
 }
-.steps_card-wrapper.touched .steps-card_3_7 img {
+.steps_card-wrapper:hover .steps-card_3_7 img {
   top: -40px;
-}
-@media (hover: hover) and (pointer: fine) {
-  .steps_card-wrapper:hover .steps-card_3_1 img {
-    bottom: 100px;
-    right: 10px;
-  }
-  .steps_card-wrapper:hover .steps-card_3_2 img {
-    top: 0px;
-    right: 50px;
-  }
-  .steps_card-wrapper:hover .steps-card_3_3 img {
-    top: 120px;
-    right: 40px;
-  }
-  .steps_card-wrapper:hover .steps-card_3_4 img {
-    left: 10px;
-  }
-  .steps_card-wrapper:hover .steps-card_3_5 img {
-    bottom: 30px;
-    left: 30px;
-  }
-  .steps_card-wrapper:hover .steps-card_3_6 img {
-    top: 20px;
-    left: 10px;
-  }
-  .steps_card-wrapper:hover .steps-card_3_7 img {
-    top: -40px;
-  }
 }
 
 /* Card 4 images animation */
@@ -545,47 +469,26 @@
   top: 0px;
   left: 40px;
 }
-.steps_card-wrapper.touched .steps-card_4_1 img {
+
+.steps_card-wrapper:hover .steps-card_4_1 img {
   width: 250px;
   top: 0px;
   right: 10px;
 }
-.steps_card-wrapper.touched .steps-card_4_2 img {
+.steps_card-wrapper:hover .steps-card_4_2 img {
   width: 232px;
   bottom: -10px;
   left: -25px;
 }
-.steps_card-wrapper.touched .steps-card_4_3 img {
+.steps_card-wrapper:hover .steps-card_4_3 img {
   width: 234px;
   bottom: -64px;
   right: 8px;
 }
-.steps_card-wrapper.touched .steps-card_4_4 img {
+.steps_card-wrapper:hover .steps-card_4_4 img {
   width: 30px;
   top: 0px;
   left: 25px;
-}
-@media (hover: hover) and (pointer: fine) {
-  .steps_card-wrapper:hover .steps-card_4_1 img {
-    width: 250px;
-    top: 0px;
-    right: 10px;
-  }
-  .steps_card-wrapper:hover .steps-card_4_2 img {
-    width: 232px;
-    bottom: -10px;
-    left: -25px;
-  }
-  .steps_card-wrapper:hover .steps-card_4_3 img {
-    width: 234px;
-    bottom: -64px;
-    right: 8px;
-  }
-  .steps_card-wrapper:hover .steps-card_4_4 img {
-    width: 30px;
-    top: 0px;
-    left: 25px;
-  }
 }
 /* Card Image animation end */
 

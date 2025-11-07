@@ -78,3 +78,26 @@
     transform: translateX(-100%);
   }
 }
+
+@media (max-width: 767px) {
+  .primary-button-White {
+    grid-column-gap: 0.4rem;
+    border-radius: 0.375rem;
+    padding: 0.4rem 1.2rem;
+  }
+
+  .primary-btn-text {
+    font-size: 0.875rem !important;
+    font-weight: 500;
+    line-height: 100% !important;
+  }
+
+  .secondary-btn_wrap {
+    z-index: 3;
+    width: 1rem;
+  }
+  .secondary-btn_icon-wrap {
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+  }
+}

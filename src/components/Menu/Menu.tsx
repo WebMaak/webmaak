@@ -103,7 +103,7 @@ export default function Menu({ scrolled }: MenuProps) {
         >
           <span className="anchor"></span>
           <span className="index">03</span>
-          <span className="label">Portfolio</span>
+          <span className="label">Our Work</span>
         </a>
         <a
           className="link"
