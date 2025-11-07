@@ -37,6 +37,15 @@ function SeventhSection() {
         "The e-card which you provided to me was amazingly great work..Great work guyz and the best part was wedding website which was absolutely cherry on the cake.. Commendable work..keep up the Good work.",
     },
     {
+      name: "Kalika Nigam",
+      role: "Founder,",
+      company: "Chamki",
+      image: "/logo.png",
+      // companyLogo: "/marquee-logo/21.png",
+      quote:
+        "Working with Webmark was an absolute pleasure! They built a stunning website for my brand and truly brought my vision to life. The team was incredibly dedicated, prompt with every update, and went above and beyond to make sure everything was perfect. Highly recommend them to anyone looking for a reliable and creative web development team!",
+    },
+    {
       name: "DigiTalks",
       role: "Agency",
       company: "",
@@ -68,7 +77,7 @@ function SeventhSection() {
             <div className="testimonail_heading">
               <div className="fadeup text-center">
                 <h2 className="section-info_primary-text">
-                  What our clients think{" "}
+                  What our clients think <br />
                   <span className="heading-text-italic"> about</span>
                   our work
                 </h2>

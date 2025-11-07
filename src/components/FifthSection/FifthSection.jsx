@@ -13,9 +13,10 @@ function FifthSection() {
         className="section_integration pt-20 pb-12 flex gap-4 justify-center items-center flex-col"
         data-theme="light"
       >
-        <div className="fadeup">
+        <div className="fadeup text-center">
           <h2 className="section-info_primary-text text-center mx-auto">
-            Powering Ideas With <br className="md:hidden visible" />
+            Powering Ideas
+            <br /> With <span> </span>
             <span className="heading-text-italic mx-auto">
               Modern Technology
             </span>

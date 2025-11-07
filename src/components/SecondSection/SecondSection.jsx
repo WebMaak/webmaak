@@ -65,7 +65,7 @@ function SecondSection() {
 
                   <button
                     onClick={() => setActive("table")}
-                    className={`relative z-10 px-9 py-3 rounded-full text-sm md:text-base font-semibold transition-colors duration-300 ${
+                    className={`relative z-10 px-9 py-3 rounded-full text-[0.875rem] md:text-base font-semibold transition-colors duration-300 ${
                       active === "table" ? "text-white" : "text-royalblue-dark"
                     }`}
                   >
@@ -73,7 +73,7 @@ function SecondSection() {
                   </button>
                   <button
                     onClick={() => setActive("map")}
-                    className={`relative z-10 px-9 py-3 rounded-full text-sm md:text-base font-semibold transition-colors duration-300 ${
+                    className={`relative z-10 px-9 py-3 rounded-full text-[0.875rem] md:text-base font-semibold transition-colors duration-300 ${
                       active === "map" ? "text-white" : "text-royalblue-dark"
                     }`}
                   >

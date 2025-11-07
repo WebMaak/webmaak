@@ -40,12 +40,7 @@ export default function ModernFooter() {
       else if (width >= 1200) setZoomFont("13rem");
       else if (width >= 1150) setZoomFont("13rem");
       else if (width >= 1100) setZoomFont("10rem");
-      else if (width >= 1050) setZoomFont("10rem");
-      else if (width >= 1000) setZoomFont("8rem");
-      else if (width >= 800) setZoomFont("8rem");
-      else if (width >= 700) setZoomFont("7rem");
-      else if (width >= 767) setZoomFont("6rem");
-      else setZoomFont("4rem");
+      else setZoomFont("8rem");
     };
 
     handleResize();
@@ -71,7 +66,7 @@ export default function ModernFooter() {
                 that inspire and engage.{" "}
               </h2>{" "}
             </div>{" "}
-            <div className="fadeup max-w-[90%] md:max-w-[70%] mx-auto mb-6 ">
+            <div className="fadeup max-w-[80%] md:max-w-[70%] lg:max-w-[50%] mx-auto mb-6 ">
               {" "}
               <p className="sub-title-cta-sec text-center">
                 Every great brand deserves an exceptional online presence. We’re
@@ -91,9 +86,9 @@ export default function ModernFooter() {
         data-theme="light"
       >
         <div className="footer-inner max-w-[98%] lg:p-20 md:p-6 p-5 mx-auto rounded-3xl shadow-lg ">
-          <div className="flex flex-col md:flex-col justify-between gap-12 mb-12">
+          <div className="flex flex-col md:flex-col  lg:flex-row justify-between gap-12 mb-12">
             {/* Logo and Description */}
-            <div className="max-w-[30%] md:max-w-full footer-left text-center md:text-left">
+            <div className="lg:max-w-[30%] md:max-w-full  footer-left text-center md:text-left">
               <div className="footer-logo mb-4">
                 <img
                   src="/main-logo/colored-logo.png"
