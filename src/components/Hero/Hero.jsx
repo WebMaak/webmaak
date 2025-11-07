@@ -178,7 +178,7 @@ function Hero() {
                 loading="lazy"
                 alt=""
                 onClick={() => {
-                  document.getElementById("media-section")?.scrollIntoView({
+                  document.getElementById("section8")?.scrollIntoView({
                     behavior: "smooth",
                     block: "start",
                   });
@@ -202,7 +202,7 @@ function Hero() {
             loading="lazy"
             alt=""
             onClick={() => {
-              document.getElementById("it-section")?.scrollIntoView({
+              document.getElementById("section7")?.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
               });
