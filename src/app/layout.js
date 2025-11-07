@@ -4,7 +4,6 @@ import "./globals.css";
 import { ClientOnlyScrollProgress } from "../components/ClientOnlyScrollProgress";
 import SmoothScrollProvider from "./smooth-scroll-provider";
 
-
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -17,7 +16,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Webmaak",
+  title: "WebMaak",
   description: "Created with love Webmaak",
   icons: {
     icon: "/main-logo/favicon.png",
@@ -27,7 +26,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <ClientOnlyScrollProgress />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>

@@ -18,6 +18,38 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.heading-style-h2.is-contact-page-hero-heading-about {
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(#fff, #fff9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: Bricolage Grotesque, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  position: relative;
+}
+.heading-style-h3.is-contact-page-hero-heading-about {
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(#fff 65%, rgba(255, 255, 255, 0.719) 35%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: Bricolage Grotesque, sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+}
+.contact_sub-title-one-about {
+  z-index: 100;
+  color: #fffc;
+  text-align: center;
+  font-size: 1.125rem;
+}
 .section-info_primary-text-subheading {
   background: linear-gradient(
     180deg,

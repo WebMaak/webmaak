@@ -2,7 +2,6 @@
 
 import React from "react";
 import "@/app/about/page.css";
-import "@/app/contact/page.css";
 
 export default function Client() {
   return (
@@ -10,12 +9,12 @@ export default function Client() {
       <section className="w-full bg-gradient-to-r from-[#0f061b] to-[#341162] py-28">
         <div className="casestudy_wrapper">
           <div className="container-large">
-            <h2 className="heading-style-h2 is-contact-page-hero-heading">
+            <h2 className="heading-style-h2 is-contact-page-hero-heading-about py-4">
               Trusted by Global Brands
               <br />
             </h2>
             <div className="contact_sub-title-wrapper flex flex-col justify-center items-center">
-              <div split-text="" className="contact_sub-title-one w-3/4">
+              <div split-text="" className="contact_sub-title-one-about w-3/4">
                 We’ve partnered with clients around the world to bring their
                 ideas to life through creative design, innovative apps, and
                 impactful growth.
