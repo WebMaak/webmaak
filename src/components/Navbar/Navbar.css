@@ -418,9 +418,6 @@ a {
 
 /* Media querries */
 @media screen and (max-width: 991px) {
-  .navbar-button {
-    display: none !important;
-  }
   .navbar_menu-item::after {
     display: none; /* Remove the underline effect */
   }
@@ -2859,6 +2856,9 @@ a {
     opacity: 1 !important;
     visibility: visible !important;
   } */
+  .navbar-button {
+    display: none !important;
+  }
   .navbar_component {
     padding-top: 0.1rem;
   }
