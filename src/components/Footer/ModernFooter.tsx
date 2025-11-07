@@ -103,19 +103,19 @@ export default function ModernFooter() {
               </p>
               <div className="gap-3 text-[1.2rem] footer-socials flex justify-start ">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/webmaak-creative"
                   className="text-black/60 hover:text-black transition-colors"
                 >
                   <i className="fa-brands fa-linkedin-in"></i>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/webmaak/"
                   className="text-black/60 hover:text-black transition-colors"
                 >
                   <i className="fa-brands fa-instagram"></i>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/webmaak "
                   className="text-black/60 hover:text-black  transition-colors"
                 >
                   <i className="fa-brands fa-facebook-f"></i>
@@ -132,15 +132,15 @@ export default function ModernFooter() {
                 <ul className="lg:space-y-3 space-y-1 footer-menu-list ">
                   <li>
                     <a
-                      href="#"
+                      href="https://webmaak.workway.pro/login"
                       className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
-                      Signin
+                      Sign in
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://webmaak.workway.pro/lead-form/cab7978cc6df39803c26bc4186b8d6a6?styled=1&with_logo=1"
                       className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Get a Quote
@@ -189,7 +189,7 @@ export default function ModernFooter() {
                 <ul className="lg:space-y-3 space-y-1 footer-menu-list">
                   <li>
                     <a
-                      href="#"
+                      href="/contact@webapps"
                       className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       UI/UX Design
@@ -197,7 +197,7 @@ export default function ModernFooter() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/contact@webapps"
                       className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       App Development
@@ -205,7 +205,7 @@ export default function ModernFooter() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/contact@media"
                       className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Video Editing & MGFx
@@ -213,7 +213,7 @@ export default function ModernFooter() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/contact@media"
                       className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       3D Modelling & Animation
@@ -221,7 +221,7 @@ export default function ModernFooter() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/contact@webapps"
                       className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Web Design & Development
@@ -238,7 +238,7 @@ export default function ModernFooter() {
                 <ul className="lg:space-y-3 space-y-1 footer-menu-list">
                   <li>
                     <a
-                      href="#"
+                      href="/about"
                       className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       About us
@@ -248,6 +248,22 @@ export default function ModernFooter() {
                     <a
                       href="#"
                       className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
+                      onClick={() => {
+                        const section = document.querySelector("#section3");
+                        if (section) {
+                          // Resume Lenis, scroll to section, then close menu
+                          if (window.lenis) {
+                            window.lenis.start();
+                            window.lenis.scrollTo(section, {
+                              duration: 1.5,
+                              easing: (t) =>
+                                Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                            });
+                          } else {
+                            section.scrollIntoView({ behavior: "smooth" });
+                          }
+                        }
+                      }}
                     >
                       Our Work
                     </a>
@@ -256,13 +272,29 @@ export default function ModernFooter() {
                     <a
                       href="#"
                       className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
+                      onClick={() => {
+                        const section = document.querySelector("#section3");
+                        if (section) {
+                          // Resume Lenis, scroll to section, then close menu
+                          if (window.lenis) {
+                            window.lenis.start();
+                            window.lenis.scrollTo(section, {
+                              duration: 1.5,
+                              easing: (t) =>
+                                Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                            });
+                          } else {
+                            section.scrollIntoView({ behavior: "smooth" });
+                          }
+                        }
+                      }}
                     >
                       Careers
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/contact"
                       className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
                       Contact us

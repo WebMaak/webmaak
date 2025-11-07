@@ -16,6 +16,7 @@ import Navigator from "../components/Navigator/Navigator";
 import { React, useState, useEffect } from "react";
 import { OrbitingCirclesPulse } from "../components/orbiting-circles-pulse";
 import Loader from "../components/Loader/Loader";
+import WelcomeLoader from "../components/Loader/WelcomeLoader";
 import Client from "@/components/client";
 
 export default function Home() {
@@ -93,6 +94,7 @@ export default function Home() {
 
   return (
     <>
+      <WelcomeLoader />
       <Loader />
       <div className="main relative">
         <Navbar />

@@ -10,6 +10,7 @@ import {
   Presentation,
   // ChartNoAxesCombined,
   MousePointerClick,
+  Headset,
   Quote,
   BringToFront,
   Link as LinkIcon,
@@ -33,8 +34,8 @@ const sections = [
   { id: "section5", icon: <SquareChartGantt size={20} />, label: "Solutions" },
   { id: "section6", icon: <BringToFront size={20} />, label: "Tech Stack" },
   { id: "section10", icon: <Quote size={20} />, label: "Testimonial" },
-  { id: "section11", icon: <MousePointerClick size={24} />, label: "CTA" },
-  { id: "section7", icon: <LinkIcon size={20} />, label: "Footer" },
+  { id: "section11", icon: <Headset size={20} />, label: "Contact" },
+  // { id: "section7", icon: <LinkIcon size={20} />, label: "Footer" },
 ];
 
 export default function Navigator() {
