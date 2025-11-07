@@ -71,12 +71,20 @@ export default function Menu({ scrolled }: MenuProps) {
       </div>
 
       <div id="menu-links">
-        <a className="link" href="#" onClick={() => setMenuOpen(!menuOpen)}>
+        <a
+          className="link"
+          href="/about"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
           <span className="anchor"></span>
           <span className="index">01</span>
           <span className="label">About Us</span>
         </a>
-        <a className="link" href="#" onClick={() => setMenuOpen(!menuOpen)}>
+        <a
+          className="link"
+          href="/contact"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
           <span className="anchor"></span>
           <span className="index">02</span>
           <span className="label">Contact Us</span>
@@ -103,7 +111,7 @@ export default function Menu({ scrolled }: MenuProps) {
         >
           <span className="anchor"></span>
           <span className="index">03</span>
-          <span className="label">Our Work</span>
+          <span className="label">Services</span>
         </a>
         <a
           className="link"
