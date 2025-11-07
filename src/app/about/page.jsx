@@ -168,7 +168,7 @@ export default function LandingPage() {
                 className="rounded-lg"
               />
               <div className="flex flex-col text-center lg:text-left">
-                <h3 className="section-info_primary-text-card">Talib Ali</h3>
+                <h3 className="section-info_primary-text-card">Aman Ali</h3>
                 <h4 className="section-info_primary-text-subheading">
                   {" "}
                   Co-Founder, COO
