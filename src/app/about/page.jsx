@@ -144,18 +144,27 @@ export default function LandingPage() {
                 </h4>
 
                 <div className="mt-1 flex items-center justify-center lg:justify-start px-5 gap-5 ">
-                  <a href="#" aria-label="LinkedIn">
+                  <a
+                    href="https://www.linkedin.com/in/mdtalib15/"
+                    aria-label="LinkedIn"
+                  >
                     <FaLinkedinIn className="w-5 h-5 text-[#0A66C2]" />
                   </a>
-                  <a href="#" aria-label="Instagram">
+                  <a
+                    href="https://www.instagram.com/talib_imran"
+                    aria-label="Instagram"
+                  >
                     <FaInstagram className="w-5 h-5 text-[#E4405F]" />
                   </a>
-                  <a href="#" aria-label="Facebook">
+                  <a
+                    href="https://www.facebook.com/talib.ali.15/"
+                    aria-label="Facebook"
+                  >
                     <FaFacebookF className="w-5 h-5 text-[#1877F2]" />
                   </a>
-                  <a href="#" aria-label="X">
+                  {/* <a href="#" aria-label="X">
                     <SiX className="w-5 h-5 text-black" />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </article>
@@ -200,18 +209,27 @@ export default function LandingPage() {
                 </h4>
 
                 <div className="mt-1 flex items-center justify-center lg:justify-start px-5 gap-5">
-                  <a href="#" aria-label="LinkedIn">
+                  <a
+                    href="https://www.linkedin.com/in/mdaman0803/"
+                    aria-label="LinkedIn"
+                  >
                     <FaLinkedinIn className="w-5 h-5 text-[#0A66C2]" />
                   </a>
-                  <a href="#" aria-label="Instagram">
+                  <a
+                    href="https://www.instagram.com/mdaman0803/"
+                    aria-label="Instagram"
+                  >
                     <FaInstagram className="w-5 h-5 text-[#E4405F]" />
                   </a>
-                  <a href="#" aria-label="Facebook">
+                  <a
+                    href="https://www.facebook.com/mdaman08"
+                    aria-label="Facebook"
+                  >
                     <FaFacebookF className="w-5 h-5 text-[#1877F2]" />
                   </a>
-                  <a href="#" aria-label="X">
+                  {/* <a href="#" aria-label="X">
                     <SiX className="w-5 h-5 text-black" />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </article>
