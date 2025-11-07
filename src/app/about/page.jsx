@@ -13,16 +13,17 @@ export default function LandingPage() {
       <Navbar />
       <div className="min-h-screen bg-white text-gray-900 font-sans">
         {/* Hero */}
-        <header className="mx-auto px-6 py-20 text-center">
+        <header className="mx-auto px-6 py-20 text-center pt-24 md:pt-36">
           <div className="container-medium">
             <div className="steps_heading-wrap relative">
               <div className="section-info-wrap">
                 <div className="fadeup">
                   <h2 className="section-info_primary-text-about">
-                    From <span className="heading-text-italic">Vision </span>to
-                    <span> </span>
-                    <span className="heading-text-italic">Reality</span>: <br />{" "}
-                    The Story of WebMaak Creative LLP
+                    The <span className="heading-text-italic">Story </span>of
+                    <br />{" "}
+                    <span className="about-blue-heading">
+                      WebMaak Creative LLP
+                    </span>
                   </h2>
                 </div>
                 <div className="fadeup">
@@ -46,7 +47,7 @@ export default function LandingPage() {
                   </p>
                 </div>
                 <div className="mt-8 flex justify-center">
-                  <Image src="/about-map.jpg" width={1400} height={10} />
+                  <img src="/about-map.jpg" className="w-[70%] " />
                 </div>
                 <div className="fadeup">
                   <p className="sub-title-border-about background-color-white ">
@@ -60,7 +61,7 @@ export default function LandingPage() {
                     solutions under one roof.
                   </p>
                   <p className="sub-title-border-about background-color-white ">
-                    With a strong foundation in bothI{" "}
+                    With a strong foundation in both{" "}
                     <span className="font-semibold">
                       {" "}
                       technology and creativity
@@ -106,14 +107,14 @@ export default function LandingPage() {
         <section className="max-w-[1400px] mx-auto px-6 mb-20">
           {/* Example content area (cards) */}
           <div className="mt-8 flex flex-col gap-6">
-            <article className="p-6 flex gap-2 bg-white border rounded-lg shadow-sm">
+            <article className="p-6 flex flex-col lg:flex-row items-center lg:items:left gap-2 bg-white border rounded-lg shadow-sm">
               <Image
                 src="/talib.png"
                 width={300}
                 height={200}
                 className="rounded-lg"
               />
-              <div className="flex flex-col">
+              <div className="flex flex-col text-center lg:text-left">
                 <h3 className="section-info_primary-text-card">Talib Ali</h3>
                 <h4 className="section-info_primary-text-subheading">
                   {" "}
@@ -142,7 +143,7 @@ export default function LandingPage() {
                   Socials
                 </h4>
 
-                <div className="mt-1 flex items-center justify-center md:justify-start px-5 gap-5">
+                <div className="mt-1 flex items-center justify-center lg:justify-start px-5 gap-5 ">
                   <a href="#" aria-label="LinkedIn">
                     <FaLinkedinIn className="w-5 h-5 text-[#0A66C2]" />
                   </a>
@@ -159,14 +160,14 @@ export default function LandingPage() {
               </div>
             </article>
 
-            <article className="p-6 flex gap-2 bg-white border rounded-lg shadow-sm">
+            <article className="p-6 flex flex-col lg:flex-row items-center lg:items:left gap-2 bg-white border rounded-lg shadow-sm">
               <Image
                 src="/aman.jpg"
                 width={300}
                 height={200}
                 className="rounded-lg"
               />
-              <div className="flex flex-col">
+              <div className="flex flex-col text-center lg:text-left">
                 <h3 className="section-info_primary-text-card">Talib Ali</h3>
                 <h4 className="section-info_primary-text-subheading">
                   {" "}
@@ -198,7 +199,7 @@ export default function LandingPage() {
                   Socials
                 </h4>
 
-                <div className="mt-1 flex items-center justify-center md:justify-start px-5 gap-5">
+                <div className="mt-1 flex items-center justify-center lg:justify-start px-5 gap-5">
                   <a href="#" aria-label="LinkedIn">
                     <FaLinkedinIn className="w-5 h-5 text-[#0A66C2]" />
                   </a>
@@ -216,7 +217,7 @@ export default function LandingPage() {
             </article>
           </div>
         </section>
-        <section className="w-full bg-gradient-to-r from-[#0f061b] to-[#341162] py-28">
+        <section className="w-full bg-gradient-to-r from-[#0f061b] to-[#341162] mb-14 py-28">
           <div className="casestudy_wrapper">
             <div className="container-large">
               <h2 className="heading-style-h2 is-contact-page-hero-heading-about">
@@ -253,7 +254,7 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-        <p className="sub-title-border-about background-color-white text-center mt-14">
+        <p className="sub-title-border-about background-color-white text-center ">
           Though <span className="font-semibold"> small in size</span>, our team
           is
           <span className="font-semibold"> highly efficient</span>, blending

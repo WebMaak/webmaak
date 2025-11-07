@@ -85,7 +85,7 @@ function SeventhSection() {
               <div className="fadeup">
                 <p className="sub-title-border mx-auto background-color-white mt-2 w-[90%] lg:w-[55%] text-center">
                   At WebMaak Creative, we believe great work starts with a great
-                  partnership. Here’s how we roll—from your first "What if..."
+                  partnership. Here’s how we roll from your first "What if..."
                   to your final "Wow!".
                 </p>
               </div>

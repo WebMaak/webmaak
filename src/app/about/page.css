@@ -50,6 +50,13 @@
   text-align: center;
   font-size: 1.125rem;
 }
+.section-info_primary-text-about .about-blue-heading {
+  color: #0175e4 !important;
+  -webkit-text-fill-color: #0175e4;
+  background: transparent !important;
+  background-clip: none !important;
+  border: none !important;
+}
 .section-info_primary-text-subheading {
   background: linear-gradient(
     180deg,
@@ -98,7 +105,7 @@
   padding: 0.5rem 1.25rem;
   font-size: 1.25rem;
   line-height: 1.6;
-  max-width: 50%;
+  max-width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
