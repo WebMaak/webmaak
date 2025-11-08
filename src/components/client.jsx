@@ -23,7 +23,7 @@ export default function Client() {
           </div>
         </div>
         <div className="max-w-[1400px] mx-auto md:px-6 px-2 mt-24">
-          <div className="flex flex-wrap justify-center gap-12 md:gap-6 lg:gap-14">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-6 lg:gap-14">
             {Array.from({ length: 39 }, (_, i) => i + 1).map((num) => (
               <div
                 key={num}
