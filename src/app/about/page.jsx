@@ -51,7 +51,7 @@ export default function LandingPage() {
                 </div>
                 <div className="fadeup">
                   <p className="sub-title-border-about background-color-white ">
-                    In <span className="font-semibold"> 2023, Aman Ali</span>
+                    In <span className="font-semibold"> 2023, Aman Ali </span>
                     joined the venture, expanding WebMaak’s capabilities into
                     <span className="font-semibold">
                       {" "}
@@ -69,7 +69,7 @@ export default function LandingPage() {
                     , we have successfully delivered
                     <span className="font-semibold">
                       {" "}
-                      100+ projects across the globe
+                      350+ projects across the globe
                     </span>
                     , spanning diverse industries and markets.
                   </p>
@@ -131,7 +131,7 @@ export default function LandingPage() {
                   gradually expanded his expertise into{" "}
                   <span className="font-bold">
                     {" "}
-                    UI/UX design, Web Development, and project management{" "}
+                    UI/UX design, Web Development, and Project Management{" "}
                   </span>
                   . He now leads all{" "}
                   <span className="font-bold"> IT and design projects </span>,
@@ -191,7 +191,7 @@ export default function LandingPage() {
                   and Chartered Accountancy.
                   <span className="font-bold">
                     {" "}
-                    sionate about photography, animation, and all forms of
+                    passionate about photography, animation, and all forms of
                     visual storytelling, he poured his creativity into
                     post-production and video editing
                   </span>
