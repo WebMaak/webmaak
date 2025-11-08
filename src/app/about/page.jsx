@@ -259,7 +259,7 @@ export default function LandingPage() {
               {Array.from({ length: 39 }, (_, i) => i + 1).map((num) => (
                 <div
                   key={num}
-                  className="flex items-center justify-center w-[100px] sm:w-[120px] md:w-[140px]"
+                  className="flex items-center justify-center w-[120px] sm:w-[120px] md:w-[140px]"
                 >
                   <img
                     src={`/marquee-logo/${num}.png`}
