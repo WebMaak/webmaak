@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import "./page.css";
 import Navbar from "@/components/Navbar/Navbar";
 import ModernFooter from "@/components/Footer/ModernFooter";
-import EighthSection from "@/components/EighthSection/EighthSection";
 import Button from "@/components/ui/Button";
 import {
   FaFacebookF,
@@ -87,8 +86,8 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <div className="section_contact min-h-[101vh]">
-        <div className="casestudy_wrapper">
+      <div className="section_contact h-auto lg:h-screen">
+        <div className="casestudy_wrapper md:mt-[5rem] lg:mt-[2rem]">
           <div className="container-large">
             <div className="hero-bg">
               <img
@@ -112,8 +111,7 @@ function Contact() {
             </div>
           </div>
         </div>
-
-        <section className="section_layout508">
+        <section className="section_layout508 md:pb-[8rem] pb-[5rem]">
           <div className="padding-global">
             <div className="container-large">
               <div className="layout508_tabs w-tabs">
@@ -232,9 +230,6 @@ function Contact() {
             </div>
           </div>
         </section>
-
-        {/* Bottom Section */}
-        <section className="section_trust hidden"></section>
       </div>
       <ModernFooter />
     </>

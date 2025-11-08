@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Button = ({ name, link }) => {
   return (
@@ -7,13 +7,18 @@ const Button = ({ name, link }) => {
       <a href={link}>
         <button className="btn-17">
           <span className="text-container">
-            <span className="text w-tab-link " style={{backgroundColor: "transparent"}}>{name}</span>
+            <span
+              className="text w-tab-link "
+              style={{ backgroundColor: "transparent" }}
+            >
+              {name}
+            </span>
           </span>
         </button>
       </a>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   .btn-17,
@@ -29,7 +34,7 @@ const StyledWrapper = styled.div`
   .btn-17 {
     -webkit-tap-highlight-color: transparent;
     -webkit-appearance: button;
-    background-color: #DDDDDD;
+    background-color: #dddddd;
     background-image: none;
     color: #fff;
     cursor: pointer;
@@ -40,6 +45,10 @@ const StyledWrapper = styled.div`
     padding: 0;
     font-weight: 500;
     text-transform: capitalize;
+    width: 200px;
+    display: flex;
+    align-items-center;
+    justify-content: center;
   }
 
   .btn-17:disabled {
@@ -61,7 +70,7 @@ const StyledWrapper = styled.div`
 
   .btn-17 {
     border-width: 2px;
-    padding: 0rem 1rem;
+    // padding: 0rem 1rem;
     z-index: 0;
   }
 
@@ -151,6 +160,6 @@ const StyledWrapper = styled.div`
   .btn-17:hover:after {
     --progress: -102%;
   }
-  `;
+`;
 
 export default Button;

@@ -87,8 +87,8 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <div className="section_contact min-h-[150vh]">
-        <div className="casestudy_wrapper">
+      <div className="section_contact h-[fit-content] lg:h-auto">
+        <div className="casestudy_wrapper md:mt-[5rem] lg:mt-[2rem]">
           <div className="container-large">
             <div className="hero-bg">
               <img
@@ -377,7 +377,7 @@ function Contact() {
           </div>
         </div>
       </div> */}
-        <section className="section_layout508">
+        <section className="section_layout508 md:pb-[8rem] pb-[5rem]">
           <div className="padding-global mobile-padding-none">
             <div className="container-large">
               <div className="layout508_tabs w-tabs">
@@ -411,7 +411,7 @@ function Contact() {
                     className={`lg:pt-16 md:pt-10 pt-6 lg:pb-0 md:pb-10 pb-4 lg:px-0 md:px-8 px-2 relative`}
                   >
                     <AmanScheduler />
-                    <div className="p-4 w-full bg-[#16062d] absolute bottom-0">
+                    <div className="p-4 w-full bg-transparent md:bg-[#16062d] absolute bottom-0">
                       &nbsp;
                     </div>
                   </div>
@@ -472,9 +472,6 @@ function Contact() {
             </div>
           </div>
         </section>
-
-        {/* Bottom Section */}
-        <section className="section_trust hidden"></section>
       </div>
       <ModernFooter />
     </>
