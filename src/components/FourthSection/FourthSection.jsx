@@ -250,20 +250,13 @@ export default function FourthSection() {
               </div>
               {/* Card 4 */}
               <div className="solutions_card-wrap column span-1">
-                <div className="solutions_card-holder-wrap scaleup">
-                  <div className="solutions_card-holder">
-                    <div className="solutions_card verticle">
-                      <div className="solutions_card_bg">
-                        <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6600a071caf91db80a7178be_revamp.webp"
-                          loading="lazy"
-                          sizes="100vw"
-                          srcset="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6600a071caf91db80a7178be_revamp-p-500.png 500w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/6600a071caf91db80a7178be_revamp.webp 732w"
-                          alt=""
-                          className="solutions_revamp-blur"
-                        />
-                      </div>
-                      <div className="solutions_card-content revamp">
+                <div className="solutions_card-holder-wrap scaleup ">
+                  <div className="solutions_card-holder ">
+                    <div
+                      className="solutions_card verticle "
+                      style={{ backgroundColor: "#161c28" }}
+                    >
+                      <div className="solutions_card-content revamp ">
                         <div className="solutions_card_top-content">
                           <h4 className="solutions_card_title">
                             Digital Marketing Solutions
@@ -279,218 +272,13 @@ export default function FourthSection() {
                       </div>
                       <div className="solutions_card-content-image-wrap _w-100">
                         <img
-                          src="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66009ce42a32edee7a7d6a8f_revamp-img.webp"
+                          src="/digital-marketing.png"
                           loading="lazy"
                           sizes="(max-width: 479px) 90vw, (max-width: 767px) 94vw, (max-width: 991px) 91vw, 29vw"
-                          srcset="https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66009ce42a32edee7a7d6a8f_revamp-img-p-500.webp 500w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66009ce42a32edee7a7d6a8f_revamp-img-p-800.webp 800w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66009ce42a32edee7a7d6a8f_revamp-img-p-1080.webp 1080w, https://cdn.prod.website-files.com/65fb34308fabd933e87cbcb1/66009ce42a32edee7a7d6a8f_revamp-img.webp 1230w"
+                          srcset="/digital-marketing.png 500w, /digital-marketing.png 800w, /digital-marketing.png 1080w, /digital-marketing.png 1230w"
                           alt=""
                           className="solutions_revamp-image"
                         />
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="100%"
-                          viewBox="0 0 76 76"
-                          fill="none"
-                          className="wordpress-svg"
-                        >
-                          <g filter="url(#filter0_di_2338_7840)" class="g">
-                            <rect
-                              x="14.9434"
-                              y="7.19727"
-                              width="44"
-                              height="44"
-                              rx="22"
-                              transform="rotate(-3.81135 14.9434 7.19727)"
-                              fill="currentColor"
-                              shape-rendering="crispEdges"
-                              className="rect-4"
-                            ></rect>
-                            <g opacity="0.6" class="g-2">
-                              <path
-                                d="M22.6029 28.738C23.0184 34.9742 27.0014 40.122 32.4266 42.3258L23.5398 22.2353C22.7961 24.2529 22.4508 26.4539 22.6029 28.738Z"
-                                fill="currentColor"
-                              ></path>
-                              <path
-                                d="M48.9398 26.1844C48.81 24.2373 48.0208 22.9355 47.3511 21.9259C46.466 20.6813 45.6442 19.6322 45.5578 18.3344C45.4613 16.8861 46.4699 15.4648 48.017 15.3617C48.0869 15.3571 48.1537 15.3614 48.222 15.3607C45.248 12.9795 41.4093 11.6604 37.3077 11.9336C31.8038 12.3003 27.1497 15.4469 24.6176 19.9119C24.988 19.8984 25.3368 19.8829 25.6327 19.8632C27.2806 19.7534 29.8181 19.3836 29.8181 19.3836C30.664 19.2769 30.8472 20.5177 30.0055 20.6746C30.0055 20.6746 29.1588 20.8319 28.2124 20.9449L35.0864 37.6281L37.8452 27.0578L34.9426 20.496C34.091 20.5027 33.2806 20.4558 33.2806 20.4558C32.4283 20.4626 32.4413 19.1579 33.2936 19.1514C33.2936 19.1514 35.9087 19.1781 37.4568 19.0749C39.1043 18.9652 41.6421 18.5953 41.6421 18.5953C42.4886 18.4886 42.6716 19.7293 41.8296 19.8863C41.8296 19.8863 40.981 20.0437 40.0364 20.1566L46.8581 36.7135L48.0796 31.3574C48.6156 29.1329 49.0296 27.5332 48.9398 26.1844Z"
-                                fill="currentColor"
-                              ></path>
-                              <path
-                                d="M38.7249 29.0484L34.9131 43.0992C36.3521 43.4201 37.8598 43.5476 39.4064 43.4445C41.241 43.3223 42.9792 42.8879 44.5786 42.203C44.5318 42.1383 44.4887 42.0692 44.452 41.9934L38.7249 29.0484Z"
-                                fill="currentColor"
-                              ></path>
-                              <path
-                                d="M51.6775 19.2082C51.7787 19.7056 51.853 20.2417 51.8916 20.8212C51.9981 22.42 51.8192 24.2371 51.0696 26.5442L47.1842 40.7788C51.686 37.7354 54.4983 32.451 54.1111 26.6388C53.9289 23.8996 53.0576 21.3705 51.6775 19.2082Z"
-                                fill="currentColor"
-                              ></path>
-                              <path
-                                d="M37.1335 9.32343C27.0073 9.99802 19.3174 18.7853 19.992 28.9118C20.6667 39.0395 29.4543 46.7287 39.5804 46.0541C49.7063 45.3796 57.3974 36.5925 56.7227 26.4648C56.0478 16.3384 47.2593 8.64885 37.1335 9.32343ZM39.5243 45.2123C29.8625 45.856 21.4778 38.5184 20.8341 28.8557C20.1904 19.1936 27.5275 10.8092 37.1896 10.1655C46.8511 9.52189 55.2352 16.8589 55.8788 26.521C56.5226 36.1838 49.1858 44.5687 39.5243 45.2123Z"
-                                fill="currentColor"
-                              ></path>
-                            </g>
-                          </g>
-                          <defs>
-                            <filter
-                              id="filter0_di_2338_7840"
-                              x="-0.45664"
-                              y="-1.12656"
-                              width="77.6271"
-                              height="77.6262"
-                              filterUnits="userSpaceOnUse"
-                              color-interpolation-filters="sRGB"
-                            >
-                              <feFlood
-                                flood-opacity="0"
-                                result="BackgroundImageFix"
-                              ></feFlood>
-                              <feColorMatrix
-                                in="SourceAlpha"
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                result="hardAlpha"
-                              ></feColorMatrix>
-                              <feOffset dy="10"></feOffset>
-                              <feGaussianBlur stdDeviation="7.7"></feGaussianBlur>
-                              <feComposite
-                                in2="hardAlpha"
-                                operator="out"
-                              ></feComposite>
-                              <feColorMatrix
-                                type="matrix"
-                                values="0 0 0 0 0.0375 0 0 0 0 0.0375 0 0 0 0 0.0375 0 0 0 0.12 0"
-                              ></feColorMatrix>
-                              <feBlend
-                                mode="normal"
-                                in2="BackgroundImageFix"
-                                result="effect1_dropShadow_2338_7840"
-                              ></feBlend>
-                              <feBlend
-                                mode="normal"
-                                in="SourceGraphic"
-                                in2="effect1_dropShadow_2338_7840"
-                                result="shape"
-                              ></feBlend>
-                              <feColorMatrix
-                                in="SourceAlpha"
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                result="hardAlpha"
-                              ></feColorMatrix>
-                              <feOffset dy="12"></feOffset>
-                              <feGaussianBlur stdDeviation="40"></feGaussianBlur>
-                              <feComposite
-                                in2="hardAlpha"
-                                operator="arithmetic"
-                                k2="-1"
-                                k3="1"
-                              ></feComposite>
-                              <feColorMatrix
-                                type="matrix"
-                                values="0 0 0 0 0.883333 0 0 0 0 0.883333 0 0 0 0 0.883333 0 0 0 0.1 0"
-                              ></feColorMatrix>
-                              <feBlend
-                                mode="normal"
-                                in2="shape"
-                                result="effect2_innerShadow_2338_7840"
-                              ></feBlend>
-                            </filter>
-                          </defs>
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="100%"
-                          viewBox="0 0 95 96"
-                          fill="none"
-                          className="revamp-webflow-svg"
-                        >
-                          <g
-                            filter="url(#filter0_di_2338_7847)"
-                            className="g-3"
-                          >
-                            <rect
-                              x="17.0693"
-                              y="4.86719"
-                              width="64"
-                              height="64"
-                              rx="32"
-                              transform="rotate(2.67174 17.0693 4.86719)"
-                              fill="currentColor"
-                              shape-rendering="crispEdges"
-                            ></rect>
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M64.2411 29.0931L52.9495 48.5879L43.2197 48.1339L47.9411 40.0563L47.7467 40.0473C43.9565 44.4607 38.4796 47.2269 30.8441 47.5564L31.2251 39.3911C31.2251 39.3911 36.1023 39.3346 39.1001 36.5023L31.3767 36.1419L31.7764 27.5783L40.4569 27.9834L40.1282 35.0268L40.3227 35.0351L44.1989 28.158L50.7638 28.4643L50.4372 35.4631L50.6316 35.4718L54.6384 28.645L64.2411 29.0931Z"
-                              fill="currentColor"
-                              className="path-5"
-                            ></path>
-                          </g>
-                          <defs>
-                            <filter
-                              id="filter0_di_2338_7847"
-                              x="-1.31406"
-                              y="-0.532812"
-                              width="97.7141"
-                              height="97.7141"
-                              filterUnits="userSpaceOnUse"
-                              color-interpolation-filters="sRGB"
-                            >
-                              <feFlood
-                                flood-opacity="0"
-                                result="BackgroundImageFix"
-                              ></feFlood>
-                              <feColorMatrix
-                                in="SourceAlpha"
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                result="hardAlpha"
-                              ></feColorMatrix>
-                              <feOffset dy="10"></feOffset>
-                              <feGaussianBlur stdDeviation="7.7"></feGaussianBlur>
-                              <feComposite
-                                in2="hardAlpha"
-                                operator="out"
-                              ></feComposite>
-                              <feColorMatrix
-                                type="matrix"
-                                values="0 0 0 0 0.0375 0 0 0 0 0.0375 0 0 0 0 0.0375 0 0 0 0.12 0"
-                              ></feColorMatrix>
-                              <feBlend
-                                mode="normal"
-                                in2="BackgroundImageFix"
-                                result="effect1_dropShadow_2338_7847"
-                              ></feBlend>
-                              <feBlend
-                                mode="normal"
-                                in="SourceGraphic"
-                                in2="effect1_dropShadow_2338_7847"
-                                result="shape"
-                              ></feBlend>
-                              <feColorMatrix
-                                in="SourceAlpha"
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                result="hardAlpha"
-                              ></feColorMatrix>
-                              <feOffset dy="12"></feOffset>
-                              <feGaussianBlur stdDeviation="40"></feGaussianBlur>
-                              <feComposite
-                                in2="hardAlpha"
-                                operator="arithmetic"
-                                k2="-1"
-                                k3="1"
-                              ></feComposite>
-                              <feColorMatrix
-                                type="matrix"
-                                values="0 0 0 0 0.883333 0 0 0 0 0.883333 0 0 0 0 0.883333 0 0 0 0.1 0"
-                              ></feColorMatrix>
-                              <feBlend
-                                mode="normal"
-                                in2="shape"
-                                result="effect2_innerShadow_2338_7847"
-                              ></feBlend>
-                            </filter>
-                          </defs>
-                        </svg>
                       </div>
                     </div>
                   </div>
