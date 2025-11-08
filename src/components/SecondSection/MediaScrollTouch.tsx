@@ -59,7 +59,7 @@ function HorizontalDragCarousel() {
       title: "Architectural Visualisation",
       link: "/contact@media",
       image: "/media-scroll/architectural.jpg",
-      tags: ["Unreal Engine"],
+      tags: ["Unreal Engine", "Blender"],
       description:
         "Turning 2D architectural plans into realistic 3D visuals and walkthroughs.",
     },
