@@ -22,8 +22,8 @@ export default function Client() {
             </div>
           </div>
         </div>
-        <div className="max-w-[1400px] mx-auto px-6 mt-24">
-          <div className="flex flex-wrap justify-center gap-2 md:gap-6 lg:gap-14">
+        <div className="max-w-[1400px] mx-auto md:px-6 px-2 mt-24">
+          <div className="flex flex-wrap justify-center gap-12 md:gap-6 lg:gap-14">
             {Array.from({ length: 39 }, (_, i) => i + 1).map((num) => (
               <div
                 key={num}
@@ -32,7 +32,7 @@ export default function Client() {
                 <img
                   src={`/marquee-logo/${num}.png`}
                   alt={`Logo ${num}`}
-                  className="w-auto max-h-6 md:max-h-12 lg:max-h-16 object-contain hover:scale-[1.2] transition-transform duration-300"
+                  className="w-auto max-h-8 md:max-h-12 lg:max-h-16 object-contain hover:scale-[1.2] transition-transform duration-300"
                   loading="lazy"
                 />
               </div>
