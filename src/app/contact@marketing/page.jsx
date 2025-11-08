@@ -432,13 +432,13 @@ function Contact() {
                     <FaLinkedinIn /> LinkedIn
                   </a>
 
-                  <a
+                  {/* <a
                     href="https://x.com/yourprofile"
                     target="_blank"
                     className="contact_endorsement-partner webflow"
                   >
                     <FaXTwitter /> x.com
-                  </a>
+                  </a> */}
 
                   <a
                     href="https://www.instagram.com/webmaak/"
