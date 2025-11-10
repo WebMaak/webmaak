@@ -36,20 +36,20 @@ function SeventhSection() {
       quote:
         "The e-card which you provided to me was amazingly great work..Great work guyz and the best part was wedding website which was absolutely cherry on the cake.. Commendable work..keep up the Good work.",
     },
-    // {
-    //   name: "Arun",
-    //   role: "Client,",
-    //   company: "Design Leeway",
-    //   image: "/testimonial/arun.png",
-    //   // companyLogo: "/marquee-logo/21.png",
-    //   quote:
-    //     "Working with Webmak and Team Talib was an excellent experience. The communication throughout our fintech website development in Webflow was smooth and efficient. Their quick response to feedback and commitment to maintaining design integrity truly stood out. The team’s product animation skills and turnaround time were impressive. I’d love to collaborate with them on many more projects in the future.",
-    // },
+    {
+      name: "Arun",
+      role: "Client,",
+      company: "Design Leeway",
+      image: "/testimonial/arun.png",
+      // companyLogo: "/marquee-logo/21.png",
+      quote:
+        "Working with Webmak and Team Talib was an excellent experience. The communication throughout our fintech website development in Webflow was smooth and efficient. Their quick response to feedback and commitment to maintaining design integrity truly stood out. The team’s product animation skills and turnaround time were impressive. I’d love to collaborate with them on many more projects in the future.",
+    },
     {
       name: "Seema Tak",
       role: "Wedding Planner",
       company: "",
-      image: "/testimonial/digitalks.png",
+      image: "/testimonial/seema-tak.png",
       quote:
         "Hey Aman, just wanted to thanks for both the videos came out amazing! You managed to deliver them in such a short time with so little input and still made them look so creative and perfect. I’m really impressed with your work and speed. Lots of videos are coming your way soon so please be ready! Now I feel so relaxed knowing you’re there to handle videos even at the last minute. Thank you so much again for your amazing work keep it up! Looking forward to working together again very soon.",
     },
