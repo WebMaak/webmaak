@@ -181,7 +181,7 @@ function Contact() {
                     Your Gateway to WebMaak Updates & Insights
                   </div>
                 </div>
-                <div className="contact_endorsement-partners-wrapper">
+                <div className="contact_endorsement-partners-wrapper px-2">
                   <a
                     href="https://www.linkedin.com/company/webmaak-creative"
                     target="_blank"
