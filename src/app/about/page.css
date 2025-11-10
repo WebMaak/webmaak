@@ -67,6 +67,16 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.section-info_primary-text-socials {
+  background: linear-gradient(
+    180deg,
+    #1a2224 11.35%,
+    rgba(26, 34, 36, 0.5) 250.2%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .section-info_primary-text-about {
   display: inline;
   margin-top: 0;
@@ -93,6 +103,16 @@
   margin-bottom: 0;
   font-family: Bricolage Grotesque, sans-serif;
   font-size: 1.7rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  line-height: 1.2;
+}
+.section-info_primary-text-socials {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Bricolage Grotesque, sans-serif;
+  font-size: 1.2rem;
   font-weight: 600;
   padding: 0.5rem 1.25rem;
   line-height: 1.2;

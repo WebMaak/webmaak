@@ -138,32 +138,29 @@ export default function LandingPage() {
                   ensuring seamless execution, creative quality, and client
                   satisfaction.
                 </p>
-                <h4 className="section-info_primary-text-subheading">
-                  {" "}
-                  Socials
-                </h4>
+                <h4 className="section-info_primary-text-socials"> Socials</h4>
 
-                <div className="mt-1 flex items-center justify-center lg:justify-start px-5 gap-5 ">
+                <div className="mt-1 flex items-center justify-center lg:justify-start px-5 gap-3">
                   <a
                     href="https://www.linkedin.com/in/mdtalib15/"
                     aria-label="LinkedIn"
                   >
-                    <FaLinkedinIn className="w-5 h-5 text-[#0A66C2]" />
+                    <FaLinkedinIn className="w-4 h-4 text-[#0A66C2]" />
                   </a>
                   <a
                     href="https://www.instagram.com/talib_imran"
                     aria-label="Instagram"
                   >
-                    <FaInstagram className="w-5 h-5 text-[#E4405F]" />
+                    <FaInstagram className="w-4 h-4 text-[#E4405F]" />
                   </a>
                   <a
                     href="https://www.facebook.com/talib.ali.15/"
                     aria-label="Facebook"
                   >
-                    <FaFacebookF className="w-5 h-5 text-[#1877F2]" />
+                    <FaFacebookF className="w-4 h-4 text-[#1877F2]" />
                   </a>
                   {/* <a href="#" aria-label="X">
-                    <SiX className="w-5 h-5 text-black" />
+                    <SiX className="w-4 h-4 text-black" />
                   </a> */}
                 </div>
               </div>
@@ -203,32 +200,29 @@ export default function LandingPage() {
                   , bringing life to visuals through his keen eye for detail and
                   storytelling flair.
                 </p>
-                <h4 className="section-info_primary-text-subheading">
-                  {" "}
-                  Socials
-                </h4>
+                <h4 className="section-info_primary-text-socials"> Socials</h4>
 
-                <div className="mt-1 flex items-center justify-center lg:justify-start px-5 gap-5">
+                <div className="mt-1 flex items-center justify-center lg:justify-start px-5 gap-3">
                   <a
                     href="https://www.linkedin.com/in/mdaman0803/"
                     aria-label="LinkedIn"
                   >
-                    <FaLinkedinIn className="w-5 h-5 text-[#0A66C2]" />
+                    <FaLinkedinIn className="w-4 h-4 text-[#0A66C2]" />
                   </a>
                   <a
                     href="https://www.instagram.com/mdaman0803/"
                     aria-label="Instagram"
                   >
-                    <FaInstagram className="w-5 h-5 text-[#E4405F]" />
+                    <FaInstagram className="w-4 h-4 text-[#E4405F]" />
                   </a>
                   <a
                     href="https://www.facebook.com/mdaman08"
                     aria-label="Facebook"
                   >
-                    <FaFacebookF className="w-5 h-5 text-[#1877F2]" />
+                    <FaFacebookF className="w-4 h-4 text-[#1877F2]" />
                   </a>
                   {/* <a href="#" aria-label="X">
-                    <SiX className="w-5 h-5 text-black" />
+                    <SiX className="w-4 h-4 text-black" />
                   </a> */}
                 </div>
               </div>
