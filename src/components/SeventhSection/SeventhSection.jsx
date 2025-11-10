@@ -29,7 +29,7 @@ function SeventhSection() {
     },
     {
       name: "Hamna Kouser",
-      role: "Client",
+      role: "",
       company: "",
       image: "/clients/client5.png",
       // companyLogo: "/marquee-logo/21.png",
@@ -38,7 +38,7 @@ function SeventhSection() {
     },
     {
       name: "Arun",
-      role: "Client,",
+      role: "",
       company: "Design Leeway",
       image: "/testimonial/arun.png",
       // companyLogo: "/marquee-logo/21.png",
