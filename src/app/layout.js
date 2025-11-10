@@ -17,7 +17,7 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "WebMaak",
-  description: "Created with love Webmaak",
+  description: "Crafting Digital Masterpieces",
   icons: {
     icon: "/main-logo/favicon.png",
   },
