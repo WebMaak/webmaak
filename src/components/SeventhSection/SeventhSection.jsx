@@ -82,10 +82,7 @@ function SeventhSection() {
   ];
   const [cards, setCards] = useState(cardData);
   return (
-    <section
-      id="reviews"
-      className="section_testimonial relative max-w-[100vw] overflow-hidden "
-    >
+    <section className="section_testimonial relative max-w-[100vw] overflow-hidden ">
       <div class="absolute bottom-[0%] left-[15%] w-[30rem] h-[30rem] bg-pink-300 rounded-full filter blur-[7.5rem] opacity-40 "></div>
       <div class="absolute top-[15%] right-[12%] w-[40rem] h-[40rem] bg-purple-300 rounded-full filter blur-[10rem] opacity-50 "></div>
       <div>
@@ -99,7 +96,7 @@ function SeventhSection() {
                   our work
                 </h2>
               </div>
-              <div className="fadeup">
+              <div className="fadeup ">
                 <p className="sub-title-border mx-auto background-color-white mt-2 w-[90%] lg:w-[55%] text-center">
                   At WebMaak Creative, we believe great work starts with a great
                   partnership. Here’s how we roll from your first "What if..."

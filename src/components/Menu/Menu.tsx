@@ -109,7 +109,7 @@ export default function Menu({ scrolled }: MenuProps) {
           className="link"
           href="#"
           onClick={() => {
-            const section = document.querySelector("#reviews");
+            const section = document.querySelector("#section10");
             if (section) {
               // Resume Lenis, scroll to section, then close menu
               if (window.lenis) {
