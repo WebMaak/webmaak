@@ -11,10 +11,12 @@ import Menu from "../Menu/Menu";
 export default function Navbar() {
   const pathname = usePathname(); // current route
   const [scrolled, setScrolled] = useState(false);
+  const [isAbout, setIsAbout] = useState(false);
 
   const pageScrollPoints = {
     "/": 0.9,
     "/contact": 0.2,
+    "/about": 0.1,
     "/contact@media": 0.2,
     "/contact@webapps": 0.2,
     "/contact@marketing": 0.2,
@@ -28,8 +30,17 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
+
+  useEffect(() => {
+    if (pathname === "/about" || scrolled === true) {
+      setIsAbout(true);
+    } else {
+      setIsAbout(false);
+    }
+  }, [pathname, scrolled]);
 
   return (
     <header className={`section_navbar ${scrolled ? "scrolled" : ""}`}>
@@ -146,7 +157,7 @@ export default function Navbar() {
             id="w-node-d5229618-d2f9-dcdf-f238-806b9aeacf98-9aeacf7f"
             className="navbar_button-wrapper"
           >
-            <Menu scrolled={scrolled} />
+            {isAbout ? <Menu scrolled={true} /> : <Menu scrolled={scrolled} />}
             <a href="/contact" className="navbar-button w-inline-block">
               <div className="navbar-btn-content">
                 <div className="button-bg-1"></div>
@@ -181,11 +192,11 @@ export default function Navbar() {
             >
               <div
                 className={`navbar-btn-content-white ${
-                  scrolled ? "scrolled" : ""
+                  isAbout ? "scrolled" : ""
                 }`}
               >
                 <div
-                  className={`button-bg-1-white ${scrolled ? "scrolled" : ""}`}
+                  className={`button-bg-1-white ${isAbout ? "scrolled" : ""}`}
                 ></div>
                 <div className="button-bg-2"></div>
                 <div className="navbar_text_white flex items-center gap-3">
@@ -209,7 +220,7 @@ export default function Navbar() {
               </div>
               <div
                 className={`navbar-light-wrap-white ${
-                  scrolled ? "scrolled" : ""
+                  isAbout ? "scrolled" : ""
                 }`}
               >
                 <div className="navbar-light"></div>
