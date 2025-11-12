@@ -188,7 +188,7 @@ export default function LandingPage() {
                   and Chartered Accountancy.
                   <span className="font-bold">
                     {" "}
-                    passionate about photography, animation, and all forms of
+                    Passionate about photography, animation, and all forms of
                     visual storytelling, he poured his creativity into
                     post-production and video editing
                   </span>
