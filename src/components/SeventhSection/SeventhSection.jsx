@@ -37,8 +37,8 @@ function SeventhSection() {
         "The e-card which you provided to me was amazingly great work..Great work guyz and the best part was wedding website which was absolutely cherry on the cake.. Commendable work..keep up the Good work.",
     },
     {
-      name: "Arun",
-      role: "",
+      name: "Arun Kumar",
+      role: "Founder",
       company: "Design Leeway",
       image: "/testimonial/arun.png",
       // companyLogo: "/marquee-logo/21.png",
@@ -64,7 +64,7 @@ function SeventhSection() {
     },
     {
       name: "DigiTalks",
-      role: "Agency",
+      role: "",
       company: "",
       image: "/testimonial/digitalks.png",
       quote:

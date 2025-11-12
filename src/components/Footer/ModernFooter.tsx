@@ -13,11 +13,15 @@ export default function ModernFooter() {
   const [zoomFont, setZoomFont] = useState("20rem");
 
   const hideOnRoutes = [
+    "/about",
     "/contact",
-    "/contact@marketing",
     "/contact@media",
     "/contact@webapps",
-    "/about",
+    "/contact@marketing",
+    "/privacy-policy",
+    "/terms-of-services",
+    "/project-onboarding-guide",
+    "/project-delivery-refund-policy",
   ];
   const shouldHide = hideOnRoutes.includes(pathname);
 
@@ -172,10 +176,10 @@ export default function ModernFooter() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/legal/payment-terms"
                       className="text-gray-600 footer-menu-links hover:text-black transition-colors text-sm"
                     >
-                      Project Delivery & Refund Policy
+                      Legal & Compliance
                     </a>
                   </li>
                 </ul>

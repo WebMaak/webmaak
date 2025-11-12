@@ -22,9 +22,10 @@ export default function Navbar() {
     "/contact@marketing": 0.2,
   };
 
-  useEffect(() => {
-    const scrollPoint = pageScrollPoints[pathname] || 0.9;
+  // Get the scroll point for the current page
+  const scrollPoint = pageScrollPoints[pathname] ?? 0.1;
 
+  useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > window.innerHeight * scrollPoint);
     };
@@ -32,10 +33,24 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [pathname]);
+  }, [pathname, scrollPoint]);
 
   useEffect(() => {
-    if (pathname === "/about" || scrolled === true) {
+    const specialPages = [
+      "/about",
+      "/legal/payment-terms",
+      "/legal/project-scope",
+      "/legal/work-suspension",
+      "/legal/confidentiality-policy",
+      "/legal/delivery-policy",
+      "/legal/communication-policy",
+      "/legal/refund-policy",
+      "/legal/partner-credit",
+      "/legal/associate-engagement",
+      "/legal/quality-assurance",
+    ];
+
+    if (specialPages.includes(pathname) || scrolled) {
       setIsAbout(true);
     } else {
       setIsAbout(false);
