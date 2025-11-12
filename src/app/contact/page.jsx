@@ -116,14 +116,14 @@ function Contact() {
             <div className="container-large">
               <div className="layout508_tabs w-tabs">
                 <div className="layout508_tabs-menu w-tab-menu">
-                  <a
+                  {/* <a
                     onClick={() => setactiveTab(false)}
                     className={`layout508_tab-link w-inline-block w-tab-link ${
                       !activeTab ? "w--current" : ""
                     }`}
                   >
                     <div>Schedule a call</div>
-                  </a>
+                  </a> */}
                   <a
                     href="https://webmaak.workway.pro/lead-form/cab7978cc6df39803c26bc4186b8d6a6?styled=1&with_logo=1"
                     onClick={() => setactiveTab(true)}
