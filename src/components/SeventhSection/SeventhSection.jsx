@@ -43,7 +43,7 @@ function SeventhSection() {
       image: "/testimonial/arun.png",
       // companyLogo: "/marquee-logo/21.png",
       quote:
-        "Working with Webmak and Team Talib was an excellent experience. The communication throughout our fintech website development in Webflow was smooth and efficient. Their quick response to feedback and commitment to maintaining design integrity truly stood out. The team’s product animation skills and turnaround time were impressive. I’d love to collaborate with them on many more projects in the future.",
+        "Working with WebMaak and Team Talib was an excellent experience. The communication throughout our fintech website development in Webflow was smooth and efficient. Their quick response to feedback and commitment to maintaining design integrity truly stood out. The team’s product animation skills and turnaround time were impressive. I’d love to collaborate with them on many more projects in the future.",
     },
     {
       name: "Seema Tak",
