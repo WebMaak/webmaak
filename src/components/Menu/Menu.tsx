@@ -83,23 +83,24 @@ export default function Menu({ scrolled }: MenuProps) {
 
         <a
           className="link"
-          href="#"
-          onClick={() => {
-            const section = document.querySelector("#section4");
-            if (section) {
-              // Resume Lenis, scroll to section, then close menu
-              if (window.lenis) {
-                window.lenis.start();
-                window.lenis.scrollTo(section, {
-                  duration: 1.5,
-                  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                });
-              } else {
-                section.scrollIntoView({ behavior: "smooth" });
-              }
-            }
-            setMenuOpen(!menuOpen);
-          }}
+          href="#Services"
+          onClick={() => setMenuOpen(!menuOpen)}
+          // onClick={() => {
+          //   const section = document.querySelector("#section4");
+          //   if (section) {
+          //     // Resume Lenis, scroll to section, then close menu
+          //     if (window.lenis) {
+          //       window.lenis.start();
+          //       window.lenis.scrollTo(section, {
+          //         duration: 1.5,
+          //         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          //       });
+          //     } else {
+          //       section.scrollIntoView({ behavior: "smooth" });
+          //     }
+          //   }
+          //   setMenuOpen(!menuOpen);
+          // }}
         >
           <span className="anchor"></span>
           <span className="index">02</span>
@@ -107,23 +108,24 @@ export default function Menu({ scrolled }: MenuProps) {
         </a>
         <a
           className="link"
-          href="#"
-          onClick={() => {
-            const section = document.querySelector("#section10");
-            if (section) {
-              // Resume Lenis, scroll to section, then close menu
-              if (window.lenis) {
-                window.lenis.start();
-                window.lenis.scrollTo(section, {
-                  duration: 1.5,
-                  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                });
-              } else {
-                section.scrollIntoView({ behavior: "smooth" });
-              }
-            }
-            setMenuOpen(!menuOpen);
-          }}
+          href="#Reviews"
+          onClick={() => setMenuOpen(!menuOpen)}
+          // onClick={() => {
+          //   const section = document.querySelector("#section10");
+          //   if (section) {
+          //     // Resume Lenis, scroll to section, then close menu
+          //     if (window.lenis) {
+          //       window.lenis.start();
+          //       window.lenis.scrollTo(section, {
+          //         duration: 1.5,
+          //         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          //       });
+          //     } else {
+          //       section.scrollIntoView({ behavior: "smooth" });
+          //     }
+          //   }
+          //   setMenuOpen(!menuOpen);
+          // }}
         >
           <span className="anchor"></span>
           <span className="index">03</span>

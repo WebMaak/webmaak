@@ -142,7 +142,7 @@ function HorizontalDragCarousel() {
   return (
     <>
       <section className="relative w-full bg-white">
-        <div className="max-width-case-study center mt-24">
+        <div className="max-width-case-study center  pt-24">
           <div className="section-info-wrap case-study">
             <div className="fadeup bro">
               <h2 className="section-info_primary-text">

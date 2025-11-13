@@ -11,6 +11,7 @@ import {
   // ChartNoAxesCombined,
   MousePointerClick,
   Headset,
+  Handshake,
   Quote,
   BringToFront,
   Link as LinkIcon,
@@ -24,7 +25,7 @@ const sections = [
     icon: <Presentation size={20} />,
     label: "Crafted Projects",
   },
-  { id: "section4", icon: <Code2 size={20} />, label: "IT / Web Apps" },
+  { id: "Services", icon: <Code2 size={20} />, label: "IT / Web Apps" },
   { id: "section8", icon: <Clapperboard size={20} />, label: "Media / Edits" },
   // {
   //   id: "section9",
@@ -33,7 +34,12 @@ const sections = [
   // },
   { id: "section5", icon: <SquareChartGantt size={20} />, label: "Solutions" },
   { id: "section6", icon: <BringToFront size={20} />, label: "Tech Stack" },
-  { id: "section10", icon: <Quote size={20} />, label: "Testimonial" },
+  {
+    id: "client-section",
+    icon: <Handshake size={20} />,
+    label: "Trusted by Clients",
+  },
+  { id: "Reviews", icon: <Quote size={20} />, label: "Testimonial" },
   { id: "section11", icon: <Headset size={20} />, label: "Contact" },
   // { id: "section7", icon: <LinkIcon size={20} />, label: "Footer" },
 ];

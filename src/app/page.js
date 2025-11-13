@@ -118,7 +118,7 @@ export default function Home() {
 
           <FirstSection />
           <SecondSection />
-          <div id="section4" data-theme="light">
+          <div id="Services" data-theme="light">
             <ItScrollTouch />
           </div>
           <div id="section8" data-theme="light">
@@ -222,8 +222,10 @@ export default function Home() {
               <img src="/orbiting-circle-icons/19.png" alt="icon 19" />
             </OrbitingCirclesPulse>
           </div>
-          <Client />
-          <div id="section10" data-theme="light">
+          <div id="client-section" data-theme="dark">
+            <Client />
+          </div>
+          <div id="Reviews" data-theme="light">
             <SeventhSection />
           </div>
           <div>

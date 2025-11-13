@@ -38,7 +38,7 @@ function SeventhSection() {
     },
     {
       name: "Arun Kumar",
-      role: "Founder",
+      role: "Founder,",
       company: "Design Leeway",
       image: "/testimonial/arun.png",
       // companyLogo: "/marquee-logo/21.png",
@@ -82,7 +82,7 @@ function SeventhSection() {
   ];
   const [cards, setCards] = useState(cardData);
   return (
-    <section className="section_testimonial relative max-w-[100vw] overflow-hidden ">
+    <section className="section_testimonial relative max-w-[100vw] overflow-hidden pt-10">
       <div class="absolute bottom-[0%] left-[15%] w-[30rem] h-[30rem] bg-pink-300 rounded-full filter blur-[7.5rem] opacity-40 "></div>
       <div class="absolute top-[15%] right-[12%] w-[40rem] h-[40rem] bg-purple-300 rounded-full filter blur-[10rem] opacity-50 "></div>
       <div>
@@ -160,8 +160,8 @@ function TestimonialText({ testimonial }) {
           <div className="testimonail_content flex flex-col justify-between items-start w-full p-12">
             <p className="testimonial_text text-black text-[0.1rem] md:text-[1.3rem] font-normal leading-snug md:mb-6 mb-0">
               "
-              {testimonial.quote.length > 170
-                ? testimonial.quote.slice(0, 170) + "..."
+              {testimonial.quote.length > 225
+                ? testimonial.quote.slice(0, 225) + "..."
                 : testimonial.quote}
               "
               <br />
