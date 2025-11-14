@@ -83,7 +83,7 @@ export default function Menu({ scrolled }: MenuProps) {
 
         <a
           className="link"
-          href="#Services"
+          href="/#Services"
           onClick={() => setMenuOpen(!menuOpen)}
           // onClick={() => {
           //   const section = document.querySelector("#section4");
@@ -108,7 +108,7 @@ export default function Menu({ scrolled }: MenuProps) {
         </a>
         <a
           className="link"
-          href="#Reviews"
+          href="/#Reviews"
           onClick={() => setMenuOpen(!menuOpen)}
           // onClick={() => {
           //   const section = document.querySelector("#section10");
