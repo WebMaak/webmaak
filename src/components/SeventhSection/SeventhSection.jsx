@@ -155,7 +155,7 @@ function TestimonialText({ testimonial }) {
     <div className="w-full">
       {!showFull ? (
         // Full card view
-        <div className="testimonail_card flex flex-col lg:flex-row bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden w-full lg:h-[400px] md:h-[650px] h-[450px] relative">
+        <div className="testimonail_card flex flex-col lg:flex-row bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden w-full lg:h-[400px] md:h-[725px] h-[525px] relative">
           {/* Testimonial Content */}
           <div className="testimonail_content flex flex-col justify-between items-start w-full p-12">
             <p className="testimonial_text text-black text-[0.1rem] md:text-[1.3rem] font-normal leading-snug md:mb-6 mb-0">

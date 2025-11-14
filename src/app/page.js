@@ -134,7 +134,6 @@ export default function Home() {
   // Spacer intersection — identical logic
   useEffect(() => {
     const img = new Image();
-    img.src = "/background-design.png";
     img.onload = () => setBgHeight(`${img.naturalHeight}px`);
 
     const spacer = document.getElementById("spacer");

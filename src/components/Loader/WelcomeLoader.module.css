@@ -10,7 +10,7 @@
   justify-content: center;
   flex-direction: column;
   transition: opacity 0.8s ease;
-  cursor: url("/scissor.png"), auto; /* 🧷 place your scissor icon in /public */
+  /* cursor: url("/scissor.png"), auto; */
 }
 
 .video {
