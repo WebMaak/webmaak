@@ -313,22 +313,22 @@ export default function FourthSection() {
                           >
                             <div className="icon-text-wrap">
                               <div className="icon-text_text pt-[3px]">
-                                Growth-Focused Strategies
+                                3d modelling and texturing
                               </div>
                             </div>
                             <div className="icon-text-wrap">
                               <div className="icon-text_text pt-[3px]">
-                                CMS & custom integrations
+                                3d animation
                               </div>
                             </div>
                             <div className="icon-text-wrap">
                               <div className="icon-text_text pt-[3px]">
-                                Optimized for speed & SEO
+                                Architectural Visualization
                               </div>
                             </div>
                             <div className="icon-text-wrap">
                               <div className="icon-text_text pt-[3px]">
-                                Scalable, future-ready builds
+                                Motion Graphics and VFX
                               </div>
                             </div>
                           </div>
