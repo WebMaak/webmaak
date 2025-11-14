@@ -322,7 +322,11 @@ export default function Home() {
           </div>
 
           {/* Clients */}
-          <div id="client-section" data-theme="dark">
+          <div
+            id="client-section"
+            data-theme="dark"
+            className="mt-18 md:mt-32 "
+          >
             {loadLazySections && <Client />}
           </div>
 
