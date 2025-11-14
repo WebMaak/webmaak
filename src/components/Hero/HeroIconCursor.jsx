@@ -35,14 +35,14 @@
 //             transform: rotate(360deg);
 //           }
 //         }
-        
+
 //         .circle-rotator {
 //           width: 100%;
 //           height: 100%;
 //           position: relative;
 //           animation: rotateText 8s linear infinite;
 //         }
-        
+
 //         .char-wrapper {
 //           position: absolute;
 //           left: 50%;
@@ -50,9 +50,9 @@
 //           transform-origin: 0 0;
 //         }
 //       `}</style>
-      
+
 //       {children({ setHoverText })}
-      
+
 //       {hoverText && (
 //         <div
 //           className="circle-tooltip"
@@ -193,8 +193,6 @@
 //   );
 // }
 
-
-
 // import { useState, useEffect } from "react";
 
 // export default function HeroIconCursor({ children }) {
@@ -250,13 +248,11 @@
 //             />
 
 //         </div>
-        
+
 //       )}
 //     </>
 //   );
 // }
-
-
 
 // Previous animation of apinning circle image
 
@@ -320,8 +316,9 @@
 //   );
 // }
 
-
 // Spinning text
+"use client";
+
 import { useState, useEffect, useRef } from "react";
 import { SpinningText } from "./SpinningText";
 
@@ -333,32 +330,45 @@ export default function HeroIconCursor({
   className,
 }) {
   const [showText, setShowText] = useState(false);
-  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
-  const targetPos = useRef({ x: 0, y: 0 });
   const [isTouch, setIsTouch] = useState(false);
 
-  // Detect if it’s a touch device
+  const tooltipRef = useRef(null);
+  const targetPos = useRef({ x: 0, y: 0 });
+  const currentPos = useRef({ x: 0, y: 0 });
+
+  // Detect touch devices
   useEffect(() => {
     setIsTouch("ontouchstart" in window || navigator.maxTouchPoints > 0);
   }, []);
 
-  // Track cursor position for desktop
+  // Track cursor on desktop (same tracking logic as before)
   useEffect(() => {
-    if (isTouch) return; // Skip mouse tracking for touch devices
+    if (isTouch) return;
 
     const handleMouseMove = (e) => {
       targetPos.current.x = e.clientX;
       targetPos.current.y = e.clientY;
     };
+
     document.addEventListener("mousemove", handleMouseMove);
 
     const animate = () => {
-      setTooltipPos((prev) => ({
-        x: prev.x + (targetPos.current.x - prev.x) * 0.2,
-        y: prev.y + (targetPos.current.y - prev.y) * 0.2,
-      }));
+      // SAME smoothing equation you used
+      currentPos.current.x +=
+        (targetPos.current.x - currentPos.current.x) * 0.2;
+      currentPos.current.y +=
+        (targetPos.current.y - currentPos.current.y) * 0.2;
+
+      if (tooltipRef.current) {
+        tooltipRef.current.style.transform = `
+          translate(${currentPos.current.x}px, ${currentPos.current.y}px)
+          translate(-50%, -50%)
+        `;
+      }
+
       requestAnimationFrame(animate);
     };
+
     animate();
 
     return () => document.removeEventListener("mousemove", handleMouseMove);
@@ -366,21 +376,24 @@ export default function HeroIconCursor({
 
   return (
     <>
-      {/* Pass hover controls to children */}
+      {/* Pass hover function to children (unchanged) */}
       {children({
         setShowImage: (val) => {
           if (!isTouch) setShowText(val);
         },
       })}
 
+      {/* Tooltip */}
       {showText && (
         <div
-          className={`fixed z-[9999] pointer-events-none -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out ${
+          ref={tooltipRef}
+          className={`fixed z-[9999] pointer-events-none transition-opacity duration-500 ease-in-out ${
             className || ""
           }`}
           style={{
-            left: tooltipPos.x,
-            top: tooltipPos.y,
+            left: 0,
+            top: 0,
+            transform: "translate(-50%, -50%)", // Initial position
           }}
         >
           <div className="slow-spin">

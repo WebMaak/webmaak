@@ -1,118 +1,83 @@
 "use client";
+import React from "react";
 import { cn } from "@/app/lib/utils";
-import { motion, Transition, Variants } from "motion/react";
-import React, { CSSProperties } from "react";
 
 type SpinningTextProps = {
   children: string | string[];
-  style?: CSSProperties;
-  duration?: number;
   className?: string;
   reverse?: boolean;
   fontSize?: number;
   radius?: number;
-  transition?: Transition;
-  variants?: {
-    container?: Variants;
-    item?: Variants;
-  };
+  duration?: number;
+  style?: React.CSSProperties;
 };
 
-const BASE_TRANSITION: Partial<Transition> = {
-  repeat: Infinity,
-  ease: "linear",
-};
-
-
-const BASE_ITEM_VARIANTS = {
-  hidden: {
-    opacity: 1,
-  },
-  visible: {
-    opacity: 1,
-  },
-};
- 
 export function SpinningText({
   children,
-  duration = 10,
-  style,
   className,
   reverse = false,
+  fontSize = 16,
   radius = 5,
-  transition,
-  variants,
+  duration = 20,
+  style,
 }: SpinningTextProps) {
   if (typeof children !== "string" && !Array.isArray(children)) {
     throw new Error("children must be a string or an array of strings");
   }
 
-  if (Array.isArray(children)) {
-    // Validate all elements are strings
-    if (!children.every((child) => typeof child === "string")) {
-      throw new Error("all elements in children array must be strings");
-    }
-    children = children.join("");
-  }
-
-  const letters = children.split("");
+  const text = Array.isArray(children) ? children.join("") : children;
+  const letters = text.split("");
   letters.push(" ");
 
-  const finalTransition: Transition = {
-  ...BASE_TRANSITION,
-  ...transition,
-  duration: transition?.duration ?? duration,
-  ease: (transition as any)?.easing ?? "linear",
-};
-
-
-  const containerVariants = {
-    visible: { rotate: reverse ? -360 : 360 },
-    ...variants?.container,
-  };
-
-  const itemVariants = {
-    ...BASE_ITEM_VARIANTS,
-    ...variants?.item,
-  };
-
   return (
-    <motion.div
-      className={cn("relative", className)}
+    <div
+      className={cn("relative spinning-text", className)}
       style={{
         ...style,
+        animation: `spin ${duration}s linear infinite`,
+        animationDirection: reverse ? "reverse" : "normal",
       }}
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-      transition={finalTransition}
     >
       {letters.map((letter, index) => (
-        <motion.span
-          aria-hidden="true"
+        <span
           key={`${index}-${letter}`}
-          variants={itemVariants}
-          className="absolute hidden lg:block left-1/2 top-1/2 text-white font-semibold uppercase"
-            style={{
-              "--index": index,
+          aria-hidden="true"
+          className="absolute hidden lg:block left-1/2 top-1/2 text-white font-semibold uppercase spinning-letter"
+          style={
+            {
+              "--i": index,
               "--total": letters.length,
-              "--radius": radius,
-              fontSize: '1rem',
-              letterSpacing: '2px',
-              fontWeight: 400,
-              textShadow: '0 4px 10px rgba(65, 121, 225, 0.77)', 
-              transform: `
-                translate(-50%, -50%)
-                rotate(calc(360deg / var(--total) * var(--index)))
-                translateY(calc(var(--radius, 5) * -1ch))
-              `,
-              transformOrigin: 'center',
-            } as React.CSSProperties}
+              "--r": radius,
+              fontSize,
+            } as any
+          }
         >
           {letter}
-        </motion.span>
+        </span>
       ))}
-      <span className="sr-only">{children}</span>
-    </motion.div>
+
+      <span className="sr-only">{text}</span>
+
+      <style jsx>{`
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        .spinning-letter {
+          transform: translate(-50%, -50%)
+            rotate(calc(360deg / var(--total) * var(--i)))
+            translateY(calc(var(--r) * -1ch));
+          transform-origin: center;
+          letter-spacing: 2px;
+          font-weight: 400;
+          text-shadow: 0 4px 10px rgba(65, 121, 225, 0.77);
+        }
+      `}</style>
+    </div>
   );
 }
