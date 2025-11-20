@@ -55,6 +55,12 @@ export default function Menu({ scrolled }: MenuProps) {
     }
   }, [mounted, menuOpen]);
 
+  const handleAnchorNav = (target: string) => {
+    // Save the hash so the home page can use it later
+    sessionStorage.setItem("scrollTarget", target);
+    setMenuOpen(false);
+  };
+
   const menuContent = (
     <div id="menu">
       <div id="menu-gradient"></div>
@@ -84,7 +90,14 @@ export default function Menu({ scrolled }: MenuProps) {
         <a
           className="link"
           href="/#Services"
-          onClick={() => setMenuOpen(!menuOpen)}
+          // OnClick Funtion 1
+          // onClick={() => setMenuOpen(!menuOpen)}
+          // OnClick Funtion 2
+          onClick={() => {
+            sessionStorage.setItem("scrollTarget", "Services");
+            setMenuOpen(!menuOpen);
+          }}
+          // OnClick Funtion 3
           // onClick={() => {
           //   const section = document.querySelector("#section4");
           //   if (section) {
@@ -109,7 +122,14 @@ export default function Menu({ scrolled }: MenuProps) {
         <a
           className="link"
           href="/#Reviews"
-          onClick={() => setMenuOpen(!menuOpen)}
+          // OnClick Funtion 1
+          // onClick={() => setMenuOpen(!menuOpen)}
+          // OnClick Funtion 2
+          onClick={() => {
+            sessionStorage.setItem("scrollTarget", "Reviews");
+            setMenuOpen(!menuOpen);
+          }}
+          // OnClick Funtion 3
           // onClick={() => {
           //   const section = document.querySelector("#section10");
           //   if (section) {

@@ -27,7 +27,7 @@ export default function LandingPage() {
                   </h2>
                 </div>
                 <div className="fadeup">
-                  <p className="sub-title-border-about background-color-white ">
+                  <p className="sub-title-border-about background-color-white">
                     Founded with a vision for creativity and innovation,{" "}
                     <span className="font-semibold">
                       {" "}

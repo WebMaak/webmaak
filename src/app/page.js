@@ -169,6 +169,28 @@ export default function Home() {
     };
   }, []);
 
+  // Scroll Logic
+  // Scroll to target after hydration
+  useEffect(() => {
+    const target = sessionStorage.getItem("scrollTarget");
+    if (!target) return;
+
+    const el = document.getElementById(target);
+    if (!el) return;
+
+    // Give dynamic components time to mount
+    const timer = setTimeout(() => {
+      if (window.lenis) {
+        window.lenis.scrollTo(el, { duration: 1.2 });
+      } else {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 300); // adjust if needed
+
+    sessionStorage.removeItem("scrollTarget");
+    return () => clearTimeout(timer);
+  }, [loadLazySections, loadAfter, loadOrbit]);
+
   return (
     <>
       <WelcomeLoader />

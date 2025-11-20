@@ -149,13 +149,13 @@
 }
 @media screen and (max-width: 767px) {
   .section-info_primary-text-about {
-    font-size: 1.5rem !important;
+    font-size: 2rem !important;
   }
   .section-info_primary-text-card {
     font-size: 1.5rem !important;
   }
   .sub-title-border-about {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 479px) {
@@ -168,6 +168,6 @@
   .sub-title-border-about {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    font-size: 0.625rem !important;
+    font-size: 1rem !important;
   }
 }

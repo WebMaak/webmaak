@@ -87,22 +87,48 @@
 
 
 import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import "./Marquee.css";
 
 const Marquee = ({ position = "middle", duration = 10, text, accentText }) => {
   const tickerRef = useRef(null);
 
   useEffect(() => {
-    // GSAP animations removed - marquee will be static/cloned once for layout.
     const ticker = tickerRef.current;
     if (!ticker) return;
+
     const inner = ticker.querySelector(".ticker-wrap");
     const content = inner.querySelector(".ticker-text");
-    // Ensure there are at least two copies for visual repetition without animation
-    if (content && inner.children.length < 2) {
+
+    // Reset & clone enough times
+    inner.innerHTML = "";
+    inner.append(content);
+    let totalWidth = content.offsetWidth;
+    while (totalWidth < ticker.offsetWidth * 2) {
       const clone = content.cloneNode(true);
       inner.append(clone);
+      totalWidth += content.offsetWidth;
     }
+
+    // Animate all copies
+    const animations = [];
+    inner.querySelectorAll(".ticker-text").forEach((element) => {
+      const animation = gsap.to(element, {
+        x: "-100%",
+        repeat: -1,
+        duration: duration,
+        ease: "linear",
+      });
+      animations.push(animation);
+    });
+
+    // Pause on hover
+    ticker.addEventListener("mouseenter", () => {
+      animations.forEach((anim) => anim.pause());
+    });
+    ticker.addEventListener("mouseleave", () => {
+      animations.forEach((anim) => anim.play());
+    });
   }, [duration]);
 
   return (
