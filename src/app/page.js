@@ -75,10 +75,6 @@ const Loader = dynamic(
   () => import("../components/Loader/Loader").then((m) => m.default),
   { ssr: false }
 );
-const WelcomeLoader = dynamic(
-  () => import("../components/Loader/WelcomeLoader").then((m) => m.default),
-  { ssr: false }
-);
 
 const Client = dynamic(
   () => import("../components/client").then((m) => m.default),
@@ -193,7 +189,6 @@ export default function Home() {
 
   return (
     <>
-      <WelcomeLoader />
       <Loader />
 
       <div className="main relative">
