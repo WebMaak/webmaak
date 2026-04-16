@@ -1,10 +1,5 @@
 "use client";
 
-/**
- * Home page — optimized with staged hydration + JSDoc types.
- * UI & functionality remain 100% identical to your original file.
- */
-
 import React, { useEffect, useState, useRef } from "react";
 import dynamic from "next/dynamic";
 
