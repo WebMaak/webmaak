@@ -1,0 +1,207 @@
+.section-info_primary-text-about {
+  background: linear-gradient(
+    180deg,
+    #1a2224 11.35%,
+    rgba(26, 34, 36, 0.5) 250.2%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-info_primary-text-card {
+  background: linear-gradient(
+    180deg,
+    #1a2224 11.35%,
+    rgba(26, 34, 36, 0.5) 250.2%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heading-style-h2.is-contact-page-hero-heading-about {
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(#fff, #fff9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: var(--font-sora);
+  font-size: 3.5rem;
+  font-weight: 700;
+  position: relative;
+}
+.heading-style-h3.is-contact-page-hero-heading-about {
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(#fff 65%, rgba(255, 255, 255, 0.719) 35%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: var(--font-sora);
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+}
+.contact_sub-title-one-about {
+  z-index: 100;
+  color: #fffc;
+  text-align: center;
+  font-size: 1.125rem;
+}
+.section-info_primary-text-subheading {
+  background: linear-gradient(
+    180deg,
+    #1a2224 11.35%,
+    rgba(26, 34, 36, 0.5) 250.2%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-info_primary-text-socials {
+  background: linear-gradient(
+    180deg,
+    #1a2224 11.35%,
+    rgba(26, 34, 36, 0.5) 250.2%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-info_primary-text-about {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: var(--font-lora);
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.heading-text-italic {
+  font-family: var(--font-lora);
+}
+.section-info_primary-text-card {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: var(--font-sora);
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  line-height: 1.2;
+}
+.section-info_primary-text-subheading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: var(--font-sora);
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  line-height: 1.2;
+}
+.section-info_primary-text-socials {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: var(--font-sora);
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  line-height: 1.2;
+}
+.sub-title-border-about {
+  font-family: var(--font-inter);
+  color: #8c8c8c;
+  /* border: 1px solid #ddd; */
+  border-radius: 1.875rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.steps_heading-wrap {
+  position: relative;
+}
+.section-info_primary-text-about .about-blue-heading {
+  font-style: normal;
+  color: #0175e4;
+  -webkit-text-fill-color: #0175e4;
+  background: transparent;
+  background-clip: none;
+  border: none;
+}
+
+.fa-linkedin-in {
+  color: rgb(10 102 194);
+}
+
+.fa-facebook-f {
+  color: #0175e4;
+}
+
+.fa-instagram {
+  color: rgb(228 64 95);
+}
+
+.fadeup {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1536px) {
+  .sub-title-border-about {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section-info_primary-text-about {
+    font-size: 2rem !important;
+  }
+  .section-info_primary-text-card {
+    font-size: 2rem !important;
+  }
+  .sub-title-border-about {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .sub-title-border-about {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .section-info_primary-text-socials {
+    padding: 1rem 0 0.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sub-title-border-about {
+    max-width: 100%;
+  }
+  .section-info_primary-text-about {
+    font-size: 2rem !important;
+  }
+  .section-info_primary-text-card {
+    font-size: 1.5rem !important;
+  }
+  .sub-title-border-about {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .section-info_primary-text-about {
+    font-size: 1.5rem;
+  }
+  .section-info_primary-text-card {
+    font-size: 1.5rem;
+  }
+  .sub-title-border-about {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 1rem !important;
+  }
+}

@@ -1,0 +1,25 @@
+.app-container {
+  /* min-height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 4rem 0rem 8rem; */
+}
+
+.video-showcase {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  will-change: opacity;
+}
+.fade-in-showcase {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 0;
+    align-items: flex-start;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

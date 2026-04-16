@@ -1,0 +1,16 @@
+.trailContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.trailImage {
+  position: absolute;
+  width: 280px;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+  will-change: transform, opacity;
+}

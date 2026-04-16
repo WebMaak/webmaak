@@ -1,0 +1,256 @@
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: background 0.5s ease;
+}
+
+/* ===============================
+   TEXTURES & OVERLAYS
+================================ */
+
+.meshGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  filter: blur(80px);
+  opacity: 0.6;
+}
+
+/* ===============================
+   DARK MODE
+================================ */
+
+.wrapper.dark {
+  background-color: #050505;
+}
+
+.wrapper.dark .meshGradient {
+  background:
+    radial-gradient(circle at 20% 20%, #1a1a1a 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, #101010 0%, transparent 50%);
+}
+
+/* ===============================
+   LIGHT MODE
+================================ */
+
+.wrapper.light {
+  background-color: #f7f7f7;
+}
+
+.wrapper.light .meshGradient {
+  background:
+    radial-gradient(circle at 20% 20%, #e0e0e0 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, #ebebeb 0%, transparent 50%);
+}
+
+.wrapper.light .noiseOverlay {
+  opacity: 0.03;
+}
+
+/* ===============================
+   CONTENT
+================================ */
+
+.overlay {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.eyebrow {
+  display: block;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: #ffffff;
+  opacity: 0.5;
+  margin-bottom: 2rem;
+}
+
+.wrapper.light .eyebrow {
+  color: #0a0a0a;
+}
+
+.title {
+  font-family:
+    "Sora",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.wrapper.light .title {
+  color: #0a0a0a;
+}
+
+.description {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 3rem;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper.light .description {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* ===============================
+   ACTIONS / BUTTONS
+================================ */
+
+.actions {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background-color: #ffffff;
+  color: #050505;
+  border-radius: 100px;
+  font-family:
+    "Sora",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease;
+}
+
+.wrapper.light .primaryBtn {
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+.primaryBtn:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  font-family:
+    "Sora",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.wrapper.light .secondaryBtn {
+  color: #0a0a0a;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #ffffff;
+}
+
+.wrapper.light .secondaryBtn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: #0a0a0a;
+}
+
+/* ===============================
+   MODE TOGGLE (kept, but variables removed)
+================================ */
+
+.modeToggle {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.wrapper.light .modeToggle {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.05);
+  color: #0a0a0a;
+}
+
+.modeToggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(15deg);
+}
+
+.wrapper.light .modeToggle:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.modeToggle svg {
+  width: 20px;
+  height: 20px;
+}

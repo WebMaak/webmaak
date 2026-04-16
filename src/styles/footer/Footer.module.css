@@ -1,0 +1,270 @@
+.pageWrapper {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--gray-50), var(--white));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+
+  z-index: 1000;
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.heroCard {
+  background: linear-gradient(to bottom, var(--black-3), var(--black-0));
+  border-radius: 1.5rem;
+  /* padding: 7rem 2rem; */
+  padding-bottom: 8rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 4rem; */
+}
+
+/* FOOTER */
+.footerOuter {
+  width: 100%;
+  background: var(--gray-50);
+  border-radius: 1.5rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-bottom: none;
+  padding: 4rem 4rem 0;
+}
+
+.footerInner {
+  background: var(--white);
+  border-radius: 1.5rem;
+  padding: 5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.topSection {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.footerLeft {
+  max-width: 550px;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.25rem;
+  color: var(--gray-500);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.socials a {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--gray-300);
+  padding: 0.75rem;
+  border-radius: 50%;
+  transition:
+    color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+}
+
+.socials a:hover {
+  color: var(--tag-hover-bg);
+  border-color: var(--brand-mid);
+}
+
+.columns {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.columnTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--black-3);
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+}
+
+.menuList li {
+  margin-bottom: 1rem;
+}
+
+.menuList a {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.menuList a:hover {
+  color: var(--black-0);
+}
+
+/* Bottom */
+.bottomBar {
+  border-top: 1px solid var(--gray-200);
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--gray-500);
+}
+
+.contactLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contactLinks a {
+  font-family: var(--font-inter);
+  color: var(--brand-mid);
+}
+
+.contactLinks a:hover {
+  color: var(--brand-dark);
+}
+
+/* BIG TEXT */
+.bigText {
+  font-weight: 800;
+  font-family: var(--font-inter);
+  font-size: 15vw;
+  padding-top: 4rem;
+
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  mix-blend-mode: multiply;
+}
+
+/* .bigTextMobile {
+  display: none;
+  font-size: 3rem;
+} */
+
+.fadeInButton {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  transition-delay: 2s;
+}
+
+.fadeInButton.visible {
+  opacity: 1;
+  transition-delay: 0.25s;
+}
+
+@media (max-width: 1536px) {
+  .pageWrapper {
+    padding-bottom: 0;
+  }
+  .footerOuter {
+    padding: 1.5rem 1.5rem 0;
+  }
+  .footerInner {
+    padding: 2rem;
+  }
+  .bigText {
+    padding-top: 2rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .columns {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .topSection {
+    flex-direction: column;
+  }
+  .pageWrapper {
+    padding-bottom: 0;
+  }
+  .footerOuter {
+    padding: 1rem 1rem 0;
+  }
+  .footerInner {
+    padding: 2.5rem;
+  }
+  .bigText {
+    padding-top: 2rem;
+  }
+  .heroCard {
+    padding-bottom: 6rem;
+  }
+}
+@media (max-width: 768px) {
+  .bigText {
+    font-size: 13vw;
+  }
+  .pageWrapper {
+    padding: 1rem 1rem 0;
+  }
+  .bigTextMobile {
+    display: block;
+  }
+  .heroCard {
+    padding: 1.5rem 1rem 3.5rem;
+  }
+  .hero {
+    padding-bottom: 3em;
+  }
+  .footerInner {
+    padding: 2rem;
+    text-align: center;
+  }
+  .socials {
+    justify-content: center;
+  }
+  .socials a {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .columns {
+    justify-content: center;
+  }
+  .contactLinks {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .topSection {
+    margin-bottom: 2rem;
+  }
+}

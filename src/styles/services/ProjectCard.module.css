@@ -1,0 +1,139 @@
+/* ================= CARD ================= */
+
+.card {
+  width: 400px; /* ~2x visual presence */
+  background: var(--white);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  transition: box-shadow 0.3s ease;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+/* ================= IMAGE (4:3, COVER, NO BG) ================= */
+
+.media {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ================= CONTENT ================= */
+
+.body {
+  position: relative;
+  padding: 22px 22px 28px;
+}
+
+/* ================= TAGS ================= */
+
+.tags {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.tags span {
+  font-size: 11px; /* reduced */
+  line-height: 1;
+  padding: 7px 15px;
+  border-radius: 999px;
+  background: var(--gray-150);
+  color: var(--black-3);
+  border: 1px solid #ecebeb;
+  white-space: nowrap;
+}
+
+/* ================= TEXT ================= */
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: var(--black-3);
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--black-8);
+  padding-right: 52px;
+}
+
+/* ================= ACTION (LUCIDE ICON) ================= */
+
+.arrow {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--gray-250);
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: var(--black-3);
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.arrow:hover {
+  background: var(--gray-100);
+  border-color: var(--gray-300);
+  transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1536px) {
+  .card {
+    width: 340px;
+    border-radius: 12px;
+  }
+  .body {
+    padding: 24px 18px 32px;
+  }
+  .title {
+    font-size: 17px;
+  }
+  .description {
+    font-size: 13px;
+    padding-right: 44px;
+  }
+  .arrow {
+    width: 38px;
+    height: 38px;
+    right: 18px;
+    bottom: 18px;
+  }
+  .tags {
+    margin-bottom: 32px;
+  }
+  .tags span {
+    font-size: 9px;
+    /* padding: 5px 10px; */
+  }
+}
+
+/* Mobile */
+@media (max-width: 1536px) {
+  .card {
+    width: 330px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+  }
+}

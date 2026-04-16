@@ -1,0 +1,121 @@
+.container {
+  padding: 15vh 2.5rem; /* pl-10 */
+}
+
+.title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 2.5rem; /* mb-10 */
+  color: var(--black-3); /* text-gray-900 */
+  font-family: var(--font-sora), sans-serif;
+}
+
+.subtitle {
+  font-weight: 400; /* font-normal */
+  font-size: 1.25rem; /* text-xl */
+}
+
+.sectionHeading {
+  color: var(--brand-mid); /* color: #0175e4 */
+  margin-bottom: 0.5rem; /* mb-2 */
+  font-size: 1.25rem; /* text-xl */
+  font-weight: bold; /* font-bold */
+  font-family: var(--font-sora), sans-serif;
+}
+
+.paragraph {
+  color: var(--gray-500); /* text-gray-700 */
+  margin-bottom: 1.5rem; /* mb-6 */
+  font-size: 1.25rem; /* text-xl */
+  font-family: var(--font-inter), sans-serif;
+}
+
+.orderedList {
+  list-style-type: decimal;
+  padding-left: 1.5rem; /* pl-6 */
+  margin-bottom: 1.5rem; /* mb-6 */
+  font-size: 1.25rem; /* text-xl */
+  font-family: var(--font-inter), sans-serif;
+}
+
+.orderedList li {
+  color: var(--gray-500); /* text-gray-700 */
+  margin-bottom: 0.5rem; /* space-y-2 */
+}
+
+.list {
+  list-style-type: disc;
+  padding-left: 3rem; /* pl-12 */
+  margin-bottom: 1.5rem; /* mb-6 */
+  font-size: 1.25rem; /* text-xl */
+  font-family: var(--font-inter), sans-serif;
+}
+
+.list li {
+  color: var(--gray-500); /* text-gray-700 */
+  margin-bottom: 0.5rem; /* space-y-2 */
+}
+
+.nestedList {
+  list-style-type: disc;
+  padding-left: 1.5rem; /* pl-6 */
+  margin-top: 0.25rem; /* mt-1 */
+}
+
+.nestedList li {
+  margin-bottom: 0.25rem; /* space-y-1 */
+}
+
+.contactText {
+  color: var(--black-3); /* text-gray-800 */
+  margin-bottom: 1rem; /* mb-4 */
+  font-weight: 600; /* font-semibold */
+  font-size: 1.125rem; /* text-lg */
+  font-family: var(--font-inter), sans-serif;
+  line-height: 1.6;
+}
+
+.link {
+  color: var(--brand-mid); /* text-blue-600 */
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: var(--brand-dark);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 15vh 1rem 8vh 6rem;
+  }
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .sectionHeading {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .paragraph {
+    font-size: 1rem;
+  }
+  .orderedList {
+    font-size: 1rem;
+  }
+  .orderedList li {
+    margin-bottom: 0.5rem;
+  }
+  .list {
+    font-size: 1rem;
+  }
+  .list li {
+    margin-bottom: 0.5rem;
+  }
+  .contactText {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+}

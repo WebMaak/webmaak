@@ -1,0 +1,35 @@
+.section {
+  width: 100%;
+  padding: 15vh 2.5rem;
+}
+
+.heading {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #111827;
+  font-family: "Bricolage Grotesque", sans-serif;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.paragraph {
+  margin-bottom: 1rem;
+}
+
+.list {
+  list-style-type: disc;
+  padding-left: 1.5rem; /* pl-6 */
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* space-y-1 */
+}
+
+.listItem {
+  /* no extra styling needed – content already includes ✔ */
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 15vh 1rem 8vh 6rem;
+  }
+}

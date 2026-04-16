@@ -1,0 +1,117 @@
+.container {
+  background-color: var(--white);
+  padding: 15vh 2.5rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  color: var(--black-3);
+  font-family: var(--font-sora), sans-serif;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.sectionHeading {
+  color: var(--brand-mid);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: var(--font-sora), sans-serif;
+}
+
+.paragraph {
+  color: var(--gray-600);
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.subheading {
+  color: var(--gray-600);
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.list {
+  list-style-type: disc;
+  padding-left: 3rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.list li {
+  color: var(--black-3);
+  margin-bottom: 0.5rem;
+}
+
+.listSpaced {
+  margin-bottom: 1.5rem;
+}
+
+.nestedList {
+  list-style-type: disc;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+.nestedList li {
+  margin-bottom: 0.25rem;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.contactText {
+  color: var(--black-3);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  font-family: var(--font-inter), sans-serif;
+  line-height: 1.6;
+}
+
+.link {
+  color: var(--brand-dark);
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: var(--brand-dark);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 15vh 1rem 8vh 6rem;
+  }
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .sectionHeading {
+    font-size: 1rem;
+  }
+  .paragraph {
+    font-size: 1rem;
+  }
+  .subheading {
+    font-size: 1rem;
+  }
+  .list {
+    font-size: 1rem;
+  }
+  .contactText {
+    font-size: 1.125rem;
+  }
+}

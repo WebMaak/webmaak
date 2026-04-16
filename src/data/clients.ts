@@ -1,0 +1,1 @@
+// Client logos list.

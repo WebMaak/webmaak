@@ -1,0 +1,410 @@
+/* ---------------------------------------------------------
+   HERO Background STYLES
+   Background Image full viewport
+   --------------------------------------------------------- */
+
+.hero-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://res.cloudinary.com/dsvgjs1qb/image/upload/f_auto,q_auto,w_1920/v1772194027/hero-bg_usxcj3.jpg");
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-icons {
+  display: flex;
+  justify-content: center;
+  gap: 24rem;
+  padding-bottom: 4rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ---------------------------------------------------------
+   HERO ICON COMPONENT STYLES
+   Background trail, main icon, hover text (cursor-follow)
+   --------------------------------------------------------- */
+
+/* HERO ICON ONLY */
+
+.heroIcon-wrapper {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+/* Rotating background trail */
+.heroIcon-bg-container {
+  width: 18rem;
+  height: 18rem;
+  position: relative;
+}
+
+.heroIcon-bg-container.it {
+  -webkit-mask-image: linear-gradient(to left, transparent 50%, black 100%);
+  mask-image: linear-gradient(to left, transparent 50%, black 100%);
+}
+
+.heroIcon-bg-container.media {
+  -webkit-mask-image: linear-gradient(to right, transparent 25%, black 100%);
+  mask-image: linear-gradient(to right, transparent 25%, black 100%);
+}
+
+.heroIcon-bg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+  mix-blend-mode: color-dodge;
+  object-fit: contain;
+  animation: heroTrailSpin 32s linear infinite;
+}
+
+/* Main icon link */
+.heroIcon-link {
+  text-decoration: none;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 7rem;
+  height: 7rem;
+}
+
+/* Main icon */
+.heroIcon-main {
+  width: 7rem;
+  height: 7rem;
+
+  object-fit: contain;
+  position: static;
+  z-index: 3;
+}
+
+/* FOLLOW + ROTATE text image */
+.heroIcon-hover {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+  filter: drop-shadow(0 0 1px rgba(46, 90, 223, 0.3))
+    drop-shadow(0 0 2px rgba(65, 105, 225, 0.2))
+    drop-shadow(0 0 3px rgba(65, 105, 225, 0.1));
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  pointer-events: none;
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+
+  /* Position follows cursor, rotation offset is cursor-based */
+  transform: translate(var(--x, -50%), var(--y, -50%));
+}
+
+/* When active, apply the continuous rotation animation */
+.heroIcon-hover.active {
+  opacity: 1;
+  animation: heroHoverRotate 6s linear infinite;
+}
+
+/* Rotate hover text around center */
+@keyframes heroHoverRotate {
+  from {
+    transform: translate(var(--x, -50%), var(--y, -50%)) rotateZ(0deg);
+  }
+  to {
+    transform: translate(var(--x, -50%), var(--y, -50%)) rotateZ(360deg);
+  }
+}
+
+/* Rotate background trail */
+@keyframes heroTrailSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------------------------------------------------------
+   HERO MARQUEE (mask fade technique)
+   --------------------------------------------------------- */
+
+.hero-marquee-wrapper {
+  width: 100%;
+  max-width: 70rem;
+
+  position: relative;
+  display: flex;
+  overflow: hidden;
+
+  /* Fade edges like your old site */
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 12%,
+    #000 88%,
+    transparent
+  );
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 12%,
+    #000 88%,
+    transparent
+  );
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+
+  margin-top: 12rem;
+}
+
+/* Track animation */
+.hero-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding-right: 4rem;
+  animation: marqueeMove 80s linear infinite;
+}
+
+/* Logos */
+.hero-marquee-logo {
+  max-height: 3.5rem;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes marqueeMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------------------------------------------------------
+   HERO CONTENT STYLES
+--------------------------------------------------------- */
+
+.hero-content {
+  text-align: center;
+  color: #fff;
+  margin-top: 8rem;
+}
+
+.hero-title {
+  line-height: 1;
+  margin-bottom: 1.6rem;
+}
+.hero-title .line:nth-child(1) {
+  margin-bottom: -0.5rem;
+}
+
+/* LINE WRAPPER */
+.hero-title .line {
+  overflow: hidden; /* for reveal animation */
+}
+.hero-title .line p {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+
+  letter-spacing: -0.1rem;
+}
+
+/* Blue gradient for "Crafting" */
+.crafting {
+  font-family: var(--font-sora);
+  font-weight: 700;
+  font-size: 5.5rem;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(#4169e1 0%, #1e3a8a 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+}
+
+/* Italic Lora "Digital" */
+.digital {
+  font-family: var(--font-lora);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 5.5rem;
+
+  padding-bottom: 0.7rem;
+
+  display: inline-block;
+  transform: skewX(-10deg);
+
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(#fff 30%, hsla(0, 0%, 100%, 0.7) 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* "Masterpieces" - large italic */
+.masterpieces {
+  font-family: var(--font-lora);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 5.5rem;
+
+  padding-bottom: 0.8rem;
+
+  display: inline-block;
+  transform: skewX(-10deg);
+
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(#fff 30%, hsla(0, 0%, 100%, 0.7) 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Subtitle */
+.hero-subtext {
+  max-width: 32rem;
+
+  font-family: var(--font-inter);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  letter-spacing: -0.2px;
+  text-align: center;
+  font-weight: 500;
+  color: #ccc;
+
+  margin: 0 auto 2rem;
+}
+
+.sm-visible {
+  display: none !important;
+}
+
+/* Scaled devices Responsivness */
+@media (max-width: 1536px) {
+  .crafting,
+  .masterpieces,
+  .digital {
+    font-size: 4rem;
+  }
+  .hero-title {
+    margin-bottom: 1rem;
+  }
+  .hero-subtext {
+    font-size: 0.875rem;
+    max-width: 26rem;
+  }
+  .hero-marquee-wrapper {
+    margin-top: 10rem;
+  }
+  .hero-marquee-track {
+    gap: 6rem;
+  }
+  .hero-marquee-wrapper {
+    max-width: 60rem;
+  }
+  .hero-icons {
+    gap: 15rem;
+  }
+  .heroIcon-main {
+    width: 6rem;
+    height: 6rem;
+  }
+  .heroIcon-bg-container {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+/* Tablet Responsivness */
+@media (max-width: 1024px) {
+  .heroIcon-hover {
+    display: none !important;
+  }
+  .hero-icons {
+    gap: 6rem;
+    padding-top: 8rem;
+    padding-bottom: 0;
+  }
+  .hero-wrapper {
+    height: 70vh;
+  }
+}
+
+/* Mobile Responsivness */
+@media (max-width: 768px) {
+  .sm-hide {
+    display: none !important;
+  }
+  .sm-visible {
+    display: block !important;
+  }
+  .hero-subtext {
+    font-size: 0.8rem;
+    max-width: 20rem;
+    line-height: 1.4;
+  }
+  .hero-title {
+    margin-bottom: 0.5rem;
+  }
+  .crafting {
+    font-size: 2.875rem;
+    letter-spacing: 0.1rem;
+    padding-bottom: 0.2rem;
+  }
+  .digital {
+    font-size: 2.875rem;
+    letter-spacing: 0.01rem;
+  }
+  .masterpieces {
+    font-size: 2.875rem;
+    margin-top: -0.25rem;
+  }
+  .hero-marquee-wrapper {
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+  }
+  .hero-marquee-track {
+    gap: 3rem;
+  }
+  .hero-wrapper {
+    height: 100vh;
+  }
+  .hero-icons {
+    gap: 1rem;
+    padding-top: 14rem;
+    padding-bottom: 0;
+    z-index: 10;
+  }
+  .heroIcon-main {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+  .heroIcon-bg-container {
+    width: 14rem;
+    height: 14rem;
+  }
+}

@@ -1,0 +1,167 @@
+/* =========================================================
+   SECTION TITLE BLOCK – BASE (LAYOUT & SIZE)
+   ========================================================= */
+
+.section-title-block.light {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 10rem 0 4rem;
+  text-align: center;
+}
+.section-title-block.dark {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 8rem 0 4rem;
+  text-align: center;
+}
+
+/* Heading base */
+.section-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 0 0 1.5rem 0;
+  display: inline-block;
+}
+
+/* Line wrapper */
+.title-line {
+  display: block;
+}
+
+/* Normal text */
+.title-normal {
+  font-family: var(--font-sora), sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+/* Italic / serif text */
+.title-italic {
+  line-height: 1.3;
+  font-family: var(--font-lora), serif;
+  font-style: italic;
+  font-weight: 500;
+  display: inline-block;
+  transform: skewX(-10deg);
+  transform-origin: left bottom;
+}
+
+/* Description base */
+.section-desc {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================================================
+   LIGHT THEME (COLOR ONLY)
+   ========================================================= */
+
+.section-title.light {
+  color: #1a2224;
+}
+
+.section-desc.light {
+  color: #8c8c8c;
+}
+
+.title-line.light .title-normal,
+.title-line.light .title-italic {
+  background: linear-gradient(
+    180deg,
+    #1a2224 11.35%,
+    rgba(26, 34, 36, 0.5) 250.2%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   DARK THEME (COLOR ONLY)
+   ========================================================= */
+
+.title-line.dark .title-normal,
+.title-line.dark .title-italic {
+  background-image: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.6) 120%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-desc.dark {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.title-line.dark .title-normal,
+.title-line.dark .title-italic {
+  color: #ffffff;
+}
+
+/* =========================================================
+   RESPONSIVE SCALE (THEME-AGNOSTIC)
+   ========================================================= */
+
+/* Large screens */
+@media (max-width: 1536px) {
+  .section-title-block.light {
+    padding: 6rem 0 3rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-desc {
+    font-size: 1rem;
+  }
+  .section-title-block {
+    max-width: 38rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .section-title {
+    margin-bottom: 0.875rem;
+  }
+  .section-desc {
+    font-size: 0.9rem;
+  }
+  .section-title-block.light {
+    max-width: 34rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .section-title-block.dark {
+    padding-top: 6rem;
+    max-width: 34rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+  .section-desc {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  .section-title-block {
+    max-width: 21.5rem;
+  }
+  .section-title-block.light {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .section-title-block.dark {
+    padding: 2rem 1rem 2rem;
+  }
+}

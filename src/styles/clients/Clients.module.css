@@ -1,0 +1,79 @@
+.section {
+  width: 100%;
+  padding: 2rem 0 10rem;
+  margin-top: 10rem;
+  background: linear-gradient(135deg, #0f061b 0%, #341162 100%);
+  overflow: hidden;
+}
+
+/* ================= LOGO GRID ================= */
+/* FIX: use flex instead of grid to center last row */
+
+.grid {
+  max-width: 1400px;
+  margin: 2rem auto 0;
+  padding-inline: clamp(16px, 6vw, 64px);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* THIS centers last row correctly */
+  gap: clamp(18px, 4vw, 56px);
+}
+
+/* ================= LOGO ITEM ================= */
+
+.logoItem {
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoItem img {
+  max-height: clamp(28px, 4vw, 64px);
+  width: auto;
+  object-fit: contain;
+  opacity: 0.85;
+
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1536px) {
+  .grid {
+    gap: 36px;
+    max-width: 1070px;
+  }
+  .logoItem {
+    width: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    margin-top: 5rem;
+    padding: 0 0 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: 3rem;
+  }
+  .grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    gap: 18px;
+  }
+
+  .logoItem {
+    width: 90px;
+  }
+}

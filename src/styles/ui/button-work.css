@@ -1,0 +1,213 @@
+/* ---------------------------------------------------------
+   WebMaak Button – Updated
+   • No hover scale
+   • Opposite direction icon rotations
+   • Will-change applied
+--------------------------------------------------------- */
+
+.wm-btn {
+  margin-top: 2rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.9rem 2rem;
+  background: #ffffff;
+  border-radius: 0.4rem;
+
+  font-family: var(--font-sora);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #171717;
+
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  z-index: 1;
+
+  box-shadow:
+    inset 0 2px 2px #85858540,
+    inset 0 -2px #1e40af32,
+    0 0 0 4px #8686860d,
+    0 20px 120px -10px #3b82f6cc;
+
+  overflow: hidden;
+
+  /* Removed scale to avoid flicker */
+  will-change: box-shadow;
+  transition: box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wm-btn:hover {
+  box-shadow:
+    inset 0 2px 2px #85858540,
+    inset 0 -2px #1e40af32,
+    0 0 0 4px #8686860d,
+    0 20px 120px 10px #3b83f67f;
+  /* box-shadow:
+    rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 48px; */
+}
+
+/* ---------------------------------------------
+   Icons
+---------------------------------------------- */
+
+.wm-btn-icon {
+  position: absolute;
+  width: 1.4rem;
+  height: 1.4rem;
+  z-index: 3;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+
+  /* Optimization */
+  will-change: transform, opacity;
+}
+
+/* Left icon (Microsoft Teams) */
+.wm-btn-icon.left {
+  background-image: url("/button/microsoft-team.png");
+
+  left: 1.2rem;
+
+  opacity: 0;
+  transform: translateY(8px) rotate(-20deg);
+  transition:
+    opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Right icon (Google Chat) */
+.wm-btn-icon.right {
+  background-image: url("/button/google-chat.webp");
+
+  right: 1.2rem;
+
+  opacity: 0;
+  transform: translateY(8px) rotate(20deg);
+  transition:
+    opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* On hover: icons rise + rotate (opposite directions) */
+.wm-btn:hover .wm-btn-icon.left {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg); /* clockwise */
+}
+
+.wm-btn:hover .wm-btn-icon.right {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg); /* anti-clockwise */
+}
+
+/* ---------------------------------------------
+   Text stays centered
+---------------------------------------------- */
+
+.wm-btn-text {
+  z-index: 3;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+}
+
+/* ---------------------------------------------
+   Subtle hover gradient overlay
+---------------------------------------------- */
+
+.wm-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 140, 255, 0.15),
+    rgba(255, 255, 255, 0),
+    rgba(112, 53, 249, 0.15)
+  );
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wm-btn:hover::after {
+  opacity: 1;
+}
+
+/* Scaled devices Responsivness */
+@media (max-width: 1536px) {
+  .wm-btn-text {
+    font-size: 0.775rem;
+  }
+  .wm-btn {
+    padding: 0.8rem 1.75rem;
+  }
+  .wm-btn-icon.left,
+  .wm-btn-icon.right {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wm-btn-icon.left,
+  .wm-btn-icon.right {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+  .wm-btn::after {
+    opacity: 1;
+  }
+
+  /* ------------------------------------------
+   Button Breathing Shadow Animation
+  ------------------------------------------- */
+  @keyframes wmBtnBreath {
+    0% {
+      box-shadow:
+        inset 0 2px 2px #00000040,
+        inset 0 -2px #1e40af5e,
+        0 0 0 4px #0000000d,
+        0 20px 120px 10px #3b83f631;
+    }
+    50% {
+      box-shadow:
+        inset 0 2px 2px #00000040,
+        inset 0 -2px #1e40af,
+        0 0 0 4px #0000000d,
+        0 20px 120px 10px #3b83f67f;
+    }
+    100% {
+      box-shadow:
+        inset 0 2px 2px #00000040,
+        inset 0 -2px #1e40af5e,
+        0 0 0 4px #0000000d,
+        0 20px 120px 10px #3b83f631;
+    }
+  }
+
+  /* Apply to the button */
+  .wm-btn {
+    animation: wmBtnBreath 4s ease-in-out infinite;
+  }
+}
+@media (max-width: 768px) {
+  .wm-btn {
+    padding: 0.6rem 1.5rem;
+  }
+  .wm-btn-text {
+    font-size: 0.65rem;
+  }
+  .wm-btn-icon.left,
+  .wm-btn-icon.right {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+}

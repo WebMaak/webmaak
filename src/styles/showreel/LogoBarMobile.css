@@ -1,0 +1,82 @@
+.logo-bar-mobile-root {
+  display: none;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.logo-bar-mobile-card {
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-100);
+}
+
+.nav-arrow-btn {
+  background: var(--gray-100);
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--gray-900);
+  transition: transform 0.2s;
+}
+
+.nav-arrow-btn:active {
+  transform: scale(0.9);
+}
+
+.mobile-logo-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mobile-brand-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 100%;
+}
+
+.mobile-logo-image {
+  max-height: 100%;
+  max-width: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
+.mobile-pagination {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.pagination-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--gray-200);
+  transition: all 0.3s ease;
+}
+
+.pagination-dot.active {
+  background-color: var(--gray-900);
+  width: 12px;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .logo-bar-mobile-root {
+    display: block;
+  }
+}

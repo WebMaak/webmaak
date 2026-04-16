@@ -1,0 +1,356 @@
+/* =========================================================
+   SECTION LAYOUT
+   ========================================================= */
+.section {
+  position: relative;
+  max-width: 100vw;
+  overflow: hidden;
+  padding-bottom: 6rem;
+}
+
+/* =========================================================
+   CONTAINERS
+   ========================================================= */
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* .paddingSection {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+} */
+
+/* =========================================================
+   SWIPER WRAPPER
+   ========================================================= */
+.swiper {
+  width: 100%;
+  height: fit-content;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* =========================================================
+   SLIDES – BASE
+   ========================================================= */
+/* Slide wrapper (keep layout only) */
+.slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+
+  width: 1100px;
+  height: 475px;
+}
+
+/* THIS is the element Swiper mutates */
+:global(.swiper-slide) {
+  opacity: 1;
+  transform: translate3d(0, 16px, 0);
+  z-index: 0;
+
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* Adjacent slides */
+:global(.swiper-slide-prev),
+:global(.swiper-slide-next) {
+  transform: translate3d(0, 10px, 0);
+  z-index: 1;
+  opacity: 0.8; /* Slightly more visible on mobile since blur is gone */
+}
+
+@media (max-width: 1024px) {
+  :global(.swiper-slide-prev),
+  :global(.swiper-slide-next) {
+    opacity: 0.6;
+  }
+}
+
+/* Active slide */
+:global(.swiper-slide-active) {
+  z-index: 3;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+.card {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  overflow: hidden;
+  box-shadow:
+    rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  /* Transition and Initial State */
+  opacity: 0.6;
+  filter: blur(8px);
+  transform: scale(0.95);
+  transition:
+    opacity 0.6s ease,
+    filter 0.6s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+
+  will-change: opacity, filter, transform;
+}
+
+/* Active Slide Card State */
+:global(.swiper-slide-active) .card {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+
+@media (max-width: 1024px) {
+  .card {
+    filter: none !important; /* Blur is super expensive on mobile */
+    opacity: 0.4;
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  :global(.swiper-slide-active) .card {
+    opacity: 1;
+  }
+}
+
+/* Card depth */
+:global(.swiper-slide-active .card) {
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.16);
+}
+
+:global(.swiper-slide-prev .card),
+:global(.swiper-slide-next .card) {
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 1024px) {
+  :global(.swiper-slide-active .card) {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  }
+  :global(.swiper-slide-prev .card),
+  :global(.swiper-slide-next .card) {
+    box-shadow: none;
+  }
+}
+
+/* =========================================================
+   CARD STATES
+   ========================================================= */
+.cardCollapsed {
+  flex-direction: row;
+}
+
+.cardExpanded {
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+.left {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Quote */
+.quoteBlock {
+  flex-shrink: 0;
+}
+
+.quote {
+  font-size: 1.25rem;
+  line-height: 1.65;
+  color: var(--black-8);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Read more */
+.readMore {
+  margin-top: 0.75rem;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  font-size: 1rem;
+  font-weight: 500;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Meta at bottom */
+.meta {
+  margin-top: auto;
+}
+
+.name {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--black-8);
+  margin-bottom: 0.25rem;
+}
+
+.designation {
+  font-size: 1.35rem;
+  color: var(--gray-500);
+}
+
+.role {
+  font-family: var(--font-lora);
+}
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+.imageWrap {
+  width: 40%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* =========================================================
+   EXPANDED CLEANUP
+   ========================================================= */
+.cardExpanded .left {
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cardExpanded .readMore {
+  margin-top: 1.5rem;
+}
+
+/* Animations */
+/* Swiper fade-in entrance */
+.swiperFadeIn {
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
+  will-change: opacity;
+}
+
+.swiperFadeInVisible {
+  opacity: 1;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 1536px) {
+  .slide {
+    width: 735px;
+    height: 350px;
+  }
+  .quote,
+  .cardExpanded .quote {
+    font-size: 1rem;
+  }
+  .name,
+  .designation {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .swiper {
+    height: auto;
+  }
+  .slide {
+    width: 520px;
+    height: 700px;
+  }
+  .quote {
+    text-align: center;
+  }
+  .quoteBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .meta {
+    text-align: center;
+  }
+  /* :global(.swiper-slide-prev),
+  :global(.swiper-slide-next) {
+    width: 480px;
+    height: 580px;
+  } */
+  .cardCollapsed {
+    flex-direction: column;
+  }
+  .imageWrap {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .image {
+    border-radius: 50%;
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide {
+    width: 320px;
+    height: 480px;
+  }
+  .left {
+    padding: 1.5rem;
+  }
+  :global(.swiper-slide-prev),
+  :global(.swiper-slide-next) {
+    width: 320px;
+    height: 480px;
+  }
+  .image {
+    width: 100px;
+  }
+  .cardExpanded {
+    padding: 1.5rem;
+  }
+  .quote {
+    font-size: 0.9rem;
+  }
+  .cardExpanded .quote {
+    font-size: 0.75rem;
+  }
+  .name,
+  .designation {
+    font-size: 1rem;
+  }
+}
