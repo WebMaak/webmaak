@@ -21,7 +21,7 @@ export default function Hero() {
         </div>
       </div>
       <HeroContent />
-      <div className="css-fadeup-1-2">
+      <div className="css-fadeup-1-2 hero-button">
         <Button />
       </div>
       <div className="css-fadein-1-2">
