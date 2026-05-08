@@ -96,6 +96,10 @@
   z-index: 3;
 }
 
+.hero-button {
+   z-index: 4;
+}
+
 /* FOLLOW + ROTATE text image */
 .heroIcon-hover {
   width: 10rem;
